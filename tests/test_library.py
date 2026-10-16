@@ -7,6 +7,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
 from library import identities, parse_atom, parse_bibtex, title_identity
 from discover import merge_hits
+from discover import parse_datacite
 import discover
 
 
@@ -45,6 +46,25 @@ class LibraryTests(unittest.TestCase):
     def test_html_is_not_a_successful_empty_feed(self):
         with self.assertRaises(ValueError):
             parse_atom('<html><body>Too many requests</body></html>')
+
+    def test_registry_date_does_not_erase_paper_version(self):
+        paper = {"arxiv_id": "2609.12345", "version": "v2", "title": "A", "updated": "2026-10-01T00:00:00Z", "queries": ["arxiv"]}
+        registry = {**paper, "version": "", "updated": "2026-10-16T00:00:00Z", "queries": ["registry"], "metadata_source": "DataCite"}
+        queue, _, _ = merge_hits([paper, registry], [], [], [])
+        self.assertEqual(queue[0]["version"], "v2")
+        self.assertNotIn("metadata_source", queue[0])
+
+    def test_registry_is_not_an_arxiv_version_observation(self):
+        paper = {"id": "known", "arxiv_id": "2609.12345", "title": "A", "reviewed_version": "v1"}
+        registry = {"arxiv_id": "2609.12345", "version": "", "title": "A", "updated": "2026-10-16T00:00:00Z", "queries": ["registry"], "metadata_source": "DataCite"}
+        self.assertEqual(merge_hits([registry], [paper], [], [])[1], [])
+
+    def test_parse_registry_keeps_provenance(self):
+        payload = {"data": [{"attributes": {"doi": "10.48550/arXiv.2609.12345", "titles": [{"title": "A"}], "creators": [{"name": "Researcher"}], "publicationYear": 2026, "updated": "2026-10-16T00:00:00Z"}}], "meta": {"total": 1}}
+        records, total = parse_datacite(json.dumps(payload))
+        self.assertEqual(total, 1)
+        self.assertEqual(records[0]["version"], "")
+        self.assertEqual(records[0]["metadata_source"], "DataCite arXiv DOI registry")
 
     def test_failed_search_preserves_last_successful_watermark(self):
         with tempfile.TemporaryDirectory() as tmp:

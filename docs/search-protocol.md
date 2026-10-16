@@ -16,6 +16,8 @@ Primary queries combine speculative decoding, speculative sampling, self-specula
 
 Exact automated queries live in [search_queries.json](../data/search_queries.json). The hosted job searches the official arXiv API, sorted by latest update, with a 14-day overlapping window. It paginates until it covers that window or marks the search incomplete. A failed run does not advance the last successful watermark. Requests are sequential with at least 3.2 seconds between successful pages or query families, with bounded retries. Query URLs and completeness are logged in `updates/logs/`.
 
+DataCite is queried with the same Boolean term families, restricted to the arXiv DOI prefix `10.48550`. Its registry-update timestamps are explicitly labeled and never treated as arXiv version or first-publication dates. The registry can lag new submissions. Successful DataCite retrieval does not erase a direct arXiv outage from the completeness log.
+
 The hosted job does **not** claim exhaustive native searches of DBLP, OpenReview, ACL Anthology, PMLR, ACM, IEEE, or every publisher. Weekly curator review supplements discovery with scholarly indexes, official publisher/conference pages, author/project pages, and backward/forward citation tracing where relevant. Record which source was used for discovery and which only for metadata cross-checking. An unavailable source is not a zero-result search.
 
 ## Inclusion

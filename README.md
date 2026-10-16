@@ -50,7 +50,7 @@ A study may appear under several dimensions. Every study has one canonical recor
 
 ## Weekly updates
 
-GitHub Actions checks arXiv every Monday at **08:17 Asia/Shanghai** (00:17 UTC). It deduplicates discoveries, records version changes, and commits the candidate queue and search log. You can also run it from the Actions tab. The workflow uses no paid API or secret.
+GitHub Actions checks arXiv and its DataCite DOI registry every Monday at **08:17 Asia/Shanghai** (00:17 UTC). It deduplicates discoveries, records version changes, and commits the candidate queue and search log. You can also run it from the Actions tab. The workflow uses no paid API or secret.
 
 A separate weekly curator review is configured in the maintainer's Codex chat. Primary-source screening is required before a candidate enters the curated taxonomy. The hosted discovery job works independently of the maintainer's computer; the curator run requires its configured host to be available.
 

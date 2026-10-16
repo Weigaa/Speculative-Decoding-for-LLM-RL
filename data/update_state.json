@@ -1,7 +1,17 @@
 {
-  "status": "not_run",
-  "last_attempt": null,
+  "status": "incomplete",
+  "last_attempt": "2026-10-16T02:26:56Z",
   "last_successful_scan": null,
   "pending_candidates": 0,
-  "note": "No network search has been claimed yet. Weekly discovery and curator screening are separate."
+  "note": "No network search has been claimed yet. Weekly discovery and curator screening are separate.",
+  "since": "2026-10-02T02:26:56Z",
+  "newly_discovered": 0,
+  "failures": [
+    "primary-sampling-rl",
+    "primary-draft-posttraining",
+    "secondary-tail-load",
+    "secondary-reuse",
+    "secondary-policy-adaptation",
+    "secondary-verification-parallel"
+  ]
 }

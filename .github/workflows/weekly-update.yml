@@ -24,7 +24,7 @@ jobs:
           python-version: '3.12'
       - name: Test discovery and deduplication
         run: python -m unittest discover -s tests -v
-      - name: Search arXiv and record incomplete searches explicitly
+      - name: Search primary metadata sources and record incomplete coverage
         id: discovery
         continue-on-error: true
         run: python scripts/discover.py
@@ -39,6 +39,7 @@ jobs:
           git add data/inbox.json data/version_observations.json data/update_state.json updates/
           if ! git diff --cached --quiet; then
             git commit -m 'Update literature candidates and version observations'
+            git pull --rebase origin main
             git push origin HEAD:main
           fi
       - name: Fail visibly when discovery was incomplete

@@ -2,10 +2,11 @@
 import argparse
 from datetime import datetime, timedelta, timezone
 import time
+import json
 from urllib.parse import urlencode
 from urllib.request import Request, urlopen
 from urllib.error import HTTPError
-from library import ROOT, read_json, write_json, parse_atom, identities
+from library import ROOT, read_json, write_json, parse_atom, identities, arxiv_identity
 
 
 def now_utc():
@@ -45,7 +46,7 @@ def merge_hits(hits, papers, queue, screening_log):
     for hit in hits:
         match = next((known[i] for i in identities(hit) if i in known), None)
         if match:
-            if match.get("arxiv_id") == hit["arxiv_id"] and hit["version"] != match.get("reviewed_version", ""):
+            if hit.get("version") and match.get("arxiv_id") == hit["arxiv_id"] and hit["version"] != match.get("reviewed_version", ""):
                 versions.append({"id": match["id"], "reviewed_version": match.get("reviewed_version", ""),
                                  "observed_version": hit["version"], "url": hit["url"], "observed_at": hit["updated"]})
             continue
@@ -54,7 +55,12 @@ def merge_hits(hits, papers, queue, screening_log):
         current = pending.get(hit["arxiv_id"])
         if current:
             queries = sorted(set(current.get("queries", [])) | set(hit["queries"]))
-            if hit["updated"] > current["updated"]:
+            registry_hit = bool(hit.get("metadata_source"))
+            registry_current = bool(current.get("metadata_source"))
+            if (not registry_hit and registry_current) or (registry_hit == registry_current and hit["updated"] > current["updated"]):
+                if not registry_hit:
+                    current.pop("metadata_source", None)
+                    current.pop("metadata_record_url", None)
                 current.update(hit)
             current["queries"] = queries
         else:
@@ -67,6 +73,28 @@ def merge_hits(hits, papers, queue, screening_log):
             pending[hit["arxiv_id"]] = {**hit, "status": "pending"}
             added += 1
     return sorted(pending.values(), key=lambda x: x["updated"], reverse=True), versions, added
+
+
+def parse_datacite(data):
+    payload = json.loads(data)
+    if "data" not in payload or not isinstance(payload["data"], list):
+        raise ValueError("Expected a DataCite DOI-list response")
+    entries = []
+    for record in payload["data"]:
+        a = record["attributes"]
+        doi = a.get("doi", "")
+        if not doi.casefold().startswith("10.48550/arxiv."):
+            continue
+        aid = arxiv_identity(doi)
+        if not aid or not a.get("updated") or not a.get("titles"):
+            raise ValueError("Incomplete arXiv DOI metadata")
+        abstract = next((d.get("description", "") for d in a.get("descriptions", []) if d.get("descriptionType") == "Abstract"), "")
+        entries.append({"arxiv_id": aid, "doi": doi, "version": "", "title": a["titles"][0]["title"],
+                        "authors": [c.get("name", "") for c in a.get("creators", [])],
+                        "published": str(a.get("publicationYear", "")), "updated": a["updated"],
+                        "abstract": abstract, "url": "https://arxiv.org/abs/" + aid,
+                        "metadata_source": "DataCite arXiv DOI registry", "metadata_record_url": "https://api.datacite.org/dois/" + doi})
+    return entries, payload.get("meta", {}).get("total", len(entries))
 
 
 def main():
@@ -82,12 +110,17 @@ def main():
     if previous:
         # A failed weekly run must not create a gap. Retain a two-day overlap.
         default_since = min(default_since, datetime.fromisoformat(previous.replace("Z", "+00:00")) - timedelta(days=2))
+    elif state.get("since") and state.get("status") == "incomplete":
+        default_since = min(default_since, datetime.fromisoformat(state["since"].replace("Z", "+00:00")))
     since = default_since.isoformat(timespec="seconds").replace("+00:00", "Z")
     config = read_json(ROOT / "data/search_queries.json")
     hits, logs, failures = [], [], []
+    arxiv_throttled = False
     for family in config["families"]:
         row = {"family": family["id"], "query": family["query"], "since": since, "urls": [], "records": 0}
         try:
+            if arxiv_throttled:
+                raise RuntimeError("Not attempted: arXiv requested cooldown earlier in this run")
             complete = False
             for page in range(args.max_pages):
                 url = "https://export.arxiv.org/api/query?" + urlencode({
@@ -111,8 +144,39 @@ def main():
         except Exception as exc:
             row.update(status="incomplete", error=f"{type(exc).__name__}: {exc}")
             failures.append(family["id"])
+            if isinstance(exc, HTTPError) and exc.code == 429:
+                arxiv_throttled = True
         logs.append(row)
         print(f"{family['id']}: {row['status']} ({row['records']} recent records)", flush=True)
+        time.sleep(3.2)
+    # A second official metadata source supplies useful discovery during arXiv
+    # outages. Registry update time is not an arXiv paper-version timestamp.
+    for family in config["families"]:
+        family_id = "datacite-" + family["id"]
+        query = "(" + family["query"].replace("all:", "") + ") AND updated:[" + since + " TO *]"
+        row = {"family": family_id, "source": "DataCite arXiv DOI registry", "query": query, "since": since, "urls": [], "records": 0}
+        try:
+            complete = False
+            for page in range(args.max_pages):
+                url = "https://api.datacite.org/dois?" + urlencode({"query": query, "prefix": "10.48550", "sort": "-updated", "page[size]": 100, "page[number]": page + 1})
+                row["urls"].append(url)
+                entries, total = parse_datacite(fetch(url))
+                for entry in entries:
+                    if entry["updated"] >= since:
+                        hits.append({**entry, "queries": [family_id], "discovered_at": timestamp})
+                        row["records"] += 1
+                if len(entries) < 100 or (page + 1) * 100 >= total or entries[-1]["updated"] < since:
+                    complete = True
+                    break
+                time.sleep(3.2)
+            if not complete:
+                raise RuntimeError("DataCite pagination limit reached")
+            row["status"] = "success"
+        except Exception as exc:
+            row.update(status="incomplete", error=f"{type(exc).__name__}: {exc}")
+            failures.append(family_id)
+        logs.append(row)
+        print(f"{family_id}: {row['status']} ({row['records']} recent metadata records)", flush=True)
         time.sleep(3.2)
     log_path = ROOT / "data/screening_log.jsonl"
     screened = [__import__("json").loads(x) for x in log_path.read_text().splitlines() if x.strip()] if log_path.exists() else []
@@ -125,7 +189,7 @@ def main():
     write_json(ROOT / "data/version_observations.json", sorted(version_index.values(), key=lambda x: (x["id"], x["observed_version"])))
     state.update(last_attempt=timestamp, status="incomplete" if failures else "success", since=since,
                  pending_candidates=len(queue), newly_discovered=added, failures=failures,
-                 note="Automated arXiv discovery only. Search hits require primary-source screening before taxonomy inclusion.")
+                 note="Automated arXiv and DataCite discovery. DataCite dates are registry-update dates, not paper-version dates. Hits require primary-source screening.")
     if not failures:
         state["last_successful_scan"] = timestamp
     write_json(state_path, state)

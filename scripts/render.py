@@ -57,7 +57,7 @@ def build():
               "- [Search and inclusion protocol](docs/search-protocol.md)",
               "- [Maintenance instructions](CONTRIBUTING.md)", "",
               "## Weekly updates", "",
-              "GitHub Actions checks arXiv every Monday at **08:17 Asia/Shanghai** (00:17 UTC). It deduplicates discoveries, records version changes, and commits the candidate queue and search log. You can also run it from the Actions tab. The workflow uses no paid API or secret.", "",
+              "GitHub Actions checks arXiv and its DataCite DOI registry every Monday at **08:17 Asia/Shanghai** (00:17 UTC). It deduplicates discoveries, records version changes, and commits the candidate queue and search log. You can also run it from the Actions tab. The workflow uses no paid API or secret.", "",
               "A separate weekly curator review is configured in the maintainer's Codex chat. Primary-source screening is required before a candidate enters the curated taxonomy. The hosted discovery job works independently of the maintainer's computer; the curator run requires its configured host to be available.", "",
               "A successful empty search is reported as such. Failed or truncated searches are recorded as incomplete and do not advance the last-success timestamp. Scheduled GitHub runs can be delayed, and GitHub may disable schedules in inactive public repositories.", "",
               "## Bibliography and citation", "",
@@ -110,8 +110,9 @@ def build():
         ctext.append("No pending candidates have been recorded. Check the update status before interpreting this as an empty search.")
     for c in candidates:
         ctext += [f"## [{md(c['title'])}]({checked_url(c['url'])})", "",
-                  f"- arXiv: `{c['arxiv_id']}` / {c['version']}",
-                  f"- Updated: {md(c['updated'])}", f"- Screening status: {md(c.get('status', 'pending'))}",
+                  f"- arXiv: `{c['arxiv_id']}` / {c['version'] or 'version not recorded'}",
+                  f"- {'Metadata updated' if c.get('metadata_source') else 'Paper updated'}: {md(c['updated'])}",
+                  f"- Source: {md(c.get('metadata_source', 'arXiv API'))}", f"- Screening status: {md(c.get('status', 'pending'))}",
                   f"- Query families: {md(', '.join(c.get('queries', [])))}", "",
                   md(c.get("abstract", "")), ""]
     out["updates/candidates.md"] = "\n".join(ctext) + "\n"

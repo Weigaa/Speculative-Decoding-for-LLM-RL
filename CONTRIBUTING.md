@@ -29,7 +29,7 @@ The initial bibliography was imported, so metadata corrections are welcome. Dist
 
 ## Weekly hosted discovery
 
-The workflow `.github/workflows/weekly-update.yml` runs every Monday at 00:17 UTC (08:17 Asia/Shanghai) and on manual dispatch. It uses the automatically supplied GitHub token with repository-contents permission; no personal token or paid API key is required. It updates pending candidates, observed versions, and exact-query logs only. The semantic curator pass is a separate scheduled Codex task.
+The workflow `.github/workflows/weekly-update.yml` runs every Monday at 00:17 UTC (08:17 Asia/Shanghai) and on manual dispatch. It uses the automatically supplied GitHub token with repository-contents permission; no personal token or paid API key is required. It queries arXiv and the official DataCite arXiv DOI registry, then updates pending candidates, observed versions, and exact-query logs only. DataCite metadata-update dates are not paper-version dates. The semantic curator pass is a separate scheduled Codex task.
 
 If GitHub disables a public repository's schedule after inactivity, re-enable it in Actions. Scheduler latency and source outages are visible through workflow status and search logs. Failure must never be reported as a successful empty search.
 
