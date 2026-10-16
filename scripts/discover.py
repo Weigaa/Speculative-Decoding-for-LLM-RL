@@ -4,6 +4,7 @@ from datetime import datetime, timedelta, timezone
 import time
 from urllib.parse import urlencode
 from urllib.request import Request, urlopen
+from urllib.error import HTTPError
 from library import ROOT, read_json, write_json, parse_atom, identities
 
 
@@ -17,10 +18,16 @@ def fetch(url):
             req = Request(url, headers={"User-Agent": "SpeculativeRolloutSurvey/1.0 (public scholarly metadata index)"})
             with urlopen(req, timeout=40) as response:
                 return response.read()
-        except Exception:
+        except Exception as exc:
             if attempt == 2:
                 raise
-            time.sleep(4 * (attempt + 1))
+            delay = 4 * (attempt + 1)
+            if isinstance(exc, HTTPError) and exc.code == 429:
+                retry_after = exc.headers.get("Retry-After", "") if exc.headers else ""
+                if retry_after.isdigit() and int(retry_after) > 60:
+                    raise  # Do not violate a long server-directed cooldown.
+                delay = max(int(retry_after) if retry_after.isdigit() else 12, 12 * (attempt + 1))
+            time.sleep(delay)
 
 
 def merge_hits(hits, papers, queue, screening_log):
@@ -117,7 +124,8 @@ def main():
     write_json(ROOT / "data/inbox.json", queue)
     write_json(ROOT / "data/version_observations.json", sorted(version_index.values(), key=lambda x: (x["id"], x["observed_version"])))
     state.update(last_attempt=timestamp, status="incomplete" if failures else "success", since=since,
-                 pending_candidates=len(queue), newly_discovered=added, failures=failures)
+                 pending_candidates=len(queue), newly_discovered=added, failures=failures,
+                 note="Automated arXiv discovery only. Search hits require primary-source screening before taxonomy inclusion.")
     if not failures:
         state["last_successful_scan"] = timestamp
     write_json(state_path, state)

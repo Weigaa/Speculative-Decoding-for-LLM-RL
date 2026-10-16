@@ -111,6 +111,8 @@ def parse_bibtex(s):
 def parse_atom(xml):
     import xml.etree.ElementTree as ET
     root = ET.fromstring(xml)
+    if root.tag != "{http://www.w3.org/2005/Atom}feed":
+        raise ValueError("Expected an Atom feed, not a proxy or HTML error page")
     result = []
     for entry in root.findall("a:entry", ATOM):
         get = lambda name: " ".join((entry.findtext("a:" + name, default="", namespaces=ATOM)).split())

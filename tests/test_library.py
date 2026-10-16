@@ -1,9 +1,13 @@
 import sys
 import unittest
+import tempfile
+import json
+from unittest.mock import patch
 from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
 from library import identities, parse_atom, parse_bibtex, title_identity
 from discover import merge_hits
+import discover
 
 
 class LibraryTests(unittest.TestCase):
@@ -37,6 +41,25 @@ class LibraryTests(unittest.TestCase):
     def test_atom_error_is_not_empty_search(self):
         with self.assertRaises(ValueError):
             parse_atom('<feed xmlns="http://www.w3.org/2005/Atom"><entry><id>http://arxiv.org/api/errors</id></entry></feed>')
+
+    def test_html_is_not_a_successful_empty_feed(self):
+        with self.assertRaises(ValueError):
+            parse_atom('<html><body>Too many requests</body></html>')
+
+    def test_failed_search_preserves_last_successful_watermark(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            (root / "data").mkdir()
+            for name, value in {"papers": [], "inbox": [], "version_observations": [],
+                                "search_queries": {"families": [{"id": "test", "query": "all:speculative"}]},
+                                "update_state": {"last_successful_scan": "2026-10-01T00:00:00Z"}}.items():
+                (root / f"data/{name}.json").write_text(json.dumps(value))
+            with patch.object(discover, "ROOT", root), patch.object(discover, "fetch", side_effect=TimeoutError("source unavailable")), patch.object(discover.time, "sleep"), patch.object(sys, "argv", ["discover"]):
+                with self.assertRaises(SystemExit):
+                    discover.main()
+            state = json.loads((root / "data/update_state.json").read_text())
+            self.assertEqual(state["last_successful_scan"], "2026-10-01T00:00:00Z")
+            self.assertEqual(state["status"], "incomplete")
 
 
 if __name__ == "__main__":
