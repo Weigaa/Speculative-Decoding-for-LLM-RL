@@ -1,0 +1,131 @@
+{
+  "timestamp": "2026-10-16T02:43:11Z",
+  "since": "2026-10-02T02:26:56Z",
+  "status": "incomplete",
+  "queries": [
+    {
+      "family": "primary-sampling-rl",
+      "query": "(all:\"speculative decoding\" OR all:\"speculative sampling\" OR all:\"self-speculative decoding\") AND (all:\"reinforcement learning\" OR all:RLHF OR all:RLVR OR all:GRPO OR all:rollout)",
+      "since": "2026-10-02T02:26:56Z",
+      "urls": [
+        "https://export.arxiv.org/api/query?search_query=%28all%3A%22speculative+decoding%22+OR+all%3A%22speculative+sampling%22+OR+all%3A%22self-speculative+decoding%22%29+AND+%28all%3A%22reinforcement+learning%22+OR+all%3ARLHF+OR+all%3ARLVR+OR+all%3AGRPO+OR+all%3Arollout%29&start=0&max_results=100&sortBy=lastUpdatedDate&sortOrder=descending"
+      ],
+      "records": 0,
+      "status": "incomplete",
+      "error": "TimeoutError: The read operation timed out"
+    },
+    {
+      "family": "primary-draft-posttraining",
+      "query": "(all:\"draft model\" OR all:\"draft-and-verify\" OR all:\"multi-token prediction\") AND (all:\"post-training\" OR all:\"reinforcement learning\" OR all:rollout OR all:\"agentic RL\")",
+      "since": "2026-10-02T02:26:56Z",
+      "urls": [
+        "https://export.arxiv.org/api/query?search_query=%28all%3A%22draft+model%22+OR+all%3A%22draft-and-verify%22+OR+all%3A%22multi-token+prediction%22%29+AND+%28all%3A%22post-training%22+OR+all%3A%22reinforcement+learning%22+OR+all%3Arollout+OR+all%3A%22agentic+RL%22%29&start=0&max_results=100&sortBy=lastUpdatedDate&sortOrder=descending"
+      ],
+      "records": 0,
+      "status": "incomplete",
+      "error": "HTTPError: HTTP Error 429: Unknown Error"
+    },
+    {
+      "family": "secondary-tail-load",
+      "query": "(all:\"speculative decoding\" OR all:\"speculative sampling\") AND (all:\"long-tail\" OR all:concurrency OR all:\"active batch\" OR all:\"load-aware\" OR all:scheduling)",
+      "since": "2026-10-02T02:26:56Z",
+      "urls": [],
+      "records": 0,
+      "status": "incomplete",
+      "error": "RuntimeError: Not attempted: arXiv requested cooldown earlier in this run"
+    },
+    {
+      "family": "secondary-reuse",
+      "query": "(all:speculative) AND (all:\"trajectory reuse\" OR all:\"prefix reuse\" OR all:\"suffix reuse\" OR all:\"tree cache\" OR all:retrieval)",
+      "since": "2026-10-02T02:26:56Z",
+      "urls": [],
+      "records": 0,
+      "status": "incomplete",
+      "error": "RuntimeError: Not attempted: arXiv requested cooldown earlier in this run"
+    },
+    {
+      "family": "secondary-policy-adaptation",
+      "query": "(all:speculative OR all:drafter) AND (all:\"online drafter\" OR all:\"policy drift\" OR all:staleness OR all:\"on-policy distillation\" OR all:\"co-training\")",
+      "since": "2026-10-02T02:26:56Z",
+      "urls": [],
+      "records": 0,
+      "status": "incomplete",
+      "error": "RuntimeError: Not attempted: arXiv requested cooldown earlier in this run"
+    },
+    {
+      "family": "secondary-verification-parallel",
+      "query": "(all:\"speculative decoding\" OR all:drafter) AND (all:\"adaptive verification\" OR all:\"parallel drafting\" OR all:\"block diffusion\" OR all:\"multi-token prediction\")",
+      "since": "2026-10-02T02:26:56Z",
+      "urls": [],
+      "records": 0,
+      "status": "incomplete",
+      "error": "RuntimeError: Not attempted: arXiv requested cooldown earlier in this run"
+    },
+    {
+      "family": "datacite-primary-sampling-rl",
+      "source": "DataCite arXiv DOI registry",
+      "query": "((\"speculative decoding\" OR \"speculative sampling\" OR \"self-speculative decoding\") AND (\"reinforcement learning\" OR RLHF OR RLVR OR GRPO OR rollout)) AND updated:[2026-10-02T02:26:56Z TO *]",
+      "since": "2026-10-02T02:26:56Z",
+      "urls": [
+        "https://api.datacite.org/dois?query=%28%28%22speculative+decoding%22+OR+%22speculative+sampling%22+OR+%22self-speculative+decoding%22%29+AND+%28%22reinforcement+learning%22+OR+RLHF+OR+RLVR+OR+GRPO+OR+rollout%29%29+AND+updated%3A%5B2026-10-02T02%3A26%3A56Z+TO+%2A%5D&prefix=10.48550&sort=-updated&page%5Bsize%5D=100&page%5Bnumber%5D=1"
+      ],
+      "records": 4,
+      "status": "success"
+    },
+    {
+      "family": "datacite-primary-draft-posttraining",
+      "source": "DataCite arXiv DOI registry",
+      "query": "((\"draft model\" OR \"draft-and-verify\" OR \"multi-token prediction\") AND (\"post-training\" OR \"reinforcement learning\" OR rollout OR \"agentic RL\")) AND updated:[2026-10-02T02:26:56Z TO *]",
+      "since": "2026-10-02T02:26:56Z",
+      "urls": [
+        "https://api.datacite.org/dois?query=%28%28%22draft+model%22+OR+%22draft-and-verify%22+OR+%22multi-token+prediction%22%29+AND+%28%22post-training%22+OR+%22reinforcement+learning%22+OR+rollout+OR+%22agentic+RL%22%29%29+AND+updated%3A%5B2026-10-02T02%3A26%3A56Z+TO+%2A%5D&prefix=10.48550&sort=-updated&page%5Bsize%5D=100&page%5Bnumber%5D=1"
+      ],
+      "records": 5,
+      "status": "success"
+    },
+    {
+      "family": "datacite-secondary-tail-load",
+      "source": "DataCite arXiv DOI registry",
+      "query": "((\"speculative decoding\" OR \"speculative sampling\") AND (\"long-tail\" OR concurrency OR \"active batch\" OR \"load-aware\" OR scheduling)) AND updated:[2026-10-02T02:26:56Z TO *]",
+      "since": "2026-10-02T02:26:56Z",
+      "urls": [
+        "https://api.datacite.org/dois?query=%28%28%22speculative+decoding%22+OR+%22speculative+sampling%22%29+AND+%28%22long-tail%22+OR+concurrency+OR+%22active+batch%22+OR+%22load-aware%22+OR+scheduling%29%29+AND+updated%3A%5B2026-10-02T02%3A26%3A56Z+TO+%2A%5D&prefix=10.48550&sort=-updated&page%5Bsize%5D=100&page%5Bnumber%5D=1"
+      ],
+      "records": 4,
+      "status": "success"
+    },
+    {
+      "family": "datacite-secondary-reuse",
+      "source": "DataCite arXiv DOI registry",
+      "query": "((speculative) AND (\"trajectory reuse\" OR \"prefix reuse\" OR \"suffix reuse\" OR \"tree cache\" OR retrieval)) AND updated:[2026-10-02T02:26:56Z TO *]",
+      "since": "2026-10-02T02:26:56Z",
+      "urls": [
+        "https://api.datacite.org/dois?query=%28%28speculative%29+AND+%28%22trajectory+reuse%22+OR+%22prefix+reuse%22+OR+%22suffix+reuse%22+OR+%22tree+cache%22+OR+retrieval%29%29+AND+updated%3A%5B2026-10-02T02%3A26%3A56Z+TO+%2A%5D&prefix=10.48550&sort=-updated&page%5Bsize%5D=100&page%5Bnumber%5D=1"
+      ],
+      "records": 6,
+      "status": "success"
+    },
+    {
+      "family": "datacite-secondary-policy-adaptation",
+      "source": "DataCite arXiv DOI registry",
+      "query": "((speculative OR drafter) AND (\"online drafter\" OR \"policy drift\" OR staleness OR \"on-policy distillation\" OR \"co-training\")) AND updated:[2026-10-02T02:26:56Z TO *]",
+      "since": "2026-10-02T02:26:56Z",
+      "urls": [
+        "https://api.datacite.org/dois?query=%28%28speculative+OR+drafter%29+AND+%28%22online+drafter%22+OR+%22policy+drift%22+OR+staleness+OR+%22on-policy+distillation%22+OR+%22co-training%22%29%29+AND+updated%3A%5B2026-10-02T02%3A26%3A56Z+TO+%2A%5D&prefix=10.48550&sort=-updated&page%5Bsize%5D=100&page%5Bnumber%5D=1"
+      ],
+      "records": 1,
+      "status": "success"
+    },
+    {
+      "family": "datacite-secondary-verification-parallel",
+      "source": "DataCite arXiv DOI registry",
+      "query": "((\"speculative decoding\" OR drafter) AND (\"adaptive verification\" OR \"parallel drafting\" OR \"block diffusion\" OR \"multi-token prediction\")) AND updated:[2026-10-02T02:26:56Z TO *]",
+      "since": "2026-10-02T02:26:56Z",
+      "urls": [
+        "https://api.datacite.org/dois?query=%28%28%22speculative+decoding%22+OR+drafter%29+AND+%28%22adaptive+verification%22+OR+%22parallel+drafting%22+OR+%22block+diffusion%22+OR+%22multi-token+prediction%22%29%29+AND+updated%3A%5B2026-10-02T02%3A26%3A56Z+TO+%2A%5D&prefix=10.48550&sort=-updated&page%5Bsize%5D=100&page%5Bnumber%5D=1"
+      ],
+      "records": 11,
+      "status": "success"
+    }
+  ]
+}
