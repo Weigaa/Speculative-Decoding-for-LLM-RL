@@ -33,6 +33,7 @@ Direct RL evidence. Exact and lenient acceptance settings must be distinguished.
 - Evidence pointer: Manuscript synthesis; individual source locations not yet indexed.
 - Source publication date: 2025-09-27T10:32:34Z
 - Released code: not recorded (not a claim of non-availability)
+- Artifact checks: not independently checked in this library
 
 ## BibTeX
 

@@ -93,6 +93,7 @@ def build():
                  f"- Metadata provenance: {p['metadata_provenance']}", f"- Evidence pointer: {p.get('evidence_pointer') or 'Manuscript synthesis; individual source locations not yet indexed.'}",
                  f"- Source publication date: {p.get('published') or 'not recorded'}",
                  "- Released code: " + (", ".join(f"[official artifact]({checked_url(u)})" for u in p.get("code_urls", [])) or "not recorded (not a claim of non-availability)"),
+                 "- Artifact checks: " + ("; ".join(f"{md(a['status'])} on {a['checked_at']}" + (f", revision `{a['head_sha']}`" if a.get('head_sha') else "") for a in p.get("code_artifacts", [])) or "not independently checked in this library"),
                  "", "## BibTeX", "", "```bibtex", p["bibtex"], "```", "", "[Back to all records](../docs/all-papers.md)"]
         out[f"papers/{p['id']}.md"] = "\n".join(lines) + "\n"
         all_lines.append(f"| `{p['id']}` | [{md(p['title'])}](../papers/{p['id']}.md) | {p['role']} |")

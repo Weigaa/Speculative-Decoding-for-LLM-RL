@@ -30,6 +30,7 @@ Outside the core taxonomy.
 - Evidence pointer: Manuscript synthesis; individual source locations not yet indexed.
 - Source publication date: 2026-04-26T14:49:33Z
 - Released code: not recorded (not a claim of non-availability)
+- Artifact checks: not independently checked in this library
 
 ## BibTeX
 

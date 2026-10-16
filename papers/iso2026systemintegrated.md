@@ -33,6 +33,7 @@ Direct RL evidence. Separate directly measured configurations from larger-scale 
 - Evidence pointer: Manuscript synthesis; individual source locations not yet indexed.
 - Source publication date: 2026-04-29T15:11:48Z
 - Released code: not recorded (not a claim of non-availability)
+- Artifact checks: not independently checked in this library
 
 ## BibTeX
 

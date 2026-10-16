@@ -33,6 +33,7 @@ Direct RL evidence. Generation load, long prefixes, and cache-aware execution de
 - Evidence pointer: Manuscript synthesis; individual source locations not yet indexed.
 - Source publication date: 2026-07-19T15:31:13Z
 - Released code: not recorded (not a claim of non-availability)
+- Artifact checks: not independently checked in this library
 
 ## BibTeX
 

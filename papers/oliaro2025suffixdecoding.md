@@ -31,6 +31,7 @@ Serving-origin evidence. RL transfer needs rollout-level evaluation of recurrenc
 - Evidence pointer: Manuscript synthesis; individual source locations not yet indexed.
 - Source publication date: not recorded
 - Released code: [official artifact](https://github.com/snowflakedb/ArcticInference)
+- Artifact checks: public_repository_checked on 2026-10-16, revision `aca5d9a8a62474035c15d114d40a01abc8c94b51`
 
 ## BibTeX
 

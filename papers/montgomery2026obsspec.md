@@ -30,6 +30,7 @@ Outside the core taxonomy.
 - Evidence pointer: Section 3 and Appendix C
 - Source publication date: 2026-10-11T00:40:33Z
 - Released code: not recorded (not a claim of non-availability)
+- Artifact checks: not independently checked in this library
 
 ## BibTeX
 

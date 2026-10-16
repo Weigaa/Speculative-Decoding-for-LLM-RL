@@ -30,6 +30,7 @@ Direct RL evidence. Pre-RL head training can reduce continual updates in the rep
 - Evidence pointer: Manuscript synthesis; individual source locations not yet indexed.
 - Source publication date: 2026-06-10T17:36:45Z
 - Released code: not recorded (not a claim of non-availability)
+- Artifact checks: not independently checked in this library
 
 ## BibTeX
 

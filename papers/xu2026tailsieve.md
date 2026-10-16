@@ -31,6 +31,7 @@ Direct RL evidence. Account for routing, migration, and replica reallocation whe
 - Evidence pointer: Manuscript synthesis; individual source locations not yet indexed.
 - Source publication date: 2026-08-24T04:18:09Z
 - Released code: not recorded (not a claim of non-availability)
+- Artifact checks: not independently checked in this library
 
 ## BibTeX
 

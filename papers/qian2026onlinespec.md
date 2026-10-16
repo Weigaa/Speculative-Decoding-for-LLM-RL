@@ -31,6 +31,7 @@ Serving-origin evidence. Adaptation frequency, training resources, and actor-rol
 - Evidence pointer: Manuscript synthesis; individual source locations not yet indexed.
 - Source publication date: not recorded
 - Released code: not recorded (not a claim of non-availability)
+- Artifact checks: not independently checked in this library
 
 ## BibTeX
 

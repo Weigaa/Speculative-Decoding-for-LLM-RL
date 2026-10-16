@@ -30,6 +30,7 @@ Serving / inference evaluation, not direct RL training evidence. Claims remain t
 - Evidence pointer: Section 3 and experiments
 - Source publication date: 2026-09-21T06:02:51Z
 - Released code: not recorded (not a claim of non-availability)
+- Artifact checks: not independently checked in this library
 
 ## BibTeX
 

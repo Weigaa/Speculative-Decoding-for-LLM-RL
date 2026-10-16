@@ -30,6 +30,7 @@ Serving / inference evaluation, not direct RL training evidence. Claims remain t
 - Evidence pointer: Sections 3–4 and theoretical analysis
 - Source publication date: 2026-09-18T14:28:28Z
 - Released code: not recorded (not a claim of non-availability)
+- Artifact checks: not independently checked in this library
 
 ## BibTeX
 

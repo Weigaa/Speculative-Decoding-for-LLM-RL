@@ -32,6 +32,7 @@ Direct RL evidence. Distinguish trajectory-local correction, parameter updates, 
 - Evidence pointer: Manuscript synthesis; individual source locations not yet indexed.
 - Source publication date: 2026-08-05T15:32:27Z
 - Released code: not recorded (not a claim of non-availability)
+- Artifact checks: not independently checked in this library
 
 ## BibTeX
 

@@ -579,7 +579,17 @@
       "https://github.com/furiosa-ai/EfficientRollout"
     ],
     "manuscript_cited": true,
-    "bibtex": "@article{kim2026efficientrollout,\n  author  = {Minseo Kim and Minjae Lee and Seunghyuk Oh and Kevin Galim and\n             Donghoon Kim and Coleman Hooper and Harman Singh and\n             Amir Gholami and Hyung Il Koo and Wonjun Kang},\n  title   = {{EfficientRollout}: System-Aware Self-Speculative Decoding for\n             {RL} Rollouts},\n  journal = {arXiv preprint arXiv:2606.18967},\n  year    = {2026},\n  doi     = {10.48550/arXiv.2606.18967}\n}"
+    "bibtex": "@article{kim2026efficientrollout,\n  author  = {Minseo Kim and Minjae Lee and Seunghyuk Oh and Kevin Galim and\n             Donghoon Kim and Coleman Hooper and Harman Singh and\n             Amir Gholami and Hyung Il Koo and Wonjun Kang},\n  title   = {{EfficientRollout}: System-Aware Self-Speculative Decoding for\n             {RL} Rollouts},\n  journal = {arXiv preprint arXiv:2606.18967},\n  year    = {2026},\n  doi     = {10.48550/arXiv.2606.18967}\n}",
+    "code_artifacts": [
+      {
+        "url": "https://github.com/furiosa-ai/EfficientRollout",
+        "status": "public_repository_checked",
+        "checked_at": "2026-10-16",
+        "archived": false,
+        "default_branch": "main",
+        "head_sha": "3191d383523797f1adc0136d4907f5c97026519f"
+      }
+    ]
   },
   {
     "id": "xu2026bubblespec",
@@ -1228,7 +1238,17 @@
       "https://github.com/mit-han-lab/fastrl"
     ],
     "manuscript_cited": true,
-    "bibtex": "@inproceedings{hu2026tlt,\n  author    = {Qinghao Hu and Shang Yang and Junxian Guo and Xiaozhe Yao and Yujun Lin and Yuxian Gu and Han Cai and Chuang Gan and Ana Klimovic and Song Han},\n  title     = {Taming the Long-Tail: Efficient Reasoning RL Training with Adaptive Drafter},\n  booktitle = {Proceedings of the 31st ACM International Conference on Architectural Support for Programming Languages and Operating Systems},\n  year      = {2026}\n}"
+    "bibtex": "@inproceedings{hu2026tlt,\n  author    = {Qinghao Hu and Shang Yang and Junxian Guo and Xiaozhe Yao and Yujun Lin and Yuxian Gu and Han Cai and Chuang Gan and Ana Klimovic and Song Han},\n  title     = {Taming the Long-Tail: Efficient Reasoning RL Training with Adaptive Drafter},\n  booktitle = {Proceedings of the 31st ACM International Conference on Architectural Support for Programming Languages and Operating Systems},\n  year      = {2026}\n}",
+    "code_artifacts": [
+      {
+        "url": "https://github.com/mit-han-lab/fastrl",
+        "status": "public_repository_checked",
+        "checked_at": "2026-10-16",
+        "archived": false,
+        "default_branch": "main",
+        "head_sha": "bce3df7a4d46473912e9b81bf47bca419729557f"
+      }
+    ]
   },
   {
     "id": "qin2026seer",
@@ -1364,7 +1384,17 @@
       "https://github.com/SafeAILab/EAGLE"
     ],
     "manuscript_cited": true,
-    "bibtex": "@inproceedings{li2025eagle3,\n  author    = {Yuhui Li and Fangyun Wei and Chao Zhang and Hongyang Zhang},\n  title     = {EAGLE-3: Scaling up Inference Acceleration of Large Language Models via Training-Time Test},\n  booktitle = {Advances in Neural Information Processing Systems},\n  year      = {2025}\n}"
+    "bibtex": "@inproceedings{li2025eagle3,\n  author    = {Yuhui Li and Fangyun Wei and Chao Zhang and Hongyang Zhang},\n  title     = {EAGLE-3: Scaling up Inference Acceleration of Large Language Models via Training-Time Test},\n  booktitle = {Advances in Neural Information Processing Systems},\n  year      = {2025}\n}",
+    "code_artifacts": [
+      {
+        "url": "https://github.com/SafeAILab/EAGLE",
+        "status": "public_repository_checked",
+        "checked_at": "2026-10-16",
+        "archived": false,
+        "default_branch": "main",
+        "head_sha": "cb7e0841fe0c206c6ed74a197ad5e2a1f13f5a2b"
+      }
+    ]
   },
   {
     "id": "chen2026dflash",
@@ -1443,7 +1473,17 @@
       "https://github.com/snowflakedb/ArcticInference"
     ],
     "manuscript_cited": true,
-    "bibtex": "@inproceedings{oliaro2025suffixdecoding,\n  author    = {Gabriele Oliaro and Zhihao Jia and Daniel F. Campos and Aurick Qiao},\n  title     = {SuffixDecoding: Extreme Speculative Decoding for Emerging AI Applications},\n  booktitle = {Advances in Neural Information Processing Systems},\n  year      = {2025}\n}"
+    "bibtex": "@inproceedings{oliaro2025suffixdecoding,\n  author    = {Gabriele Oliaro and Zhihao Jia and Daniel F. Campos and Aurick Qiao},\n  title     = {SuffixDecoding: Extreme Speculative Decoding for Emerging AI Applications},\n  booktitle = {Advances in Neural Information Processing Systems},\n  year      = {2025}\n}",
+    "code_artifacts": [
+      {
+        "url": "https://github.com/snowflakedb/ArcticInference",
+        "status": "public_repository_checked",
+        "checked_at": "2026-10-16",
+        "archived": false,
+        "default_branch": "main",
+        "head_sha": "aca5d9a8a62474035c15d114d40a01abc8c94b51"
+      }
+    ]
   },
   {
     "id": "he2024rest",
@@ -2419,7 +2459,17 @@
       "https://github.com/mlsys-seo/spexis"
     ],
     "manuscript_cited": true,
-    "bibtex": "@article{jung2026spexis,\n  author  = {Hyungyu Jung and Jaehyeok Yu and Hoonseo Choi and Sungkyun Kim and Jinho Lee and Jiwon Seo},\n  title   = {Spexis: Speculative Lookahead Scheduling for {LLM} Inference},\n  journal = {arXiv preprint arXiv:2609.34370},\n  year    = {2026},\n  doi     = {10.48550/arXiv.2609.34370}\n}"
+    "bibtex": "@article{jung2026spexis,\n  author  = {Hyungyu Jung and Jaehyeok Yu and Hoonseo Choi and Sungkyun Kim and Jinho Lee and Jiwon Seo},\n  title   = {Spexis: Speculative Lookahead Scheduling for {LLM} Inference},\n  journal = {arXiv preprint arXiv:2609.34370},\n  year    = {2026},\n  doi     = {10.48550/arXiv.2609.34370}\n}",
+    "code_artifacts": [
+      {
+        "url": "https://github.com/mlsys-seo/spexis",
+        "status": "public_repository_checked",
+        "checked_at": "2026-10-16",
+        "archived": false,
+        "default_branch": "main",
+        "head_sha": "038c3b9f666dd96989f7c66d5b7cb1236a5a4664"
+      }
+    ]
   },
   {
     "id": "dai2026tlar",

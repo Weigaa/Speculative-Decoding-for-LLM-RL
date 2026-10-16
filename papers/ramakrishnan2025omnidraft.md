@@ -30,6 +30,7 @@ Serving-origin evidence. Online adaptation during serving does not demonstrate e
 - Evidence pointer: Manuscript synthesis; individual source locations not yet indexed.
 - Source publication date: not recorded
 - Released code: not recorded (not a claim of non-availability)
+- Artifact checks: not independently checked in this library
 
 ## BibTeX
 

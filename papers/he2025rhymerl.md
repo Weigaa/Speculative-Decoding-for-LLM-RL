@@ -32,6 +32,7 @@ Direct RL evidence. Report history reuse and verification semantics for the part
 - Evidence pointer: Manuscript synthesis; individual source locations not yet indexed.
 - Source publication date: 2025-08-26T01:42:46Z
 - Released code: not recorded (not a claim of non-availability)
+- Artifact checks: not independently checked in this library
 
 ## BibTeX
 

@@ -31,6 +31,7 @@ Serving-origin evidence. Confidence, calibration, and engine load are method-spe
 - Evidence pointer: Manuscript synthesis; individual source locations not yet indexed.
 - Source publication date: 2026-07-06T14:28:06Z
 - Released code: not recorded (not a claim of non-availability)
+- Artifact checks: not independently checked in this library
 
 ## BibTeX
 

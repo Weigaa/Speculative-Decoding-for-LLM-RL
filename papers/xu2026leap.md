@@ -30,6 +30,7 @@ Outside the core taxonomy.
 - Evidence pointer: Sections 3–4
 - Source publication date: not recorded
 - Released code: not recorded (not a claim of non-availability)
+- Artifact checks: not independently checked in this library
 
 ## BibTeX
 

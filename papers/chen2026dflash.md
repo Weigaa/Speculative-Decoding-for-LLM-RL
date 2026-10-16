@@ -30,6 +30,7 @@ Serving-origin evidence. Parallel proposal generation is not itself a verificati
 - Evidence pointer: Manuscript synthesis; individual source locations not yet indexed.
 - Source publication date: 2026-02-05T18:59:30Z
 - Released code: not recorded (not a claim of non-availability)
+- Artifact checks: not independently checked in this library
 
 ## BibTeX
 

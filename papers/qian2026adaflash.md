@@ -31,6 +31,7 @@ Serving-origin evidence. Evaluate parallel draft compute and verification under 
 - Evidence pointer: Manuscript synthesis; individual source locations not yet indexed.
 - Source publication date: 2026-07-21T15:52:50Z
 - Released code: not recorded (not a claim of non-availability)
+- Artifact checks: not independently checked in this library
 
 ## BibTeX
 

@@ -31,6 +31,7 @@ Direct RL evidence in a broader foundation-model technical report. Do not attrib
 - Evidence pointer: Manuscript synthesis; individual source locations not yet indexed.
 - Source publication date: 2026-08-13T17:31:28Z
 - Released code: not recorded (not a claim of non-availability)
+- Artifact checks: not independently checked in this library
 
 ## BibTeX
 

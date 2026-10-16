@@ -33,6 +33,7 @@ Direct evaluation in RL rollout or training. Claims remain tied to the source ev
 - Evidence pointer: Section 4.2, Table 1 and Section 4.3
 - Source publication date: 2026-09-15T05:09:12Z
 - Released code: not recorded (not a claim of non-availability)
+- Artifact checks: not independently checked in this library
 
 ## BibTeX
 

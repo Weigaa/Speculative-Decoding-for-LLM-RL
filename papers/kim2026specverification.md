@@ -30,6 +30,7 @@ Serving-origin evidence. Predictor overhead and load-dependent verification bene
 - Evidence pointer: Manuscript synthesis; individual source locations not yet indexed.
 - Source publication date: not recorded
 - Released code: not recorded (not a claim of non-availability)
+- Artifact checks: not independently checked in this library
 
 ## BibTeX
 

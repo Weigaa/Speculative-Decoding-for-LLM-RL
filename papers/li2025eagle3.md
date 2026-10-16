@@ -32,6 +32,7 @@ Serving-origin evidence. An external learned drafter trained for a fixed target 
 - Evidence pointer: Manuscript synthesis; individual source locations not yet indexed.
 - Source publication date: not recorded
 - Released code: [official artifact](https://github.com/SafeAILab/EAGLE)
+- Artifact checks: public_repository_checked on 2026-10-16, revision `cb7e0841fe0c206c6ed74a197ad5e2a1f13f5a2b`
 
 ## BibTeX
 

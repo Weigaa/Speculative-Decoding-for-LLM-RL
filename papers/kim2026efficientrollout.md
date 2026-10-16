@@ -33,6 +33,7 @@ Direct RL evidence. The September 30 v2 reports latency reductions up to 24.2% f
 - Evidence pointer: Manuscript synthesis; individual source locations not yet indexed.
 - Source publication date: 2026-06-17T11:51:06Z
 - Released code: [official artifact](https://github.com/furiosa-ai/EfficientRollout)
+- Artifact checks: public_repository_checked on 2026-10-16, revision `3191d383523797f1adc0136d4907f5c97026519f`
 
 ## BibTeX
 

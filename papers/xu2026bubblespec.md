@@ -32,6 +32,7 @@ Direct RL evidence. Idle-resource use depends on the synchronous execution regim
 - Evidence pointer: Manuscript synthesis; individual source locations not yet indexed.
 - Source publication date: 2026-05-09T10:21:38Z
 - Released code: not recorded (not a claim of non-availability)
+- Artifact checks: not independently checked in this library
 
 ## BibTeX
 

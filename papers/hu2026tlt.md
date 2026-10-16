@@ -33,6 +33,7 @@ Direct RL evidence. Report exposed maintenance cost separately from maintenance 
 - Evidence pointer: Manuscript synthesis; individual source locations not yet indexed.
 - Source publication date: not recorded
 - Released code: [official artifact](https://github.com/mit-han-lab/fastrl)
+- Artifact checks: public_repository_checked on 2026-10-16, revision `bce3df7a4d46473912e9b81bf47bca419729557f`
 
 ## BibTeX
 

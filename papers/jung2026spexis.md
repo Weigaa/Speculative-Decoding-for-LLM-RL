@@ -31,6 +31,7 @@ Serving / inference evaluation, not direct RL training evidence. Claims remain t
 - Evidence pointer: Sections 3–5
 - Source publication date: 2026-09-28T05:46:02Z
 - Released code: [official artifact](https://github.com/mlsys-seo/spexis)
+- Artifact checks: public_repository_checked on 2026-10-16, revision `038c3b9f666dd96989f7c66d5b7cb1236a5a4664`
 
 ## BibTeX
 
