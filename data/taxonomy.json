@@ -1,0 +1,73 @@
+[
+  {
+    "title": "Workload-Aware Speculation",
+    "path": "taxonomy/workload-aware",
+    "description": "The workload determines when speculation is useful and which reusable proposals exist.",
+    "dimensions": [
+      {
+        "id": "closed-batch-tail",
+        "title": "Closed-Batch Tail",
+        "description": "Closed rollout batches expose a tail once the prescribed pending queue can no longer replenish active requests."
+      },
+      {
+        "id": "workload-recurrence",
+        "title": "Workload Recurrence",
+        "description": "Recurring prompts and related continuations enable historical, tree, suffix, or retrieval-based proposals."
+      }
+    ]
+  },
+  {
+    "title": "Policy-Aware Speculation",
+    "path": "taxonomy/policy-aware",
+    "description": "Proposal efficiency, maintenance, and verification semantics are related but distinct.",
+    "dimensions": [
+      {
+        "id": "proposal-source",
+        "title": "Proposal Source",
+        "description": "Compare external, target-derived, MTP, and history-based proposal sources."
+      },
+      {
+        "id": "proposal-maintenance",
+        "title": "Proposal Maintenance",
+        "description": "Maintain proposal state under policy evolution using static, periodic, online, triggered, or target-coupled strategies."
+      },
+      {
+        "id": "verification-semantics",
+        "title": "Verification Semantics",
+        "description": "Separate stochastic distribution preservation, greedy equivalence, approximate acceptance, and training-policy freshness."
+      }
+    ]
+  },
+  {
+    "title": "System Co-Design",
+    "path": "taxonomy/system-co-design",
+    "description": "Scheduling, placement, state, and synchronization determine realized rollout and training benefit.",
+    "dimensions": [
+      {
+        "id": "scheduling-mode-selection",
+        "title": "Scheduling and Mode Selection",
+        "description": "Choose speculative execution modes and verification budgets under varying rollout load."
+      },
+      {
+        "id": "placement-idle-resources",
+        "title": "Placement and Idle Resources",
+        "description": "Place drafting and maintenance to account for idle capacity and exposed runtime cost."
+      },
+      {
+        "id": "memory-reuse-state",
+        "title": "Memory and Reuse State",
+        "description": "Manage historical indices, speculative cache state, KV residency, and state refresh."
+      },
+      {
+        "id": "synchronization-versioning",
+        "title": "Synchronization and Versioning",
+        "description": "Coordinate actor-rollout policy versions, proposal state, and distributed feature transport."
+      },
+      {
+        "id": "parallel-load-aware-drafting",
+        "title": "Parallel and Load-Aware Drafting",
+        "description": "Analyze parallel candidate generation, verification width, and load-dependent net benefit."
+      }
+    ]
+  }
+]

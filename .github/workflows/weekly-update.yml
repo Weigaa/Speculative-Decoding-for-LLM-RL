@@ -1,0 +1,46 @@
+name: Weekly literature discovery
+on:
+  schedule:
+    # Mondays, 08:17 Asia/Shanghai. Scheduling is best-effort.
+    - cron: '17 0 * * 1'
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: literature-discovery
+  cancel-in-progress: false
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          fetch-depth: 1
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with:
+          python-version: '3.12'
+      - name: Test discovery and deduplication
+        run: python -m unittest discover -s tests -v
+      - name: Search arXiv and record incomplete searches explicitly
+        id: discovery
+        continue-on-error: true
+        run: python scripts/discover.py
+      - name: Regenerate reading lists
+        run: python scripts/render.py
+      - name: Validate library
+        run: python scripts/validate.py
+      - name: Commit candidate queue, version observations, and search logs
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/inbox.json data/version_observations.json data/update_state.json updates/
+          if ! git diff --cached --quiet; then
+            git commit -m 'Update literature candidates and version observations'
+            git push origin HEAD:main
+          fi
+      - name: Fail visibly when discovery was incomplete
+        if: steps.discovery.outcome == 'failure'
+        run: exit 1

@@ -1,0 +1,29 @@
+{
+  "scope": "Token-level speculative generation for LLM RL, plus serving-origin mechanisms with a concrete transfer argument.",
+  "families": [
+    {
+      "id": "primary-sampling-rl",
+      "query": "(all:\"speculative decoding\" OR all:\"speculative sampling\" OR all:\"self-speculative decoding\") AND (all:\"reinforcement learning\" OR all:RLHF OR all:RLVR OR all:GRPO OR all:rollout)"
+    },
+    {
+      "id": "primary-draft-posttraining",
+      "query": "(all:\"draft model\" OR all:\"draft-and-verify\" OR all:\"multi-token prediction\") AND (all:\"post-training\" OR all:\"reinforcement learning\" OR all:rollout OR all:\"agentic RL\")"
+    },
+    {
+      "id": "secondary-tail-load",
+      "query": "(all:\"speculative decoding\" OR all:\"speculative sampling\") AND (all:\"long-tail\" OR all:concurrency OR all:\"active batch\" OR all:\"load-aware\" OR all:scheduling)"
+    },
+    {
+      "id": "secondary-reuse",
+      "query": "(all:speculative) AND (all:\"trajectory reuse\" OR all:\"prefix reuse\" OR all:\"suffix reuse\" OR all:\"tree cache\" OR all:retrieval)"
+    },
+    {
+      "id": "secondary-policy-adaptation",
+      "query": "(all:speculative OR all:drafter) AND (all:\"online drafter\" OR all:\"policy drift\" OR all:staleness OR all:\"on-policy distillation\" OR all:\"co-training\")"
+    },
+    {
+      "id": "secondary-verification-parallel",
+      "query": "(all:\"speculative decoding\" OR all:drafter) AND (all:\"adaptive verification\" OR all:\"parallel drafting\" OR all:\"block diffusion\" OR all:\"multi-token prediction\")"
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+cff-version: 1.2.0
+message: "Please cite this repository for the literature library. The companion survey manuscript is in preparation."
+type: dataset
+title: "Speculative Decoding for LLM Reinforcement Learning Literature Library"
+authors:
+  - family-names: Wei
+    given-names: Jia
+version: 1.0.0
+date-released: 2026-10-16
+url: "https://github.com/Weigaa/Speculative-Decoding-for-LLM-RL"
+license: MIT
+keywords:
+  - speculative decoding
+  - reinforcement learning
+  - rollout generation
+  - literature survey
