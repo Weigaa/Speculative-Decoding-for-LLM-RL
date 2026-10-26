@@ -17,3 +17,6 @@ Choose speculative execution modes and verification budgets under varying rollou
 | [ASPIRE](../../papers/ziashahabi2026aspire.md) | 2026 | Serving / inference — RL transfer potential | Manuscript core |
 | [DScale](../../papers/chen2026dscale.md) | 2026 | Serving / inference — RL transfer potential | Manuscript core |
 | [Spexis](../../papers/jung2026spexis.md) | 2026 | Serving / inference — RL transfer potential | Manuscript core |
+| [Adaptive DHiSparse](../../papers/alazhar2026adaptivedhisparse.md) | 2026 | Serving / inference — RL transfer potential | Post-cutoff screened addition |
+| [DLoop](../../papers/gu2026dloop.md) | 2026 | Serving / inference — RL transfer potential | Post-cutoff screened addition |
+| [ValuSpec](../../papers/he2026valuspec.md) | 2026 | Serving / inference — RL transfer potential | Post-cutoff screened addition |

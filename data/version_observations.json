@@ -4,6 +4,9 @@
     "reviewed_version": "v1",
     "observed_version": "v2",
     "url": "https://arxiv.org/abs/2608.04962v2",
-    "observed_at": "2026-10-14T04:53:03Z"
+    "observed_at": "2026-10-14T04:53:03Z",
+    "checked_at": "2026-10-26",
+    "curator_status": "material_change_reviewed_snapshot_preserved",
+    "curator_note": "SpecRoll v1 was renamed and substantially revised as SPARK v2 under the same arXiv ID. Method and authors changed. Keep one canonical study and retain v1 snapshot/BibTeX; manuscript reconciliation is recommended. The revision predates or coincides with the cutoff, not a new post-cutoff study."
   }
 ]

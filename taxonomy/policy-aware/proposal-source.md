@@ -27,3 +27,12 @@ Compare external, target-derived, MTP, and history-based proposal sources.
 | [TLAR](../../papers/dai2026tlar.md) | 2026 | Serving / inference — RL transfer potential | Manuscript core |
 | [AgSpec](../../papers/lee2026agspec.md) | 2026 | Serving / inference — RL transfer potential | Manuscript core |
 | [Post-training MTP heads](../../papers/badarayani2026posttrainingmtp.md) | 2026 | Serving / inference — RL transfer potential | Manuscript core |
+| [JetSpec++](../../papers/feng2026jetspecpp.md) | 2026 | Serving / inference — RL transfer potential | Post-cutoff screened addition |
+| [ReaDy](../../papers/sun2026ready.md) | 2026 | Serving / inference — RL transfer potential | Post-cutoff screened addition |
+| [FOLD](../../papers/li2026fold.md) | 2026 | Serving / inference — RL transfer potential | Post-cutoff screened addition |
+| [DCOCO](../../papers/eisenstadt2026dcoco.md) | 2026 | Serving / inference — RL transfer potential | Post-cutoff screened addition |
+| [DLoop](../../papers/gu2026dloop.md) | 2026 | Serving / inference — RL transfer potential | Post-cutoff screened addition |
+| [SchemaFill](../../papers/chen2026schemafill.md) | 2026 | Serving / inference — RL transfer potential | Post-cutoff screened addition |
+| [DominoTree](../../papers/lin2026dominotree.md) | 2026 | Serving / inference — RL transfer potential | Post-cutoff screened addition |
+| [RIFT](../../papers/tsur2026rift.md) | 2026 | Serving / inference — RL transfer potential | Post-cutoff screened addition |
+| [ReAnchor](../../papers/lee2026reanchor.md) | 2026 | Serving / inference — RL transfer potential | Post-cutoff screened addition |

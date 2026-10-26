@@ -115,3 +115,14 @@
 | `montgomery2026obsspec` | [ObsSpec: Accelerating Agentic Reinforcement Learning with Observation Speculation](../papers/montgomery2026obsspec.md) | contextual |
 | `surana2026generate` | [Generate, Filter, Control, Replay: A Comprehensive Survey of Rollout Strategies for LLM Reinforcement Learning](../papers/surana2026generate.md) | related_survey |
 | `gholipour2026rolloutefficiency` | [Rollout Efficiency in Reinforcement Learning for Reasoning Large Language Models: A Taxonomy and Future Directions](../papers/gholipour2026rolloutefficiency.md) | related_survey |
+| `feng2026jetspecpp` | [JetSpec++: Foresight Parallel Drafting with Self Refinements](../papers/feng2026jetspecpp.md) | post_cutoff |
+| `sun2026ready` | [ReaDy: Recurrent States as Dynamic Context for Speculative Drafting in Hybrid Linear Attention Large Language Models](../papers/sun2026ready.md) | post_cutoff |
+| `li2026fold` | [FOLD: Position-Free Far Memory with Local Order for Long-Context Speculative Decoding](../papers/li2026fold.md) | post_cutoff |
+| `alazhar2026adaptivedhisparse` | [Adaptive DHiSparse: Speculative Decoding over a Load-Adaptive KV Hierarchy](../papers/alazhar2026adaptivedhisparse.md) | post_cutoff |
+| `eisenstadt2026dcoco` | [Contextual Correction of Parallel Drafts for Speculative Decoding](../papers/eisenstadt2026dcoco.md) | post_cutoff |
+| `gu2026dloop` | [DLoop: Looped Speculative Decoding](../papers/gu2026dloop.md) | post_cutoff |
+| `chen2026schemafill` | [SchemaFill: Efficient LLM Tool Calling via Slot-Parallel Speculative Decoding](../papers/chen2026schemafill.md) | post_cutoff |
+| `lin2026dominotree` | [DominoTree: Conditional Tree-Structured Drafting with Domino for Speculative Decoding](../papers/lin2026dominotree.md) | post_cutoff |
+| `he2026valuspec` | [ValuSpec: Plug-and-Play Candidate Valuation before Target Verification for Tree-Based Speculative Decoding](../papers/he2026valuspec.md) | post_cutoff |
+| `tsur2026rift` | [RIFT: KV Cache Compression for Draft Models with Complementary Compressibility Training](../papers/tsur2026rift.md) | post_cutoff |
+| `lee2026reanchor` | [ReAnchor: Reusing Rejected Verifier States for Diffusion Drafting](../papers/lee2026reanchor.md) | post_cutoff |

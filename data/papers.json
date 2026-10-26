@@ -764,7 +764,7 @@
     "venue": "arXiv preprint arXiv:2608.04962",
     "doi": "10.48550/arXiv.2608.04962",
     "arxiv_id": "2608.04962",
-    "url": "https://arxiv.org/abs/2608.04962",
+    "url": "https://arxiv.org/abs/2608.04962v1",
     "reviewed_version": "v1",
     "published": "2026-08-05T15:32:27Z",
     "role": "core",
@@ -780,7 +780,20 @@
     "evidence_pointer": "",
     "code_urls": [],
     "manuscript_cited": true,
-    "bibtex": "@article{pham2026specroll,\n  author  = {Nhat Minh Pham and Duy Tung Doan and Thi Duyen Ngo and\n             Vinh Van Nguyen and Khac-Hoai Nam Bui},\n  title   = {{SpecRoll}: Fast-Slow Verifier-Feedback Adaptation for\n             Speculative Reinforcement Learning Rollouts},\n  journal = {arXiv preprint arXiv:2608.04962},\n  year    = {2026},\n  doi     = {10.48550/arXiv.2608.04962}\n}"
+    "bibtex": "@article{pham2026specroll,\n  author  = {Nhat Minh Pham and Duy Tung Doan and Thi Duyen Ngo and\n             Vinh Van Nguyen and Khac-Hoai Nam Bui},\n  title   = {{SpecRoll}: Fast-Slow Verifier-Feedback Adaptation for\n             Speculative Reinforcement Learning Rollouts},\n  journal = {arXiv preprint arXiv:2608.04962},\n  year    = {2026},\n  doi     = {10.48550/arXiv.2608.04962}\n}",
+    "version_notes": [
+      {
+        "version": "v2",
+        "title": "SPARK: Learning from Verification in Speculative GRPO Rollouts",
+        "authors": "Nhat Minh Pham and Duy Tung Doan and Quang Huy Phung and Thi Duyen Ngo and Vinh Van Nguyen and Khac-Hoai Nam Bui",
+        "url": "https://arxiv.org/abs/2608.04962v2",
+        "source_updated": "2026-10-14T04:53:03Z",
+        "checked_at": "2026-10-26",
+        "evidence_pointer": "Official arXiv v1/v2 submission history and full text; v2 Sections 3–4, ablations on correction sharing/reset and Appendix B.4.",
+        "summary": "The same arXiv study is now titled SPARK and has a revised author list. Its v2 description uses a low-rank logit correction shared among responses to the same prompt, updated after every verification round from verifier probabilities and reset at each rollout. A projection from draft features is retained and trained across rollouts. The v2 method does not update the draft backbone during generation or add target forward passes. Its training results and ablations must be interpreted using the v2 configuration, not substituted for v1 measurements.",
+        "snapshot_impact": "Material version change, not a new study. The v2 revision was public on the manuscript cutoff date. The imported SpecRoll title, v1 BibTeX, reviewed_version and 46-study snapshot are retained for traceability. The author should reconcile the manuscript name, fast–slow-head description, Table 6 classification and any numerical claims with the chosen version before submission. No performance numbers have been silently overwritten."
+      }
+    ]
   },
   {
     "id": "li2026bebop",
@@ -2764,5 +2777,385 @@
     "code_urls": [],
     "manuscript_cited": true,
     "bibtex": "@article{gholipour2026rolloutefficiency,\n  author = {Niloofar Gholipour and Marcos Assuncao and\n            Gursimran Singh and Timothy Yu and Rajkumar Buyya and\n            Julien Gascon-Samson and Zhenan Fan and Yong Zhang and\n            Xiaojie Xu and Yaqiang Yao and Xiaolong Bai},\n  title = {Rollout Efficiency in Reinforcement Learning for Reasoning\n           Large Language Models: A Taxonomy and Future Directions},\n  journal = {arXiv preprint arXiv:2609.25463},\n  year = {2026},\n  doi = {10.48550/arXiv.2609.25463}\n}"
+  },
+  {
+    "id": "feng2026jetspecpp",
+    "name": "JetSpec++",
+    "title": "JetSpec++: Foresight Parallel Drafting with Self Refinements",
+    "authors": "Zhaoxiang Feng and Lanxiang Hu and Haoran Yuan and Yu-Yang Qian and Jihui Yang and Peng Zhao and Yibo Zhu and Tajana Rosing and Hao Zhang",
+    "year": 2026,
+    "venue": "arXiv preprint",
+    "doi": "",
+    "arxiv_id": "2610.19792",
+    "url": "https://arxiv.org/abs/2610.19792v2",
+    "reviewed_version": "v2",
+    "published": "2026-10-14",
+    "role": "post_cutoff",
+    "evidence": "serving_transfer",
+    "dimensions": [
+      "proposal-source",
+      "verification-semantics",
+      "placement-idle-resources",
+      "parallel-load-aware-drafting"
+    ],
+    "mechanism": "Combines within-block Jacobi refinement with inter-block foresight. An adapter predicts future verifier states and likely acceptance outcomes so that a drafter on another GPU can prepare candidates while the target verifies the preceding block.",
+    "evidence_note": "Serving/inference evidence only. Acceptance is evaluated at temperatures 0 and 1, while the main throughput comparison uses single-request greedy decoding. The pipelined configuration uses a separate drafter GPU, so its latency ratio is not an equal-GPU-cost RL throughput gain. Transfer requires affordable spare placement, current-policy feature compatibility, and an unchanged target acceptance/correction rule; policy refresh and closed-batch RL training were not evaluated.",
+    "metadata_provenance": "Official arXiv abstract-page citation metadata and submission history, cross-checked against full HTML v2 on 2026-10-26. Curated after the manuscript cutoff; this is not a claim that the first posting was after the cutoff. No accepted venue is inferred.",
+    "evidence_pointer": "Sections 4.1–4.3 and 5.1–5.6; Appendix E (hardware/serving protocol and correctness checks) and F.3 (lossless verification).",
+    "code_urls": [],
+    "code_artifacts": [
+      {
+        "url": "https://github.com/hao-ai-lab/JetSpec",
+        "status": "paper-linked public JetSpec repository checked; README and implementation identify the prior JetSpec (2606.18394); JetSpec++-specific release not verified",
+        "checked_at": "2026-10-26",
+        "head_sha": "2c7b3fae75690dfe9a188a37d7fdfd43ee0e032f"
+      }
+    ],
+    "manuscript_cited": false,
+    "bibtex": "@misc{feng2026jetspecpp,\n  author = {Feng, Zhaoxiang and Hu, Lanxiang and Yuan, Haoran and Qian, Yu-Yang and Yang, Jihui and Zhao, Peng and Zhu, Yibo and Rosing, Tajana and Zhang, Hao},\n  title = {{JetSpec++: Foresight Parallel Drafting with Self Refinements}},\n  year = {2026},\n  eprint = {2610.19792},\n  archivePrefix = {arXiv},\n  url = {https://arxiv.org/abs/2610.19792v2}\n}",
+    "curated_at": "2026-10-26"
+  },
+  {
+    "id": "sun2026ready",
+    "name": "ReaDy",
+    "title": "ReaDy: Recurrent States as Dynamic Context for Speculative Drafting in Hybrid Linear Attention Large Language Models",
+    "authors": "Bohan Sun and Zunhai Su and Xialie Zhuang and Jianjin Li and Ngai Wong and Chuan-Wei Kuo",
+    "year": 2026,
+    "venue": "arXiv preprint",
+    "doi": "",
+    "arxiv_id": "2610.20503",
+    "url": "https://arxiv.org/abs/2610.20503v2",
+    "reviewed_version": "v2",
+    "published": "2026-10-14",
+    "role": "post_cutoff",
+    "evidence": "serving_transfer",
+    "dimensions": [
+      "proposal-source",
+      "memory-reuse-state"
+    ],
+    "mechanism": "Reads committed hybrid-linear-attention recurrent states using learned position-conditioned queries and low-rank projections, then injects the retrieved context into a DSpark-style drafter through residual fusion.",
+    "evidence_note": "Fixed-target inference on Qwen3.8-27B, one B200 GPU, greedy decoding and concurrency one. The reader is trained against the target recurrent state and does not demonstrate policy-refresh robustness. Transfer to recurrent/hybrid rollout targets requires consistent committed states, rollback handling, and reader maintenance after policy updates. Greedy agreement here is not experimental evidence of stochastic RL sampling equivalence.",
+    "metadata_provenance": "Official arXiv abstract-page citation metadata and submission history, cross-checked against full HTML v2 on 2026-10-26. Curated after the manuscript cutoff; this is not a claim that the first posting was after the cutoff. No accepted venue is inferred.",
+    "evidence_pointer": "Sections 3.1–3.2 and 4.1–4.4; Appendix D.2 and the greedy serving/diagnostic protocol.",
+    "code_urls": [
+      "https://github.com/StartLuxLabs/ReaDy"
+    ],
+    "code_artifacts": [
+      {
+        "url": "https://github.com/StartLuxLabs/ReaDy",
+        "status": "linked and checked; public repository",
+        "checked_at": "2026-10-26",
+        "head_sha": "8ac61b51d529fad980566cfde7a3c41415ba93a5"
+      }
+    ],
+    "manuscript_cited": false,
+    "bibtex": "@misc{sun2026ready,\n  author = {Sun, Bohan and Su, Zunhai and Zhuang, Xialie and Li, Jianjin and Wong, Ngai and Kuo, Chuan-Wei},\n  title = {{ReaDy: Recurrent States as Dynamic Context for Speculative Drafting in Hybrid Linear Attention Large Language Models}},\n  year = {2026},\n  eprint = {2610.20503},\n  archivePrefix = {arXiv},\n  url = {https://arxiv.org/abs/2610.20503v2}\n}",
+    "curated_at": "2026-10-26"
+  },
+  {
+    "id": "li2026fold",
+    "name": "FOLD",
+    "title": "FOLD: Position-Free Far Memory with Local Order for Long-Context Speculative Decoding",
+    "authors": "Shuxuan Li and Jialiang Kang and Yanghao Zhou and Ziye Zhu and Xiao Yang",
+    "year": 2026,
+    "venue": "arXiv preprint",
+    "doi": "",
+    "arxiv_id": "2610.20392",
+    "url": "https://arxiv.org/abs/2610.20392v1",
+    "reviewed_version": "v1",
+    "published": "2026-10-14",
+    "role": "post_cutoff",
+    "evidence": "serving_transfer",
+    "dimensions": [
+      "proposal-source",
+      "memory-reuse-state"
+    ],
+    "mechanism": "Extends a pretrained short-context drafter without retraining by preserving local positional order and presenting distant entries as position-free far memory. Separate attention normalization controls the contribution of distant memory.",
+    "evidence_note": "Long-context serving/inference experiments, not RL rollout. Transfer targets long rollout prefixes whose draft attention/state is the bottleneck. The memory transformation belongs to the drafter; current-policy target verification must remain intact. The reported greedy output-agreement checks do not establish stochastic RL-update equivalence or behavior after target-policy drift.",
+    "metadata_provenance": "Official arXiv abstract-page citation metadata and submission history, cross-checked against full HTML v1 on 2026-10-26. Curated after the manuscript cutoff; this is not a claim that the first posting was after the cutoff. No accepted venue is inferred.",
+    "evidence_pointer": "Sections 3.1–3.3 and 4; Appendix B.2–B.5 (evaluation data, length dispatch, storage-matched controls and output agreement).",
+    "code_urls": [
+      "https://github.com/NuyoahNasuS/FOLD"
+    ],
+    "code_artifacts": [
+      {
+        "url": "https://github.com/NuyoahNasuS/FOLD",
+        "status": "linked and checked; public repository",
+        "checked_at": "2026-10-26",
+        "head_sha": "22beb43a7704beeabd6e5a242404aa2f44982a79"
+      }
+    ],
+    "manuscript_cited": false,
+    "bibtex": "@misc{li2026fold,\n  author = {Li, Shuxuan and Kang, Jialiang and Zhou, Yanghao and Zhu, Ziye and Yang, Xiao},\n  title = {{FOLD: Position-Free Far Memory with Local Order for Long-Context Speculative Decoding}},\n  year = {2026},\n  eprint = {2610.20392},\n  archivePrefix = {arXiv},\n  url = {https://arxiv.org/abs/2610.20392v1}\n}",
+    "curated_at": "2026-10-26"
+  },
+  {
+    "id": "alazhar2026adaptivedhisparse",
+    "name": "Adaptive DHiSparse",
+    "title": "Adaptive DHiSparse: Speculative Decoding over a Load-Adaptive KV Hierarchy",
+    "authors": "Naji Alazhar and Wassel Alazhar",
+    "year": 2026,
+    "venue": "arXiv preprint",
+    "doi": "",
+    "arxiv_id": "2610.13708",
+    "url": "https://arxiv.org/abs/2610.13708v1",
+    "reviewed_version": "v1",
+    "published": "2026-10-09",
+    "role": "post_cutoff",
+    "evidence": "serving_transfer",
+    "dimensions": [
+      "scheduling-mode-selection",
+      "memory-reuse-state",
+      "parallel-load-aware-drafting"
+    ],
+    "mechanism": "Makes hierarchical sparse KV residency depend on load, protects the required working set, retains optional history when memory is free, and fetches missing rows from host storage. Shared retrieval, a window-bounded draft ring and reusable verification staging support speculative blocks.",
+    "evidence_note": "Long-context serving of GLM-5.3 and DeepSeek-V4.1-Flash with DSpark/DFlash2, including offered-load steps and latency-bounded throughput comparisons. The baseline is the same sparse target computation, not a claim of dense-policy equivalence. Transfer requires rollout-engine support for hierarchical retrieval, cache invalidation at policy refresh and the same acceptance rule. No RL training evaluation is reported.",
+    "metadata_provenance": "Official arXiv abstract-page citation metadata and submission history, cross-checked against full HTML v1 on 2026-10-26. Curated after the manuscript cutoff; this is not a claim that the first posting was after the cutoff. No accepted venue is inferred.",
+    "evidence_pointer": "Sections 3.1–3.5 (KV hierarchy and speculative-state lifetime), 4.1 (matched configuration) and 4.2–4.3 (load/latency/residency measurements).",
+    "code_urls": [],
+    "code_artifacts": [],
+    "manuscript_cited": false,
+    "bibtex": "@misc{alazhar2026adaptivedhisparse,\n  author = {Alazhar, Naji and Alazhar, Wassel},\n  title = {{Adaptive DHiSparse: Speculative Decoding over a Load-Adaptive KV Hierarchy}},\n  year = {2026},\n  eprint = {2610.13708},\n  archivePrefix = {arXiv},\n  url = {https://arxiv.org/abs/2610.13708v1}\n}",
+    "curated_at": "2026-10-26"
+  },
+  {
+    "id": "eisenstadt2026dcoco",
+    "name": "DCOCO",
+    "title": "Contextual Correction of Parallel Drafts for Speculative Decoding",
+    "authors": "Roy Eisenstadt and Harel Lidar and Tal Gonen and Omer Luxembourg and Itamar Zimerman and Lior Wolf and Eli David and Ilan Naiman",
+    "year": 2026,
+    "venue": "arXiv preprint",
+    "doi": "",
+    "arxiv_id": "2610.12570",
+    "url": "https://arxiv.org/abs/2610.12570v1",
+    "reviewed_version": "v1",
+    "published": "2026-10-08",
+    "role": "post_cutoff",
+    "evidence": "serving_transfer",
+    "dimensions": [
+      "proposal-source",
+      "parallel-load-aware-drafting"
+    ],
+    "mechanism": "Retains multiple draft-token candidates per position and scores compatibility between adjacent positions in parallel, recovering intra-block dependence without a serial correction chain.",
+    "evidence_note": "Serving experiments retrain comparator drafters on the same corpus/backbone and test greedy and stochastic decoding, including 4–32 concurrent requests. The relevant transfer is the cost of draft correction as rollout concurrency changes. Target-policy refresh, correction-model maintenance and any closed-batch activation rule remain to be evaluated in RL. Higher acceptance alone is not treated as a throughput guarantee.",
+    "metadata_provenance": "Official arXiv abstract-page citation metadata and submission history, cross-checked against full HTML v1 on 2026-10-26. Curated after the manuscript cutoff; this is not a claim that the first posting was after the cutoff. No accepted venue is inferred.",
+    "evidence_pointer": "Method section on parallel contextual candidate scoring; experimental setup and serving results; Appendix F (higher concurrency) and G (stochastic verification with deterministic proposals).",
+    "code_urls": [
+      "https://github.com/two-delta/DCOCO"
+    ],
+    "code_artifacts": [
+      {
+        "url": "https://github.com/two-delta/DCOCO",
+        "status": "linked and checked; public repository",
+        "checked_at": "2026-10-26",
+        "head_sha": "7a39cf1ec2d273894082463b41ef95d823b4fc7a"
+      }
+    ],
+    "manuscript_cited": false,
+    "bibtex": "@misc{eisenstadt2026dcoco,\n  author = {Eisenstadt, Roy and Lidar, Harel and Gonen, Tal and Luxembourg, Omer and Zimerman, Itamar and Wolf, Lior and David, Eli and Naiman, Ilan},\n  title = {{Contextual Correction of Parallel Drafts for Speculative Decoding}},\n  year = {2026},\n  eprint = {2610.12570},\n  archivePrefix = {arXiv},\n  url = {https://arxiv.org/abs/2610.12570v1}\n}",
+    "curated_at": "2026-10-26"
+  },
+  {
+    "id": "gu2026dloop",
+    "name": "DLoop",
+    "title": "DLoop: Looped Speculative Decoding",
+    "authors": "Geonmo Gu and Byeongho Heo and HeeJae Jun and Yoohoon Kang and Sangmin Lee and Sangdoo Yun and Dongyoon Han",
+    "year": 2026,
+    "venue": "arXiv preprint",
+    "doi": "",
+    "arxiv_id": "2610.07659",
+    "url": "https://arxiv.org/abs/2610.07659v2",
+    "reviewed_version": "v2",
+    "published": "2026-10-06",
+    "role": "post_cutoff",
+    "evidence": "serving_transfer",
+    "dimensions": [
+      "proposal-source",
+      "verification-semantics",
+      "scheduling-mode-selection",
+      "parallel-load-aware-drafting"
+    ],
+    "mechanism": "Runs multiple whole drafting stages before one target verification, continuing while draft confidence exceeds a threshold. Loop-aware training exposes the drafter to its own hidden states at unverified positions.",
+    "evidence_note": "Serving/inference across autoregressive, parallel and MTP drafters. The standard target acceptance rule is retained; experiments include greedy and temperature-one sampling. A rollout transfer must tune confidence thresholds against target-verification cost and load, and maintain a compatible drafter after policy refresh. This is not direct RL evaluation. DLoop (2610.07659) is distinct from the separately queued D-Loop (2610.06011).",
+    "metadata_provenance": "Official arXiv abstract-page citation metadata and submission history, cross-checked against full HTML v2 on 2026-10-26. Curated after the manuscript cutoff; this is not a claim that the first posting was after the cutoff. No accepted venue is inferred.",
+    "evidence_pointer": "Section 3 (confidence-controlled drafting loop and loop-aware training), Section 4 and Appendix A.1–A.2 (setup and greedy/sampling results).",
+    "code_urls": [],
+    "code_artifacts": [
+      {
+        "url": "https://github.com/naver-ai/DLoop",
+        "status": "paper-linked public repository checked; README-only placeholder says code is under internal review and will be released; implementation not yet verified",
+        "checked_at": "2026-10-26",
+        "head_sha": "577bb1a42bea5c28d14937cb6fe14fd745e7a705"
+      }
+    ],
+    "manuscript_cited": false,
+    "bibtex": "@misc{gu2026dloop,\n  author = {Gu, Geonmo and Heo, Byeongho and Jun, HeeJae and Kang, Yoohoon and Lee, Sangmin and Yun, Sangdoo and Han, Dongyoon},\n  title = {{DLoop: Looped Speculative Decoding}},\n  year = {2026},\n  eprint = {2610.07659},\n  archivePrefix = {arXiv},\n  url = {https://arxiv.org/abs/2610.07659v2}\n}",
+    "curated_at": "2026-10-26"
+  },
+  {
+    "id": "chen2026schemafill",
+    "name": "SchemaFill",
+    "title": "SchemaFill: Efficient LLM Tool Calling via Slot-Parallel Speculative Decoding",
+    "authors": "Zhi-Kai Chen and Song-Yan Li and De-Chuan Zhan and Han-Jia Ye",
+    "year": 2026,
+    "venue": "arXiv preprint",
+    "doi": "",
+    "arxiv_id": "2610.07086",
+    "url": "https://arxiv.org/abs/2610.07086v1",
+    "reviewed_version": "v1",
+    "published": "2026-10-05",
+    "role": "post_cutoff",
+    "evidence": "serving_transfer",
+    "dimensions": [
+      "proposal-source",
+      "verification-semantics",
+      "parallel-load-aware-drafting"
+    ],
+    "mechanism": "Uses public tool schemas to draft argument slots and multiple tool calls in parallel, then assembles structural text and slot candidates for target verification under their actual autoregressive prefixes.",
+    "evidence_note": "Tool-call token generation on Glaive/BFCL serving benchmarks, not end-to-end agentic RL. Main experiments are greedy; Appendix B defines the stochastic correction rule and Appendix C.5 reports temperature-one results. This is token-level proposal acceleration, not execution or acceptance of unverified tool actions. Transfer requires preserving the current rollout policy and validation of the additional structured-drafting overhead within the agent loop.",
+    "metadata_provenance": "Official arXiv abstract-page citation metadata and submission history, cross-checked against full HTML v1 on 2026-10-26. Curated after the manuscript cutoff; this is not a claim that the first posting was after the cutoff. No accepted venue is inferred.",
+    "evidence_pointer": "Sections 3.1–3.3 and 4; Appendix B (greedy and stochastic consistency) and C.5 (temperature-one evaluation).",
+    "code_urls": [],
+    "code_artifacts": [
+      {
+        "status": "paper-linked repository not retrievable through public GitHub API; release not verified",
+        "checked_at": "2026-10-26",
+        "url": "https://github.com/Czzzk/SchemaFill"
+      }
+    ],
+    "manuscript_cited": false,
+    "bibtex": "@misc{chen2026schemafill,\n  author = {Chen, Zhi-Kai and Li, Song-Yan and Zhan, De-Chuan and Ye, Han-Jia},\n  title = {{SchemaFill: Efficient LLM Tool Calling via Slot-Parallel Speculative Decoding}},\n  year = {2026},\n  eprint = {2610.07086},\n  archivePrefix = {arXiv},\n  url = {https://arxiv.org/abs/2610.07086v1}\n}",
+    "curated_at": "2026-10-26"
+  },
+  {
+    "id": "lin2026dominotree",
+    "name": "DominoTree",
+    "title": "DominoTree: Conditional Tree-Structured Drafting with Domino for Speculative Decoding",
+    "authors": "Saw S. Lin and Jyh-Shing Roger Jang",
+    "year": 2026,
+    "venue": "arXiv preprint",
+    "doi": "",
+    "arxiv_id": "2607.08642",
+    "url": "https://arxiv.org/abs/2607.08642v4",
+    "reviewed_version": "v4",
+    "published": "2026-07-09",
+    "role": "post_cutoff",
+    "evidence": "serving_transfer",
+    "dimensions": [
+      "proposal-source",
+      "verification-semantics",
+      "parallel-load-aware-drafting"
+    ],
+    "mechanism": "Makes tree proposals conditional on each candidate path through a Domino recurrent correction and constructs a high-value tree with a best-first or GPU frontier builder. Verification must maintain tree-correct recurrent as well as attention state.",
+    "evidence_note": "Both single-stream research-harness and SGLang inference experiments are reported. In the served concurrency sweep, a low-concurrency advantage can reverse at larger batches despite longer acceptance. Transfer therefore requires engine-level profiling and tree-correct recurrent-state handling, rather than translating research-harness speedup to RL. The paper does not evaluate target-policy evolution or RL training.",
+    "metadata_provenance": "Official arXiv abstract-page citation metadata and submission history, cross-checked against full HTML v4 on 2026-10-26. Curated after the manuscript cutoff; this is not a claim that the first posting was after the cutoff. No accepted venue is inferred.",
+    "evidence_pointer": "Sections 3.2–3.4; 4.4 (numerical agreement); 4.5.1–4.5.4 (serving, concurrency and hybrid recurrent verification); Section 6 (implementation scope and load-budget limitations).",
+    "code_urls": [
+      "https://github.com/slin-zhq/Domino-Tree"
+    ],
+    "code_artifacts": [
+      {
+        "url": "https://github.com/slin-zhq/Domino-Tree",
+        "status": "linked and checked; public repository",
+        "checked_at": "2026-10-26",
+        "head_sha": "6f5a2bfec7bb07bfbe98800d741bd6c30b0ceb0d"
+      }
+    ],
+    "manuscript_cited": false,
+    "bibtex": "@misc{lin2026dominotree,\n  author = {Lin, Saw S. and Jang, Jyh-Shing Roger},\n  title = {{DominoTree: Conditional Tree-Structured Drafting with Domino for Speculative Decoding}},\n  year = {2026},\n  eprint = {2607.08642},\n  archivePrefix = {arXiv},\n  url = {https://arxiv.org/abs/2607.08642v4}\n}",
+    "curated_at": "2026-10-26"
+  },
+  {
+    "id": "he2026valuspec",
+    "name": "ValuSpec",
+    "title": "ValuSpec: Plug-and-Play Candidate Valuation before Target Verification for Tree-Based Speculative Decoding",
+    "authors": "Liang He and SiYuan Ma and Qishi Zhan and Yongqi Fan and Mingyu Cao and Qizhen Lan and Zhaolu Kang and Xilu Wang",
+    "year": 2026,
+    "venue": "arXiv preprint",
+    "doi": "",
+    "arxiv_id": "2610.31338",
+    "url": "https://arxiv.org/abs/2610.31338v1",
+    "reviewed_version": "v1",
+    "published": "2026-10-22",
+    "role": "post_cutoff",
+    "evidence": "serving_transfer",
+    "dimensions": [
+      "workload-recurrence",
+      "verification-semantics",
+      "scheduling-mode-selection"
+    ],
+    "mechanism": "Filters low-value branches of an already supplied candidate tree before target verification. A threshold is calibrated from separate target greedy trajectories, with retrieval-tree and EAGLE-3 tree suppliers evaluated independently.",
+    "evidence_note": "Serving/inference only. Evaluation uses greedy decoding, a non-overlapping calibration/evaluation split, main batch size one and extra batch-size-four/eight tests. Output identity is a greedy guarantee; it is not a general stochastic RL guarantee. Transfer to recurrent rollout trees requires current-policy verification and recalibration under policy/reward-workload change. Calibration and verification savings must be amortized rather than reported as demonstrated RL speedup.",
+    "metadata_provenance": "Official arXiv abstract-page citation metadata and submission history, cross-checked against full HTML v1 on 2026-10-26. Curated after the manuscript cutoff; this is not a claim that the first posting was after the cutoff. No accepted venue is inferred.",
+    "evidence_pointer": "Section 3 (valuation/filtering and greedy fallback), Section 4 (recurring-workload/calibration protocol) and Section 5 (retrieval and EAGLE-3 results).",
+    "code_urls": [],
+    "code_artifacts": [],
+    "manuscript_cited": false,
+    "bibtex": "@misc{he2026valuspec,\n  author = {He, Liang and Ma, SiYuan and Zhan, Qishi and Fan, Yongqi and Cao, Mingyu and Lan, Qizhen and Kang, Zhaolu and Wang, Xilu},\n  title = {{ValuSpec: Plug-and-Play Candidate Valuation before Target Verification for Tree-Based Speculative Decoding}},\n  year = {2026},\n  eprint = {2610.31338},\n  archivePrefix = {arXiv},\n  url = {https://arxiv.org/abs/2610.31338v1}\n}",
+    "curated_at": "2026-10-26"
+  },
+  {
+    "id": "tsur2026rift",
+    "name": "RIFT",
+    "title": "RIFT: KV Cache Compression for Draft Models with Complementary Compressibility Training",
+    "authors": "Dor Tsur and Maor Ashkenazi and Maximilian Golub and Peter Hicks and Yaniv Galron and Talor Abramovich and Yoav Miron and Tiyasa Mitra and Bita Darvish Rouhani and Ran Zilberstein",
+    "year": 2026,
+    "venue": "arXiv preprint",
+    "doi": "",
+    "arxiv_id": "2610.31098",
+    "url": "https://arxiv.org/abs/2610.31098v1",
+    "reviewed_version": "v1",
+    "published": "2026-10-22",
+    "role": "post_cutoff",
+    "evidence": "serving_transfer",
+    "dimensions": [
+      "proposal-source",
+      "verification-semantics",
+      "memory-reuse-state"
+    ],
+    "mechanism": "Combines prefill-selected and recent KV entries for draft-side compression, refreshes their selection as generation progresses, and uses an adaptive refresh controller to limit rescoring. Optional sparse-mask training makes the drafter more compressible.",
+    "evidence_note": "Serving/inference of external and KV-based self-drafters on long-input/long-output SPEED-Bench settings, including greedy and stochastic acceptance measurements. Compression is on the draft cache; an unchanged target and correct rejection sampling preserve the target distribution. Decode staleness here means stale within-sequence KV selection, not actor-policy version drift. RL transfer requires policy-aware cache invalidation, refresh-cost accounting and maintenance of any trained drafter.",
+    "metadata_provenance": "Official arXiv abstract-page citation metadata and submission history, cross-checked against full HTML v1 on 2026-10-26. Curated after the manuscript cutoff; this is not a claim that the first posting was after the cutoff. No accepted venue is inferred.",
+    "evidence_pointer": "Sections 2–4 (scope, decode staleness, static/dynamic/adaptive refresh), Section 5 and Appendices D–J (settings, latency/quality and compressibility training).",
+    "code_urls": [],
+    "code_artifacts": [],
+    "manuscript_cited": false,
+    "bibtex": "@misc{tsur2026rift,\n  author = {Tsur, Dor and Ashkenazi, Maor and Golub, Maximilian and Hicks, Peter and Galron, Yaniv and Abramovich, Talor and Miron, Yoav and Mitra, Tiyasa and Rouhani, Bita Darvish and Zilberstein, Ran},\n  title = {{RIFT: KV Cache Compression for Draft Models with Complementary Compressibility Training}},\n  year = {2026},\n  eprint = {2610.31098},\n  archivePrefix = {arXiv},\n  url = {https://arxiv.org/abs/2610.31098v1}\n}",
+    "curated_at": "2026-10-26"
+  },
+  {
+    "id": "lee2026reanchor",
+    "name": "ReAnchor",
+    "title": "ReAnchor: Reusing Rejected Verifier States for Diffusion Drafting",
+    "authors": "Sanghyun Lee and Wonjin Nam and Seungho Jang and Jaeho Lee and Jiho Park and Jaewoon Lee and Seungryong Kim",
+    "year": 2026,
+    "venue": "arXiv preprint",
+    "doi": "",
+    "arxiv_id": "2610.26531",
+    "url": "https://arxiv.org/abs/2610.26531v1",
+    "reviewed_version": "v1",
+    "published": "2026-10-19",
+    "role": "post_cutoff",
+    "evidence": "serving_transfer",
+    "dimensions": [
+      "proposal-source",
+      "memory-reuse-state",
+      "parallel-load-aware-drafting"
+    ],
+    "mechanism": "Reuses verifier hidden states beyond the first rejection as shifted anchors for parallel blocks from a pretrained diffusion drafter. Positive overlaps attach those blocks to a baseline proposal and merge shared prefixes for a new target verification.",
+    "evidence_note": "Serving/inference with pretrained DFlash drafters and four autoregressive targets, evaluated at temperature zero across eight benchmarks. Rejected-suffix states are speculative proposal hints, not committed KV state or accepted output. Transfer requires correct-prefix target re-verification and bounded extra state/verification width. Nonzero-temperature RL sampling and end-to-end RL gains have not been demonstrated.",
+    "metadata_provenance": "Official arXiv abstract-page citation metadata and submission history, cross-checked against full HTML v1 on 2026-10-26. Curated after the manuscript cutoff; this is not a claim that the first posting was after the cutoff. No accepted venue is inferred.",
+    "evidence_pointer": "Sections 3.1–3.3 (shifted anchors and trie construction), 4.1–4.3 (setup and ablations), and the appendix on earliest positive-overlap selection.",
+    "code_urls": [],
+    "code_artifacts": [
+      {
+        "status": "paper-linked repository not retrievable through public GitHub API; release not verified",
+        "checked_at": "2026-10-26",
+        "url": "https://github.com/cvlab-kaist/ReAnchor"
+      }
+    ],
+    "manuscript_cited": false,
+    "bibtex": "@misc{lee2026reanchor,\n  author = {Lee, Sanghyun and Nam, Wonjin and Jang, Seungho and Lee, Jaeho and Park, Jiho and Lee, Jaewoon and Kim, Seungryong},\n  title = {{ReAnchor: Reusing Rejected Verifier States for Diffusion Drafting}},\n  year = {2026},\n  eprint = {2610.26531},\n  archivePrefix = {arXiv},\n  url = {https://arxiv.org/abs/2610.26531v1}\n}",
+    "curated_at": "2026-10-26"
   }
 ]

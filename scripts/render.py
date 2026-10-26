@@ -86,7 +86,7 @@ def build():
                  f"- Citation key: `{p['id']}`", f"- Authors: {md(p['authors'])}",
                  f"- Year: {p['year']}", f"- Bibliographic venue: {md(p['venue'])}",
                  f"- Source: [paper]({checked_url(p['url'])})", f"- Evidence setting: **{EVIDENCE[p['evidence']]}**",
-                 f"- Library role: `{p['role']}`", f"- Cited in the manuscript PDF: {'yes' if p['manuscript_cited'] else 'no (bibliography-only import)'}",
+                 f"- Library role: `{p['role']}`", f"- Cited in the manuscript PDF: {'yes' if p['manuscript_cited'] else ('no (screened library addition)' if p['id'] not in snapshot['bibliography_ids'] else 'no (bibliography-only import)')}",
                  f"- Reviewed arXiv version: {md(p.get('reviewed_version') or 'not recorded')}", "",
                  "## Mechanism / relevance", "", p["mechanism"], "", "## Evidence and transfer boundary", "", p["evidence_note"], "",
                  "## Taxonomy dimensions", "", links, "", "## Source and artifact record", "",
@@ -94,7 +94,15 @@ def build():
                  f"- Source publication date: {p.get('published') or 'not recorded'}",
                  "- Released code: " + (", ".join(f"[official artifact]({checked_url(u)})" for u in p.get("code_urls", [])) or "not recorded (not a claim of non-availability)"),
                  "- Artifact checks: " + ("; ".join(f"{md(a['status'])} on {a['checked_at']}" + (f", revision `{a['head_sha']}`" if a.get('head_sha') else "") for a in p.get("code_artifacts", [])) or "not independently checked in this library"),
-                 "", "## BibTeX", "", "```bibtex", p["bibtex"], "```", "", "[Back to all records](../docs/all-papers.md)"]
+                 ]
+        for note in p.get("version_notes", []):
+            lines += ["", f"## Version review: {md(note['version'])}", "",
+                      f"**{md(note['title'])}**", "",
+                      f"- Authors in this version: {md(note['authors'])}",
+                      f"- [Version source]({checked_url(note['url'])}); revised {note['source_updated']}; checked {note['checked_at']}.",
+                      f"- Evidence pointer: {md(note['evidence_pointer'])}", "",
+                      note["summary"], "", note["snapshot_impact"]]
+        lines += ["", "## BibTeX", "", "```bibtex", p["bibtex"], "```", "", "[Back to all records](../docs/all-papers.md)"]
         out[f"papers/{p['id']}.md"] = "\n".join(lines) + "\n"
         all_lines.append(f"| `{p['id']}` | [{md(p['title'])}](../papers/{p['id']}.md) | {p['role']} |")
     out["docs/all-papers.md"] = "\n".join(all_lines) + "\n"
@@ -116,10 +124,15 @@ def build():
                   f"- Source: {md(c.get('metadata_source', 'arXiv API'))}", f"- Screening status: {md(c.get('status', 'pending'))}",
                   f"- Query families: {md(', '.join(c.get('queries', [])))}", "",
                   md(c.get("abstract", "")), ""]
+        if c.get("screening_reason"):
+            ctext += ["Curator note: " + md(c["screening_reason"]), ""]
     out["updates/candidates.md"] = "\n".join(ctext) + "\n"
     versions = read_json(ROOT / "data/version_observations.json", [])
     vtext = ["# Version observations", "", "New versions do not overwrite reviewed or manuscript versions. Re-read changed experiments before changing a paper card.", ""]
     vtext += [f"- [{md(v['id'])}]({checked_url(v['url'])}): reviewed {md(v['reviewed_version'] or 'unspecified')}, observed {md(v['observed_version'])} ({v['observed_at']})." for v in versions]
+    for v in versions:
+        if v.get("curator_note"):
+            vtext += ["", f"Curator review of `{v['id']}` ({v['checked_at']}): {v['curator_note']} See the [paper card](../papers/{v['id']}.md)."]
     out["updates/versions.md"] = "\n".join(vtext) + "\n"
     return out
 

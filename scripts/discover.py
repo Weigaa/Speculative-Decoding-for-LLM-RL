@@ -97,6 +97,15 @@ def parse_datacite(data):
     return entries, payload.get("meta", {}).get("total", len(entries))
 
 
+def merge_version_observations(prior, observed):
+    """Keep curator reviews when a search encounters the same version again."""
+    index = {(v["id"], v["observed_version"]): dict(v) for v in prior}
+    for version in observed:
+        key = (version["id"], version["observed_version"])
+        index[key] = {**index.get(key, {}), **version}
+    return sorted(index.values(), key=lambda v: (v["id"], v["observed_version"]))
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--lookback-days", type=int, default=14)
@@ -182,11 +191,8 @@ def main():
     screened = [__import__("json").loads(x) for x in log_path.read_text().splitlines() if x.strip()] if log_path.exists() else []
     queue, observed, added = merge_hits(hits, read_json(ROOT / "data/papers.json"), read_json(ROOT / "data/inbox.json", []), screened)
     prior_versions = read_json(ROOT / "data/version_observations.json", [])
-    version_index = {(x["id"], x["observed_version"]): x for x in prior_versions}
-    for v in observed:
-        version_index[(v["id"], v["observed_version"])] = v
     write_json(ROOT / "data/inbox.json", queue)
-    write_json(ROOT / "data/version_observations.json", sorted(version_index.values(), key=lambda x: (x["id"], x["observed_version"])))
+    write_json(ROOT / "data/version_observations.json", merge_version_observations(prior_versions, observed))
     state.update(last_attempt=timestamp, status="incomplete" if failures else "success", since=since,
                  pending_candidates=len(queue), newly_discovered=added, failures=failures,
                  note="Automated arXiv and DataCite discovery. DataCite dates are registry-update dates, not paper-version dates. Hits require primary-source screening.")

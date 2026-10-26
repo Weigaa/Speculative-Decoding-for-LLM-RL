@@ -8,10 +8,28 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
 from library import identities, parse_atom, parse_bibtex, title_identity
 from discover import merge_hits
 from discover import parse_datacite
+from discover import merge_version_observations
 import discover
 
 
 class LibraryTests(unittest.TestCase):
+    def test_reobserving_version_preserves_curator_review(self):
+        prior = {"id": "study", "observed_version": "v2", "reviewed_version": "v1",
+                 "curator_note": "Changed mechanism; preserve snapshot", "checked_at": "2026-10-26"}
+        observed = {"id": "study", "observed_version": "v2", "reviewed_version": "v1",
+                    "url": "https://arxiv.org/abs/2608.04962v2"}
+        merged = merge_version_observations([prior], [observed])
+        self.assertEqual(len(merged), 1)
+        self.assertEqual(merged[0]["curator_note"], prior["curator_note"])
+        self.assertEqual(merged[0]["checked_at"], prior["checked_at"])
+
+    def test_new_version_does_not_inherit_earlier_version_review(self):
+        prior = {"id": "study", "observed_version": "v2", "curator_note": "v2 reviewed"}
+        observed = {"id": "study", "observed_version": "v3", "reviewed_version": "v1"}
+        merged = merge_version_observations([prior], [observed])
+        self.assertEqual(len(merged), 2)
+        self.assertNotIn("curator_note", next(v for v in merged if v["observed_version"] == "v3"))
+
     def test_nested_bibtex_and_adjacent_entries(self):
         s = '@article{a, title={{RL}: An {MTP} Study},year={2026}}@article{b,title={Other},year="2025"}'
         records = parse_bibtex(s)

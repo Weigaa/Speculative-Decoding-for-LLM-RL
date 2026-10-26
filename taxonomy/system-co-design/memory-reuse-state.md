@@ -17,3 +17,8 @@ Manage historical indices, speculative cache state, KV residency, and state refr
 | [H-Spec](../../papers/jiang2026hspec.md) | 2026 | Serving / inference — RL transfer potential | Manuscript core |
 | [TLAR](../../papers/dai2026tlar.md) | 2026 | Serving / inference — RL transfer potential | Manuscript core |
 | [AgSpec](../../papers/lee2026agspec.md) | 2026 | Serving / inference — RL transfer potential | Manuscript core |
+| [ReaDy](../../papers/sun2026ready.md) | 2026 | Serving / inference — RL transfer potential | Post-cutoff screened addition |
+| [FOLD](../../papers/li2026fold.md) | 2026 | Serving / inference — RL transfer potential | Post-cutoff screened addition |
+| [Adaptive DHiSparse](../../papers/alazhar2026adaptivedhisparse.md) | 2026 | Serving / inference — RL transfer potential | Post-cutoff screened addition |
+| [RIFT](../../papers/tsur2026rift.md) | 2026 | Serving / inference — RL transfer potential | Post-cutoff screened addition |
+| [ReAnchor](../../papers/lee2026reanchor.md) | 2026 | Serving / inference — RL transfer potential | Post-cutoff screened addition |

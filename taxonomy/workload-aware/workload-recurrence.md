@@ -15,3 +15,4 @@ Recurring prompts and related continuations enable historical, tree, suffix, or 
 | [REST](../../papers/he2024rest.md) | 2024 | Serving / inference — RL transfer potential | Manuscript core |
 | [TLAR](../../papers/dai2026tlar.md) | 2026 | Serving / inference — RL transfer potential | Manuscript core |
 | [AgSpec](../../papers/lee2026agspec.md) | 2026 | Serving / inference — RL transfer potential | Manuscript core |
+| [ValuSpec](../../papers/he2026valuspec.md) | 2026 | Serving / inference — RL transfer potential | Post-cutoff screened addition |

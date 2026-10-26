@@ -15,3 +15,9 @@ Separate stochastic distribution preservation, greedy equivalence, approximate a
 | [S3R](../../papers/he2026s3r.md) | 2026 | Direct RL rollout / training | Manuscript core |
 | [RheoSampling](../../papers/hu2026rheosampling.md) | 2026 | Serving / inference — RL transfer potential | Manuscript core |
 | [Nucleus SD](../../papers/li2026nucleussd.md) | 2026 | Serving / inference — RL transfer potential | Manuscript core |
+| [JetSpec++](../../papers/feng2026jetspecpp.md) | 2026 | Serving / inference — RL transfer potential | Post-cutoff screened addition |
+| [DLoop](../../papers/gu2026dloop.md) | 2026 | Serving / inference — RL transfer potential | Post-cutoff screened addition |
+| [SchemaFill](../../papers/chen2026schemafill.md) | 2026 | Serving / inference — RL transfer potential | Post-cutoff screened addition |
+| [DominoTree](../../papers/lin2026dominotree.md) | 2026 | Serving / inference — RL transfer potential | Post-cutoff screened addition |
+| [ValuSpec](../../papers/he2026valuspec.md) | 2026 | Serving / inference — RL transfer potential | Post-cutoff screened addition |
+| [RIFT](../../papers/tsur2026rift.md) | 2026 | Serving / inference — RL transfer potential | Post-cutoff screened addition |

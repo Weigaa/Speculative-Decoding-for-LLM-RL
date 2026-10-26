@@ -1,0 +1,31 @@
+{
+  "date": "2026-10-26",
+  "type": "curator_supplement",
+  "discovery_status": "incomplete",
+  "reviewed_candidates": 44,
+  "included": 11,
+  "excluded": 9,
+  "pending": 24,
+  "version_reviews": [
+    {
+      "id": "pham2026specroll",
+      "observed": "v2",
+      "snapshot_reviewed": "v1",
+      "result": "material change; preserve snapshot and flag manuscript reconciliation"
+    }
+  ],
+  "primary_sources": "Official arXiv abstract/submission history and full HTML for the reviewed versions; inclusion evidence pointers stored in papers.json",
+  "supplemental_web_index": {
+    "domain": "arxiv.org",
+    "queries": [
+      "site:arxiv.org \"speculative\" (\"GRPO\" OR \"RLVR\" OR \"rollout\") \"October\" \"2026\"",
+      "site:arxiv.org \"speculative decoding\" (\"policy drift\" OR \"on-policy distillation\" OR \"online drafter\") \"2026\"",
+      "site:arxiv.org \"speculative decoding\" (\"concurrency\" OR \"long-tail\" OR \"shrinking\") \"2026\" \"October\"",
+      "site:arxiv.org \"speculative decoding\" (\"trajectory reuse\" OR \"prefix reuse\" OR \"tree cache\" OR \"adaptive verification\" OR \"parallel drafting\") \"2026\" \"October\""
+    ],
+    "result": "No indexed hits returned; not a completeness claim or an absence-of-literature finding"
+  },
+  "hosted_workflow_checked": "2026-10-26",
+  "latest_visible_hosted_run": "https://github.com/Weigaa/Speculative-Decoding-for-LLM-RL/actions/runs/39201634538",
+  "note": "No October 26 hosted run visible. Local retry and DataCite fallback are logged separately. Last complete discovery watermark unchanged."
+}
