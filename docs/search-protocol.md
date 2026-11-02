@@ -4,9 +4,11 @@
 
 ## Frozen manuscript versus living library
 
-The manuscript cutoff is **October 14, 2026**. The frozen corpus contains 46 unique technical studies: 21 directly evaluated in RL rollout or training and 25 serving/inference-origin studies selected for a concrete rollout-transfer mechanism. The imported author bibliography contains 111 records, including 107 cited records and four bibliography-only entries. Related surveys, foundations, generic training infrastructure, and contextual action/observation/numerical studies are excluded from the core count.
+The preserved imported manuscript snapshot has cutoff **October 14, 2026**. The frozen corpus contains 46 unique technical studies: 21 directly evaluated in RL rollout or training and 25 serving/inference-origin studies selected for a concrete rollout-transfer mechanism. The imported author bibliography contains 111 records, including 107 cited records and four bibliography-only entries. Related surveys, foundations, generic training infrastructure, and contextual action/observation/numerical studies are excluded from the core count.
 
 The author-supplied classifications are preserved as the initial curation, not presented as independent reproduction of results. Citation metadata and versions are distinguished: a version observed online does not silently replace the version reviewed for the manuscript.
+
+Later manuscript editions may have different cutoffs and citations. The `manuscript_cited` flag refers only to the preserved imported snapshot, not to whether an author has subsequently cited a living-library addition.
 
 Weekly discoveries after the cutoff enter a separate queue. Once screened, eligible additions can enter the living taxonomy with role `post_cutoff`. They must not change the cutoff or the frozen IDs in `data/manuscript_snapshot.json`.
 

@@ -1,0 +1,68 @@
+{
+  "date": "2026-11-02",
+  "type": "curator_supplement",
+  "configured_query_coverage": "all six arXiv and six DataCite families completed; not exhaustive scholarship coverage",
+  "initial_candidates": 40,
+  "included": 5,
+  "included_direct_rl": 2,
+  "included_serving_transfer": 3,
+  "excluded": 2,
+  "pending": 33,
+  "verified_artifact_changes": [
+    "gu2026dloop",
+    "feng2026jetspecpp"
+  ],
+  "new_artifact_checked": "malvankar2026tabletune",
+  "web_index_supplement": [
+    {
+      "query": "site:arxiv.org \"speculative decoding\" \"rollout\" \"2026\" \"October\"",
+      "result": "no indexed hits"
+    },
+    {
+      "query": "site:arxiv.org \"speculative\" \"reinforcement learning\" \"2610\"",
+      "result": "no indexed hits"
+    },
+    {
+      "query": "site:arxiv.org \"speculative decoding\" \"policy\" \"November\" \"2026\"",
+      "result": "no indexed hits"
+    },
+    {
+      "query": "site:arxiv.org \"speculative decoding\" \"parallel\" \"October\" \"2026\" \"cache\"",
+      "result": "no indexed hits"
+    },
+    {
+      "query": "speculative decoding RL rollout October 2026 new papers",
+      "domains": [
+        "arxiv.org"
+      ],
+      "result": "NgramRL and known S3R/NeMo RL/EfficientRollout; duplicate review against library"
+    },
+    {
+      "query": "speculative decoding policy drift on-policy distillation 2026",
+      "domains": [
+        "arxiv.org"
+      ],
+      "result": "mostly irrelevant index hits; not counted as eligible studies"
+    },
+    {
+      "query": "speculative decoding concurrency cache reuse verification parallel October 2026",
+      "domains": [
+        "arxiv.org"
+      ],
+      "result": "no additional eligible hit established"
+    }
+  ],
+  "primary_full_text_review": [
+    "2610.32881v1",
+    "2610.28998v1",
+    "2610.31840v1",
+    "2610.38968v1",
+    "2610.37778v1"
+  ],
+  "notes": [
+    "NgramRL previously discussed with the author; this run completes its public library record, not a claim of first discovery.",
+    "FlashNext-RL shows direct MTP integration in RL, without an isolated SD benefit experiment.",
+    "No Overleaf or manuscript edits in this heartbeat.",
+    "Preserved snapshot cutoff and 46 core IDs unchanged."
+  ]
+}

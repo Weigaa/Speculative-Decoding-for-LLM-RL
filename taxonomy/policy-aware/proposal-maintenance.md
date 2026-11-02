@@ -23,3 +23,6 @@ Maintain proposal state under policy evolution using static, periodic, online, t
 | [GrowMTP](../../papers/he2026growmtp.md) | 2026 | Direct RL rollout / training | Manuscript core |
 | [S3R](../../papers/he2026s3r.md) | 2026 | Direct RL rollout / training | Manuscript core |
 | [Acceptance-aware training](../../papers/xia2026acceptanceaware.md) | 2026 | Serving / inference — RL transfer potential | Manuscript core |
+| [NgramRL](../../papers/pandey2026ngramrl.md) | 2026 | Direct RL rollout / training | Post-cutoff screened addition |
+| [FlashNext-RL](../../papers/yao2026flashnextrl.md) | 2026 | Direct RL rollout / training | Post-cutoff screened addition |
+| [MDraft](../../papers/molodyk2026mdraft.md) | 2026 | Serving / inference — RL transfer potential | Post-cutoff screened addition |

@@ -32,8 +32,8 @@ Serving/inference across autoregressive, parallel and MTP drafters. The standard
 - Metadata provenance: Official arXiv abstract-page citation metadata and submission history, cross-checked against full HTML v2 on 2026-10-26. Curated after the manuscript cutoff; this is not a claim that the first posting was after the cutoff. No accepted venue is inferred.
 - Evidence pointer: Section 3 (confidence-controlled drafting loop and loop-aware training), Section 4 and Appendix A.1–A.2 (setup and greedy/sampling results).
 - Source publication date: 2026-10-06
-- Released code: not recorded (not a claim of non-availability)
-- Artifact checks: paper-linked public repository checked; README-only placeholder says code is under internal review and will be released; implementation not yet verified on 2026-10-26, revision `577bb1a42bea5c28d14937cb6fe14fd745e7a705`
+- Released code: [official artifact](https://github.com/naver-ai/DLoop)
+- Artifact checks: paper-linked public repository checked; README-only placeholder says code is under internal review and will be released; implementation not yet verified on 2026-10-26, revision `577bb1a42bea5c28d14937cb6fe14fd745e7a705`; linked and checked; matching implementation now present; README announces code and loop-aware model release on 2026-10-28 on 2026-11-02, revision `775dedd71aa95e1d98e6780efe5c444a2a27575c`
 
 ## BibTeX
 

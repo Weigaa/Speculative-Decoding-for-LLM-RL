@@ -2802,13 +2802,21 @@
     "evidence_note": "Serving/inference evidence only. Acceptance is evaluated at temperatures 0 and 1, while the main throughput comparison uses single-request greedy decoding. The pipelined configuration uses a separate drafter GPU, so its latency ratio is not an equal-GPU-cost RL throughput gain. Transfer requires affordable spare placement, current-policy feature compatibility, and an unchanged target acceptance/correction rule; policy refresh and closed-batch RL training were not evaluated.",
     "metadata_provenance": "Official arXiv abstract-page citation metadata and submission history, cross-checked against full HTML v2 on 2026-10-26. Curated after the manuscript cutoff; this is not a claim that the first posting was after the cutoff. No accepted venue is inferred.",
     "evidence_pointer": "Sections 4.1–4.3 and 5.1–5.6; Appendix E (hardware/serving protocol and correctness checks) and F.3 (lossless verification).",
-    "code_urls": [],
+    "code_urls": [
+      "https://github.com/hao-ai-lab/JetSpec"
+    ],
     "code_artifacts": [
       {
         "url": "https://github.com/hao-ai-lab/JetSpec",
         "status": "paper-linked public JetSpec repository checked; README and implementation identify the prior JetSpec (2606.18394); JetSpec++-specific release not verified",
         "checked_at": "2026-10-26",
         "head_sha": "2c7b3fae75690dfe9a188a37d7fdfd43ee0e032f"
+      },
+      {
+        "url": "https://github.com/hao-ai-lab/JetSpec",
+        "head_sha": "673267e4faba71a63099c258f0802c2f3aa44f8e",
+        "checked_at": "2026-11-02",
+        "status": "linked and checked; matching implementation files and README visible in public repository"
       }
     ],
     "manuscript_cited": false,
@@ -2979,13 +2987,21 @@
     "evidence_note": "Serving/inference across autoregressive, parallel and MTP drafters. The standard target acceptance rule is retained; experiments include greedy and temperature-one sampling. A rollout transfer must tune confidence thresholds against target-verification cost and load, and maintain a compatible drafter after policy refresh. This is not direct RL evaluation. DLoop (2610.07659) is distinct from the separately queued D-Loop (2610.06011).",
     "metadata_provenance": "Official arXiv abstract-page citation metadata and submission history, cross-checked against full HTML v2 on 2026-10-26. Curated after the manuscript cutoff; this is not a claim that the first posting was after the cutoff. No accepted venue is inferred.",
     "evidence_pointer": "Section 3 (confidence-controlled drafting loop and loop-aware training), Section 4 and Appendix A.1–A.2 (setup and greedy/sampling results).",
-    "code_urls": [],
+    "code_urls": [
+      "https://github.com/naver-ai/DLoop"
+    ],
     "code_artifacts": [
       {
         "url": "https://github.com/naver-ai/DLoop",
         "status": "paper-linked public repository checked; README-only placeholder says code is under internal review and will be released; implementation not yet verified",
         "checked_at": "2026-10-26",
         "head_sha": "577bb1a42bea5c28d14937cb6fe14fd745e7a705"
+      },
+      {
+        "url": "https://github.com/naver-ai/DLoop",
+        "head_sha": "775dedd71aa95e1d98e6780efe5c444a2a27575c",
+        "checked_at": "2026-11-02",
+        "status": "linked and checked; matching implementation now present; README announces code and loop-aware model release on 2026-10-28"
       }
     ],
     "manuscript_cited": false,
@@ -3157,5 +3173,170 @@
     "manuscript_cited": false,
     "bibtex": "@misc{lee2026reanchor,\n  author = {Lee, Sanghyun and Nam, Wonjin and Jang, Seungho and Lee, Jaeho and Park, Jiho and Lee, Jaewoon and Kim, Seungryong},\n  title = {{ReAnchor: Reusing Rejected Verifier States for Diffusion Drafting}},\n  year = {2026},\n  eprint = {2610.26531},\n  archivePrefix = {arXiv},\n  url = {https://arxiv.org/abs/2610.26531v1}\n}",
     "curated_at": "2026-10-26"
+  },
+  {
+    "id": "pandey2026ngramrl",
+    "name": "NgramRL",
+    "title": "NgramRL: Accelerating RL Post-Training for Structured Generation via Rollout-Aware N-gram Speculative Decoding",
+    "authors": "Nilesh Prasad Pandey and Jangseon Park and Jason Kong and Onat Gungor and Tajana Rosing",
+    "year": 2026,
+    "venue": "arXiv preprint",
+    "doi": "",
+    "arxiv_id": "2610.32881",
+    "url": "https://arxiv.org/abs/2610.32881v1",
+    "reviewed_version": "v1",
+    "published": "2026-10-23",
+    "role": "post_cutoff",
+    "evidence": "direct_rl",
+    "dimensions": [
+      "workload-recurrence",
+      "proposal-source",
+      "proposal-maintenance",
+      "verification-semantics",
+      "memory-reuse-state",
+      "parallel-load-aware-drafting"
+    ],
+    "mechanism": "Builds bounded per-prompt n-gram draft caches from recent RL rollouts. A fan-out prefetcher prepares candidates for likely acceptance-length/continuation outcomes during target verification, with ordinary lookup on a miss.",
+    "evidence_note": "Direct GRPO rollout evidence using verl/vLLM: Qwen3-8B and DeepSeek-LLM-7B, GSM8K/Spider/CodeContests, two A100-80GB GPUs, 64 prompts and five responses per prompt over 15 epochs. The paper states exact speculative-sampling correction under the current rollout policy; the training sampling temperature is not specified in the inspected setup. Tokens per target forward are not tokens/s. Its 1.38x Spider result compares prefetching with synchronous NgramRL on a separately profiled Qwen3-8B, batch-64, k=16 RTX PRO 6000 rig; it is not an end-to-end RL training speedup over autoregressive decoding.",
+    "metadata_provenance": "Official arXiv abstract-page citation metadata and submission history cross-checked with full HTML v1 on 2026-11-02. Public preprint; no formal acceptance inferred. Added to the living library after the October 14 snapshot.",
+    "evidence_pointer": "Sections 3.2–3.5; 4.1.1–4.1.5, Table 1, and Figure 7. Separate GRPO acceptance measurements from the dedicated hardware profiling rig.",
+    "code_urls": [],
+    "code_artifacts": [],
+    "manuscript_cited": false,
+    "bibtex": "@article{pandey2026ngramrl,\n  author = {Pandey, Nilesh Prasad and Park, Jangseon and Kong, Jason and Gungor, Onat and Rosing, Tajana},\n  title = {{NgramRL: Accelerating RL Post-Training for Structured Generation via Rollout-Aware N-gram Speculative Decoding}},\n  journal = {arXiv preprint arXiv:2610.32881},\n  year = {2026},\n  eprint = {2610.32881},\n  archivePrefix = {arXiv}\n}",
+    "curated_at": "2026-11-02"
+  },
+  {
+    "id": "yao2026flashnextrl",
+    "name": "FlashNext-RL",
+    "title": "FlashNext-RL: A System Optimization Study for Long-Horizon Agentic RL of Qwen3.8-Flash-Next",
+    "authors": "Zhewei Yao and Yuxiong He",
+    "year": 2026,
+    "venue": "arXiv preprint",
+    "doi": "",
+    "arxiv_id": "2610.28998",
+    "url": "https://arxiv.org/abs/2610.28998v1",
+    "reviewed_version": "v1",
+    "published": "2026-10-20",
+    "role": "post_cutoff",
+    "evidence": "direct_rl",
+    "dimensions": [
+      "proposal-source",
+      "proposal-maintenance",
+      "scheduling-mode-selection",
+      "memory-reuse-state",
+      "synchronization-versioning",
+      "parallel-load-aware-drafting"
+    ],
+    "mechanism": "Integrates a frozen native MTP head with long-context SWE RL rollouts, choosing tensor/expert parallel topology and KV-aware admission jointly. Layerwise weight transfer and bounded receive buffers coordinate refreshed target weights with rollout memory.",
+    "evidence_note": "Direct RL system-integration evidence, not a new speculative algorithm or an isolated SD speedup. The live BF16 Qwen3.8-Flash-Next run uses prime-rl, vLLM, one eight-B200 training node and three eight-B200 inference nodes, MTP3 proposals and 672 concurrent sessions. Section 2 separates replayed engine measurements from live telemetry; Section 5 reports steps 5–15. The MTP head is frozen while parts of the target are updated, leaving longer-run acceptance drift open. The paper does not isolate SD-on versus SD-off gains or independently establish exact stochastic rollout/group equivalence. Training-kernel and checkpoint gains must not be attributed to MTP.",
+    "metadata_provenance": "Official arXiv abstract-page citation metadata and submission history cross-checked with full HTML v1 on 2026-11-02. Public preprint; no formal acceptance inferred. Added to the living library after the October 14 snapshot.",
+    "evidence_pointer": "Sections 1 and 2.1–2.3 (MTP configuration, topology replay and live telemetry); 4.3 (policy-weight refresh); 5 and Table 16 (live SWE RL run).",
+    "code_urls": [],
+    "code_artifacts": [
+      {
+        "url": "https://github.com/PrimeIntellect-ai/prime-rl",
+        "status": "paper-linked underlying framework checked; a FlashNext-RL-specific implementation/revision was not verified, so this is not recorded as released study code",
+        "checked_at": "2026-11-02",
+        "head_sha": "4e94a8616558d99f9a39d6a1facbadbfe6233e86"
+      }
+    ],
+    "manuscript_cited": false,
+    "bibtex": "@article{yao2026flashnextrl,\n  author = {Yao, Zhewei and He, Yuxiong},\n  title = {{FlashNext-RL: A System Optimization Study for Long-Horizon Agentic RL of Qwen3.8-Flash-Next}},\n  journal = {arXiv preprint arXiv:2610.28998},\n  year = {2026},\n  eprint = {2610.28998},\n  archivePrefix = {arXiv}\n}",
+    "curated_at": "2026-11-02"
+  },
+  {
+    "id": "song2026specmem",
+    "name": "SpecMem",
+    "title": "SPECMEM: Accelerating Agentic Tool Calling via Live Memory Management",
+    "authors": "Zihe Song and Wenting Zhao and Ye Liu and Yuanjie Zhu and Ke Xu and Shanghao Li and Philip S. Yu",
+    "year": 2026,
+    "venue": "arXiv preprint",
+    "doi": "",
+    "arxiv_id": "2610.31840",
+    "url": "https://arxiv.org/abs/2610.31840v1",
+    "reviewed_version": "v1",
+    "published": "2026-10-22",
+    "role": "post_cutoff",
+    "evidence": "serving_transfer",
+    "dimensions": [
+      "workload-recurrence",
+      "proposal-source",
+      "memory-reuse-state"
+    ],
+    "mechanism": "Keeps retrieved tool-call drafts live through online write-back of verified calls and bounded per-user stores with eviction. A separate schema-level gate defers tool effects until verification where needed.",
+    "evidence_note": "Serving/agent-inference evidence only. Main recurrence streams use synthetic per-user sessions; canonicalized-call longest-common-prefix scores against greedy target outputs are proxies, distinct from wire-token acceptance. Section 4.3 times an external speculative loop with a ToolSpec reimplementation, not an engine-integrated RL rollout path. BFCL/Seal-Tools and live tau-squared-bench checks do not establish RL training gains. Transfer requires verified current-policy token sampling, context/version-aware invalidation, bounded state and measured lookup/write-back costs. Tool-side execution gating is contextual evidence and is not counted as a separate token-level method.",
+    "metadata_provenance": "Official arXiv abstract-page citation metadata and submission history cross-checked with full HTML v1 on 2026-11-02. Public preprint; no formal acceptance inferred. Added to the living library after the October 14 snapshot.",
+    "evidence_pointer": "Sections 3.1–3.4, 4.1–4.3 and 5.4; Limitations: simulated repetition, metric/integration scope and side-effect-gate scope.",
+    "code_urls": [],
+    "code_artifacts": [],
+    "manuscript_cited": false,
+    "bibtex": "@article{song2026specmem,\n  author = {Song, Zihe and Zhao, Wenting and Liu, Ye and Zhu, Yuanjie and Xu, Ke and Li, Shanghao and Yu, Philip S.},\n  title = {{SPECMEM: Accelerating Agentic Tool Calling via Live Memory Management}},\n  journal = {arXiv preprint arXiv:2610.31840},\n  year = {2026},\n  eprint = {2610.31840},\n  archivePrefix = {arXiv}\n}",
+    "curated_at": "2026-11-02"
+  },
+  {
+    "id": "malvankar2026tabletune",
+    "name": "TableTune",
+    "title": "TableTune: Measured, Self-Correcting Draft-Length Tables for Dynamic Speculative Decoding",
+    "authors": "Abhishek Malvankar and Paul Castro and Nick Mitchell and Lionel Villard",
+    "year": 2026,
+    "venue": "arXiv preprint",
+    "doi": "",
+    "arxiv_id": "2610.38968",
+    "url": "https://arxiv.org/abs/2610.38968v1",
+    "reviewed_version": "v1",
+    "published": "2026-10-28",
+    "role": "post_cutoff",
+    "evidence": "serving_transfer",
+    "dimensions": [
+      "scheduling-mode-selection",
+      "parallel-load-aware-drafting"
+    ],
+    "mechanism": "Profiles decode-step time by active batch and draft length on the actual serving path, then selects a throughput-oriented length table. A runtime controller updates acceptance estimates and rebuilds the table with exploration and hysteresis.",
+    "evidence_note": "Serving-transfer evidence, not RL rollout evaluation. H100/T4/A10G and llm-d studies compare tuned tables with fixed or other adaptive speculative configurations; they do not isolate an SD-over-autoregressive gain attributable to the tuner. Main code prompts use temperature one; n-gram/chat cases are greedy. Transfer requires profiling the rollout engine at its actual context lengths and resource sharing, plus accounting for policy refresh and controller cost. CUDA-graph switching, a real speculation-off path and profile errors matter; the controller repairs acceptance drift, not an inaccurate step-time model.",
+    "metadata_provenance": "Official arXiv abstract/submission metadata and full HTML v1 reviewed on 2026-11-02. Preprint status only; no acceptance inferred.",
+    "evidence_pointer": "Sections 4–6, especially 6.1 (sampling and baselines), 6.6 (graph/switch/off behavior), 6.7 (profiling errors) and 7 (scope/limitations).",
+    "code_urls": [
+      "https://github.com/asm582/tabletune"
+    ],
+    "code_artifacts": [
+      {
+        "url": "https://github.com/asm582/tabletune",
+        "head_sha": "38170878d901cb06f696a122a0b4140a3d365f02",
+        "checked_at": "2026-11-02",
+        "status": "linked and checked; matching implementation files and README visible in public repository"
+      }
+    ],
+    "manuscript_cited": false,
+    "bibtex": "@article{malvankar2026tabletune,\n  author = {Malvankar, Abhishek and Castro, Paul and Mitchell, Nick and Villard, Lionel},\n  title = {{TableTune: Measured, Self-Correcting Draft-Length Tables for Dynamic Speculative Decoding}},\n  journal = {arXiv preprint arXiv:2610.38968},\n  year = {2026},\n  eprint = {2610.38968},\n  archivePrefix = {arXiv}\n}",
+    "curated_at": "2026-11-02"
+  },
+  {
+    "id": "molodyk2026mdraft",
+    "name": "MDraft",
+    "title": "Multi-Draft On-Policy Distillation for Diffusion Drafters",
+    "authors": "Petr Molodyk and Yuchen Zhu and Jaemoo Choi and Molei Tao and Yongxin Chen",
+    "year": 2026,
+    "venue": "arXiv preprint",
+    "doi": "",
+    "arxiv_id": "2610.37778",
+    "url": "https://arxiv.org/abs/2610.37778v1",
+    "reviewed_version": "v1",
+    "published": "2026-10-27",
+    "role": "post_cutoff",
+    "evidence": "serving_transfer",
+    "dimensions": [
+      "proposal-maintenance",
+      "parallel-load-aware-drafting"
+    ],
+    "mechanism": "Samples multiple parallel draft blocks for each training context and blends the verifier conditionals across sampled prefixes into reverse-KL targets. Detached survival weights use verification feedback; the drafter architecture and inference procedure remain unchanged.",
+    "evidence_note": "Fixed-verifier drafter-training/inference evidence, not target-policy RL. DFlash drafters for Qwen3-4B/8B are evaluated on math, code and chat at temperatures 0, 0.6 and 1. The paper reports acceptance length including the bonus token and explicitly does not report wall-clock speedup. Each training context uses one draft forward and K verifier evaluations, which can be batched but are not free. Transfer to evolving RL policies requires current-policy target refresh, amortized verifier/training cost and an unchanged correct acceptance rule. On-policy refers to drafter-generated states, not RL policy optimization.",
+    "metadata_provenance": "Official arXiv abstract/submission metadata and full HTML v1 reviewed on 2026-11-02. Preprint status only; no acceptance inferred.",
+    "evidence_pointer": "Sections 3.1–3.3 (target blending, K verifier evaluations and survival weights), 4.1–4.4 (fixed-teacher setup and acceptance-only evaluation) and Appendix 11 (parallel drafting and verification).",
+    "code_urls": [],
+    "code_artifacts": [],
+    "manuscript_cited": false,
+    "bibtex": "@article{molodyk2026mdraft,\n  author = {Molodyk, Petr and Zhu, Yuchen and Choi, Jaemoo and Tao, Molei and Chen, Yongxin},\n  title = {{Multi-Draft On-Policy Distillation for Diffusion Drafters}},\n  journal = {arXiv preprint arXiv:2610.37778},\n  year = {2026},\n  eprint = {2610.37778},\n  archivePrefix = {arXiv}\n}",
+    "curated_at": "2026-11-02"
   }
 ]

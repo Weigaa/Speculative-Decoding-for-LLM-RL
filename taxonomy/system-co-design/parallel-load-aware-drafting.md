@@ -20,3 +20,7 @@ Analyze parallel candidate generation, verification width, and load-dependent ne
 | [SchemaFill](../../papers/chen2026schemafill.md) | 2026 | Serving / inference — RL transfer potential | Post-cutoff screened addition |
 | [DominoTree](../../papers/lin2026dominotree.md) | 2026 | Serving / inference — RL transfer potential | Post-cutoff screened addition |
 | [ReAnchor](../../papers/lee2026reanchor.md) | 2026 | Serving / inference — RL transfer potential | Post-cutoff screened addition |
+| [NgramRL](../../papers/pandey2026ngramrl.md) | 2026 | Direct RL rollout / training | Post-cutoff screened addition |
+| [FlashNext-RL](../../papers/yao2026flashnextrl.md) | 2026 | Direct RL rollout / training | Post-cutoff screened addition |
+| [TableTune](../../papers/malvankar2026tabletune.md) | 2026 | Serving / inference — RL transfer potential | Post-cutoff screened addition |
+| [MDraft](../../papers/molodyk2026mdraft.md) | 2026 | Serving / inference — RL transfer potential | Post-cutoff screened addition |

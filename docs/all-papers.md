@@ -126,3 +126,8 @@
 | `he2026valuspec` | [ValuSpec: Plug-and-Play Candidate Valuation before Target Verification for Tree-Based Speculative Decoding](../papers/he2026valuspec.md) | post_cutoff |
 | `tsur2026rift` | [RIFT: KV Cache Compression for Draft Models with Complementary Compressibility Training](../papers/tsur2026rift.md) | post_cutoff |
 | `lee2026reanchor` | [ReAnchor: Reusing Rejected Verifier States for Diffusion Drafting](../papers/lee2026reanchor.md) | post_cutoff |
+| `pandey2026ngramrl` | [NgramRL: Accelerating RL Post-Training for Structured Generation via Rollout-Aware N-gram Speculative Decoding](../papers/pandey2026ngramrl.md) | post_cutoff |
+| `yao2026flashnextrl` | [FlashNext-RL: A System Optimization Study for Long-Horizon Agentic RL of Qwen3.8-Flash-Next](../papers/yao2026flashnextrl.md) | post_cutoff |
+| `song2026specmem` | [SPECMEM: Accelerating Agentic Tool Calling via Live Memory Management](../papers/song2026specmem.md) | post_cutoff |
+| `malvankar2026tabletune` | [TableTune: Measured, Self-Correcting Draft-Length Tables for Dynamic Speculative Decoding](../papers/malvankar2026tabletune.md) | post_cutoff |
+| `molodyk2026mdraft` | [Multi-Draft On-Policy Distillation for Diffusion Drafters](../papers/molodyk2026mdraft.md) | post_cutoff |

@@ -32,8 +32,8 @@ Serving/inference evidence only. Acceptance is evaluated at temperatures 0 and 1
 - Metadata provenance: Official arXiv abstract-page citation metadata and submission history, cross-checked against full HTML v2 on 2026-10-26. Curated after the manuscript cutoff; this is not a claim that the first posting was after the cutoff. No accepted venue is inferred.
 - Evidence pointer: Sections 4.1–4.3 and 5.1–5.6; Appendix E (hardware/serving protocol and correctness checks) and F.3 (lossless verification).
 - Source publication date: 2026-10-14
-- Released code: not recorded (not a claim of non-availability)
-- Artifact checks: paper-linked public JetSpec repository checked; README and implementation identify the prior JetSpec (2606.18394); JetSpec++-specific release not verified on 2026-10-26, revision `2c7b3fae75690dfe9a188a37d7fdfd43ee0e032f`
+- Released code: [official artifact](https://github.com/hao-ai-lab/JetSpec)
+- Artifact checks: paper-linked public JetSpec repository checked; README and implementation identify the prior JetSpec (2606.18394); JetSpec++-specific release not verified on 2026-10-26, revision `2c7b3fae75690dfe9a188a37d7fdfd43ee0e032f`; linked and checked; matching implementation files and README visible in public repository on 2026-11-02, revision `673267e4faba71a63099c258f0802c2f3aa44f8e`
 
 ## BibTeX
 
