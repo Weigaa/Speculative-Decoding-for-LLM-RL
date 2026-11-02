@@ -2,7 +2,7 @@
   "status": "success",
   "last_attempt": "2026-11-02T01:02:59Z",
   "last_successful_scan": "2026-11-02T01:02:59Z",
-  "pending_candidates": 33,
+  "pending_candidates": 31,
   "note": "Automated arXiv and DataCite discovery. DataCite dates are registry-update dates, not paper-version dates. Hits require primary-source screening.",
   "since": "2026-10-19T01:02:59Z",
   "newly_discovered": 13,
@@ -11,5 +11,9 @@
   "curator_included": 5,
   "curator_excluded": 2,
   "curator_pending": 33,
-  "curator_note": "All six arXiv and six DataCite query families completed. Added five screened studies (two direct RL integration/rollout, three serving transfer), excluded two out-of-scope hits and retained 33 pending candidates. Two formerly unverified code releases were checked; frozen snapshot unchanged."
+  "curator_note": "All six arXiv and six DataCite query families completed. Added five screened studies (two direct RL integration/rollout, three serving transfer), excluded two out-of-scope hits and retained 33 pending candidates. Two formerly unverified code releases were checked; frozen snapshot unchanged.",
+  "final_submission_review": "2026-11-02",
+  "final_review_added": 2,
+  "final_review_metadata_corrections": 7,
+  "final_review_note": "Two additional serving-transfer records screened from full text. Updated-edition manifest records 64 studies (23 direct RL integration/evaluation, 41 transfer); original October 14 snapshot remains unchanged."
 }

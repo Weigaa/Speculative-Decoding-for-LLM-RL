@@ -929,11 +929,25 @@
     "dimensions": [],
     "mechanism": "Related survey used for positioning and coverage comparison.",
     "evidence_note": "Not counted in the 46-study technical corpus. Imported citation metadata is not independent evidence of speculative RL acceleration.",
-    "metadata_provenance": "Author-supplied BibTeX; arXiv versions cross-checked against saved official API metadata where available. Full field-level publication metadata has not been independently reverified.",
+    "metadata_provenance": "Author-supplied BibTeX; arXiv versions cross-checked against saved official API metadata where available. Full field-level publication metadata has not been independently reverified. Field-level correction verified on 2026-11-02: https://api.crossref.org/works/10.1145/3754448.",
     "evidence_pointer": "",
     "code_urls": [],
     "manuscript_cited": true,
-    "bibtex": "@article{surveyInferMiao2025,\n  title   = {Towards Efficient Generative Large Language Model Serving: A Survey from Algorithms to Systems},\n  author  = {Miao, Xupeng and Oliaro, Gabriele and Zhang, Zhihao and Cheng, Xinhao and Jin, Hongyi and Chen, Tianqi and Jia, Zhihao},\n  journal = {ACM Computing Surveys},\n  year    = {2025},\n  publisher = {Association for Computing Machinery},\n  doi     = {10.1145/3754448},\n}"
+    "bibtex": "@article{surveyInferMiao2025,\n  title = {Towards Efficient Generative Large Language Model Serving: A Survey from Algorithms to Systems},\n  author = {Miao, Xupeng and Oliaro, Gabriele and Zhang, Zhihao and Cheng, Xinhao and Jin, Hongyi and Chen, Tianqi and Jia, Zhihao},\n  journal = {ACM Computing Surveys},\n  year = {2025},\n  publisher = {Association for Computing Machinery},\n  doi = {10.1145/3754448},\n  volume = {58},\n  number = {1},\n  pages = {1--37}\n}",
+    "metadata_corrections": [
+      {
+        "checked_at": "2026-11-02",
+        "source": "https://api.crossref.org/works/10.1145/3754448",
+        "original": {
+          "title": "Towards Efficient Generative Large Language Model Serving: A Survey from Algorithms to Systems",
+          "authors": "Miao, Xupeng and Oliaro, Gabriele and Zhang, Zhihao and Cheng, Xinhao and Jin, Hongyi and Chen, Tianqi and Jia, Zhihao",
+          "year": 2025,
+          "venue": "ACM Computing Surveys",
+          "bibtex": "@article{surveyInferMiao2025,\n  title   = {Towards Efficient Generative Large Language Model Serving: A Survey from Algorithms to Systems},\n  author  = {Miao, Xupeng and Oliaro, Gabriele and Zhang, Zhihao and Cheng, Xinhao and Jin, Hongyi and Chen, Tianqi and Jia, Zhihao},\n  journal = {ACM Computing Surveys},\n  year    = {2025},\n  publisher = {Association for Computing Machinery},\n  doi     = {10.1145/3754448},\n}"
+        },
+        "reason": "Author spelling/list or formal-publication metadata corrected from primary conference/publisher records; citation key retained."
+      }
+    ]
   },
   {
     "id": "surveyInferZhou2024",
@@ -1991,9 +2005,9 @@
     "id": "li2024eagle",
     "name": "EAGLE: Speculative Sampling Requires Rethinking Feature Uncertainty",
     "title": "EAGLE: Speculative Sampling Requires Rethinking Feature Uncertainty",
-    "authors": "Li, Yuhui and Wei, Fang and Zhang, Chao and Zhang, Sining and Ye, Yujia and others",
+    "authors": "Li, Yuhui and Wei, Fangyun and Zhang, Chao and Zhang, Hongyang",
     "year": 2024,
-    "venue": "Proceedings of the 41st International Conference on Machine Learning",
+    "venue": "41st International Conference on Machine Learning",
     "doi": "",
     "arxiv_id": "2401.15077",
     "url": "https://arxiv.org/abs/2401.15077",
@@ -2004,19 +2018,33 @@
     "dimensions": [],
     "mechanism": "Background reference supporting definitions, infrastructure, or the surrounding RL and inference setting.",
     "evidence_note": "Not counted in the 46-study technical corpus. Imported citation metadata is not independent evidence of speculative RL acceleration.",
-    "metadata_provenance": "Author-supplied BibTeX; arXiv versions cross-checked against saved official API metadata where available. Full field-level publication metadata has not been independently reverified.",
+    "metadata_provenance": "Author-supplied BibTeX; arXiv versions cross-checked against saved official API metadata where available. Full field-level publication metadata has not been independently reverified. Field-level correction verified on 2026-11-02: https://proceedings.mlr.press/v235/li24bt.html.",
     "evidence_pointer": "",
     "code_urls": [],
     "manuscript_cited": true,
-    "bibtex": "@inproceedings{li2024eagle,\n  author    = {Li, Yuhui and Wei, Fang and Zhang, Chao and Zhang, Sining and\n               Ye, Yujia and others},\n  title     = {EAGLE: Speculative Sampling Requires Rethinking Feature\n               Uncertainty},\n  booktitle = {Proceedings of the 41st International Conference on Machine\n               Learning},\n  year      = {2024},\n  publisher = {PMLR},\n  url       = {https://arxiv.org/abs/2401.15077}\n}"
+    "bibtex": "@inproceedings{li2024eagle,\n  author = {Li, Yuhui and Wei, Fangyun and Zhang, Chao and Zhang, Hongyang},\n  title = {{EAGLE}: Speculative Sampling Requires Rethinking Feature Uncertainty},\n  booktitle = {41st International Conference on Machine Learning},\n  year = {2024},\n  publisher = {PMLR},\n  url = {https://arxiv.org/abs/2401.15077},\n  pages = {28935--28948}\n}",
+    "metadata_corrections": [
+      {
+        "checked_at": "2026-11-02",
+        "source": "https://proceedings.mlr.press/v235/li24bt.html",
+        "original": {
+          "title": "EAGLE: Speculative Sampling Requires Rethinking Feature Uncertainty",
+          "authors": "Li, Yuhui and Wei, Fang and Zhang, Chao and Zhang, Sining and Ye, Yujia and others",
+          "year": 2024,
+          "venue": "Proceedings of the 41st International Conference on Machine Learning",
+          "bibtex": "@inproceedings{li2024eagle,\n  author    = {Li, Yuhui and Wei, Fang and Zhang, Chao and Zhang, Sining and\n               Ye, Yujia and others},\n  title     = {EAGLE: Speculative Sampling Requires Rethinking Feature\n               Uncertainty},\n  booktitle = {Proceedings of the 41st International Conference on Machine\n               Learning},\n  year      = {2024},\n  publisher = {PMLR},\n  url       = {https://arxiv.org/abs/2401.15077}\n}"
+        },
+        "reason": "Author spelling/list or formal-publication metadata corrected from primary conference/publisher records; citation key retained."
+      }
+    ]
   },
   {
     "id": "li2024eagle2",
     "name": "EAGLE-2: Faster Inference of Language Models with Dynamic Draft Trees",
     "title": "EAGLE-2: Faster Inference of Language Models with Dynamic Draft Trees",
-    "authors": "Li, Yuhui and Wei, Fang and Zhang, Chao and others",
+    "authors": "Li, Yuhui and Wei, Fangyun and Zhang, Chao and Zhang, Hongyang",
     "year": 2024,
-    "venue": "arXiv preprint arXiv:2406.16858",
+    "venue": "2024 Conference on Empirical Methods in Natural Language Processing",
     "doi": "",
     "arxiv_id": "2406.16858",
     "url": "https://arxiv.org/abs/2406.16858",
@@ -2027,11 +2055,25 @@
     "dimensions": [],
     "mechanism": "Background reference supporting definitions, infrastructure, or the surrounding RL and inference setting.",
     "evidence_note": "Not counted in the 46-study technical corpus. Imported citation metadata is not independent evidence of speculative RL acceleration.",
-    "metadata_provenance": "Author-supplied BibTeX; arXiv versions cross-checked against saved official API metadata where available. Full field-level publication metadata has not been independently reverified.",
+    "metadata_provenance": "Author-supplied BibTeX; arXiv versions cross-checked against saved official API metadata where available. Full field-level publication metadata has not been independently reverified. Field-level correction verified on 2026-11-02: https://aclanthology.org/2024.emnlp-main.422/.",
     "evidence_pointer": "",
     "code_urls": [],
     "manuscript_cited": true,
-    "bibtex": "@article{li2024eagle2,\n  author  = {Li, Yuhui and Wei, Fang and Zhang, Chao and others},\n  title   = {EAGLE-2: Faster Inference of Language Models with Dynamic Draft Trees},\n  journal = {arXiv preprint arXiv:2406.16858},\n  year    = {2024}\n}"
+    "bibtex": "@inproceedings{li2024eagle2,\n  author = {Li, Yuhui and Wei, Fangyun and Zhang, Chao and Zhang, Hongyang},\n  title = {{EAGLE-2}: Faster Inference of Language Models with Dynamic Draft Trees},\n  year = {2024},\n  booktitle = {2024 Conference on Empirical Methods in Natural Language Processing},\n  publisher = {Association for Computational Linguistics},\n  pages = {7421--7432},\n  doi = {10.18653/v1/2024.emnlp-main.422}\n}",
+    "metadata_corrections": [
+      {
+        "checked_at": "2026-11-02",
+        "source": "https://aclanthology.org/2024.emnlp-main.422/",
+        "original": {
+          "title": "EAGLE-2: Faster Inference of Language Models with Dynamic Draft Trees",
+          "authors": "Li, Yuhui and Wei, Fang and Zhang, Chao and others",
+          "year": 2024,
+          "venue": "arXiv preprint arXiv:2406.16858",
+          "bibtex": "@article{li2024eagle2,\n  author  = {Li, Yuhui and Wei, Fang and Zhang, Chao and others},\n  title   = {EAGLE-2: Faster Inference of Language Models with Dynamic Draft Trees},\n  journal = {arXiv preprint arXiv:2406.16858},\n  year    = {2024}\n}"
+        },
+        "reason": "Author spelling/list or formal-publication metadata corrected from primary conference/publisher records; citation key retained."
+      }
+    ]
   },
   {
     "id": "yu2022orca",
@@ -2083,9 +2125,9 @@
     "id": "rajbhandari2020zero",
     "name": "ZeRO: Memory Optimizations Toward Training Trillion Parameter Models",
     "title": "ZeRO: Memory Optimizations Toward Training Trillion Parameter Models",
-    "authors": "Samyam Rajbhandari and Jeff Rasley and Olatunji Ruwase and Yuxiong He",
+    "authors": "Rajbhandari, Samyam and Rasley, Jeff and Ruwase, Olatunji and He, Yuxiong",
     "year": 2020,
-    "venue": "Proceedings of the International Conference for High Performance Computing, Networking, Storage and Analysis",
+    "venue": "the International Conference for High Performance Computing, Networking, Storage and Analysis",
     "doi": "10.1109/SC41405.2020.00024",
     "arxiv_id": "1405.2020",
     "url": "https://arxiv.org/abs/1405.2020",
@@ -2096,19 +2138,33 @@
     "dimensions": [],
     "mechanism": "Background reference supporting definitions, infrastructure, or the surrounding RL and inference setting.",
     "evidence_note": "Not counted in the 46-study technical corpus. Imported citation metadata is not independent evidence of speculative RL acceleration.",
-    "metadata_provenance": "Author-supplied BibTeX; arXiv versions cross-checked against saved official API metadata where available. Full field-level publication metadata has not been independently reverified. Author correction verified against Microsoft Research publication page.",
+    "metadata_provenance": "Author-supplied BibTeX; arXiv versions cross-checked against saved official API metadata where available. Full field-level publication metadata has not been independently reverified. Author correction verified against Microsoft Research publication page. Field-level correction verified on 2026-11-02: https://www.microsoft.com/en-us/research/publication/zero-memory-optimizations-toward-training-trillion-parameter-models/.",
     "evidence_pointer": "",
     "code_urls": [],
     "manuscript_cited": true,
-    "bibtex": "@inproceedings{rajbhandari2020zero,\n  author    = {Samyam Rajbhandari and Jeff Rasley and Olatunji Ruwase and Yuxiong He},\n  title     = {ZeRO: Memory Optimizations Toward Training Trillion Parameter\n               Models},\n  booktitle = {Proceedings of the International Conference for High Performance\n               Computing, Networking, Storage and Analysis},\n  year      = {2020},\n  doi       = {10.1109/SC41405.2020.00024}\n}"
+    "bibtex": "@inproceedings{rajbhandari2020zero,\n  author = {Rajbhandari, Samyam and Rasley, Jeff and Ruwase, Olatunji and He, Yuxiong},\n  title = {{ZeRO}: Memory Optimizations Toward Training Trillion Parameter Models},\n  booktitle = {the International Conference for High Performance Computing, Networking, Storage and Analysis},\n  year = {2020},\n  doi = {10.1109/SC41405.2020.00024}\n}",
+    "metadata_corrections": [
+      {
+        "checked_at": "2026-11-02",
+        "source": "https://www.microsoft.com/en-us/research/publication/zero-memory-optimizations-toward-training-trillion-parameter-models/",
+        "original": {
+          "title": "ZeRO: Memory Optimizations Toward Training Trillion Parameter Models",
+          "authors": "Samyam Rajbhandari and Jeff Rasley and Olatunji Ruwase and Yuxiong He",
+          "year": 2020,
+          "venue": "Proceedings of the International Conference for High Performance Computing, Networking, Storage and Analysis",
+          "bibtex": "@inproceedings{rajbhandari2020zero,\n  author    = {Samyam Rajbhandari and Jeff Rasley and Olatunji Ruwase and Yuxiong He},\n  title     = {ZeRO: Memory Optimizations Toward Training Trillion Parameter\n               Models},\n  booktitle = {Proceedings of the International Conference for High Performance\n               Computing, Networking, Storage and Analysis},\n  year      = {2020},\n  doi       = {10.1109/SC41405.2020.00024}\n}"
+        },
+        "reason": "Author spelling/list or formal-publication metadata corrected from primary conference/publisher records; citation key retained."
+      }
+    ]
   },
   {
     "id": "liu2023agentbench",
     "name": "AgentBench: Evaluating LLMs as Agents",
     "title": "AgentBench: Evaluating LLMs as Agents",
     "authors": "Liu, Xiao and Yu, Hao and Zhang, Hanchen and Xu, Yifan and Lei, Xuanyu and Lai, Hanyu and Gu, Yu and Ding, Hangliang and Men, Kaiwen and Yang, Kejuan and Zhang, Shudan and Deng, Xiang and Zeng, Aohan and Du, Zhengxiao and Zhang, Chenhui and Shen, Sheng and Zhang, Tianjun and Su, Yu and Sun, Huan and Huang, Minlie and Dong, Yuxiao and Tang, Jie",
-    "year": 2023,
-    "venue": "arXiv preprint arXiv:2308.03688",
+    "year": 2024,
+    "venue": "12th International Conference on Learning Representations",
     "doi": "",
     "arxiv_id": "2308.03688",
     "url": "https://arxiv.org/abs/2308.03688",
@@ -2119,19 +2175,33 @@
     "dimensions": [],
     "mechanism": "Background reference supporting definitions, infrastructure, or the surrounding RL and inference setting.",
     "evidence_note": "Not counted in the 46-study technical corpus. Imported citation metadata is not independent evidence of speculative RL acceleration.",
-    "metadata_provenance": "Author-supplied BibTeX; arXiv versions cross-checked against saved official API metadata where available. Full field-level publication metadata has not been independently reverified.",
+    "metadata_provenance": "Author-supplied BibTeX; arXiv versions cross-checked against saved official API metadata where available. Full field-level publication metadata has not been independently reverified. Field-level correction verified on 2026-11-02: https://arxiv.org/abs/2308.03688.",
     "evidence_pointer": "",
     "code_urls": [],
     "manuscript_cited": true,
-    "bibtex": "@article{liu2023agentbench,\n  author  = {Liu, Xiao and Yu, Hao and Zhang, Hanchen and Xu, Yifan and\n             Lei, Xuanyu and Lai, Hanyu and Gu, Yu and Ding, Hangliang and\n             Men, Kaiwen and Yang, Kejuan and Zhang, Shudan and Deng, Xiang and\n             Zeng, Aohan and Du, Zhengxiao and Zhang, Chenhui and Shen, Sheng and\n             Zhang, Tianjun and Su, Yu and Sun, Huan and Huang, Minlie and\n             Dong, Yuxiao and Tang, Jie},\n  title   = {AgentBench: Evaluating LLMs as Agents},\n  journal = {arXiv preprint arXiv:2308.03688},\n  year    = {2023},\n}"
+    "bibtex": "@inproceedings{liu2023agentbench,\n  author = {Liu, Xiao and Yu, Hao and Zhang, Hanchen and Xu, Yifan and Lei, Xuanyu and Lai, Hanyu and Gu, Yu and Ding, Hangliang and Men, Kaiwen and Yang, Kejuan and Zhang, Shudan and Deng, Xiang and Zeng, Aohan and Du, Zhengxiao and Zhang, Chenhui and Shen, Sheng and Zhang, Tianjun and Su, Yu and Sun, Huan and Huang, Minlie and Dong, Yuxiao and Tang, Jie},\n  title = {{AgentBench}: Evaluating {LLMs} as Agents},\n  year = {2024},\n  booktitle = {12th International Conference on Learning Representations}\n}",
+    "metadata_corrections": [
+      {
+        "checked_at": "2026-11-02",
+        "source": "https://arxiv.org/abs/2308.03688",
+        "original": {
+          "title": "AgentBench: Evaluating LLMs as Agents",
+          "authors": "Liu, Xiao and Yu, Hao and Zhang, Hanchen and Xu, Yifan and Lei, Xuanyu and Lai, Hanyu and Gu, Yu and Ding, Hangliang and Men, Kaiwen and Yang, Kejuan and Zhang, Shudan and Deng, Xiang and Zeng, Aohan and Du, Zhengxiao and Zhang, Chenhui and Shen, Sheng and Zhang, Tianjun and Su, Yu and Sun, Huan and Huang, Minlie and Dong, Yuxiao and Tang, Jie",
+          "year": 2023,
+          "venue": "arXiv preprint arXiv:2308.03688",
+          "bibtex": "@article{liu2023agentbench,\n  author  = {Liu, Xiao and Yu, Hao and Zhang, Hanchen and Xu, Yifan and\n             Lei, Xuanyu and Lai, Hanyu and Gu, Yu and Ding, Hangliang and\n             Men, Kaiwen and Yang, Kejuan and Zhang, Shudan and Deng, Xiang and\n             Zeng, Aohan and Du, Zhengxiao and Zhang, Chenhui and Shen, Sheng and\n             Zhang, Tianjun and Su, Yu and Sun, Huan and Huang, Minlie and\n             Dong, Yuxiao and Tang, Jie},\n  title   = {AgentBench: Evaluating LLMs as Agents},\n  journal = {arXiv preprint arXiv:2308.03688},\n  year    = {2023},\n}"
+        },
+        "reason": "Author spelling/list or formal-publication metadata corrected from primary conference/publisher records; citation key retained."
+      }
+    ]
   },
   {
     "id": "qin2023toollm",
     "name": "ToolLLM: Facilitating Large Language Models to Master 16000+ Real-world APIs",
     "title": "ToolLLM: Facilitating Large Language Models to Master 16000+ Real-world APIs",
     "authors": "Qin, Yujia and Liang, Shihao and Ye, Yining and Zhu, Kunlun and Yan, Lan and Lu, Yaxi and Lin, Yankai and Cong, Xin and Tang, Xiangru and Qian, Bill and Zhao, Sihan and Hong, Lauren and Tian, Runchu and Xie, Ruobing and Zhou, Jie and Gerstein, Mark and Li, Dahai and Liu, Zhiyuan and Sun, Maosong",
-    "year": 2023,
-    "venue": "arXiv preprint arXiv:2307.16789",
+    "year": 2024,
+    "venue": "12th International Conference on Learning Representations",
     "doi": "",
     "arxiv_id": "2307.16789",
     "url": "https://arxiv.org/abs/2307.16789",
@@ -2142,11 +2212,25 @@
     "dimensions": [],
     "mechanism": "Background reference supporting definitions, infrastructure, or the surrounding RL and inference setting.",
     "evidence_note": "Not counted in the 46-study technical corpus. Imported citation metadata is not independent evidence of speculative RL acceleration.",
-    "metadata_provenance": "Author-supplied BibTeX; arXiv versions cross-checked against saved official API metadata where available. Full field-level publication metadata has not been independently reverified.",
+    "metadata_provenance": "Author-supplied BibTeX; arXiv versions cross-checked against saved official API metadata where available. Full field-level publication metadata has not been independently reverified. Field-level correction verified on 2026-11-02: https://openreview.net/attachment?id=dHng2O0Jjr&name=pdf.",
     "evidence_pointer": "",
     "code_urls": [],
     "manuscript_cited": true,
-    "bibtex": "@article{qin2023toollm,\n  author  = {Qin, Yujia and Liang, Shihao and Ye, Yining and Zhu, Kunlun and\n             Yan, Lan and Lu, Yaxi and Lin, Yankai and Cong, Xin and Tang,\n             Xiangru and Qian, Bill and Zhao, Sihan and Hong, Lauren and Tian,\n             Runchu and Xie, Ruobing and Zhou, Jie and Gerstein, Mark and Li,\n             Dahai and Liu, Zhiyuan and Sun, Maosong},\n  title   = {ToolLLM: Facilitating Large Language Models to Master 16000+\n             Real-world APIs},\n  journal = {arXiv preprint arXiv:2307.16789},\n  year    = {2023},\n}"
+    "bibtex": "@inproceedings{qin2023toollm,\n  author = {Qin, Yujia and Liang, Shihao and Ye, Yining and Zhu, Kunlun and Yan, Lan and Lu, Yaxi and Lin, Yankai and Cong, Xin and Tang, Xiangru and Qian, Bill and Zhao, Sihan and Hong, Lauren and Tian, Runchu and Xie, Ruobing and Zhou, Jie and Gerstein, Mark and Li, Dahai and Liu, Zhiyuan and Sun, Maosong},\n  title = {{ToolLLM}: Facilitating Large Language Models to Master 16000+ Real-world APIs},\n  year = {2024},\n  booktitle = {12th International Conference on Learning Representations}\n}",
+    "metadata_corrections": [
+      {
+        "checked_at": "2026-11-02",
+        "source": "https://openreview.net/attachment?id=dHng2O0Jjr&name=pdf",
+        "original": {
+          "title": "ToolLLM: Facilitating Large Language Models to Master 16000+ Real-world APIs",
+          "authors": "Qin, Yujia and Liang, Shihao and Ye, Yining and Zhu, Kunlun and Yan, Lan and Lu, Yaxi and Lin, Yankai and Cong, Xin and Tang, Xiangru and Qian, Bill and Zhao, Sihan and Hong, Lauren and Tian, Runchu and Xie, Ruobing and Zhou, Jie and Gerstein, Mark and Li, Dahai and Liu, Zhiyuan and Sun, Maosong",
+          "year": 2023,
+          "venue": "arXiv preprint arXiv:2307.16789",
+          "bibtex": "@article{qin2023toollm,\n  author  = {Qin, Yujia and Liang, Shihao and Ye, Yining and Zhu, Kunlun and\n             Yan, Lan and Lu, Yaxi and Lin, Yankai and Cong, Xin and Tang,\n             Xiangru and Qian, Bill and Zhao, Sihan and Hong, Lauren and Tian,\n             Runchu and Xie, Ruobing and Zhou, Jie and Gerstein, Mark and Li,\n             Dahai and Liu, Zhiyuan and Sun, Maosong},\n  title   = {ToolLLM: Facilitating Large Language Models to Master 16000+\n             Real-world APIs},\n  journal = {arXiv preprint arXiv:2307.16789},\n  year    = {2023},\n}"
+        },
+        "reason": "Author spelling/list or formal-publication metadata corrected from primary conference/publisher records; citation key retained."
+      }
+    ]
   },
   {
     "id": "qin2023toollearning",
@@ -2175,9 +2259,9 @@
     "id": "zhou2023webarena",
     "name": "WebArena: A Realistic Web Environment for Building Autonomous Agents",
     "title": "WebArena: A Realistic Web Environment for Building Autonomous Agents",
-    "authors": "Zhou, Shuyan and Xu, Frank F. and Zhu, Hao and Zhou, Xuhui and Lo, Robert and Sridhar, Abishek and Cheng, Xianyi and Bisk, Yonatan and Fried, Daniel and Alon, Uri and Neubig, Graham",
-    "year": 2023,
-    "venue": "arXiv preprint arXiv:2307.13854",
+    "authors": "Zhou, Shuyan and Xu, Frank F. and Zhu, Hao and Zhou, Xuhui and Lo, Robert and Sridhar, Abishek and Cheng, Xianyi and Ou, Tianyue and Bisk, Yonatan and Fried, Daniel and Alon, Uri and Neubig, Graham",
+    "year": 2024,
+    "venue": "12th International Conference on Learning Representations",
     "doi": "",
     "arxiv_id": "2307.13854",
     "url": "https://arxiv.org/abs/2307.13854",
@@ -2188,11 +2272,25 @@
     "dimensions": [],
     "mechanism": "Background reference supporting definitions, infrastructure, or the surrounding RL and inference setting.",
     "evidence_note": "Not counted in the 46-study technical corpus. Imported citation metadata is not independent evidence of speculative RL acceleration.",
-    "metadata_provenance": "Author-supplied BibTeX; arXiv versions cross-checked against saved official API metadata where available. Full field-level publication metadata has not been independently reverified.",
+    "metadata_provenance": "Author-supplied BibTeX; arXiv versions cross-checked against saved official API metadata where available. Full field-level publication metadata has not been independently reverified. Field-level correction verified on 2026-11-02: https://arxiv.org/pdf/2307.13854.",
     "evidence_pointer": "",
     "code_urls": [],
     "manuscript_cited": true,
-    "bibtex": "@article{zhou2023webarena,\n  author  = {Zhou, Shuyan and Xu, Frank F. and Zhu, Hao and Zhou, Xuhui and\n             Lo, Robert and Sridhar, Abishek and Cheng, Xianyi and Bisk,\n             Yonatan and Fried, Daniel and Alon, Uri and Neubig, Graham},\n  title   = {WebArena: A Realistic Web Environment for Building Autonomous\n             Agents},\n  journal = {arXiv preprint arXiv:2307.13854},\n  year    = {2023},\n}"
+    "bibtex": "@inproceedings{zhou2023webarena,\n  author = {Zhou, Shuyan and Xu, Frank F. and Zhu, Hao and Zhou, Xuhui and Lo, Robert and Sridhar, Abishek and Cheng, Xianyi and Ou, Tianyue and Bisk, Yonatan and Fried, Daniel and Alon, Uri and Neubig, Graham},\n  title = {{WebArena}: A Realistic Web Environment for Building Autonomous Agents},\n  year = {2024},\n  booktitle = {12th International Conference on Learning Representations}\n}",
+    "metadata_corrections": [
+      {
+        "checked_at": "2026-11-02",
+        "source": "https://arxiv.org/pdf/2307.13854",
+        "original": {
+          "title": "WebArena: A Realistic Web Environment for Building Autonomous Agents",
+          "authors": "Zhou, Shuyan and Xu, Frank F. and Zhu, Hao and Zhou, Xuhui and Lo, Robert and Sridhar, Abishek and Cheng, Xianyi and Bisk, Yonatan and Fried, Daniel and Alon, Uri and Neubig, Graham",
+          "year": 2023,
+          "venue": "arXiv preprint arXiv:2307.13854",
+          "bibtex": "@article{zhou2023webarena,\n  author  = {Zhou, Shuyan and Xu, Frank F. and Zhu, Hao and Zhou, Xuhui and\n             Lo, Robert and Sridhar, Abishek and Cheng, Xianyi and Bisk,\n             Yonatan and Fried, Daniel and Alon, Uri and Neubig, Graham},\n  title   = {WebArena: A Realistic Web Environment for Building Autonomous\n             Agents},\n  journal = {arXiv preprint arXiv:2307.13854},\n  year    = {2023},\n}"
+        },
+        "reason": "Author spelling/list or formal-publication metadata corrected from primary conference/publisher records; citation key retained."
+      }
+    ]
   },
   {
     "id": "jimenez2023swebench",
@@ -3337,6 +3435,82 @@
     "code_artifacts": [],
     "manuscript_cited": false,
     "bibtex": "@article{molodyk2026mdraft,\n  author = {Molodyk, Petr and Zhu, Yuchen and Choi, Jaemoo and Tao, Molei and Chen, Yongxin},\n  title = {{Multi-Draft On-Policy Distillation for Diffusion Drafters}},\n  journal = {arXiv preprint arXiv:2610.37778},\n  year = {2026},\n  eprint = {2610.37778},\n  archivePrefix = {arXiv}\n}",
+    "curated_at": "2026-11-02"
+  },
+  {
+    "id": "he2026longspark",
+    "name": "LongSpark",
+    "title": "LongSpark: Efficient speculative decoding with a fixed-cost parallel drafter",
+    "authors": "Hao-Yuan He and Peng-Fei Liu and Chen Chen and Si Shen and Quan He and Runzhou Liu and Xinqi Li and Zhenhua Dong and Ming Li",
+    "year": 2026,
+    "venue": "arXiv preprint",
+    "doi": "",
+    "arxiv_id": "2609.37029",
+    "url": "https://arxiv.org/abs/2609.37029v2",
+    "reviewed_version": "v2",
+    "published": "2026-09-29",
+    "role": "post_cutoff",
+    "evidence": "serving_transfer",
+    "dimensions": [
+      "proposal-source",
+      "memory-reuse-state",
+      "parallel-load-aware-drafting"
+    ],
+    "mechanism": "Builds a fixed-size drafter context from a recent target-cache window, boundary features and incrementally updated global summaries. A parallel backbone and lightweight sequential correction propose tokens without maintaining a growing draft KV cache.",
+    "evidence_note": "Serving/inference only. Main Qwen3-4B/8B/14B tests use temperature one and a target–drafter-disaggregated configuration that adds a dedicated drafter GPU over the AR baseline. Long-context experiments reach 128K; full-prefix work and the complete target cache still belong to target verification. Fixed cost applies to the additional drafter state/computation at fixed architecture and block width, not to the whole decoder. RL transfer requires summary reconstruction or invalidation when policy weights change, correct state updates after rejection, and equal-resource net rollout measurements.",
+    "metadata_provenance": "Official arXiv abstract/submission metadata, full HTML and paper-linked public code repository checked on 2026-11-02. No RL result or accepted venue inferred from serving evaluation.",
+    "evidence_pointer": "v2 Sections 2.2–2.4 (context interface, corrected sampling and state maintenance), 3.1–3.3 (hardware/sampling/load), and Appendices C–D.",
+    "code_urls": [
+      "https://github.com/Hao-Yuan-He/LongSpark"
+    ],
+    "code_artifacts": [
+      {
+        "url": "https://github.com/Hao-Yuan-He/LongSpark",
+        "head_sha": "9ab6526e481bbea67489f3a73ebc782218d56f71",
+        "checked_at": "2026-11-02",
+        "status": "paper-linked public repository checked; source files visible; code not executed"
+      }
+    ],
+    "manuscript_cited": false,
+    "bibtex": "@article{he2026longspark,\n  author = {He, Hao-Yuan and Liu, Peng-Fei and Chen, Chen and Shen, Si and He, Quan and Liu, Runzhou and Li, Xinqi and Dong, Zhenhua and Li, Ming},\n  title = {{LongSpark: Efficient speculative decoding with a fixed-cost parallel drafter}},\n  journal = {arXiv preprint arXiv:2609.37029},\n  year = {2026},\n  eprint = {2609.37029},\n  archivePrefix = {arXiv}\n}",
+    "curated_at": "2026-11-02"
+  },
+  {
+    "id": "chen2026packedss",
+    "name": "Packed-SS",
+    "title": "One Call Ahead: Packed Self-Speculative Decoding with Diffusion Drafting",
+    "authors": "Yuxiao Chen and Changxiao Cai",
+    "year": 2026,
+    "venue": "arXiv preprint",
+    "doi": "",
+    "arxiv_id": "2610.33379",
+    "url": "https://arxiv.org/abs/2610.33379v1",
+    "reviewed_version": "v1",
+    "published": "2026-10-24",
+    "role": "post_cutoff",
+    "evidence": "serving_transfer",
+    "dimensions": [
+      "proposal-source",
+      "verification-semantics",
+      "parallel-load-aware-drafting"
+    ],
+    "mechanism": "Packs verification of a deferred draft and preparation of the next draft into one shared AR/diffusion-model call. Retained candidates keep their original proposal distributions while verification uses the current committed prefix.",
+    "evidence_note": "Serving/inference on shared-weight AR/diffusion models, not RL training. Section 3.2 and Appendix B.2 provide a stochastic construction that stores proposal distributions and performs exact rejection correction; the pathwise call-count result has separate greedy monotonicity assumptions. Experiments include greedy and temperature-one cases. Transfer requires a compatible shared-mode architecture, correct attention/cache masks and a documented fixed rollout-policy snapshot. A reduction in model calls alone does not establish lower GPU cost, rollout makespan or time-to-quality under policy updates.",
+    "metadata_provenance": "Official arXiv abstract/submission metadata, full HTML and paper-linked public code repository checked on 2026-11-02. No RL result or accepted venue inferred from serving evaluation.",
+    "evidence_pointer": "Sections 3.1–3.2, 4.1–4.2 and 5; Appendix B.1 versus B.2 distinguishes greedy call-count assumptions from exact stochastic sampling; Appendices D–F give packing and timing details.",
+    "code_urls": [
+      "https://github.com/cyx78/One-Call-Ahead-Packed-Self-Speculative-Decoding-with-Diffusion-Drafting"
+    ],
+    "code_artifacts": [
+      {
+        "url": "https://github.com/cyx78/One-Call-Ahead-Packed-Self-Speculative-Decoding-with-Diffusion-Drafting",
+        "head_sha": "02343e3d69d5412c184de7de4cf3d47f99d3e02e",
+        "checked_at": "2026-11-02",
+        "status": "paper-linked public repository checked; source files visible; code not executed"
+      }
+    ],
+    "manuscript_cited": false,
+    "bibtex": "@article{chen2026packedss,\n  author = {Chen, Yuxiao and Cai, Changxiao},\n  title = {{One Call Ahead: Packed Self-Speculative Decoding with Diffusion Drafting}},\n  journal = {arXiv preprint arXiv:2610.33379},\n  year = {2026},\n  eprint = {2610.33379},\n  archivePrefix = {arXiv}\n}",
     "curated_at": "2026-11-02"
   }
 ]

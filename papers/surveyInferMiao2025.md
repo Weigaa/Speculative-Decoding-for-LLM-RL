@@ -26,7 +26,7 @@ Outside the core taxonomy.
 
 ## Source and artifact record
 
-- Metadata provenance: Author-supplied BibTeX; arXiv versions cross-checked against saved official API metadata where available. Full field-level publication metadata has not been independently reverified.
+- Metadata provenance: Author-supplied BibTeX; arXiv versions cross-checked against saved official API metadata where available. Full field-level publication metadata has not been independently reverified. Field-level correction verified on 2026-11-02: https://api.crossref.org/works/10.1145/3754448.
 - Evidence pointer: Manuscript synthesis; individual source locations not yet indexed.
 - Source publication date: not recorded
 - Released code: not recorded (not a claim of non-availability)
@@ -36,12 +36,15 @@ Outside the core taxonomy.
 
 ```bibtex
 @article{surveyInferMiao2025,
-  title   = {Towards Efficient Generative Large Language Model Serving: A Survey from Algorithms to Systems},
-  author  = {Miao, Xupeng and Oliaro, Gabriele and Zhang, Zhihao and Cheng, Xinhao and Jin, Hongyi and Chen, Tianqi and Jia, Zhihao},
+  title = {Towards Efficient Generative Large Language Model Serving: A Survey from Algorithms to Systems},
+  author = {Miao, Xupeng and Oliaro, Gabriele and Zhang, Zhihao and Cheng, Xinhao and Jin, Hongyi and Chen, Tianqi and Jia, Zhihao},
   journal = {ACM Computing Surveys},
-  year    = {2025},
+  year = {2025},
   publisher = {Association for Computing Machinery},
-  doi     = {10.1145/3754448},
+  doi = {10.1145/3754448},
+  volume = {58},
+  number = {1},
+  pages = {1--37}
 }
 ```
 

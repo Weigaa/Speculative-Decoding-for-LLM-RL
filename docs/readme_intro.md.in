@@ -5,3 +5,5 @@ A companion literature library for **Speculative Decoding for LLM Reinforcement 
 Browse the same three branches used in the manuscript: **Workload-Aware Speculation**, **Policy-Aware Speculation**, and **System Co-Design**. Each paper has a canonical card with its source, citation, evidence setting, mechanism, and transfer boundary. [中文说明](README_zh.md).
 
 The repository records bibliographic links and original synthesis notes, not hosted copies of third-party PDFs. Background references, related surveys, and contextual studies are kept separate from the technical taxonomy.
+
+The [November 2 literature edition](data/manuscript_editions/2026-11-02.csv) lists 64 screened technical studies with evidence labels and reviewed sources. Its [core BibTeX](bibliography/manuscript-2026-11-02-core.bib) selects SPARK v2 without overwriting the preserved October 14 snapshot.

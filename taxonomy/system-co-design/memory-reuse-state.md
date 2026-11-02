@@ -25,3 +25,4 @@ Manage historical indices, speculative cache state, KV residency, and state refr
 | [NgramRL](../../papers/pandey2026ngramrl.md) | 2026 | Direct RL rollout / training | Post-cutoff screened addition |
 | [FlashNext-RL](../../papers/yao2026flashnextrl.md) | 2026 | Direct RL rollout / training | Post-cutoff screened addition |
 | [SpecMem](../../papers/song2026specmem.md) | 2026 | Serving / inference — RL transfer potential | Post-cutoff screened addition |
+| [LongSpark](../../papers/he2026longspark.md) | 2026 | Serving / inference — RL transfer potential | Post-cutoff screened addition |

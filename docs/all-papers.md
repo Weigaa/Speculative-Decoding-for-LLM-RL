@@ -131,3 +131,5 @@
 | `song2026specmem` | [SPECMEM: Accelerating Agentic Tool Calling via Live Memory Management](../papers/song2026specmem.md) | post_cutoff |
 | `malvankar2026tabletune` | [TableTune: Measured, Self-Correcting Draft-Length Tables for Dynamic Speculative Decoding](../papers/malvankar2026tabletune.md) | post_cutoff |
 | `molodyk2026mdraft` | [Multi-Draft On-Policy Distillation for Diffusion Drafters](../papers/molodyk2026mdraft.md) | post_cutoff |
+| `he2026longspark` | [LongSpark: Efficient speculative decoding with a fixed-cost parallel drafter](../papers/he2026longspark.md) | post_cutoff |
+| `chen2026packedss` | [One Call Ahead: Packed Self-Speculative Decoding with Diffusion Drafting](../papers/chen2026packedss.md) | post_cutoff |

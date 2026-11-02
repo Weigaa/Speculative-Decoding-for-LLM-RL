@@ -64,18 +64,6 @@ We introduce Nemotron 3.5 Super and Nemotron 3.5 Lightning, open and efficient M
 
 Curator note: Foundation-model report with RL and post-training MTP boosting. Locate whether SD is actually evaluated during target-policy RL, after RL, or only at deployment before assigning direct evidence.
 
-## [LongSpark: Efficient speculative decoding with a fixed-cost parallel drafter](https://arxiv.org/abs/2609.37029v2)
-
-- arXiv: `2609.37029` / v2
-- Paper updated: 2026-10-26T09:15:06Z
-- Source: arXiv API
-- Screening status: pending
-- Query families: datacite-secondary-verification-parallel, secondary-verification-parallel
-
-Speculative decoding accelerates autoregressive inference by verifying multiple draft tokens in a single target forward pass. However, as the context grows, existing state-of-the-art drafters become increasingly expensive, eroding the very efficiency advantage they are designed to provide. We argue that this scaling is unnecessary. A standalone language model must grow with its prefix because it is solely responsible for every token it produces. A drafter, by contrast, only proposes candidates; the target catches and corrects every error before any token is committed. The drafter's decoding cost can therefore be made entirely independent of the prefix length. We introduce LongSpark, a block-diffusion drafter that achieves this by extracting fixed-size, multiscale views from the target's verification pass, thereby eliminating the need for a growing persistent state. Extensive evaluations demonstrate that LongSpark achieves state-of-the-art end-to-end efficiency across multiple model scales and realistic serving conditions. Notably, it delivers the lowest time-per-output-token on long-context tasks while reducing the drafter's context state by several orders of magnitude.
-
-Curator note: Needs full-text review of fixed-size multiscale verifier-state extraction, long-context memory cost and refresh/rollback requirements.
-
 ## [XPress: Parallel Refinement for Diffusion Drafters in Speculative Decoding](https://arxiv.org/abs/2608.02438v2)
 
 - arXiv: `2608.02438` / v2
@@ -99,18 +87,6 @@ Curator note: Needs full-text assessment of parallel causal-refinement cost and 
 Large language model (LLM) inference serving is increasingly constrained by memory rather than compute. As long-context and long-form reasoning workloads become more prevalent, the key-value (KV) cache dominates both memory footprint and memory traffic at the token generation (i.e., decode) stage. HBM capacity has therefore become a critical bottleneck, constraining inference batch size and throughput. This paper introduces OasisKV, a memory-centric LLM inference system that alleviates HBM limitations by offloading the KV-cache to alternative memory tiers. Exploiting the sparsity of decode-time attention and leveraging speculative decoding to predict important tokens, OasisKV selectively prefetches and stages only the most relevant KV entries in HBM for efficient LLM inference computation. To support growing LLM context and the larger batches enabled by sparse HBM residency, OasisKV employs tiered KV management across decode, prefill, and remote-memory nodes, relaxing decode-host memory capacity limits under disaggregated serving. An asynchronous prefetch pipeline hides off-GPU transfer latency while bounding per-step traffic to fit the available bandwidth. We implement OasisKV on vLLM. With only 2,048 KV tokens resident in HBM, OasisKV maintains average accuracy within a negligible 0.61 points of full attention on LongBench v2 for long-context understanding and across AIME24-25 and GPQA-Diamond for long-form reasoning. This sparsity translates into a 1.86x throughput gain over vLLM on AIME24. Synthetic long-context workloads further show up to 2.2x higher throughput in multi-GPU serving. Under prefill-decode disaggregation, OasisKV achieves 2.29x vLLM's throughput while supporting 2.42x as many concurrent requests under the same host-memory budget.
 
 Curator note: Must distinguish draft-assisted KV prefetch from altered sparse target computation. Review numerical/quality approximation and full-cache verification assumptions before inclusion.
-
-## [One Call Ahead: Packed Self-Speculative Decoding with Diffusion Drafting](https://arxiv.org/abs/2610.33379v1)
-
-- arXiv: `2610.33379` / v1
-- Paper updated: 2026-10-24T00:24:46Z
-- Source: arXiv API
-- Screening status: pending
-- Query families: secondary-tail-load
-
-Autoregressive (AR) language models generate tokens sequentially, so generating long outputs is costly. Speculative decoding mitigates this by using a lightweight drafter to propose multiple tokens for the target AR model to verify in parallel, while a diffusion-based drafter can produce an entire draft block in one forward pass. In models with AR and diffusion modes, one network both drafts and verifies, but drafting still waits for verification, so the standard schedule needs two sequential model calls per iteration. Existing one-call schedules avoid the wait but incur input size quadratic in the speculative width. Motivated by this efficiency bottleneck, we introduce Packed-SS, a self-speculative decoding schedule that verifies and drafts in a single model call with input size linear in the speculative width, while preserving the target model's distribution. The key idea is to let the diffusion drafter run one call ahead: while verifying the current draft, the model simultaneously constructs the next draft from an older verified prefix and keeps its unresolved suffix for the next iteration. Under a mild monotonicity assumption on the drafter, we further show that Packed-SS requires no more model calls than the standard two-call decoding in the greedy setting. Experiments on Nemotron 3B/8B and SetDLM 1.7B show higher throughput and lower mean wall time than both baselines under greedy decoding.
-
-Curator note: Needs full-text review of the one-call self-speculative schedule, delayed-prefix state and stochastic guarantee versus greedy-only experiments.
 
 ## [BitMTP: When Multi-Token Prediction Meets Low-Bit Large Language Models](https://arxiv.org/abs/2610.28500)
 
