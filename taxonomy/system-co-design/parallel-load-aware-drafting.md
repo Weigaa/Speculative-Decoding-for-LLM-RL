@@ -26,3 +26,11 @@ Analyze parallel candidate generation, verification width, and load-dependent ne
 | [MDraft](../../papers/molodyk2026mdraft.md) | 2026 | Serving / inference — RL transfer potential | Post-cutoff screened addition |
 | [LongSpark](../../papers/he2026longspark.md) | 2026 | Serving / inference — RL transfer potential | Post-cutoff screened addition |
 | [Packed-SS](../../papers/chen2026packedss.md) | 2026 | Serving / inference — RL transfer potential | Post-cutoff screened addition |
+| [HyFlash](../../papers/ko2026hyflash.md) | 2026 | Serving / inference — RL transfer potential | Post-cutoff screened addition |
+| [Parallel Reconsideration](../../papers/le2026reconsideration.md) | 2026 | Serving / inference — RL transfer potential | Post-cutoff screened addition |
+| [Hybrid Spark](../../papers/ranjan2026hybridspark.md) | 2026 | Serving / inference — RL transfer potential | Post-cutoff screened addition |
+| [SpecOPD](../../papers/liu2026specopd.md) | 2026 | Serving / inference — RL transfer potential | Post-cutoff screened addition |
+| [SpecPilot](../../papers/li2026specpilot.md) | 2026 | Serving / inference — RL transfer potential | Post-cutoff screened addition |
+| [FactorSpec](../../papers/su2026factorspec.md) | 2026 | Serving / inference — RL transfer potential | Post-cutoff screened addition |
+| [Uni-LaSpec](../../papers/nie2026unilaspec.md) | 2026 | Serving / inference — RL transfer potential | Post-cutoff screened addition |
+| [Teaching Diffusion to Speculate Left-to-Right](../../papers/whalen2026teaching.md) | 2026 | Serving / inference — RL transfer potential | Post-cutoff screened addition |

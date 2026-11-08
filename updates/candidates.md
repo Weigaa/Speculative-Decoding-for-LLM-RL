@@ -4,6 +4,66 @@ Unreviewed search hits are not part of the curated corpus and must not be cited 
 
 [Search protocol](../docs/search-protocol.md) · [Update status](../data/update_state.json)
 
+## [CoRD: Coupled Rollouts Fill the Blind Spot of On-Policy Distillation](https://arxiv.org/abs/2611.07959v1)
+
+- arXiv: `2611.07959` / v1
+- Paper updated: 2026-11-05T12:55:51Z
+- Source: arXiv API
+- Screening status: pending
+- Query families: datacite-primary-sampling-rl, datacite-secondary-policy-adaptation, primary-sampling-rl, secondary-policy-adaptation
+
+On-policy distillation trains a student on its own rollouts, so states the teacher would reach but the student does not are seldom supervised. We introduce CoRD (coupled-rollout distillation), which keeps the on-policy loss and moves only the distribution of training states toward the teacher, drawing rollouts from a geometric interpolation of student and teacher through the maximal coupling of speculative decoding. The coupling keeps the student's token wherever the two distributions agree and otherwise substitutes a token from the part of the target the student underweights, so interventions are as rare as any exact sampler allows and recede as the student learns. Across six base students from two model families (Qwen3 and Qwen3.5, 0.6B to 4B), CoRD raises average pass@1 over on-policy distillation by 0.9 to 2.0 points and pass@8 by 1.2 to 3.4 points on five public math benchmarks at equal steps and data. On frozen teacher-reached states, a 4B student trained with CoRD reaches in 16 steps a gap closure that on-policy distillation does not reach in 80, and substitution rules intervening at least as often in other directions fall short of CoRD.
+
+## [AiXapply: Fast and Reliable Full-File Code Integration with Specialized Small Models for IDE Workflows](https://arxiv.org/abs/2611.07634v1)
+
+- arXiv: `2611.07634` / v1
+- Paper updated: 2026-11-05T08:19:22Z
+- Source: arXiv API
+- Screening status: pending
+- Query families: datacite-primary-sampling-rl, primary-sampling-rl
+
+Large language models increasingly assist developers by proposing small code edits, yet reliably integrating a partial update snippet into an existing file while preserving unrelated content remains poorly supported by current code-generation workflows. We formalize the Code Integration (Apply) task as follows: given an original file and an update snippet, the system must produce the complete merged file while preserving all content outside the requested edit. We construct a high-quality multi-language dataset from real commits via a structured pipeline that converts code changes into update snippets paired with full-file ground truth and enforces consistency through verification and filtering. We then train a specialized 4B model, aiXapply, using supervised fine-tuning and reinforcement learning (GRPO). The supervised variant achieves 94.4% accuracy under our language-aware comparison, surpassing a strong large-model (Deepseek-V3.2) baseline (91.6%). Speculative decoding enables aiXapply-RL to reach $\sim$2700 tokens/s on a single A100 in a decoding subset; on the full benchmark, it achieves roughly 75$\times$ lower latency than the API-served Deepseek-V3.2 baseline. We further conduct an industrial deployment of aiXapply-RL in the aiXcoder IDE plugin as a dedicated Apply service, reducing mean Apply latency from 50 seconds to 1.89 seconds by offloading full-file generation from the upstream large model. Under time-based capacity planning, replacing one of five upstream serving instances would save 20% of upstream machine cost before the additional shared A100 service cost. Overall, our results demonstrate that treating code integration as a standalone task enables small models to achieve high accuracy, practical efficiency, and concrete industrial benefits in real-world IDE workflows where latency, cost and privacy are critical.
+
+## [ROCm InferaSim: Cut LLM Serving Trial Costs and Deploy the Best Configuration](https://arxiv.org/abs/2611.04032v1)
+
+- arXiv: `2611.04032` / v1
+- Paper updated: 2026-11-02T22:23:40Z
+- Source: arXiv API
+- Screening status: pending
+- Query families: secondary-tail-load
+
+Serving an LLM efficiently depends on the engine, how the model is split across GPUs, precision, scheduler settings, speculative decoding, KV-cache management, and prefill-decode disaggregation. The best configuration depends on the model, hardware, workload, and objective. Operators usually find it by trial and error. Exhaustively measuring the candidates in our study would take about 25,000 GPU-hours. ROCm InferaSim predicts serving performance from a few short measurements. Choices such as batch size, prompt length, and GPU count change the amount of work per GPU without changing the kernels. ROCm InferaSim benchmarks each distinct set of kernels once, on at most one node. We call this measurement an anchor. Analytical laws carry that anchor to other deployments that run the same kernels. For multi-node deployments, ROCm InferaSim reduces the configuration to a single-node equivalent, measures it, and scales the result analytically. A simulator replays multi-turn traffic, and a tuning agent searches configurations using the predictions. On AMD Instinct MI355X GPUs with vLLM, SGLang, and ATOM, 11 anchors took 9.1 GPU-hours, against 204 GPU-hours to measure the 226 fixed-length configurations they cover. On 172 configurations, time per output token has 8.1% median error. On a multi-turn coding workload, throughput is within 8%. For 159 disaggregated deployments, none used as an anchor, throughput is within 5.5%. A five-candidate short list contains a deployment within 12% of the best feasible pairing of model and latency target.
+
+## [Lookahead Prediction-Guided Adaptive Visual Refocusing for Interleaved Multimodal Reasoning](https://arxiv.org/abs/2611.02780v1)
+
+- arXiv: `2611.02780` / v1
+- Paper updated: 2026-11-02T08:58:28Z
+- Source: arXiv API
+- Screening status: pending
+- Query families: datacite-secondary-verification-parallel, secondary-verification-parallel
+
+Interleaved multimodal chain-of-thought reasoning improves the visual reasoning capabilities of multimodal large language models by dynamically incorporating visual evidence during reasoning. However, existing methods primarily select evidence from historical context. When the reasoning focus shifts, history-guided evidence may remain focused on prior regions and fail to cover the visual information required by the next step. We refer to this lag between visual evidence and subsequent reasoning demands as Temporal Evidence Myopia. To address this issue, we propose Lookahead Prediction-guided Adaptive Visual Refocusing (LPAVR), a training-free test-time framework. LPAVR transforms Multi-Token Prediction (MTP) from a decoding acceleration mechanism into a lookahead signal for anticipating upcoming reasoning intent. During MTP decoding, the draft head generates multiple future tokens, while the target model verifies them in parallel and retains the longest prefix consistent with its decoding trajectory. This target-verified prefix contains near-future semantics, which LPAVR uses to construct lookahead-guided visual evidence and assess whether history-guided evidence covers the indicated regions. If the coverage is sufficient, the history-guided evidence is retained; otherwise, LPAVR switches to the lookahead-guided evidence. This better aligns the visual context with upcoming reasoning and improves consistency between draft predictions and target-model decoding. Experiments on multiple multimodal reasoning benchmarks show that LPAVR improves both reasoning accuracy and the acceptance rates of MTP speculative tokens, jointly enhancing visual reasoning and speculative decoding efficiency.
+
+## [HERALD: High-Throughput Block Diffusion LLM Inference via CPU-GPU Cooperative KV Cache Retrieval](https://arxiv.org/abs/2606.21633v3)
+
+- arXiv: `2606.21633` / v3
+- Paper updated: 2026-11-01T16:58:02Z
+- Source: arXiv API
+- Screening status: pending
+- Query families: secondary-reuse
+
+Block diffusion LLMs (block dLLMs) improve decode throughput by generating tokens in parallel, and are emerging as a next-generation alternative to autoregressive LLMs. At long contexts, however, the KV cache remains a major throughput bottleneck in both memory bandwidth and capacity. For autoregressive LLMs, dynamic sparse attention is often combined with KV offloading to alleviate both bottlenecks, keeping the full KV cache in CPU DRAM and fetching only a critical subset to the GPU. However, KV subset selection and retrieval over bandwidth-limited PCIe incur substantial offloading overheads that often stall the GPU. We present HERALD, the first dynamic sparse attention method for block dLLMs that supports KV offloading. HERALD exploits a property of block dLLMs: a critical KV subset selected once per block is reused across all of its denoising steps, so the next block's selection can be hidden behind the current block's denoising. HERALD realizes this with a two-stage selection algorithm co-designed with its execution system. While the GPU denoises the current block, the CPU speculatively searches the full KV cache for the next block with a single query merged from the current block's B queries, cutting the selection compute by Bx; the GPU then refines the candidates into the final top-K subset with the next block's real queries. At K=1024, HERALD achieves near-lossless accuracy relative to Dense on LongBench and reasoning tasks across four block dLLMs, and improves decode throughput by up to 3.70x over Dense GPU-only inference, 2.59x over MAGE, a state-of-the-art block-dLLM sparse attention method, and 8.38x over MAGE-Offload, its direct KV-offloading extension.
+
+## [ReFrame: Silence-Aware Compute Reclamation for Full-Duplex Speech Models](https://arxiv.org/abs/2611.01835v1)
+
+- arXiv: `2611.01835` / v1
+- Paper updated: 2026-11-01T12:10:55Z
+- Source: arXiv API
+- Screening status: pending
+- Query families: secondary-reuse
+
+Full-duplex speech models execute dense model inference for every audio frame throughout a live interaction. This uniform framewise schedule creates sustained GPU load across dialogue states whose computation has strong, reusable temporal structure. ReFrame formulates full-duplex inference as a silence-aware computation problem. Mutual Silence Speculation (MSS) operates when both participants are silent: it evaluates multi-frame Temporal continuations, verifies text and hidden-state stability, and applies batched Mimi audio-token correction. Listening Frame Folding (LFF) operates while the user speaks and the agent listens: it processes already-arrived user frames through parallel Temporal execution and frame-batched audio-token generation while accepting only the verified prefix. Frame-Budget Reinvestment (FBR) assigns the released frame intervals to resumable external retrieval and language-model workers, then injects timely references through Moshi's conditioning interface. We instantiate ReFrame on five full-duplex models spanning Moshi-family, phase-structured, and flattened autoregressive generation. Across the complete 1,225-conversation FDBench, ReFrame reduces measured GPU execution time by 18.80-31.01% and retains 96.92-100% non-PAD text agreement on five different models. On HaluEval tests, FBR increases the number of correct generated spoken answers from 86 to 205 under the same auxiliary-service budget. ReFrame turns recurring dialogue structure into lower inference cost and higher end-to-end service capability.
+
 ## [Windowed-MTP: Removing the Full-Context Draft-KV Tax at Million-Token Context](https://arxiv.org/abs/2607.21535v2)
 
 - arXiv: `2607.21535` / v2

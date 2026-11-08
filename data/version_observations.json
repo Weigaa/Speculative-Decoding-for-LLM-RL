@@ -1,5 +1,35 @@
 [
   {
+    "id": "he2026s3r",
+    "reviewed_version": "v1",
+    "observed_version": "v2",
+    "url": "https://arxiv.org/abs/2610.13202v2",
+    "observed_at": "2026-11-03T16:41:33Z",
+    "checked_at": "2026-11-08",
+    "curator_status": "reviewed_new_edition_original_record_preserved",
+    "curator_note": "The reviewed v2 retains sparse drafting, dense verification and response-group semantics. Reviewed its setup and KV scheduling discussion. Historical values retained."
+  },
+  {
+    "id": "he2026valuspec",
+    "reviewed_version": "v1",
+    "observed_version": "v2",
+    "url": "https://arxiv.org/abs/2610.31338v2",
+    "observed_at": "2026-11-05T15:09:32Z",
+    "checked_at": "2026-11-08",
+    "curator_status": "reviewed_new_edition_original_record_preserved",
+    "curator_note": "Reviewed v2 calibration split, candidate-source separation, and greedy-only evaluation. No stochastic or direct RL evidence inferred."
+  },
+  {
+    "id": "malvankar2026tabletune",
+    "reviewed_version": "v1",
+    "observed_version": "v2",
+    "url": "https://arxiv.org/abs/2610.38968v2",
+    "observed_at": "2026-11-02T17:44:59Z",
+    "checked_at": "2026-11-08",
+    "curator_status": "reviewed_new_edition_original_record_preserved",
+    "curator_note": "Reviewed v2 serving-runner, graph-switching, profiling and cache-preemption limitations. Historical measurements retained."
+  },
+  {
     "id": "pham2026specroll",
     "reviewed_version": "v1",
     "observed_version": "v2",
@@ -8,5 +38,15 @@
     "checked_at": "2026-10-26",
     "curator_status": "material_change_reviewed_snapshot_preserved",
     "curator_note": "SpecRoll v1 was renamed and substantially revised as SPARK v2 under the same arXiv ID. Method and authors changed. Keep one canonical study and retain v1 snapshot/BibTeX; manuscript reconciliation is recommended. The revision predates or coincides with the cutoff, not a new post-cutoff study."
+  },
+  {
+    "id": "wang2026draftcotraining",
+    "reviewed_version": "v1",
+    "observed_version": "v3",
+    "url": "https://arxiv.org/abs/2609.07108v3",
+    "observed_at": "2026-11-04T03:48:05Z",
+    "checked_at": "2026-11-08",
+    "curator_status": "reviewed_new_edition_original_record_preserved",
+    "curator_note": "Reviewed v3 CP branch attention, TapChannel, and expanded direct RL evaluations up to 122B. Existing mechanism summary remains applicable; no old numerical claim overwritten."
   }
 ]

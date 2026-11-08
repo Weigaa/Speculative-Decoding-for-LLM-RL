@@ -46,3 +46,5 @@ These records are excluded from the 46-study taxonomy corpus.
 - [ReAct: Synergizing Reasoning and Acting in Language Models](../papers/yao2023react.md) (2023)
 - [Reflexion: Language Agents with Verbal Reinforcement Learning](../papers/shinn2023reflexion.md) (2023)
 - [MLAgentBench: Evaluating Language Agents on Machine Learning Experimentation](../papers/huang2023mlagentbench.md) (2023)
+- [Resource-Efficient Reinforcement Learning Post-Training through Elastic Expert Parallelism](../papers/wei2026flexfloor.md) (2026)
+- [FlashOffloading: Low-Latency KV Cache Offloading for Long-Context LLM Serving](../papers/wang2026flashoffloading.md) (2026)

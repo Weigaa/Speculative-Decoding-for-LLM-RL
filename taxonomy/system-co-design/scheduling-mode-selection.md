@@ -22,3 +22,6 @@ Choose speculative execution modes and verification budgets under varying rollou
 | [ValuSpec](../../papers/he2026valuspec.md) | 2026 | Serving / inference — RL transfer potential | Post-cutoff screened addition |
 | [FlashNext-RL](../../papers/yao2026flashnextrl.md) | 2026 | Direct RL rollout / training | Post-cutoff screened addition |
 | [TableTune](../../papers/malvankar2026tabletune.md) | 2026 | Serving / inference — RL transfer potential | Post-cutoff screened addition |
+| [Hybrid Spark](../../papers/ranjan2026hybridspark.md) | 2026 | Serving / inference — RL transfer potential | Post-cutoff screened addition |
+| [SpecPilot](../../papers/li2026specpilot.md) | 2026 | Serving / inference — RL transfer potential | Post-cutoff screened addition |
+| [Uni-LaSpec](../../papers/nie2026unilaspec.md) | 2026 | Serving / inference — RL transfer potential | Post-cutoff screened addition |

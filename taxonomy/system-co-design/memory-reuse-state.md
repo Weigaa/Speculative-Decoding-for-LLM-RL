@@ -26,3 +26,6 @@ Manage historical indices, speculative cache state, KV residency, and state refr
 | [FlashNext-RL](../../papers/yao2026flashnextrl.md) | 2026 | Direct RL rollout / training | Post-cutoff screened addition |
 | [SpecMem](../../papers/song2026specmem.md) | 2026 | Serving / inference — RL transfer potential | Post-cutoff screened addition |
 | [LongSpark](../../papers/he2026longspark.md) | 2026 | Serving / inference — RL transfer potential | Post-cutoff screened addition |
+| [HyFlash](../../papers/ko2026hyflash.md) | 2026 | Serving / inference — RL transfer potential | Post-cutoff screened addition |
+| [RECAP](../../papers/zhu2026recap.md) | 2026 | Serving / inference — RL transfer potential | Post-cutoff screened addition |
+| [Uni-LaSpec](../../papers/nie2026unilaspec.md) | 2026 | Serving / inference — RL transfer potential | Post-cutoff screened addition |

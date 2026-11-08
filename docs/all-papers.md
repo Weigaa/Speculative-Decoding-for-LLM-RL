@@ -133,3 +133,14 @@
 | `molodyk2026mdraft` | [Multi-Draft On-Policy Distillation for Diffusion Drafters](../papers/molodyk2026mdraft.md) | post_cutoff |
 | `he2026longspark` | [LongSpark: Efficient speculative decoding with a fixed-cost parallel drafter](../papers/he2026longspark.md) | post_cutoff |
 | `chen2026packedss` | [One Call Ahead: Packed Self-Speculative Decoding with Diffusion Drafting](../papers/chen2026packedss.md) | post_cutoff |
+| `ko2026hyflash` | [HyFlash: A Prefix-Memory Prior for On-Device Speculative Decoding](../papers/ko2026hyflash.md) | post_cutoff |
+| `le2026reconsideration` | [Give the Drafter a Second Chance to Guess: Parallel Reconsideration for Speculative Decoding](../papers/le2026reconsideration.md) | post_cutoff |
+| `zhu2026recap` | [RECAP: Context-Aware Prediction Recycling with Request-Local and Persistent Memories for Multimodal Speculative Decoding](../papers/zhu2026recap.md) | post_cutoff |
+| `ranjan2026hybridspark` | [Hybrid Spark: Adaptive Speculative Decoding That Lets the Content Choose the Drafter](../papers/ranjan2026hybridspark.md) | post_cutoff |
+| `liu2026specopd` | [SpecOPD: Branch-Parallel On-Policy Distillation for Speculative Decoding](../papers/liu2026specopd.md) | post_cutoff |
+| `li2026specpilot` | [SpecPilot: Autonomous Algorithm Discovery and Systems Optimization for Speculative Decoding](../papers/li2026specpilot.md) | post_cutoff |
+| `su2026factorspec` | [FactorSpec: Serving Exact Relational Constraints as Speculative Drafts](../papers/su2026factorspec.md) | post_cutoff |
+| `nie2026unilaspec` | [Seeing What Matters, Verifying What Pays: Load-Adaptive Speculative Decoding for Vision-Language Models](../papers/nie2026unilaspec.md) | post_cutoff |
+| `whalen2026teaching` | [Teaching Diffusion to Speculate Left-to-Right](../papers/whalen2026teaching.md) | post_cutoff |
+| `wei2026flexfloor` | [Resource-Efficient Reinforcement Learning Post-Training through Elastic Expert Parallelism](../papers/wei2026flexfloor.md) | background |
+| `wang2026flashoffloading` | [FlashOffloading: Low-Latency KV Cache Offloading for Long-Context LLM Serving](../papers/wang2026flashoffloading.md) | background |

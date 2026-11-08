@@ -23,3 +23,4 @@ Separate stochastic distribution preservation, greedy equivalence, approximate a
 | [RIFT](../../papers/tsur2026rift.md) | 2026 | Serving / inference — RL transfer potential | Post-cutoff screened addition |
 | [NgramRL](../../papers/pandey2026ngramrl.md) | 2026 | Direct RL rollout / training | Post-cutoff screened addition |
 | [Packed-SS](../../papers/chen2026packedss.md) | 2026 | Serving / inference — RL transfer potential | Post-cutoff screened addition |
+| [FactorSpec](../../papers/su2026factorspec.md) | 2026 | Serving / inference — RL transfer potential | Post-cutoff screened addition |

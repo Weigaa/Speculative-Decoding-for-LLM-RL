@@ -2409,7 +2409,15 @@
     "evidence_pointer": "Table 1 and Sections 3–4",
     "code_urls": [],
     "manuscript_cited": true,
-    "bibtex": "@article{wang2026draftcotraining,\n  author  = {Zili Wang and Zhaopeng Qiu and Yuekai Zhang and Shuang Yu and Junjie Lai},\n  title   = {Online Draft Co-Training for Speculative Decoding in Large-Scale, Long-Context {RL} Post-Training},\n  journal = {arXiv preprint arXiv:2609.07108},\n  year    = {2026},\n  doi     = {10.48550/arXiv.2609.07108}\n}"
+    "bibtex": "@article{wang2026draftcotraining,\n  author  = {Zili Wang and Zhaopeng Qiu and Yuekai Zhang and Shuang Yu and Junjie Lai},\n  title   = {Online Draft Co-Training for Speculative Decoding in Large-Scale, Long-Context {RL} Post-Training},\n  journal = {arXiv preprint arXiv:2609.07108},\n  year    = {2026},\n  doi     = {10.48550/arXiv.2609.07108}\n}",
+    "version_reviews": [
+      {
+        "version": "v3",
+        "url": "https://arxiv.org/html/2609.07108v3",
+        "checked_at": "2026-11-08",
+        "note": "Reviewed v3 CP branch attention, TapChannel, and expanded direct RL evaluations up to 122B. Existing mechanism summary remains applicable; no old numerical claim overwritten."
+      }
+    ]
   },
   {
     "id": "he2026growmtp",
@@ -2465,7 +2473,15 @@
     "evidence_pointer": "Sections 3–6 and Table 1",
     "code_urls": [],
     "manuscript_cited": true,
-    "bibtex": "@article{he2026s3r,\n  author  = {Yuhang He and Hongyu Ge and Zihan Lin and Siyi Liu and Yongqi Zhang},\n  title   = {{S$^3$R}: Fast and Faithful {RL} Rollouts via Self-Sparse Speculative Decoding},\n  journal = {arXiv preprint arXiv:2610.13202},\n  year    = {2026},\n  doi     = {10.48550/arXiv.2610.13202}\n}"
+    "bibtex": "@article{he2026s3r,\n  author  = {Yuhang He and Hongyu Ge and Zihan Lin and Siyi Liu and Yongqi Zhang},\n  title   = {{S$^3$R}: Fast and Faithful {RL} Rollouts via Self-Sparse Speculative Decoding},\n  journal = {arXiv preprint arXiv:2610.13202},\n  year    = {2026},\n  doi     = {10.48550/arXiv.2610.13202}\n}",
+    "version_reviews": [
+      {
+        "version": "v2",
+        "url": "https://arxiv.org/html/2610.13202v2",
+        "checked_at": "2026-11-08",
+        "note": "The reviewed v2 retains sparse drafting, dense verification and response-group semantics. Reviewed its setup and KV scheduling discussion. Historical values retained."
+      }
+    ]
   },
   {
     "id": "ziashahabi2026aspire",
@@ -3206,7 +3222,15 @@
     "code_artifacts": [],
     "manuscript_cited": false,
     "bibtex": "@misc{he2026valuspec,\n  author = {He, Liang and Ma, SiYuan and Zhan, Qishi and Fan, Yongqi and Cao, Mingyu and Lan, Qizhen and Kang, Zhaolu and Wang, Xilu},\n  title = {{ValuSpec: Plug-and-Play Candidate Valuation before Target Verification for Tree-Based Speculative Decoding}},\n  year = {2026},\n  eprint = {2610.31338},\n  archivePrefix = {arXiv},\n  url = {https://arxiv.org/abs/2610.31338v1}\n}",
-    "curated_at": "2026-10-26"
+    "curated_at": "2026-10-26",
+    "version_reviews": [
+      {
+        "version": "v2",
+        "url": "https://arxiv.org/html/2610.31338v2",
+        "checked_at": "2026-11-08",
+        "note": "Reviewed v2 calibration split, candidate-source separation, and greedy-only evaluation. No stochastic or direct RL evidence inferred."
+      }
+    ]
   },
   {
     "id": "tsur2026rift",
@@ -3407,7 +3431,15 @@
     ],
     "manuscript_cited": false,
     "bibtex": "@article{malvankar2026tabletune,\n  author = {Malvankar, Abhishek and Castro, Paul and Mitchell, Nick and Villard, Lionel},\n  title = {{TableTune: Measured, Self-Correcting Draft-Length Tables for Dynamic Speculative Decoding}},\n  journal = {arXiv preprint arXiv:2610.38968},\n  year = {2026},\n  eprint = {2610.38968},\n  archivePrefix = {arXiv}\n}",
-    "curated_at": "2026-11-02"
+    "curated_at": "2026-11-02",
+    "version_reviews": [
+      {
+        "version": "v2",
+        "url": "https://arxiv.org/html/2610.38968v2",
+        "checked_at": "2026-11-08",
+        "note": "Reviewed v2 serving-runner, graph-switching, profiling and cache-preemption limitations. Historical measurements retained."
+      }
+    ]
   },
   {
     "id": "molodyk2026mdraft",
@@ -3512,5 +3544,321 @@
     "manuscript_cited": false,
     "bibtex": "@article{chen2026packedss,\n  author = {Chen, Yuxiao and Cai, Changxiao},\n  title = {{One Call Ahead: Packed Self-Speculative Decoding with Diffusion Drafting}},\n  journal = {arXiv preprint arXiv:2610.33379},\n  year = {2026},\n  eprint = {2610.33379},\n  archivePrefix = {arXiv}\n}",
     "curated_at": "2026-11-02"
+  },
+  {
+    "id": "ko2026hyflash",
+    "name": "HyFlash",
+    "title": "HyFlash: A Prefix-Memory Prior for On-Device Speculative Decoding",
+    "authors": "Ko, Jongwoo and Cameron, Pashmina",
+    "year": 2026,
+    "venue": "arXiv preprint",
+    "doi": "",
+    "arxiv_id": "2611.07263",
+    "url": "https://arxiv.org/abs/2611.07263v1",
+    "reviewed_version": "v1",
+    "published": "2026-11-05",
+    "role": "post_cutoff",
+    "evidence": "serving_transfer",
+    "dimensions": [
+      "memory-reuse-state",
+      "parallel-load-aware-drafting"
+    ],
+    "mechanism": "Combines recent-context attention with fixed-size recurrent memory of target features in a shallow parallel drafter.",
+    "evidence_note": "Fixed-target inference on Qwen3-4B and Phi-4-reasoning, with greedy and stochastic sampling. The bounded memory applies to the drafter, not the target KV cache. RL transfer requires memory reconstruction after policy refresh and profiling draft cost under rollout concurrency.",
+    "evidence_pointer": "Sections 3–4 and Appendix C–D",
+    "metadata_provenance": "Official arXiv metadata and full text checked on 2026-11-08. Discovery used the recorded query families and author-supplied FlexFloor link.",
+    "code_urls": [],
+    "manuscript_cited": false,
+    "bibtex": "@article{ko2026hyflash,\n  author = {Ko, Jongwoo and Cameron, Pashmina},\n  title = {{HyFlash: A Prefix-Memory Prior for On-Device Speculative Decoding}},\n  journal = {arXiv preprint arXiv:2611.07263},\n  year = {2026},\n  eprint = {2611.07263},\n  archivePrefix = {arXiv}\n}",
+    "curated_at": "2026-11-08"
+  },
+  {
+    "id": "le2026reconsideration",
+    "name": "Parallel Reconsideration",
+    "title": "Give the Drafter a Second Chance to Guess: Parallel Reconsideration for Speculative Decoding",
+    "authors": "Le, Hoang Anh Duy and Dong, Huibing and Khadem, Alireza and Sun, Ziteng and Song, Xiang and Huang, Yizheng and Radpour, Soroush and Shrivastava, Anshumali and He, Ye",
+    "year": 2026,
+    "venue": "arXiv preprint",
+    "doi": "",
+    "arxiv_id": "2611.05724",
+    "url": "https://arxiv.org/abs/2611.05724v1",
+    "reviewed_version": "v1",
+    "published": "2026-11-03",
+    "role": "post_cutoff",
+    "evidence": "serving_transfer",
+    "dimensions": [
+      "parallel-load-aware-drafting",
+      "proposal-maintenance"
+    ],
+    "mechanism": "Revises uncertain feature-level guesses in parallel and appends refined candidates to the draft tree.",
+    "evidence_note": "Serving evaluation compares EAGLE-3.1 at matched budgets across Llama, Qwen and Gemma models. Verification is retained. RL transfer must recalibrate uncertainty after policy changes and measure the additional draft work at changing load.",
+    "evidence_pointer": "Sections 3–6 and Appendix C–D",
+    "metadata_provenance": "Official arXiv metadata and full text checked on 2026-11-08. Discovery used the recorded query families and author-supplied FlexFloor link.",
+    "code_urls": [],
+    "manuscript_cited": false,
+    "bibtex": "@article{le2026reconsideration,\n  author = {Le, Hoang Anh Duy and Dong, Huibing and Khadem, Alireza and Sun, Ziteng and Song, Xiang and Huang, Yizheng and Radpour, Soroush and Shrivastava, Anshumali and He, Ye},\n  title = {{Give the Drafter a Second Chance to Guess: Parallel Reconsideration for Speculative Decoding}},\n  journal = {arXiv preprint arXiv:2611.05724},\n  year = {2026},\n  eprint = {2611.05724},\n  archivePrefix = {arXiv}\n}",
+    "curated_at": "2026-11-08"
+  },
+  {
+    "id": "zhu2026recap",
+    "name": "RECAP",
+    "title": "RECAP: Context-Aware Prediction Recycling with Request-Local and Persistent Memories for Multimodal Speculative Decoding",
+    "authors": "Zhu, Hengjie and Wu, Dayan and Liu, Xinze and Fu, Peng and Lin, Zheng and Wang, Weiping",
+    "year": 2026,
+    "venue": "arXiv preprint",
+    "doi": "",
+    "arxiv_id": "2611.05894",
+    "url": "https://arxiv.org/abs/2611.05894v1",
+    "reviewed_version": "v1",
+    "published": "2026-11-04",
+    "role": "post_cutoff",
+    "evidence": "serving_transfer",
+    "dimensions": [
+      "workload-recurrence",
+      "memory-reuse-state",
+      "proposal-source"
+    ],
+    "mechanism": "Combines request-local contextual prediction memories with persistent token-level memory to build verified candidate trees.",
+    "evidence_note": "Qwen2.5-VL-7B and LLaVA-1.6-7B greedy inference at batch one. Request-local context avoids mixing image-conditioned predictions. RL transfer requires policy-version-aware memory and stochastic verification.",
+    "evidence_pointer": "Sections 3–5 and Appendices A, D, G",
+    "metadata_provenance": "Official arXiv metadata and full text checked on 2026-11-08. Discovery used the recorded query families and author-supplied FlexFloor link.",
+    "code_urls": [
+      "https://github.com/Senmo996/RECAP-official-code"
+    ],
+    "manuscript_cited": false,
+    "bibtex": "@article{zhu2026recap,\n  author = {Zhu, Hengjie and Wu, Dayan and Liu, Xinze and Fu, Peng and Lin, Zheng and Wang, Weiping},\n  title = {{RECAP: Context-Aware Prediction Recycling with Request-Local and Persistent Memories for Multimodal Speculative Decoding}},\n  journal = {arXiv preprint arXiv:2611.05894},\n  year = {2026},\n  eprint = {2611.05894},\n  archivePrefix = {arXiv}\n}",
+    "curated_at": "2026-11-08",
+    "code_artifacts": [
+      {
+        "url": "https://github.com/Senmo996/RECAP-official-code",
+        "head_sha": "e46894933ed2f42f1703f677ef0314d6c0ee471d",
+        "checked_at": "2026-11-08",
+        "status": "paper-linked public repository and default-branch commit checked; code not executed"
+      }
+    ]
+  },
+  {
+    "id": "ranjan2026hybridspark",
+    "name": "Hybrid Spark",
+    "title": "Hybrid Spark: Adaptive Speculative Decoding That Lets the Content Choose the Drafter",
+    "authors": "Ranjan, Ekagra and Venkitesh, Bharat",
+    "year": 2026,
+    "venue": "arXiv preprint",
+    "doi": "",
+    "arxiv_id": "2611.05611",
+    "url": "https://arxiv.org/abs/2611.05611v1",
+    "reviewed_version": "v1",
+    "published": "2026-11-03",
+    "role": "post_cutoff",
+    "evidence": "serving_transfer",
+    "dimensions": [
+      "workload-recurrence",
+      "scheduling-mode-selection",
+      "parallel-load-aware-drafting"
+    ],
+    "mechanism": "Selects between neural and n-gram draft chains using calibrated acceptance and a load-dependent verification-slot price.",
+    "evidence_note": "vLLM serving with DSpark and an n-gram drafter. Appendix H permits the proposed selector under greedy drafting at positive target temperature, but not under probabilistic drafting at positive temperature. Alternative selectors cover that setting. RL transfer requires a valid selector and refreshed calibration. Distinct from SPARK (2608.04962).",
+    "evidence_pointer": "Sections 3–5 and Appendices H–J",
+    "metadata_provenance": "Official arXiv metadata and full text checked on 2026-11-08. Discovery used the recorded query families and author-supplied FlexFloor link.",
+    "code_urls": [],
+    "manuscript_cited": false,
+    "bibtex": "@article{ranjan2026hybridspark,\n  author = {Ranjan, Ekagra and Venkitesh, Bharat},\n  title = {{Hybrid Spark: Adaptive Speculative Decoding That Lets the Content Choose the Drafter}},\n  journal = {arXiv preprint arXiv:2611.05611},\n  year = {2026},\n  eprint = {2611.05611},\n  archivePrefix = {arXiv}\n}",
+    "curated_at": "2026-11-08"
+  },
+  {
+    "id": "liu2026specopd",
+    "name": "SpecOPD",
+    "title": "SpecOPD: Branch-Parallel On-Policy Distillation for Speculative Decoding",
+    "authors": "Liu, Tianyu and Zhang, Jun and Huang, Wenjie and Shen, Yuhao and Xu, Tianqi and Hao, Xinyue and Gu, Hongyaoxing and Liu, Xuyang and Zhang, Baolin and Zhu, Yating and Ge, Shuang and Dai, Jun and Chen, Lei and Li, Yue and Wan, Mingchen",
+    "year": 2026,
+    "venue": "arXiv preprint",
+    "doi": "",
+    "arxiv_id": "2611.02846",
+    "url": "https://arxiv.org/abs/2611.02846v1",
+    "reviewed_version": "v1",
+    "published": "2026-11-02",
+    "role": "post_cutoff",
+    "evidence": "serving_transfer",
+    "dimensions": [
+      "proposal-maintenance",
+      "synchronization-versioning",
+      "parallel-load-aware-drafting"
+    ],
+    "mechanism": "Packs independent drafter-generated branches at reference anchors for parallel target supervision, preserving branch-specific sparse or recurrent state.",
+    "evidence_note": "Drafter distillation with frozen targets. Measures acceptance, supervision throughput and separate serving throughput. RL transfer requires refreshed teacher features and accounting for training/transport costs. It does not evaluate target-policy RL rollout acceleration.",
+    "evidence_pointer": "Method sections and Appendix A.3, A.8, D",
+    "metadata_provenance": "Official arXiv metadata and full text checked on 2026-11-08. Discovery used the recorded query families and author-supplied FlexFloor link.",
+    "code_urls": [],
+    "manuscript_cited": false,
+    "bibtex": "@article{liu2026specopd,\n  author = {Liu, Tianyu and Zhang, Jun and Huang, Wenjie and Shen, Yuhao and Xu, Tianqi and Hao, Xinyue and Gu, Hongyaoxing and Liu, Xuyang and Zhang, Baolin and Zhu, Yating and Ge, Shuang and Dai, Jun and Chen, Lei and Li, Yue and Wan, Mingchen},\n  title = {{SpecOPD: Branch-Parallel On-Policy Distillation for Speculative Decoding}},\n  journal = {arXiv preprint arXiv:2611.02846},\n  year = {2026},\n  eprint = {2611.02846},\n  archivePrefix = {arXiv}\n}",
+    "curated_at": "2026-11-08"
+  },
+  {
+    "id": "li2026specpilot",
+    "name": "SpecPilot",
+    "title": "SpecPilot: Autonomous Algorithm Discovery and Systems Optimization for Speculative Decoding",
+    "authors": "Li, Kunjun and Chai, Wenhao and Liang, Yihao and Hu, Yuezhou and Xu, Shuyao and Pan, Yi and Zheng, William X. and Ramchandran, Kannan and Keutzer, Kurt and Jiao, Jiantao",
+    "year": 2026,
+    "venue": "arXiv preprint",
+    "doi": "",
+    "arxiv_id": "2611.02501",
+    "url": "https://arxiv.org/abs/2611.02501v1",
+    "reviewed_version": "v1",
+    "published": "2026-11-02",
+    "role": "post_cutoff",
+    "evidence": "serving_transfer",
+    "dimensions": [
+      "parallel-load-aware-drafting",
+      "scheduling-mode-selection"
+    ],
+    "mechanism": "Uses a measured cost model and automated optimization to improve hybrid-target tree verification, batching and verification execution.",
+    "evidence_note": "Greedy SGLang serving on H100 and RTX PRO 6000. Token forcing checks stock-output agreement. Autonomous coding agents are the optimization tool, not evidence of agentic RL training. RL transfer needs per-load profiling, stochastic validation and compatibility after model updates.",
+    "evidence_pointer": "Sections 3–5",
+    "metadata_provenance": "Official arXiv metadata and full text checked on 2026-11-08. Discovery used the recorded query families and author-supplied FlexFloor link.",
+    "code_urls": [
+      "https://github.com/StargazerX0/SpecPilot"
+    ],
+    "manuscript_cited": false,
+    "bibtex": "@article{li2026specpilot,\n  author = {Li, Kunjun and Chai, Wenhao and Liang, Yihao and Hu, Yuezhou and Xu, Shuyao and Pan, Yi and Zheng, William X. and Ramchandran, Kannan and Keutzer, Kurt and Jiao, Jiantao},\n  title = {{SpecPilot: Autonomous Algorithm Discovery and Systems Optimization for Speculative Decoding}},\n  journal = {arXiv preprint arXiv:2611.02501},\n  year = {2026},\n  eprint = {2611.02501},\n  archivePrefix = {arXiv}\n}",
+    "curated_at": "2026-11-08",
+    "code_artifacts": [
+      {
+        "url": "https://github.com/StargazerX0/SpecPilot",
+        "head_sha": "78c42af4297bdd0b58020a491802817241a37331",
+        "checked_at": "2026-11-08",
+        "status": "paper-linked public repository and default-branch commit checked; code not executed"
+      }
+    ]
+  },
+  {
+    "id": "su2026factorspec",
+    "name": "FactorSpec",
+    "title": "FactorSpec: Serving Exact Relational Constraints as Speculative Drafts",
+    "authors": "Su, Jianchang and Xiang, Dawei and Zhang, Wei",
+    "year": 2026,
+    "venue": "arXiv preprint",
+    "doi": "",
+    "arxiv_id": "2611.02297",
+    "url": "https://arxiv.org/abs/2611.02297v1",
+    "reviewed_version": "v1",
+    "published": "2026-11-01",
+    "role": "post_cutoff",
+    "evidence": "serving_transfer",
+    "dimensions": [
+      "proposal-source",
+      "verification-semantics",
+      "parallel-load-aware-drafting"
+    ],
+    "mechanism": "Compiles finite-domain schema relations into feasible token masks and deterministic draft runs, with per-request verification widths and CPU/GPU overlap.",
+    "evidence_note": "SGLang/vLLM structured serving. Exactness is relative to the specified masked decoder, not the unconstrained model or global conditioning on a valid record. RL transfer requires matching rollout log probabilities and exploration to that constrained policy.",
+    "evidence_pointer": "Sections 3–6 and appendices on sampling and engine integration",
+    "metadata_provenance": "Official arXiv metadata and full text checked on 2026-11-08. Discovery used the recorded query families and author-supplied FlexFloor link.",
+    "code_urls": [],
+    "manuscript_cited": false,
+    "bibtex": "@article{su2026factorspec,\n  author = {Su, Jianchang and Xiang, Dawei and Zhang, Wei},\n  title = {{FactorSpec: Serving Exact Relational Constraints as Speculative Drafts}},\n  journal = {arXiv preprint arXiv:2611.02297},\n  year = {2026},\n  eprint = {2611.02297},\n  archivePrefix = {arXiv}\n}",
+    "curated_at": "2026-11-08"
+  },
+  {
+    "id": "nie2026unilaspec",
+    "name": "Uni-LaSpec",
+    "title": "Seeing What Matters, Verifying What Pays: Load-Adaptive Speculative Decoding for Vision-Language Models",
+    "authors": "Nie, Hong and Gao, Zhangchi and Liang, Yuqian and Yu, Jun and Wang, Bo and Sun, Jianqing and Liu, Shengping",
+    "year": 2026,
+    "venue": "arXiv preprint",
+    "doi": "",
+    "arxiv_id": "2611.01617",
+    "url": "https://arxiv.org/abs/2611.01617v1",
+    "reviewed_version": "v1",
+    "published": "2026-11-01",
+    "role": "post_cutoff",
+    "evidence": "serving_transfer",
+    "dimensions": [
+      "scheduling-mode-selection",
+      "memory-reuse-state",
+      "parallel-load-aware-drafting"
+    ],
+    "mechanism": "Selects visual context from verifier attention and switches between tree and truncated-chain verification according to current load.",
+    "evidence_note": "Frozen VLM inference across six models, concurrency 1–64 and multiple GPUs, with greedy and temperature-one settings. RL transfer requires current-policy visual state and recalibration under evolving rollout load.",
+    "evidence_pointer": "Sections III–IV and evaluation appendices",
+    "metadata_provenance": "Official arXiv metadata and full text checked on 2026-11-08. Discovery used the recorded query families and author-supplied FlexFloor link.",
+    "code_urls": [],
+    "manuscript_cited": false,
+    "bibtex": "@article{nie2026unilaspec,\n  author = {Nie, Hong and Gao, Zhangchi and Liang, Yuqian and Yu, Jun and Wang, Bo and Sun, Jianqing and Liu, Shengping},\n  title = {{Seeing What Matters, Verifying What Pays: Load-Adaptive Speculative Decoding for Vision-Language Models}},\n  journal = {arXiv preprint arXiv:2611.01617},\n  year = {2026},\n  eprint = {2611.01617},\n  archivePrefix = {arXiv}\n}",
+    "curated_at": "2026-11-08"
+  },
+  {
+    "id": "whalen2026teaching",
+    "name": "Teaching Diffusion to Speculate Left-to-Right",
+    "title": "Teaching Diffusion to Speculate Left-to-Right",
+    "authors": "Whalen, Lexington and Ito, Yuki and Sakamoto, Ryo",
+    "year": 2026,
+    "venue": "arXiv preprint",
+    "doi": "",
+    "arxiv_id": "2606.11552",
+    "url": "https://arxiv.org/abs/2606.11552v3",
+    "reviewed_version": "v3",
+    "published": "2026-06-10",
+    "role": "post_cutoff",
+    "evidence": "serving_transfer",
+    "dimensions": [
+      "proposal-maintenance",
+      "parallel-load-aware-drafting"
+    ],
+    "mechanism": "Trains parallel drafters using position weighting, first-error focal loss and a surrogate for accepted-prefix length.",
+    "evidence_note": "Reviewed v3, updated November 4; first public June 10. Fixed instruction-tuned targets with no target RL. Transfer is an acceptance-oriented drafter-maintenance objective, whose update cost and effectiveness must be evaluated under evolving rollout policies.",
+    "evidence_pointer": "Sections 3–5.6",
+    "metadata_provenance": "Official arXiv metadata and full text checked on 2026-11-08. Discovery used the recorded query families and author-supplied FlexFloor link.",
+    "code_urls": [],
+    "manuscript_cited": false,
+    "bibtex": "@article{whalen2026teaching,\n  author = {Whalen, Lexington and Ito, Yuki and Sakamoto, Ryo},\n  title = {{Teaching Diffusion to Speculate Left-to-Right}},\n  journal = {arXiv preprint arXiv:2606.11552},\n  year = {2026},\n  eprint = {2606.11552},\n  archivePrefix = {arXiv}\n}",
+    "curated_at": "2026-11-08"
+  },
+  {
+    "id": "wei2026flexfloor",
+    "name": "FlexFloor",
+    "title": "Resource-Efficient Reinforcement Learning Post-Training through Elastic Expert Parallelism",
+    "authors": "Wei, Jia and Qiu, Ziyi and Xu, Yi and Qian, Xuehai",
+    "year": 2026,
+    "venue": "arXiv preprint",
+    "doi": "",
+    "arxiv_id": "2611.06984",
+    "url": "https://arxiv.org/abs/2611.06984v1",
+    "reviewed_version": "v1",
+    "published": "2026-11-04",
+    "role": "background",
+    "evidence": "supporting",
+    "dimensions": [],
+    "mechanism": "Coordinates history-based prompt placement and elastic expert parallelism to release completed ranks while preserving expert availability.",
+    "evidence_note": "Supporting RL infrastructure, not token-level speculative decoding. Qwen3-30B-A3B on 16 Ascend devices. Reported 52.74% throughput and 65.40% tokens-per-occupied-rank-time gains compare a Planned configuration with verl under matched accounting. These are distinct from end-to-end training gains and SD-on/off gains.",
+    "evidence_pointer": "Sections 2, 4.2–4.4 and 5.1–5.7",
+    "metadata_provenance": "Official arXiv metadata and full text checked on 2026-11-08. Discovery used the recorded query families and author-supplied FlexFloor link.",
+    "code_urls": [],
+    "manuscript_cited": false,
+    "bibtex": "@article{wei2026flexfloor,\n  author = {Wei, Jia and Qiu, Ziyi and Xu, Yi and Qian, Xuehai},\n  title = {{Resource-Efficient Reinforcement Learning Post-Training through Elastic Expert Parallelism}},\n  journal = {arXiv preprint arXiv:2611.06984},\n  year = {2026},\n  eprint = {2611.06984},\n  archivePrefix = {arXiv}\n}",
+    "curated_at": "2026-11-08"
+  },
+  {
+    "id": "wang2026flashoffloading",
+    "name": "FlashOffloading",
+    "title": "FlashOffloading: Low-Latency KV Cache Offloading for Long-Context LLM Serving",
+    "authors": "Wang, Xuan and Wu, Zhuanhao and Fang, Tingzhu and Li, Xushi and Zhang, Sicheng and Yang, Zhenyu and Liu, Feng and Fan, Zhaohui and Xie, Qiang and Zou, Huayi and Liu, Yuncong and Song, Zeyu and Zhu, Ke and Zeng, Yanjia and Gao, Jingchun and Shi, Yan and Luo, Kui and Li, Gezi and Feng, Liangjun and Li, Cheng",
+    "year": 2026,
+    "venue": "arXiv preprint",
+    "doi": "",
+    "arxiv_id": "2611.07542",
+    "url": "https://arxiv.org/abs/2611.07542v1",
+    "reviewed_version": "v1",
+    "published": "2026-11-05",
+    "role": "background",
+    "evidence": "supporting",
+    "dimensions": [],
+    "mechanism": "Overlaps host KV transfers with computation using rolling prefill and hot decode caches.",
+    "evidence_note": "Supporting inference infrastructure. GLM-5.2 on Ascend910C with MTP3 enabled in all decode arms. Offload gains are not isolated gains from speculative decoding. Useful for discussing the memory and transfer costs of long-context rollouts.",
+    "evidence_pointer": "Sections 3–6",
+    "metadata_provenance": "Official arXiv metadata and full text checked on 2026-11-08. Discovery used the recorded query families and author-supplied FlexFloor link.",
+    "code_urls": [],
+    "manuscript_cited": false,
+    "bibtex": "@article{wang2026flashoffloading,\n  author = {Wang, Xuan and Wu, Zhuanhao and Fang, Tingzhu and Li, Xushi and Zhang, Sicheng and Yang, Zhenyu and Liu, Feng and Fan, Zhaohui and Xie, Qiang and Zou, Huayi and Liu, Yuncong and Song, Zeyu and Zhu, Ke and Zeng, Yanjia and Gao, Jingchun and Shi, Yan and Luo, Kui and Li, Gezi and Feng, Liangjun and Li, Cheng},\n  title = {{FlashOffloading: Low-Latency KV Cache Offloading for Long-Context LLM Serving}},\n  journal = {arXiv preprint arXiv:2611.07542},\n  year = {2026},\n  eprint = {2611.07542},\n  archivePrefix = {arXiv}\n}",
+    "curated_at": "2026-11-08"
   }
 ]
