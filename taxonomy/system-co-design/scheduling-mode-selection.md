@@ -25,3 +25,4 @@ Choose speculative execution modes and verification budgets under varying rollou
 | [Hybrid Spark](../../papers/ranjan2026hybridspark.md) | 2026 | Serving / inference — RL transfer potential | Post-cutoff screened addition |
 | [SpecPilot](../../papers/li2026specpilot.md) | 2026 | Serving / inference — RL transfer potential | Post-cutoff screened addition |
 | [Uni-LaSpec](../../papers/nie2026unilaspec.md) | 2026 | Serving / inference — RL transfer potential | Post-cutoff screened addition |
+| [PolyGraph](../../papers/yang2026polygraph.md) | 2026 | Serving / inference — RL transfer potential | Post-cutoff screened addition |

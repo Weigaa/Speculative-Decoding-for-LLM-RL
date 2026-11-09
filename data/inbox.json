@@ -165,25 +165,6 @@
     "last_screened": "2026-11-08"
   },
   {
-    "arxiv_id": "2607.21535",
-    "version": "v2",
-    "title": "Windowed-MTP: Removing the Full-Context Draft-KV Tax at Million-Token Context",
-    "authors": [
-      "Alagappan Valliappan"
-    ],
-    "published": "2026-07-23T17:21:44Z",
-    "updated": "2026-10-30T17:48:26Z",
-    "abstract": "Speculative decoding accelerates autoregressive generation by having a draft propose tokens that a target verifies in parallel. Frontier models increasingly ship a built-in Multi-Token-Prediction (MTP) draft head, assumed to be cheap beside verification. A shipped full-attention MTP head can become disproportionately expensive beside a hybrid target at long context. The head attends over the full KV cache for each of $γ$ draft forwards per decode step, while only 9-25% of target layers retain full attention, so a single draft layer can issue context reads at a rate comparable to the whole target. On hard, low-acceptance workloads, deep native MTP becomes net-negative: slower than no speculation. We apply a StreamingLLM-style window plus attention sink to the draft only (Windowed-MTP); target verification remains full-context, so the target distribution is preserved. The intervention is training-free and drop-in. On three models from two hybrid families (Gated DeltaNet and Mamba2) at 1M context on one GPU in SGLang, it provides an acceptance-free 1.28-1.44x per-decode-step speedup over native MTP. The speedup grows with context; at matched acceptance, TPOT improves by the same factor. The window removes most of the draft's working set, and a compact ring buffer converts that reduction into physical capacity: it reclaims the otherwise dead draft pool, a measured 7.7-11.1% of total KV at 1M, making room for one additional concurrent 1M request in the Qwen-35B batch sweep.",
-    "url": "https://arxiv.org/abs/2607.21535v2",
-    "queries": [
-      "datacite-secondary-verification-parallel",
-      "secondary-tail-load",
-      "secondary-verification-parallel"
-    ],
-    "discovered_at": "2026-11-02T06:23:34Z",
-    "status": "pending"
-  },
-  {
     "arxiv_id": "2609.39972",
     "doi": "10.48550/arxiv.2609.39972",
     "version": "",
@@ -1037,27 +1018,6 @@
     "discovered_at": "2026-10-26T01:00:30Z",
     "status": "pending",
     "screening_reason": "Official abstract verified, but arXiv HTML was unavailable (404). Full-text review of DScout scheduling and concurrency evidence is still required."
-  },
-  {
-    "arxiv_id": "2610.23861",
-    "doi": "10.48550/arxiv.2610.23861",
-    "version": "",
-    "title": "PolyGraph: Plan-Buffered CUDA Graphs for Adaptive Speculative Decoding",
-    "authors": [
-      "Yang, Junchao"
-    ],
-    "published": "2026",
-    "updated": "2026-10-20T04:02:04Z",
-    "abstract": "Adaptive speculative decoding changes the active batch size B and draft length d from one decode step to the next, whereas a CUDA Graph replays a fixed launch configuration. The resulting verification width M = B d forces serving systems to pre-capture many shapes, capture new ones on the serving path, or pad every step to the largest draft. We present PolyGraph, a plan-buffer mechanism for custom Triton kernels that avoids this choice. PolyGraph captures one maximum-grid graph and writes the active shape to GPU memory before each replay. Kernels skip tiles beyond that shape, while graph topology, allocations, layouts, pointers, and launch grids remain fixed; the update transfers only 28 bytes. On one NVIDIA H800, a trace-driven prototype with Qwen2.5-3B dimensions replaces 64 shape-specific graphs with one, matches the warmed baseline in observed step latency (17.7 vs. 17.8 ms P50), and reduces measured pre-serving graph-build time from 3,915 to 93 ms. Fixed-draft controls show that the benefit comes from avoiding padded payload: the P99 difference from MaxPad is negligible at zero padding waste but reaches an 18.7% reduction at 100% waste. Our evidence establishes a bounded work-shape mechanism for custom kernels, not a production serving system, and is limited to synthetic traces on one GPU.",
-    "url": "https://arxiv.org/abs/2610.23861",
-    "metadata_source": "DataCite arXiv DOI registry",
-    "metadata_record_url": "https://api.datacite.org/dois/10.48550/arxiv.2610.23861",
-    "queries": [
-      "datacite-secondary-tail-load"
-    ],
-    "discovered_at": "2026-10-26T01:00:30Z",
-    "status": "pending",
-    "screening_reason": "Full HTML describes a one-H800 synthetic kernel prototype, not end-to-end serving. Official page metadata gives August 14 despite a 2610 identifier. Corroborate posting/version metadata before inclusion; do not infer its date from registry-update time or identifier alone."
   },
   {
     "arxiv_id": "2610.27379",

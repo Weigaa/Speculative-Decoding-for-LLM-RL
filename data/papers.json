@@ -3860,5 +3860,76 @@
     "manuscript_cited": false,
     "bibtex": "@article{wang2026flashoffloading,\n  author = {Wang, Xuan and Wu, Zhuanhao and Fang, Tingzhu and Li, Xushi and Zhang, Sicheng and Yang, Zhenyu and Liu, Feng and Fan, Zhaohui and Xie, Qiang and Zou, Huayi and Liu, Yuncong and Song, Zeyu and Zhu, Ke and Zeng, Yanjia and Gao, Jingchun and Shi, Yan and Luo, Kui and Li, Gezi and Feng, Liangjun and Li, Cheng},\n  title = {{FlashOffloading: Low-Latency KV Cache Offloading for Long-Context LLM Serving}},\n  journal = {arXiv preprint arXiv:2611.07542},\n  year = {2026},\n  eprint = {2611.07542},\n  archivePrefix = {arXiv}\n}",
     "curated_at": "2026-11-08"
+  },
+  {
+    "id": "valliappan2026windowedmtp",
+    "name": "Windowed-MTP",
+    "title": "Windowed-MTP: Removing the Full-Context Draft-KV Tax at Million-Token Context",
+    "authors": "Alagappan Valliappan",
+    "year": 2026,
+    "venue": "arXiv preprint",
+    "doi": "",
+    "arxiv_id": "2607.21535",
+    "url": "https://arxiv.org/abs/2607.21535v2",
+    "reviewed_version": "v2",
+    "published": "2026-07-23",
+    "role": "post_cutoff",
+    "evidence": "serving_transfer",
+    "dimensions": [
+      "proposal-source",
+      "memory-reuse-state",
+      "parallel-load-aware-drafting"
+    ],
+    "mechanism": "Restricts the built-in MTP draft head to an attention sink and recent-token window while retaining full-context target verification. A compact ring buffer reclaims the unused draft KV pool.",
+    "evidence_note": "Inference evaluation of recurrent-hybrid Qwen and Nemotron targets in SGLang, principally at approximately one-million-token context on B200, with TP2 and H100 replications. Main comparisons distinguish native MTP, dense decoding, acceptance-free per-step savings and acceptance-dependent TPOT. Greedy and temperature-one configurations are reported. The compact draft pool does not remove the target full-context KV requirement. Continuous-arrival results can be prefill-limited. Transfer to RL concerns reducing draft-side attention traffic and memory at long context, with model-compatible MTP, valid target verification, ring-buffer state management and refresh after actor updates. No direct RL rollout/training evaluation is claimed.",
+    "evidence_pointer": "Sections 3–4 and 6–7; Appendices A, E and F distinguish per-step cost, physical pool reclamation, stochastic sampling, backend controls and continuous-arrival limits.",
+    "metadata_provenance": "Official arXiv abstract, v2 HTML and official Atom id-list response checked on 2026-11-09. First public July 23, revised October 30. Paper-linked reproduction repository metadata and HEAD checked; upstream SGLang PR merge status checked through GitHub API. Newly curated from the existing pending queue, not newly published this week.",
+    "code_urls": [
+      "https://github.com/avalliappan-nvidia/windowed-mtp-b200",
+      "https://github.com/sgl-project/sglang/pull/32673"
+    ],
+    "code_artifacts": [
+      {
+        "url": "https://github.com/avalliappan-nvidia/windowed-mtp-b200",
+        "head_sha": "335cb4736d69f29e6924c468b7efa188bf4cfff7",
+        "checked_at": "2026-11-09",
+        "status": "Paper-linked reproduction repository metadata and default-branch HEAD checked; code not executed"
+      },
+      {
+        "url": "https://github.com/sgl-project/sglang/pull/32673",
+        "checked_at": "2026-11-09",
+        "status": "Upstream PR confirmed merged on 2026-09-22; this establishes windowed draft-attention integration, not every reproduction component or an RL result"
+      }
+    ],
+    "manuscript_cited": false,
+    "curated_at": "2026-11-09",
+    "bibtex": "@article{valliappan2026windowedmtp,\n  author = {Valliappan, Alagappan},\n  title = {{Windowed-MTP}: Removing the Full-Context Draft-{KV} Tax at Million-Token Context},\n  journal = {arXiv preprint arXiv:2607.21535},\n  year = {2026},\n  eprint = {2607.21535},\n  archivePrefix = {arXiv},\n  note = {Reviewed version v2, October 30, 2026}\n}"
+  },
+  {
+    "id": "yang2026polygraph",
+    "name": "PolyGraph",
+    "title": "PolyGraph: Plan-Buffered CUDA Graphs for Adaptive Speculative Decoding",
+    "authors": "Junchao Yang",
+    "year": 2026,
+    "venue": "arXiv preprint",
+    "doi": "",
+    "arxiv_id": "2610.23861",
+    "url": "https://arxiv.org/abs/2610.23861v1",
+    "reviewed_version": "v1",
+    "published": "2026-08-14",
+    "role": "post_cutoff",
+    "evidence": "serving_transfer",
+    "dimensions": [
+      "scheduling-mode-selection",
+      "parallel-load-aware-drafting"
+    ],
+    "mechanism": "Captures one maximum-grid CUDA Graph and updates a fixed-address GPU plan buffer containing active batch and draft dimensions. Custom Triton kernels guard inactive tiles instead of executing maximum-shape padding.",
+    "evidence_note": "Mechanism-level prototype on one H800 with Qwen2.5-3B-shaped custom kernels and synthetic request/draft traces. It uses no trained model weights, draft model, production scheduler, tokenization, networking or paged KV implementation. Compared with warmed shape-specific graphs, the study measures similar step latency with fewer graphs and less pre-serving graph-build time; comparisons with MaxPad isolate padding waste. These are not end-to-end inference or RL speedups. Transfer is a runtime mechanism for changing rollout batch/draft widths, conditional on plan-aware kernels, fixed allocation/layout/pointers and integration with real target verification. Opaque libraries and model/topology refresh may still require graph boundaries or recapture.",
+    "evidence_pointer": "Sections 3.1–3.3 and 4.1–4.4; Section 4.1 explicitly states no trained weights, and 4.4 distinguishes prototype measurements from production serving.",
+    "metadata_provenance": "Official arXiv abstract, v1 HTML and Atom id-list metadata checked on 2026-11-09. Both abstract history and Atom response report first publication 2026-08-14 despite the identifier month prefix; the supplied source date is retained explicitly rather than inferred from the ID. Newly curated from the prior queue, not newly published this week. No separate paper code repository recorded.",
+    "code_urls": [],
+    "manuscript_cited": false,
+    "curated_at": "2026-11-09",
+    "bibtex": "@article{yang2026polygraph,\n  author = {Yang, Junchao},\n  title = {{PolyGraph}: Plan-Buffered {CUDA} Graphs for Adaptive Speculative Decoding},\n  journal = {arXiv preprint arXiv:2610.23861},\n  year = {2026},\n  eprint = {2610.23861},\n  archivePrefix = {arXiv}\n}"
   }
 ]

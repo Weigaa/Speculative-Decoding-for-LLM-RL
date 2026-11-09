@@ -34,3 +34,5 @@ Analyze parallel candidate generation, verification width, and load-dependent ne
 | [FactorSpec](../../papers/su2026factorspec.md) | 2026 | Serving / inference — RL transfer potential | Post-cutoff screened addition |
 | [Uni-LaSpec](../../papers/nie2026unilaspec.md) | 2026 | Serving / inference — RL transfer potential | Post-cutoff screened addition |
 | [Teaching Diffusion to Speculate Left-to-Right](../../papers/whalen2026teaching.md) | 2026 | Serving / inference — RL transfer potential | Post-cutoff screened addition |
+| [Windowed-MTP](../../papers/valliappan2026windowedmtp.md) | 2026 | Serving / inference — RL transfer potential | Post-cutoff screened addition |
+| [PolyGraph](../../papers/yang2026polygraph.md) | 2026 | Serving / inference — RL transfer potential | Post-cutoff screened addition |

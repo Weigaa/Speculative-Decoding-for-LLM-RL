@@ -144,3 +144,5 @@
 | `whalen2026teaching` | [Teaching Diffusion to Speculate Left-to-Right](../papers/whalen2026teaching.md) | post_cutoff |
 | `wei2026flexfloor` | [Resource-Efficient Reinforcement Learning Post-Training through Elastic Expert Parallelism](../papers/wei2026flexfloor.md) | background |
 | `wang2026flashoffloading` | [FlashOffloading: Low-Latency KV Cache Offloading for Long-Context LLM Serving](../papers/wang2026flashoffloading.md) | background |
+| `valliappan2026windowedmtp` | [Windowed-MTP: Removing the Full-Context Draft-KV Tax at Million-Token Context](../papers/valliappan2026windowedmtp.md) | post_cutoff |
+| `yang2026polygraph` | [PolyGraph: Plan-Buffered CUDA Graphs for Adaptive Speculative Decoding](../papers/yang2026polygraph.md) | post_cutoff |
