@@ -30,6 +30,13 @@
     "curator_note": "Reviewed v2 serving-runner, graph-switching, profiling and cache-preemption limitations. Historical measurements retained."
   },
   {
+    "id": "nie2026unilaspec",
+    "reviewed_version": "v1",
+    "observed_version": "v2",
+    "url": "https://arxiv.org/abs/2611.01617v2",
+    "observed_at": "2026-11-06T09:31:14Z"
+  },
+  {
     "id": "pham2026specroll",
     "reviewed_version": "v1",
     "observed_version": "v2",
@@ -48,5 +55,12 @@
     "checked_at": "2026-11-08",
     "curator_status": "reviewed_new_edition_original_record_preserved",
     "curator_note": "Reviewed v3 CP branch attention, TapChannel, and expanded direct RL evaluations up to 122B. Existing mechanism summary remains applicable; no old numerical claim overwritten."
+  },
+  {
+    "id": "xu2026tailsieve",
+    "reviewed_version": "v2",
+    "observed_version": "v3",
+    "url": "https://arxiv.org/abs/2608.22788v3",
+    "observed_at": "2026-11-06T09:28:32Z"
   }
 ]

@@ -1,5 +1,100 @@
 [
   {
+    "arxiv_id": "2611.08496",
+    "doi": "10.48550/arxiv.2611.08496",
+    "version": "",
+    "title": "MobiInfer: Accelerating On-Device GUI Agents with Workload-Aware Inference",
+    "authors": [
+      "Chen, Siming",
+      "Feng, Erhu",
+      "Feng, Dahu",
+      "Xia, Yubin"
+    ],
+    "published": "2026",
+    "updated": "2026-11-09T04:44:00Z",
+    "abstract": "Mobile GUI agents assist users in executing phone tasks through iterative observe-reason-act loops. However, deploy ing multimodal GUI agents directly on smartphones is challenging due to strict end-to-end latency requirements and significant memory overhead. We observe that GUI-agent work loads exhibit recurring workflows and structured I/O: their prompts contain reusable context, while their outputs follow fixed schemas with phase-dependent predictability. Based on this observation, we present MobiInfer, a workload-aware inference engine for on-device multimodal GUI agents. MobiInfer combines trajectory-aware prefix reuse, phase-indexed vocabulary specialization, and schema-guided speculative decoding to eliminate redundant prefill computation and reduce structured-generation overhead. We implement MobiInfer on top of MNN and evaluate it on AndroidWorld and a real world dataset using three real Android devices. Across the four model-benchmark settings, MobiInfer achieves average speedups of 2.6x in prefill and 2.5x in decoding, reduces end-to-end task latency by 2.4x on average, and cuts total deployment storage by 30%, while limiting task-success degradation to less than one percentage point.",
+    "url": "https://arxiv.org/abs/2611.08496",
+    "metadata_source": "DataCite arXiv DOI registry",
+    "metadata_record_url": "https://api.datacite.org/dois/10.48550/arxiv.2611.08496",
+    "queries": [
+      "datacite-secondary-reuse"
+    ],
+    "discovered_at": "2026-11-09T06:49:45Z",
+    "status": "pending"
+  },
+  {
+    "arxiv_id": "2611.02780",
+    "version": "v2",
+    "title": "Lookahead Prediction-Guided Adaptive Visual Refocusing for Interleaved Multimodal Reasoning",
+    "authors": [
+      "Mengzhao Wang",
+      "Yanli Ji",
+      "Peng Ye"
+    ],
+    "published": "2026-11-02T08:58:28Z",
+    "updated": "2026-11-06T16:52:15Z",
+    "abstract": "Interleaved multimodal chain-of-thought reasoning improves the visual reasoning capabilities of multimodal large language models by dynamically incorporating visual evidence during reasoning. However, existing methods primarily select evidence from historical context. When the reasoning focus shifts, history-guided evidence may remain focused on prior regions and fail to cover the visual information required by the next step. We refer to this lag between visual evidence and subsequent reasoning demands as Temporal Evidence Myopia. To address this issue, we propose Lookahead Prediction-guided Adaptive Visual Refocusing (LPAVR), a training-free test-time framework. LPAVR transforms Multi-Token Prediction (MTP) from a decoding acceleration mechanism into a lookahead signal for anticipating upcoming reasoning intent. During MTP decoding, the draft head generates multiple future tokens, while the target model verifies them in parallel and retains the longest prefix consistent with its decoding trajectory. This target-verified prefix contains near-future semantics, which LPAVR uses to construct lookahead-guided visual evidence and assess whether history-guided evidence covers the indicated regions. If the coverage is sufficient, the history-guided evidence is retained; otherwise, LPAVR switches to the lookahead-guided evidence. This better aligns the visual context with upcoming reasoning and improves consistency between draft predictions and target-model decoding. Experiments on multiple multimodal reasoning benchmarks show that LPAVR improves both reasoning accuracy and the acceptance rates of MTP speculative tokens, jointly enhancing visual reasoning and speculative decoding efficiency.",
+    "url": "https://arxiv.org/abs/2611.02780v2",
+    "queries": [
+      "datacite-secondary-verification-parallel",
+      "secondary-verification-parallel"
+    ],
+    "discovered_at": "2026-11-09T06:49:45Z",
+    "status": "pending",
+    "curator_note": "Abstract screen: MTP used for visual evidence selection; applicability to the stated rollout taxonomy requires further study.",
+    "last_screened": "2026-11-08"
+  },
+  {
+    "arxiv_id": "2611.08804",
+    "version": "v1",
+    "title": "Generative Search and Recommendation at Shopify",
+    "authors": [
+      "Juhana Kangaspunta",
+      "Khalil Hajji",
+      "Darshan Fofadiya",
+      "Kyumin Park",
+      "Michael Garner",
+      "Anthony Maltsev",
+      "Ryan Synk",
+      "Jose Sepulveda",
+      "Joshua Crisologo",
+      "Shuying Sun",
+      "Akshay Soni"
+    ],
+    "published": "2026-11-05T23:56:02Z",
+    "updated": "2026-11-05T23:56:02Z",
+    "abstract": "Search and recommendation at Shopify require retrieving relevant products from a changing catalog of billions of products under strict latency constraints. We present SID-LLM, which casts both tasks as generating semantic IDs: short sequences of content-derived tokens representing products. We jointly pre-train SID-LLM on catalog and behavioral data, giving search and recommendation a shared representation and training objective. We show that reinforcement learning further improves judged search relevance. Furthermore, distillation from task-specific experts improves recommendation quality over joint supervised fine-tuning without a statistically detected loss in search quality. Finally, for efficient serving, we pair multi-token prediction with a lightweight ranker, improving retrieval quality over our autoregressive baseline while reducing latency. We evaluate SID-LLM both as a standalone retriever and as a component of Shopify's production search and recommendation systems. As a standalone search system, SID-LLM achieves quality comparable to Shopify's existing multi-model search stack while meeting production latency requirements. Integrating SID-LLM into the search and recommendation stacks provides significant gains in both offline evaluations and online A/B tests. Together, these results demonstrate the practical value of semantic-ID generation as a unified approach to product discovery at scale.",
+    "url": "https://arxiv.org/abs/2611.08804v1",
+    "queries": [
+      "datacite-primary-draft-posttraining",
+      "primary-draft-posttraining"
+    ],
+    "discovered_at": "2026-11-09T06:49:45Z",
+    "status": "pending"
+  },
+  {
+    "arxiv_id": "2611.08669",
+    "version": "v1",
+    "title": "ChainFlow: Few-Step Latent Flow Matching for Speculative Decoding",
+    "authors": [
+      "Selim Aktas",
+      "Yusuf Erdem Erdem",
+      "Ahmed Zeer",
+      "Himmet Toprak Kesgin",
+      "Muzaffer Kaan Yuce",
+      "Mehmet Fatih Amasyali"
+    ],
+    "published": "2026-11-05T20:26:25Z",
+    "updated": "2026-11-05T20:26:25Z",
+    "abstract": "Speculative decoding has become a standard way to accelerate LLM inference: a lightweight drafter proposes tokens that the target verifies in one parallel pass. Existing drafters face trade-offs that limits their speedups: autoregressive drafters generate tokens one at a time, so drafting cost grows with draft length, while diffusion drafters generate tokens in parallel but predict each position independently, ignoring inter-token dependencies. We introduce ChainFlow, a new speculative decoding paradigm and the first flow-matching drafter conditioned on the target's hidden states. ChainFlow treats drafting as a short transport over hidden states, needing one or two flow steps instead of the many denoising steps of generation from noise. A variational autoencoder compresses these states so drafting cost barely grows with target size, lightweight feedback heads restore inter-token dependencies, and tree drafting raises acceptance. On Qwen3.5 models, at matched drafter size and training data, ChainFlow outperforms EAGLE-3 and DFlash in vLLM by 39% and 11%, respectively. These gains further widen as drafters are adapted to new languages sequentially. Our ablations cover drafter design and concurrent serving, and we open-source our code and drafter models.",
+    "url": "https://arxiv.org/abs/2611.08669v1",
+    "queries": [
+      "secondary-tail-load"
+    ],
+    "discovered_at": "2026-11-09T06:49:45Z",
+    "status": "pending"
+  },
+  {
     "arxiv_id": "2611.07959",
     "version": "v1",
     "title": "CoRD: Coupled Rollouts Fill the Blind Spot of On-Policy Distillation",
@@ -91,28 +186,6 @@
     "discovered_at": "2026-11-08T08:04:55Z",
     "status": "pending",
     "curator_note": "Abstract screen: general serving-performance simulation, not yet established as an SD-specific rollout mechanism.",
-    "last_screened": "2026-11-08"
-  },
-  {
-    "arxiv_id": "2611.02780",
-    "version": "v1",
-    "title": "Lookahead Prediction-Guided Adaptive Visual Refocusing for Interleaved Multimodal Reasoning",
-    "authors": [
-      "Mengzhao Wang",
-      "Yanli Ji",
-      "Peng Ye"
-    ],
-    "published": "2026-11-02T08:58:28Z",
-    "updated": "2026-11-02T08:58:28Z",
-    "abstract": "Interleaved multimodal chain-of-thought reasoning improves the visual reasoning capabilities of multimodal large language models by dynamically incorporating visual evidence during reasoning. However, existing methods primarily select evidence from historical context. When the reasoning focus shifts, history-guided evidence may remain focused on prior regions and fail to cover the visual information required by the next step. We refer to this lag between visual evidence and subsequent reasoning demands as Temporal Evidence Myopia. To address this issue, we propose Lookahead Prediction-guided Adaptive Visual Refocusing (LPAVR), a training-free test-time framework. LPAVR transforms Multi-Token Prediction (MTP) from a decoding acceleration mechanism into a lookahead signal for anticipating upcoming reasoning intent. During MTP decoding, the draft head generates multiple future tokens, while the target model verifies them in parallel and retains the longest prefix consistent with its decoding trajectory. This target-verified prefix contains near-future semantics, which LPAVR uses to construct lookahead-guided visual evidence and assess whether history-guided evidence covers the indicated regions. If the coverage is sufficient, the history-guided evidence is retained; otherwise, LPAVR switches to the lookahead-guided evidence. This better aligns the visual context with upcoming reasoning and improves consistency between draft predictions and target-model decoding. Experiments on multiple multimodal reasoning benchmarks show that LPAVR improves both reasoning accuracy and the acceptance rates of MTP speculative tokens, jointly enhancing visual reasoning and speculative decoding efficiency.",
-    "url": "https://arxiv.org/abs/2611.02780v1",
-    "queries": [
-      "datacite-secondary-verification-parallel",
-      "secondary-verification-parallel"
-    ],
-    "discovered_at": "2026-11-08T08:04:55Z",
-    "status": "pending",
-    "curator_note": "Abstract screen: MTP used for visual evidence selection; applicability to the stated rollout taxonomy requires further study.",
     "last_screened": "2026-11-08"
   },
   {

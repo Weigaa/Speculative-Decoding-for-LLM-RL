@@ -5,8 +5,10 @@ New versions do not overwrite reviewed or manuscript versions. Re-read changed e
 - [he2026s3r](https://arxiv.org/abs/2610.13202v2): reviewed v1, observed v2 (2026-11-03T16:41:33Z).
 - [he2026valuspec](https://arxiv.org/abs/2610.31338v2): reviewed v1, observed v2 (2026-11-05T15:09:32Z).
 - [malvankar2026tabletune](https://arxiv.org/abs/2610.38968v2): reviewed v1, observed v2 (2026-11-02T17:44:59Z).
+- [nie2026unilaspec](https://arxiv.org/abs/2611.01617v2): reviewed v1, observed v2 (2026-11-06T09:31:14Z).
 - [pham2026specroll](https://arxiv.org/abs/2608.04962v2): reviewed v1, observed v2 (2026-10-14T04:53:03Z).
 - [wang2026draftcotraining](https://arxiv.org/abs/2609.07108v3): reviewed v1, observed v3 (2026-11-04T03:48:05Z).
+- [xu2026tailsieve](https://arxiv.org/abs/2608.22788v3): reviewed v2, observed v3 (2026-11-06T09:28:32Z).
 
 Curator review of `he2026s3r` (2026-11-08): The reviewed v2 retains sparse drafting, dense verification and response-group semantics. Reviewed its setup and KV scheduling discussion. Historical values retained. See the [paper card](../papers/he2026s3r.md).
 
