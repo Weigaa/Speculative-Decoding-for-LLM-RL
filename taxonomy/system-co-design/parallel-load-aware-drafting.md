@@ -36,3 +36,9 @@ Analyze parallel candidate generation, verification width, and load-dependent ne
 | [Teaching Diffusion to Speculate Left-to-Right](../../papers/whalen2026teaching.md) | 2026 | Serving / inference — RL transfer potential | Post-cutoff screened addition |
 | [Windowed-MTP](../../papers/valliappan2026windowedmtp.md) | 2026 | Serving / inference — RL transfer potential | Post-cutoff screened addition |
 | [PolyGraph](../../papers/yang2026polygraph.md) | 2026 | Serving / inference — RL transfer potential | Post-cutoff screened addition |
+| [ForeSpark](../../papers/song2026forespark.md) | 2026 | Serving / inference — RL transfer potential | Post-cutoff screened addition |
+| [DForkTree](../../papers/zheng2026dforktree.md) | 2026 | Serving / inference — RL transfer potential | Post-cutoff screened addition |
+| [D3Tree](../../papers/nie2026d3tree.md) | 2026 | Serving / inference — RL transfer potential | Post-cutoff screened addition |
+| [ChainFlow](../../papers/aktas2026chainflow.md) | 2026 | Serving / inference — RL transfer potential | Post-cutoff screened addition |
+| [D3D](../../papers/chen2026d3d.md) | 2026 | Serving / inference — RL transfer potential | Post-cutoff screened addition |
+| [TraceSpec](../../papers/zhao2026tracespec.md) | 2026 | Serving / inference — RL transfer potential | Post-cutoff screened addition |

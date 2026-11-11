@@ -1,0 +1,130 @@
+{
+  "cutoff": "2026-11-11",
+  "status": "submission-day literature edition",
+  "core_count": 83,
+  "evidence_counts": {
+    "direct_rl": 24,
+    "serving_transfer": 59
+  },
+  "core_ids": [
+    "kim2026efficientrollout",
+    "xu2026bubblespec",
+    "he2025rhymerl",
+    "liu2025specrl",
+    "chang2026srt",
+    "shao2026das",
+    "chen2026respec",
+    "pham2026specroll",
+    "li2026bebop",
+    "iso2026systemintegrated",
+    "jin2025specrl",
+    "zhang2026fastgrpo",
+    "hu2026tlt",
+    "qin2026seer",
+    "wang2026mtprl",
+    "xu2026war",
+    "xu2026tailsieve",
+    "li2025eagle3",
+    "chen2026dflash",
+    "cheng2026dspark",
+    "oliaro2025suffixdecoding",
+    "he2024rest",
+    "elhoushi2024layerskip",
+    "ramakrishnan2025omnidraft",
+    "kim2026specverification",
+    "tiwari2025quantspec",
+    "qian2026onlinespec",
+    "wang2026aurora",
+    "lei2026draftopd",
+    "qian2026adaflash",
+    "ning2025casspec",
+    "bai2026interns2",
+    "wang2026draftcotraining",
+    "he2026growmtp",
+    "he2026s3r",
+    "ziashahabi2026aspire",
+    "jiang2026hspec",
+    "chen2026dscale",
+    "jung2026spexis",
+    "dai2026tlar",
+    "lee2026agspec",
+    "hu2026rheosampling",
+    "li2026nucleussd",
+    "zhao2026edr",
+    "xia2026acceptanceaware",
+    "badarayani2026posttrainingmtp",
+    "feng2026jetspecpp",
+    "sun2026ready",
+    "li2026fold",
+    "alazhar2026adaptivedhisparse",
+    "eisenstadt2026dcoco",
+    "gu2026dloop",
+    "chen2026schemafill",
+    "lin2026dominotree",
+    "he2026valuspec",
+    "tsur2026rift",
+    "lee2026reanchor",
+    "pandey2026ngramrl",
+    "yao2026flashnextrl",
+    "song2026specmem",
+    "malvankar2026tabletune",
+    "molodyk2026mdraft",
+    "he2026longspark",
+    "chen2026packedss",
+    "ko2026hyflash",
+    "le2026reconsideration",
+    "zhu2026recap",
+    "ranjan2026hybridspark",
+    "liu2026specopd",
+    "li2026specpilot",
+    "su2026factorspec",
+    "nie2026unilaspec",
+    "whalen2026teaching",
+    "song2026forespark",
+    "zheng2026dforktree",
+    "nie2026d3tree",
+    "aktas2026chainflow",
+    "chen2026d3d",
+    "zhao2026tracespec",
+    "naidu2026phrase",
+    "liu2026specdistill",
+    "valliappan2026windowedmtp",
+    "yang2026polygraph"
+  ],
+  "contextual_additions": [
+    "ding2026processorcontracts",
+    "luo2026adversarial"
+  ],
+  "previous_edition": "2026-11-08",
+  "reviewed_versions": {
+    "he2026s3r": {
+      "version": "v2",
+      "url": "https://arxiv.org/abs/2610.13202v2"
+    },
+    "he2026valuspec": {
+      "version": "v2",
+      "url": "https://arxiv.org/abs/2610.31338v2"
+    },
+    "malvankar2026tabletune": {
+      "version": "v2",
+      "url": "https://arxiv.org/abs/2610.38968v2"
+    },
+    "wang2026draftcotraining": {
+      "version": "v3",
+      "url": "https://arxiv.org/abs/2609.07108v3"
+    },
+    "xia2026acceptanceaware": {
+      "version": "v2",
+      "url": "https://arxiv.org/abs/2609.24150v2"
+    },
+    "xu2026tailsieve": {
+      "version": "v3",
+      "url": "https://arxiv.org/abs/2608.22788v3"
+    },
+    "nie2026unilaspec": {
+      "version": "v2",
+      "url": "https://arxiv.org/abs/2611.01617v2"
+    }
+  },
+  "note": "Twelve newly cited studies include two technical records curated November 9 and ten newly added canonical records. SPEC-Distill is an October EMNLP publication, not a new November paper. No prior snapshot or edition is overwritten."
+}

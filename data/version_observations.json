@@ -34,7 +34,10 @@
     "reviewed_version": "v1",
     "observed_version": "v2",
     "url": "https://arxiv.org/abs/2611.01617v2",
-    "observed_at": "2026-11-06T09:31:14Z"
+    "observed_at": "2026-11-06T09:31:14Z",
+    "checked_at": "2026-11-11",
+    "curator_status": "reviewed_new_edition_original_record_preserved",
+    "curator_note": "Reviewed expanded runtime controls and hardware evaluation. Full-text primary comparisons are greedy, with additional stochastic checks in appendices. Existing mechanism description remains applicable. Original v1 numerical counts remain historical and are not replaced silently."
   },
   {
     "id": "pham2026specroll",
@@ -57,10 +60,23 @@
     "curator_note": "Reviewed v3 CP branch attention, TapChannel, and expanded direct RL evaluations up to 122B. Existing mechanism summary remains applicable; no old numerical claim overwritten."
   },
   {
+    "id": "xia2026acceptanceaware",
+    "reviewed_version": "v1",
+    "observed_version": "v2",
+    "url": "https://arxiv.org/abs/2609.24150v2",
+    "observed_at": "2026-11-10T07:58:07Z",
+    "checked_at": "2026-11-11",
+    "curator_status": "reviewed_new_edition_original_record_preserved",
+    "curator_note": "Reviewed weighted window-start objectives, tree acceptance objectives and optional GRPO for the drafter. This remains fixed-target drafter training, not target-policy RL rollout evidence."
+  },
+  {
     "id": "xu2026tailsieve",
     "reviewed_version": "v2",
     "observed_version": "v3",
     "url": "https://arxiv.org/abs/2608.22788v3",
-    "observed_at": "2026-11-06T09:28:32Z"
+    "observed_at": "2026-11-06T09:28:32Z",
+    "checked_at": "2026-11-11",
+    "curator_status": "reviewed_new_edition_original_record_preserved",
+    "curator_note": "Reviewed refreshed full-response generation and group selection, plus Appendix G matched-decoder routing controls. Headline 1.67x routing and 2.59x combined gains remain versus uniform routing without speculation; matched-decoder routing gains are separate. No historical headline value replaced."
   }
 ]

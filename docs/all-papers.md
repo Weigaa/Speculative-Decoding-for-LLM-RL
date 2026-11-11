@@ -146,3 +146,13 @@
 | `wang2026flashoffloading` | [FlashOffloading: Low-Latency KV Cache Offloading for Long-Context LLM Serving](../papers/wang2026flashoffloading.md) | background |
 | `valliappan2026windowedmtp` | [Windowed-MTP: Removing the Full-Context Draft-KV Tax at Million-Token Context](../papers/valliappan2026windowedmtp.md) | post_cutoff |
 | `yang2026polygraph` | [PolyGraph: Plan-Buffered CUDA Graphs for Adaptive Speculative Decoding](../papers/yang2026polygraph.md) | post_cutoff |
+| `song2026forespark` | [ForeSpark: Joint Draft and Verification Budget Scheduling for Parallel Speculative Decoding](../papers/song2026forespark.md) | post_cutoff |
+| `zheng2026dforktree` | [DForkTree: Accelerating Speculative Decoding with Fork-Aware Block Diffusion Draft Trees](../papers/zheng2026dforktree.md) | post_cutoff |
+| `nie2026d3tree` | [D3Tree: Learning to Prune Block-Diffusion Draft Trees for Efficient Verification](../papers/nie2026d3tree.md) | post_cutoff |
+| `aktas2026chainflow` | [ChainFlow: Few-Step Latent Flow Matching for Speculative Decoding](../papers/aktas2026chainflow.md) | post_cutoff |
+| `chen2026d3d` | [D3D: Decoupled Diffusion Drafting for Asynchronous Speculative Decoding](../papers/chen2026d3d.md) | post_cutoff |
+| `zhao2026tracespec` | [TraceSpec: Understanding and Improving Speculative Decoding for LLM Agents](../papers/zhao2026tracespec.md) | post_cutoff |
+| `naidu2026phrase` | [Phrase-Level Speculative Decoding on a Frozen Target](../papers/naidu2026phrase.md) | post_cutoff |
+| `ding2026processorcontracts` | [Testing Processor Contracts in Speculative Decoding Engines](../papers/ding2026processorcontracts.md) | contextual |
+| `luo2026adversarial` | [Adversarial Speculative Reasoning Improves Long Horizon Agents](../papers/luo2026adversarial.md) | contextual |
+| `liu2026specdistill` | [SPEC-Distill: Towards Efficient Speculative Distillation for Reinforcement Learning with Verifiable Rewards](../papers/liu2026specdistill.md) | post_cutoff |

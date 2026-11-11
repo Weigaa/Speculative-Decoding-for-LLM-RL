@@ -26,3 +26,5 @@ Choose speculative execution modes and verification budgets under varying rollou
 | [SpecPilot](../../papers/li2026specpilot.md) | 2026 | Serving / inference — RL transfer potential | Post-cutoff screened addition |
 | [Uni-LaSpec](../../papers/nie2026unilaspec.md) | 2026 | Serving / inference — RL transfer potential | Post-cutoff screened addition |
 | [PolyGraph](../../papers/yang2026polygraph.md) | 2026 | Serving / inference — RL transfer potential | Post-cutoff screened addition |
+| [ForeSpark](../../papers/song2026forespark.md) | 2026 | Serving / inference — RL transfer potential | Post-cutoff screened addition |
+| [D3Tree](../../papers/nie2026d3tree.md) | 2026 | Serving / inference — RL transfer potential | Post-cutoff screened addition |

@@ -7,3 +7,5 @@ These records are excluded from the 46-study taxonomy corpus.
 - [LEAP: Learning Efficient Action Proposals For LLM Agents](../papers/xu2026leap.md) (2026)
 - [Evaluating Losslessness in Speculative Decoding Under Finite-Precision Inference](../papers/koziev2026finiteprecision.md) (2026)
 - [ObsSpec: Accelerating Agentic Reinforcement Learning with Observation Speculation](../papers/montgomery2026obsspec.md) (2026)
+- [Testing Processor Contracts in Speculative Decoding Engines](../papers/ding2026processorcontracts.md) (2026)
+- [Adversarial Speculative Reasoning Improves Long Horizon Agents](../papers/luo2026adversarial.md) (2026)

@@ -9,3 +9,5 @@ The repository records bibliographic links and original synthesis notes, not hos
 The [November 2 literature edition](data/manuscript_editions/2026-11-02.csv) lists 64 screened technical studies with evidence labels and reviewed sources. Its [core BibTeX](bibliography/manuscript-2026-11-02-core.bib) selects SPARK v2 without overwriting the preserved October 14 snapshot.
 
 The [November 8 literature edition](data/manuscript_editions/2026-11-08.csv) contains 73 technical studies (23 direct RL and 50 serving transfer). See its [core BibTeX](bibliography/manuscript-2026-11-08-core.bib) and [curation note](updates/2026-11-08.md). FlexFloor and FlashOffloading are supporting systems references.
+
+The [November 11 submission-day edition](data/manuscript_editions/2026-11-11.csv) contains 83 technical studies (24 direct RL and 59 serving transfer). Its [core BibTeX](bibliography/manuscript-2026-11-11-core.bib) and [review note](updates/2026-11-11.md) distinguish newly cited studies, older recovered publications, and contextual diagnostics.

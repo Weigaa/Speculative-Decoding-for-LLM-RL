@@ -29,3 +29,6 @@ Maintain proposal state under policy evolution using static, periodic, online, t
 | [Parallel Reconsideration](../../papers/le2026reconsideration.md) | 2026 | Serving / inference — RL transfer potential | Post-cutoff screened addition |
 | [SpecOPD](../../papers/liu2026specopd.md) | 2026 | Serving / inference — RL transfer potential | Post-cutoff screened addition |
 | [Teaching Diffusion to Speculate Left-to-Right](../../papers/whalen2026teaching.md) | 2026 | Serving / inference — RL transfer potential | Post-cutoff screened addition |
+| [ChainFlow](../../papers/aktas2026chainflow.md) | 2026 | Serving / inference — RL transfer potential | Post-cutoff screened addition |
+| [TraceSpec](../../papers/zhao2026tracespec.md) | 2026 | Serving / inference — RL transfer potential | Post-cutoff screened addition |
+| [SPEC-Distill](../../papers/liu2026specdistill.md) | 2026 | Direct RL rollout / training | Post-cutoff screened addition |

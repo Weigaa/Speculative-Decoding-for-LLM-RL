@@ -10,12 +10,14 @@ The [November 2 literature edition](data/manuscript_editions/2026-11-02.csv) lis
 
 The [November 8 literature edition](data/manuscript_editions/2026-11-08.csv) contains 73 technical studies (23 direct RL and 50 serving transfer). See its [core BibTeX](bibliography/manuscript-2026-11-08-core.bib) and [curation note](updates/2026-11-08.md). FlexFloor and FlashOffloading are supporting systems references.
 
+The [November 11 submission-day edition](data/manuscript_editions/2026-11-11.csv) contains 83 technical studies (24 direct RL and 59 serving transfer). Its [core BibTeX](bibliography/manuscript-2026-11-11-core.bib) and [review note](updates/2026-11-11.md) distinguish newly cited studies, older recovered publications, and contextual diagnostics.
+
 ## Library status
 
 - Manuscript literature cutoff: **2026-10-14**.
 - Frozen core: **46** unique studies, including **21** with direct RL evidence and **25** serving-origin transfer studies.
 - Imported bibliography: **111** records, of which **107** appear in the manuscript PDF.
-- Screened additions after the cutoff: **31**. These do not alter the manuscript snapshot.
+- Screened additions after the cutoff: **41**. These do not alter the manuscript snapshot.
 
 ## Browse by the manuscript taxonomy
 
@@ -24,21 +26,21 @@ A study may appear under several dimensions. Every study has one canonical recor
 ### [Workload-Aware Speculation](taxonomy/workload-aware/README.md)
 
 - [Closed-Batch Tail](taxonomy/workload-aware/closed-batch-tail.md) — 8 studies
-- [Workload Recurrence](taxonomy/workload-aware/workload-recurrence.md) — 14 studies
+- [Workload Recurrence](taxonomy/workload-aware/workload-recurrence.md) — 16 studies
 
 ### [Policy-Aware Speculation](taxonomy/policy-aware/README.md)
 
-- [Proposal Source](taxonomy/policy-aware/proposal-source.md) — 38 studies
-- [Proposal Maintenance](taxonomy/policy-aware/proposal-maintenance.md) — 23 studies
-- [Verification Semantics](taxonomy/policy-aware/verification-semantics.md) — 18 studies
+- [Proposal Source](taxonomy/policy-aware/proposal-source.md) — 43 studies
+- [Proposal Maintenance](taxonomy/policy-aware/proposal-maintenance.md) — 26 studies
+- [Verification Semantics](taxonomy/policy-aware/verification-semantics.md) — 20 studies
 
 ### [System Co-Design](taxonomy/system-co-design/README.md)
 
-- [Scheduling and Mode Selection](taxonomy/system-co-design/scheduling-mode-selection.md) — 20 studies
-- [Placement and Idle Resources](taxonomy/system-co-design/placement-idle-resources.md) — 6 studies
+- [Scheduling and Mode Selection](taxonomy/system-co-design/scheduling-mode-selection.md) — 22 studies
+- [Placement and Idle Resources](taxonomy/system-co-design/placement-idle-resources.md) — 7 studies
 - [Memory and Reuse State](taxonomy/system-co-design/memory-reuse-state.md) — 24 studies
 - [Synchronization and Versioning](taxonomy/system-co-design/synchronization-versioning.md) — 11 studies
-- [Parallel and Load-Aware Drafting](taxonomy/system-co-design/parallel-load-aware-drafting.md) — 30 studies
+- [Parallel and Load-Aware Drafting](taxonomy/system-co-design/parallel-load-aware-drafting.md) — 36 studies
 
 ## Other reading lists
 

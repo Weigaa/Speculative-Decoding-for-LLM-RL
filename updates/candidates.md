@@ -4,6 +4,46 @@ Unreviewed search hits are not part of the curated corpus and must not be cited 
 
 [Search protocol](../docs/search-protocol.md) · [Update status](../data/update_state.json)
 
+## [AHASD: Asynchronous Heterogeneous Architecture for LLM Adaptive Drafting Speculative Decoding on Mobile Devices](https://arxiv.org/abs/2604.25326)
+
+- arXiv: `2604.25326` / version not recorded
+- Metadata updated: 2026-11-10T10:08:49Z
+- Source: DataCite arXiv DOI registry
+- Screening status: pending
+- Query families: datacite-secondary-tail-load, datacite-secondary-verification-parallel
+
+Speculative decoding enhances the inference efficiency of large language models (LLMs) by generating drafts using a small draft language model (DLM) and verifying them in batches with a large target language model (TLM). However, adaptive drafting inference on a mobile single-NPU-PIM system faces idle overhead in traditional operator-level synchronous execution and wasted computation in asynchronous execution due to fluctuations in draft length. This paper introduces AHASD, a task-level asynchronous mobile NPU-PIM heterogeneous architecture for speculative decoding. Notably, AHASD achieves parallel drafting on the PIM and verification on a single NPU through task-level DLM-TLM decoupling and specifically, it incorporates Entropy-History-Aware Drafting Control and Time-Aware Pre-Verification Control to dynamically manage adaptive drafting algorithm execution and pre-verification timing, suppressing invalid drafting based on low-confidence drafts. Additionally, AHASD integrates Attention Algorithm Units and Gated Task Scheduling Units within LPDDR5-PIM to enable attention link localization and sub-microsecond task switching on the PIM side. Experimental results for different LLMs and adaptive drafting algorithms show that AHASD achieves up to 4.2$\times$ in throughput and 5.6$\times$ in energy efficiency improvements over a GPU-only baseline, and 1.5$\times$ in throughput and 1.24$\times$ in energy efficiency gains over the state-of-the-art GPU+PIM baseline, with hardware overhead below 3% of the DRAM area.
+
+## [Inference Validation for Regulated AI: Building a Decision Pipeline on NVIDIA AIPerf](https://arxiv.org/abs/2611.12737v1)
+
+- arXiv: `2611.12737` / v1
+- Paper updated: 2026-11-09T17:21:17Z
+- Source: arXiv API
+- Screening status: pending
+- Query families: datacite-secondary-tail-load, secondary-tail-load
+
+Deploying large language models in regulated industries requires more than picking the fastest inference engine: it requires evidence that a configuration meets contractual and legal obligations before it serves a single customer request. We describe Runway, an internal validation harness built at MasterControl that builds a governed decision pipeline around NVIDIA AIPerf. The key insight is separating concerns: AIPerf provides the trusted measurement, while Runway provides the experiment design that comes before it and the compliance, cost, and audit decisions that come after. We describe the architecture and the storage model that makes caching and audit one mechanism. We report three findings from Runway sweeps: TensorRT-LLM and vLLM rankings invert with concurrency; a newer, pricier GPU instance can be the cheaper one per request; and speculative decoding behaves differently across engines under load, so engine configuration can outweigh engine choice.
+
+## [ReFrame: Silence-Aware Compute Reclamation for Full-Duplex Speech Models](https://arxiv.org/abs/2611.01835v2)
+
+- arXiv: `2611.01835` / v2
+- Paper updated: 2026-11-09T08:03:01Z
+- Source: arXiv API
+- Screening status: pending
+- Query families: secondary-reuse
+
+Full-duplex speech models execute dense model inference for every audio frame throughout a live interaction. This uniform framewise schedule creates sustained GPU load across dialogue states whose computation has strong, reusable temporal structure. ReFrame formulates full-duplex inference as a silence-aware computation problem. Mutual Silence Speculation (MSS) operates when both participants are silent: it evaluates multi-frame Temporal continuations, verifies text and hidden-state stability, and applies batched Mimi audio-token correction. Listening Frame Folding (LFF) operates while the user speaks and the agent listens: it processes already-arrived user frames through parallel Temporal execution and frame-batched audio-token generation while accepting only the verified prefix. Frame-Budget Reinvestment (FBR) assigns the released frame intervals to resumable external retrieval and language-model workers, then injects timely references through Moshi's conditioning interface. We instantiate ReFrame on five full-duplex models spanning Moshi-family, phase-structured, and flattened autoregressive generation. Across the complete 1,225-conversation FDBench, ReFrame reduces measured GPU execution time by 18.80-31.01% and retains 96.92-100% non-PAD text agreement on five different models. On HaluEval tests, FBR increases the number of correct generated spoken answers from 86 to 205 under the same auxiliary-service budget. ReFrame turns recurring dialogue structure into lower inference cost and higher end-to-end service capability.
+
+## [Speculative Self-Distillation enables Efficient Knowledge Internalization](https://arxiv.org/abs/2611.12016v1)
+
+- arXiv: `2611.12016` / v1
+- Paper updated: 2026-11-09T07:53:11Z
+- Source: arXiv API
+- Screening status: pending
+- Query families: datacite-secondary-policy-adaptation, secondary-policy-adaptation
+
+Many real-world applications require language models to internalize knowledge that was absent from pretraining, to incorporate continually updated facts, or to learn new domain skills. Self-distillation has emerged as a natural approach for this task. A model conditioned on the source material acts as the teacher, and an unconditioned student is trained to reproduce the teacher's behavior closed-book. We propose Speculative Self-Distillation (SSD), an efficient per-token mixed-policy method for self-distillation. The student generates each rollout by default, while the teacher intervenes only at positions where its next-token distribution substantially diverges from the student's. Unlike off-policy distillation with teacher-generated prefixes, this design keeps training rollouts close to the student's test-time behavior, while avoiding the low-signal states that fully on-policy rollouts drift into. In effect, SSD lets the teacher steer the rollout exactly where the privileged context changes the prediction. On three closed-book QA benchmarks measuring fact recall, knowledge updates, and skill acquisition, SSD nearly matches on-policy distillation while using 38-69% fewer supervised tokens and consistently outperforms off-policy distillation on the held-out test set. On a forgetting stress test, SSD retains the most general capability while also achieving the best in-domain accuracy and using less supervision than the on-policy baseline. Overall, SSD establishes a new accuracy-efficiency-forgetting Pareto frontier for self-distillation.
+
 ## [MobiInfer: Accelerating On-Device GUI Agents with Workload-Aware Inference](https://arxiv.org/abs/2611.08496)
 
 - arXiv: `2611.08496` / version not recorded
@@ -13,6 +53,36 @@ Unreviewed search hits are not part of the curated corpus and must not be cited 
 - Query families: datacite-secondary-reuse
 
 Mobile GUI agents assist users in executing phone tasks through iterative observe-reason-act loops. However, deploy ing multimodal GUI agents directly on smartphones is challenging due to strict end-to-end latency requirements and significant memory overhead. We observe that GUI-agent work loads exhibit recurring workflows and structured I/O: their prompts contain reusable context, while their outputs follow fixed schemas with phase-dependent predictability. Based on this observation, we present MobiInfer, a workload-aware inference engine for on-device multimodal GUI agents. MobiInfer combines trajectory-aware prefix reuse, phase-indexed vocabulary specialization, and schema-guided speculative decoding to eliminate redundant prefill computation and reduce structured-generation overhead. We implement MobiInfer on top of MNN and evaluate it on AndroidWorld and a real world dataset using three real Android devices. Across the four model-benchmark settings, MobiInfer achieves average speedups of 2.6x in prefill and 2.5x in decoding, reduces end-to-end task latency by 2.4x on average, and cuts total deployment storage by 30%, while limiting task-success degradation to less than one percentage point.
+
+## [Efficient VLA Inference via Retrieval-Based Speculation and Hardware Acceleration](https://arxiv.org/abs/2611.11098v1)
+
+- arXiv: `2611.11098` / v1
+- Paper updated: 2026-11-08T03:28:09Z
+- Source: arXiv API
+- Screening status: pending
+- Query families: datacite-secondary-reuse, secondary-reuse
+
+Vision-language-action (VLA) models enable robots to understand and execute complex instructions, but their autoregressive (AR) action generation introduces significant latency on resource-constrained robotic platforms. Speculative decoding can accelerate AR-based inference by parallelizing action generation and verification; however, existing approaches rely on costly draft models, which are inefficient on edge platforms. In this paper, we propose Zora, a hardware-software co-design framework for accelerating AR-based VLA inference. Specifically, Zora introduces a lightweight retrieval-augmented generation (RAG)-based draft model that exploits robotic dynamics without additional neural draft models. We further reduce batch verification overhead through a kinematics-guided action-acceptance strategy and a KV-cache-sharing attention mechanism. To address the retrieval overhead introduced by RAG-based drafting, we co-design dedicated hardware support, Zora core, to address the memory irregularity in RAG-based drafting. We evaluate Zora on four VLA models with the LIBERO benchmark. Zora retains comparable accuracy while achieving up to 3.4$\times$ speedup with software-only optimization and up to 7.6$\times$ speedup with hardware support over GPUs.
+
+## [Coverage-Verified Sparse Attention: Closed-Loop Quality Control for Long-Context LLM Decoding](https://arxiv.org/abs/2611.10634v1)
+
+- arXiv: `2611.10634` / v1
+- Paper updated: 2026-11-07T10:22:27Z
+- Source: arXiv API
+- Screening status: pending
+- Query families: datacite-secondary-tail-load, secondary-tail-load
+
+Sparse attention accelerates long-context decoding by reading a subset of the KV cache, but existing methods are open-loop: the kernel commits to its selection with no signal indicating whether enough attention mass was preserved and no recovery path when it was not. The needed signal already exists inside the kernel. The fraction of softmax mass on the selected tokens, which we call coverage, satisfies an exact algebraic equality with per-step output error and serves a dual role as the acceptance criterion and the interpolation weight for recovery. Coverage-Verified Sparse Attention (CVSA) turns coverage into a training-free, closed-loop verify-then-correct decode loop that accepts high-coverage drafts and recovers only the heads that fall short, with no sampling, no draft model, and no speculative-decoding infrastructure. Quality varies by only $0.14$ points across the threshold sweep; budget and scheduling ablations characterize the deployed operating point. On LongBench at 7B and 70B, CVSA comes within $1.13$ points of dense attention, statistically matching it at 70B, and it loses $0.8$ points on RULER; measured median decode-step speedup reaches $6.21\times$ at 128K context.
+
+## [M5-TTS: A Mini-Scale Multilingual and Multi-Dialect Text-to-Speech Language Model with Multi-Token Prediction](https://arxiv.org/abs/2611.10162v1)
+
+- arXiv: `2611.10162` / v1
+- Paper updated: 2026-11-06T19:32:16Z
+- Source: arXiv API
+- Screening status: pending
+- Query families: datacite-primary-draft-posttraining, primary-draft-posttraining
+
+We present M5-TTS, a compact text-to-speech system supporting multilingual and Chinese multidialect synthesis, zero-shot voice cloning, speaker-specific multilingual generation, and CPU streaming. Its 50M-parameter language model, excluding the speech codec, combines a temporal backbone with a local multi-token prediction module over 16 codebooks. GRPO post-training combines global speaker-similarity and pause feedback with a token-level CER process advantage. Character-level error comparisons provide local feedback, with negative credit propagated backward within a clause and projected onto audio-token positions. M5-TTS achieves 1.37% CER on Seed-ZH and 2.91% WER on Seed-EN, corresponding to relative error reductions of 62.2% and 35.3% over MOSS-TTS-Nano with half the language-model parameters. It also achieves lower content error rates in five of six evaluated MiniMax languages, while difficult Chinese inputs remain a limitation. On four Intel Xeon Gold 6530 cores, it achieves a real-time factor of 0.653 and a warm first-chunk latency of 225ms. A 10-listener evaluation gives M5-TTS higher speaker-similarity and intelligibility ratings than MOSS-TTS-Nano, with a lower naturalness rating. We will release training, post-training, and inference code, together with voice-cloning and speaker-specific checkpoints, to support reproducible research on compact speech generation for on-device voice interaction.
 
 ## [Lookahead Prediction-Guided Adaptive Visual Refocusing for Interleaved Multimodal Reasoning](https://arxiv.org/abs/2611.02780v2)
 
@@ -33,16 +103,6 @@ Interleaved multimodal chain-of-thought reasoning improves the visual reasoning 
 - Query families: datacite-primary-draft-posttraining, primary-draft-posttraining
 
 Search and recommendation at Shopify require retrieving relevant products from a changing catalog of billions of products under strict latency constraints. We present SID-LLM, which casts both tasks as generating semantic IDs: short sequences of content-derived tokens representing products. We jointly pre-train SID-LLM on catalog and behavioral data, giving search and recommendation a shared representation and training objective. We show that reinforcement learning further improves judged search relevance. Furthermore, distillation from task-specific experts improves recommendation quality over joint supervised fine-tuning without a statistically detected loss in search quality. Finally, for efficient serving, we pair multi-token prediction with a lightweight ranker, improving retrieval quality over our autoregressive baseline while reducing latency. We evaluate SID-LLM both as a standalone retriever and as a component of Shopify's production search and recommendation systems. As a standalone search system, SID-LLM achieves quality comparable to Shopify's existing multi-model search stack while meeting production latency requirements. Integrating SID-LLM into the search and recommendation stacks provides significant gains in both offline evaluations and online A/B tests. Together, these results demonstrate the practical value of semantic-ID generation as a unified approach to product discovery at scale.
-
-## [ChainFlow: Few-Step Latent Flow Matching for Speculative Decoding](https://arxiv.org/abs/2611.08669v1)
-
-- arXiv: `2611.08669` / v1
-- Paper updated: 2026-11-05T20:26:25Z
-- Source: arXiv API
-- Screening status: pending
-- Query families: secondary-tail-load
-
-Speculative decoding has become a standard way to accelerate LLM inference: a lightweight drafter proposes tokens that the target verifies in one parallel pass. Existing drafters face trade-offs that limits their speedups: autoregressive drafters generate tokens one at a time, so drafting cost grows with draft length, while diffusion drafters generate tokens in parallel but predict each position independently, ignoring inter-token dependencies. We introduce ChainFlow, a new speculative decoding paradigm and the first flow-matching drafter conditioned on the target's hidden states. ChainFlow treats drafting as a short transport over hidden states, needing one or two flow steps instead of the many denoising steps of generation from noise. A variational autoencoder compresses these states so drafting cost barely grows with target size, lightweight feedback heads restore inter-token dependencies, and tree drafting raises acceptance. On Qwen3.5 models, at matched drafter size and training data, ChainFlow outperforms EAGLE-3 and DFlash in vLLM by 39% and 11%, respectively. These gains further widen as drafters are adapted to new languages sequentially. Our ablations cover drafter design and concurrent serving, and we open-source our code and drafter models.
 
 ## [CoRD: Coupled Rollouts Fill the Blind Spot of On-Policy Distillation](https://arxiv.org/abs/2611.07959v1)
 
@@ -83,16 +143,6 @@ Serving an LLM efficiently depends on the engine, how the model is split across 
 - Query families: secondary-reuse
 
 Block diffusion LLMs (block dLLMs) improve decode throughput by generating tokens in parallel, and are emerging as a next-generation alternative to autoregressive LLMs. At long contexts, however, the KV cache remains a major throughput bottleneck in both memory bandwidth and capacity. For autoregressive LLMs, dynamic sparse attention is often combined with KV offloading to alleviate both bottlenecks, keeping the full KV cache in CPU DRAM and fetching only a critical subset to the GPU. However, KV subset selection and retrieval over bandwidth-limited PCIe incur substantial offloading overheads that often stall the GPU. We present HERALD, the first dynamic sparse attention method for block dLLMs that supports KV offloading. HERALD exploits a property of block dLLMs: a critical KV subset selected once per block is reused across all of its denoising steps, so the next block's selection can be hidden behind the current block's denoising. HERALD realizes this with a two-stage selection algorithm co-designed with its execution system. While the GPU denoises the current block, the CPU speculatively searches the full KV cache for the next block with a single query merged from the current block's B queries, cutting the selection compute by Bx; the GPU then refines the candidates into the final top-K subset with the next block's real queries. At K=1024, HERALD achieves near-lossless accuracy relative to Dense on LongBench and reasoning tasks across four block dLLMs, and improves decode throughput by up to 3.70x over Dense GPU-only inference, 2.59x over MAGE, a state-of-the-art block-dLLM sparse attention method, and 8.38x over MAGE-Offload, its direct KV-offloading extension.
-
-## [ReFrame: Silence-Aware Compute Reclamation for Full-Duplex Speech Models](https://arxiv.org/abs/2611.01835v1)
-
-- arXiv: `2611.01835` / v1
-- Paper updated: 2026-11-01T12:10:55Z
-- Source: arXiv API
-- Screening status: pending
-- Query families: secondary-reuse
-
-Full-duplex speech models execute dense model inference for every audio frame throughout a live interaction. This uniform framewise schedule creates sustained GPU load across dialogue states whose computation has strong, reusable temporal structure. ReFrame formulates full-duplex inference as a silence-aware computation problem. Mutual Silence Speculation (MSS) operates when both participants are silent: it evaluates multi-frame Temporal continuations, verifies text and hidden-state stability, and applies batched Mimi audio-token correction. Listening Frame Folding (LFF) operates while the user speaks and the agent listens: it processes already-arrived user frames through parallel Temporal execution and frame-batched audio-token generation while accepting only the verified prefix. Frame-Budget Reinvestment (FBR) assigns the released frame intervals to resumable external retrieval and language-model workers, then injects timely references through Moshi's conditioning interface. We instantiate ReFrame on five full-duplex models spanning Moshi-family, phase-structured, and flattened autoregressive generation. Across the complete 1,225-conversation FDBench, ReFrame reduces measured GPU execution time by 18.80-31.01% and retains 96.92-100% non-PAD text agreement on five different models. On HaluEval tests, FBR increases the number of correct generated spoken answers from 86 to 205 under the same auxiliary-service budget. ReFrame turns recurring dialogue structure into lower inference cost and higher end-to-end service capability.
 
 ## [UBTree: Parallel Tree Drafting via Unigram and Bigram Models for Speculative Decoding](https://arxiv.org/abs/2609.39972)
 

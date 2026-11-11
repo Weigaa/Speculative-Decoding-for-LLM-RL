@@ -44,3 +44,8 @@ Compare external, target-derived, MTP, and history-based proposal sources.
 | [RECAP](../../papers/zhu2026recap.md) | 2026 | Serving / inference — RL transfer potential | Post-cutoff screened addition |
 | [FactorSpec](../../papers/su2026factorspec.md) | 2026 | Serving / inference — RL transfer potential | Post-cutoff screened addition |
 | [Windowed-MTP](../../papers/valliappan2026windowedmtp.md) | 2026 | Serving / inference — RL transfer potential | Post-cutoff screened addition |
+| [DForkTree](../../papers/zheng2026dforktree.md) | 2026 | Serving / inference — RL transfer potential | Post-cutoff screened addition |
+| [ChainFlow](../../papers/aktas2026chainflow.md) | 2026 | Serving / inference — RL transfer potential | Post-cutoff screened addition |
+| [D3D](../../papers/chen2026d3d.md) | 2026 | Serving / inference — RL transfer potential | Post-cutoff screened addition |
+| [Phrase-level drafting](../../papers/naidu2026phrase.md) | 2026 | Serving / inference — RL transfer potential | Post-cutoff screened addition |
+| [SPEC-Distill](../../papers/liu2026specdistill.md) | 2026 | Direct RL rollout / training | Post-cutoff screened addition |
