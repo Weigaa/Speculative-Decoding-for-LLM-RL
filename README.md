@@ -12,6 +12,8 @@ The [November 8 literature edition](data/manuscript_editions/2026-11-08.csv) con
 
 The [November 11 submission-day edition](data/manuscript_editions/2026-11-11.csv) contains 83 technical studies (24 direct RL and 59 serving transfer). Its [core BibTeX](bibliography/manuscript-2026-11-11-core.bib) and [review note](updates/2026-11-11.md) distinguish newly cited studies, older recovered publications, and contextual diagnostics.
 
+The [November 16 author-approved edition](data/manuscript_editions/2026-11-16.csv) contains 85 technical studies (24 direct RL and 61 serving transfer), with BunshinRL treated separately as contextual evidence. See the [selected core BibTeX](bibliography/manuscript-2026-11-16-core.bib) and [update note](updates/2026-11-16.md).
+
 ## Library status
 
 - Manuscript literature cutoff: **2026-10-14**.

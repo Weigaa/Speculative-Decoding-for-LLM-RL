@@ -4,6 +4,26 @@ Unreviewed search hits are not part of the curated corpus and must not be cited 
 
 [Search protocol](../docs/search-protocol.md) · [Update status](../data/update_state.json)
 
+## [Inference Validation for Regulated AI: A Governed Decision Pipeline for LLM Serving](https://arxiv.org/abs/2611.12737v2)
+
+- arXiv: `2611.12737` / v2
+- Paper updated: 2026-11-11T16:36:55Z
+- Source: arXiv API
+- Screening status: pending
+- Query families: datacite-secondary-tail-load, secondary-tail-load
+
+Deploying large language models in regulated industries requires more than picking the fastest inference engine: it requires evidence that a configuration meets contractual and legal obligations before it serves a single customer request. We describe Runway, an internal validation harness built at MasterControl that builds a governed decision pipeline around NVIDIA AIPerf. The key insight is separating concerns: AIPerf provides the trusted measurement, while Runway provides the experiment design that comes before it and the compliance, cost, and audit decisions that come after. We describe the architecture and the storage model that makes caching and audit one mechanism. We report three findings from Runway sweeps: TensorRT-LLM and vLLM rankings invert with concurrency; a newer, pricier GPU instance can be the cheaper one per request; and speculative decoding behaves differently across engines under load, so engine configuration can outweigh engine choice.
+
+## [Efficient VLA Inference via Retrieval-Based Speculation and Hardware Acceleration](https://arxiv.org/abs/2611.11098v2)
+
+- arXiv: `2611.11098` / v2
+- Paper updated: 2026-11-11T08:33:20Z
+- Source: arXiv API
+- Screening status: pending
+- Query families: datacite-secondary-reuse, secondary-reuse
+
+Vision-language-action (VLA) models enable robots to understand and execute complex instructions, but their autoregressive (AR) action generation introduces significant latency on resource-constrained robotic platforms. Speculative decoding can accelerate AR-based inference by parallelizing action generation and verification; however, existing approaches rely on costly draft models, which are inefficient on edge platforms. In this paper, we propose Zora, a hardware-software co-design framework for accelerating AR-based VLA inference. Specifically, Zora introduces a lightweight retrieval-augmented generation (RAG)-based draft model that exploits robotic dynamics without additional neural draft models. We further reduce batch verification overhead through a kinematics-guided action-acceptance strategy and a KV-cache-sharing attention mechanism. To address the retrieval overhead introduced by RAG-based drafting, we co-design dedicated hardware support, Zora core, to address the memory irregularity in RAG-based drafting. We evaluate Zora on four VLA models with the LIBERO benchmark. Zora retains comparable accuracy while achieving up to 3.4$\times$ speedup with software-only optimization and up to 7.6$\times$ speedup with hardware support over GPUs.
+
 ## [AHASD: Asynchronous Heterogeneous Architecture for LLM Adaptive Drafting Speculative Decoding on Mobile Devices](https://arxiv.org/abs/2604.25326)
 
 - arXiv: `2604.25326` / version not recorded
@@ -13,16 +33,6 @@ Unreviewed search hits are not part of the curated corpus and must not be cited 
 - Query families: datacite-secondary-tail-load, datacite-secondary-verification-parallel
 
 Speculative decoding enhances the inference efficiency of large language models (LLMs) by generating drafts using a small draft language model (DLM) and verifying them in batches with a large target language model (TLM). However, adaptive drafting inference on a mobile single-NPU-PIM system faces idle overhead in traditional operator-level synchronous execution and wasted computation in asynchronous execution due to fluctuations in draft length. This paper introduces AHASD, a task-level asynchronous mobile NPU-PIM heterogeneous architecture for speculative decoding. Notably, AHASD achieves parallel drafting on the PIM and verification on a single NPU through task-level DLM-TLM decoupling and specifically, it incorporates Entropy-History-Aware Drafting Control and Time-Aware Pre-Verification Control to dynamically manage adaptive drafting algorithm execution and pre-verification timing, suppressing invalid drafting based on low-confidence drafts. Additionally, AHASD integrates Attention Algorithm Units and Gated Task Scheduling Units within LPDDR5-PIM to enable attention link localization and sub-microsecond task switching on the PIM side. Experimental results for different LLMs and adaptive drafting algorithms show that AHASD achieves up to 4.2$\times$ in throughput and 5.6$\times$ in energy efficiency improvements over a GPU-only baseline, and 1.5$\times$ in throughput and 1.24$\times$ in energy efficiency gains over the state-of-the-art GPU+PIM baseline, with hardware overhead below 3% of the DRAM area.
-
-## [Inference Validation for Regulated AI: Building a Decision Pipeline on NVIDIA AIPerf](https://arxiv.org/abs/2611.12737v1)
-
-- arXiv: `2611.12737` / v1
-- Paper updated: 2026-11-09T17:21:17Z
-- Source: arXiv API
-- Screening status: pending
-- Query families: datacite-secondary-tail-load, secondary-tail-load
-
-Deploying large language models in regulated industries requires more than picking the fastest inference engine: it requires evidence that a configuration meets contractual and legal obligations before it serves a single customer request. We describe Runway, an internal validation harness built at MasterControl that builds a governed decision pipeline around NVIDIA AIPerf. The key insight is separating concerns: AIPerf provides the trusted measurement, while Runway provides the experiment design that comes before it and the compliance, cost, and audit decisions that come after. We describe the architecture and the storage model that makes caching and audit one mechanism. We report three findings from Runway sweeps: TensorRT-LLM and vLLM rankings invert with concurrency; a newer, pricier GPU instance can be the cheaper one per request; and speculative decoding behaves differently across engines under load, so engine configuration can outweigh engine choice.
 
 ## [ReFrame: Silence-Aware Compute Reclamation for Full-Duplex Speech Models](https://arxiv.org/abs/2611.01835v2)
 
@@ -53,16 +63,6 @@ Many real-world applications require language models to internalize knowledge th
 - Query families: datacite-secondary-reuse
 
 Mobile GUI agents assist users in executing phone tasks through iterative observe-reason-act loops. However, deploy ing multimodal GUI agents directly on smartphones is challenging due to strict end-to-end latency requirements and significant memory overhead. We observe that GUI-agent work loads exhibit recurring workflows and structured I/O: their prompts contain reusable context, while their outputs follow fixed schemas with phase-dependent predictability. Based on this observation, we present MobiInfer, a workload-aware inference engine for on-device multimodal GUI agents. MobiInfer combines trajectory-aware prefix reuse, phase-indexed vocabulary specialization, and schema-guided speculative decoding to eliminate redundant prefill computation and reduce structured-generation overhead. We implement MobiInfer on top of MNN and evaluate it on AndroidWorld and a real world dataset using three real Android devices. Across the four model-benchmark settings, MobiInfer achieves average speedups of 2.6x in prefill and 2.5x in decoding, reduces end-to-end task latency by 2.4x on average, and cuts total deployment storage by 30%, while limiting task-success degradation to less than one percentage point.
-
-## [Efficient VLA Inference via Retrieval-Based Speculation and Hardware Acceleration](https://arxiv.org/abs/2611.11098v1)
-
-- arXiv: `2611.11098` / v1
-- Paper updated: 2026-11-08T03:28:09Z
-- Source: arXiv API
-- Screening status: pending
-- Query families: datacite-secondary-reuse, secondary-reuse
-
-Vision-language-action (VLA) models enable robots to understand and execute complex instructions, but their autoregressive (AR) action generation introduces significant latency on resource-constrained robotic platforms. Speculative decoding can accelerate AR-based inference by parallelizing action generation and verification; however, existing approaches rely on costly draft models, which are inefficient on edge platforms. In this paper, we propose Zora, a hardware-software co-design framework for accelerating AR-based VLA inference. Specifically, Zora introduces a lightweight retrieval-augmented generation (RAG)-based draft model that exploits robotic dynamics without additional neural draft models. We further reduce batch verification overhead through a kinematics-guided action-acceptance strategy and a KV-cache-sharing attention mechanism. To address the retrieval overhead introduced by RAG-based drafting, we co-design dedicated hardware support, Zora core, to address the memory irregularity in RAG-based drafting. We evaluate Zora on four VLA models with the LIBERO benchmark. Zora retains comparable accuracy while achieving up to 3.4$\times$ speedup with software-only optimization and up to 7.6$\times$ speedup with hardware support over GPUs.
 
 ## [Coverage-Verified Sparse Attention: Closed-Loop Quality Control for Long-Context LLM Decoding](https://arxiv.org/abs/2611.10634v1)
 

@@ -30,8 +30,8 @@ Fixed-target vLLM serving with standard speculative sampling. Pre-draft selectio
 - Metadata provenance: Official arXiv metadata and versioned full text checked on 2026-11-11. Query-family discovery supplemented by official-source keyword search and citation tracing. Newly screened does not imply newly published.
 - Evidence pointer: Sections 4–6
 - Source publication date: 2026-11-10
-- Released code: not recorded (not a claim of non-availability)
-- Artifact checks: not independently checked in this library
+- Released code: [official artifact](https://github.com/facebookresearch/ForeSpark)
+- Artifact checks: Official v2-linked repository metadata and main HEAD checked; code not executed on 2026-11-16, revision `5d457ddab73a76f28db34acc577abfbd9e7c6eee`
 
 ## BibTeX
 

@@ -50,6 +50,16 @@
     "curator_note": "SpecRoll v1 was renamed and substantially revised as SPARK v2 under the same arXiv ID. Method and authors changed. Keep one canonical study and retain v1 snapshot/BibTeX; manuscript reconciliation is recommended. The revision predates or coincides with the cutoff, not a new post-cutoff study."
   },
   {
+    "id": "song2026forespark",
+    "reviewed_version": "v1",
+    "observed_version": "v2",
+    "url": "https://arxiv.org/abs/2611.13442v2",
+    "observed_at": "2026-11-13T01:33:53Z",
+    "checked_at": "2026-11-16",
+    "curator_status": "reviewed_new_edition_original_record_preserved",
+    "curator_note": "Reviewed official v2 metadata and full text, revised November 13. Author list and headline serving results unchanged. Clarifies pre-draft estimation, concave-envelope global sorting, packed variable-length drafting and post-draft verification allocation. Expanded discussion and ablations cover other drafters. Main evaluations are greedy serving unless noted; standard stochastic verification is described separately. No direct RL rollout evaluation added. The manuscript retains its concise joint-budget mechanism summary. Official implementation is newly linked and checked. Original v1 source and BibTeX remain unchanged."
+  },
+  {
     "id": "wang2026draftcotraining",
     "reviewed_version": "v1",
     "observed_version": "v3",
