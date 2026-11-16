@@ -17,7 +17,7 @@ The [November 11 submission-day edition](data/manuscript_editions/2026-11-11.csv
 - Manuscript literature cutoff: **2026-10-14**.
 - Frozen core: **46** unique studies, including **21** with direct RL evidence and **25** serving-origin transfer studies.
 - Imported bibliography: **111** records, of which **107** appear in the manuscript PDF.
-- Screened additions after the cutoff: **41**. These do not alter the manuscript snapshot.
+- Screened additions after the cutoff: **44**. These do not alter the manuscript snapshot.
 
 ## Browse by the manuscript taxonomy
 
@@ -26,21 +26,21 @@ A study may appear under several dimensions. Every study has one canonical recor
 ### [Workload-Aware Speculation](taxonomy/workload-aware/README.md)
 
 - [Closed-Batch Tail](taxonomy/workload-aware/closed-batch-tail.md) — 8 studies
-- [Workload Recurrence](taxonomy/workload-aware/workload-recurrence.md) — 16 studies
+- [Workload Recurrence](taxonomy/workload-aware/workload-recurrence.md) — 17 studies
 
 ### [Policy-Aware Speculation](taxonomy/policy-aware/README.md)
 
-- [Proposal Source](taxonomy/policy-aware/proposal-source.md) — 43 studies
-- [Proposal Maintenance](taxonomy/policy-aware/proposal-maintenance.md) — 26 studies
+- [Proposal Source](taxonomy/policy-aware/proposal-source.md) — 44 studies
+- [Proposal Maintenance](taxonomy/policy-aware/proposal-maintenance.md) — 27 studies
 - [Verification Semantics](taxonomy/policy-aware/verification-semantics.md) — 20 studies
 
 ### [System Co-Design](taxonomy/system-co-design/README.md)
 
-- [Scheduling and Mode Selection](taxonomy/system-co-design/scheduling-mode-selection.md) — 22 studies
-- [Placement and Idle Resources](taxonomy/system-co-design/placement-idle-resources.md) — 7 studies
-- [Memory and Reuse State](taxonomy/system-co-design/memory-reuse-state.md) — 24 studies
+- [Scheduling and Mode Selection](taxonomy/system-co-design/scheduling-mode-selection.md) — 23 studies
+- [Placement and Idle Resources](taxonomy/system-co-design/placement-idle-resources.md) — 8 studies
+- [Memory and Reuse State](taxonomy/system-co-design/memory-reuse-state.md) — 25 studies
 - [Synchronization and Versioning](taxonomy/system-co-design/synchronization-versioning.md) — 11 studies
-- [Parallel and Load-Aware Drafting](taxonomy/system-co-design/parallel-load-aware-drafting.md) — 36 studies
+- [Parallel and Load-Aware Drafting](taxonomy/system-co-design/parallel-load-aware-drafting.md) — 37 studies
 
 ## Other reading lists
 

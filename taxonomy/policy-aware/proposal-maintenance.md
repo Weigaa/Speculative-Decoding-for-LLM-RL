@@ -32,3 +32,4 @@ Maintain proposal state under policy evolution using static, periodic, online, t
 | [ChainFlow](../../papers/aktas2026chainflow.md) | 2026 | Serving / inference — RL transfer potential | Post-cutoff screened addition |
 | [TraceSpec](../../papers/zhao2026tracespec.md) | 2026 | Serving / inference — RL transfer potential | Post-cutoff screened addition |
 | [SPEC-Distill](../../papers/liu2026specdistill.md) | 2026 | Direct RL rollout / training | Post-cutoff screened addition |
+| [REAL Loss](../../papers/tian2026real.md) | 2026 | Serving / inference — RL transfer potential | Post-cutoff screened addition |

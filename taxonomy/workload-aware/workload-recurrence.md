@@ -22,3 +22,4 @@ Recurring prompts and related continuations enable historical, tree, suffix, or 
 | [Hybrid Spark](../../papers/ranjan2026hybridspark.md) | 2026 | Serving / inference — RL transfer potential | Post-cutoff screened addition |
 | [DForkTree](../../papers/zheng2026dforktree.md) | 2026 | Serving / inference — RL transfer potential | Post-cutoff screened addition |
 | [SPEC-Distill](../../papers/liu2026specdistill.md) | 2026 | Direct RL rollout / training | Post-cutoff screened addition |
+| [Olifant speculative drafting](../../papers/vandenbosch2026olifant.md) | 2026 | Serving / inference — RL transfer potential | Post-cutoff screened addition |

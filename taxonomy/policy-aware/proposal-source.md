@@ -49,3 +49,4 @@ Compare external, target-derived, MTP, and history-based proposal sources.
 | [D3D](../../papers/chen2026d3d.md) | 2026 | Serving / inference — RL transfer potential | Post-cutoff screened addition |
 | [Phrase-level drafting](../../papers/naidu2026phrase.md) | 2026 | Serving / inference — RL transfer potential | Post-cutoff screened addition |
 | [SPEC-Distill](../../papers/liu2026specdistill.md) | 2026 | Direct RL rollout / training | Post-cutoff screened addition |
+| [Olifant speculative drafting](../../papers/vandenbosch2026olifant.md) | 2026 | Serving / inference — RL transfer potential | Post-cutoff screened addition |

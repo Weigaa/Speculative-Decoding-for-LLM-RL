@@ -4019,6 +4019,16 @@
         "checked_at": "2026-11-11",
         "status": "Paper-linked public repository metadata and HEAD checked; code not executed"
       }
+    ],
+    "version_reviews": [
+      {
+        "version": "v2",
+        "url": "https://arxiv.org/html/2611.12356v2",
+        "checked_at": "2026-11-16",
+        "authors": "Zheng, Zhicheng and Zhang, Cheng and Tang, Chenkai and Zhao, Tianxiang",
+        "bibtex": "@article{zheng2026dforktree,\n  author = {Zheng, Zhicheng and Zhang, Cheng and Tang, Chenkai and Zhao, Tianxiang},\n  title = {{DForkTree: Accelerating Speculative Decoding with Fork-Aware Block Diffusion Draft Trees}},\n  journal = {arXiv preprint arXiv:2611.12356},\n  year = {2026},\n  eprint = {2611.12356},\n  archivePrefix = {arXiv},\n  note = {Version v2, November 12, 2026}\n}",
+        "note": "Reviewed v2 full text and official metadata. Author list adds Tianxiang Zhao. Fork-aware PMI scoring, GPU exact tree construction, batch-one RTX 5090 setup and headline gains remain. V2 expands the branch-coverage/tree-shape/calibration analyses and output-agreement confidence intervals. Stochastic sample-and-match evaluation remains separate from greedy verification. Original v1 authors, BibTeX, source selection and measurements retained; v2 metadata and BibTeX are recorded explicitly here for future citation reconciliation."
+      }
     ]
   },
   {
@@ -4262,6 +4272,132 @@
         "head_sha": "c385d8c2ae07f9b38d45f6defd2ab2e8020056d6",
         "checked_at": "2026-11-11",
         "status": "Paper-linked public repository metadata and HEAD checked; code not executed"
+      }
+    ]
+  },
+  {
+    "id": "tian2026real",
+    "name": "REAL Loss",
+    "title": "REAL Loss: Optimizing Real Expected Acceptance Length for Speculative Decoding",
+    "authors": "Tian, Yu",
+    "year": 2026,
+    "venue": "arXiv preprint",
+    "doi": "",
+    "arxiv_id": "2611.14399",
+    "url": "https://arxiv.org/abs/2611.14399v1",
+    "reviewed_version": "v1",
+    "published": "2026-11-10",
+    "role": "post_cutoff",
+    "evidence": "serving_transfer",
+    "dimensions": [
+      "proposal-maintenance",
+      "parallel-load-aware-drafting"
+    ],
+    "mechanism": "Uses accepted-path importance weights and conditional marginalization to optimize expected speculative acceptance length rather than a product of marginal acceptance surrogates.",
+    "evidence_note": "Frozen Qwen3.6-35B-A3B target and Domino drafter. Controlled loss-level reimplementations share architecture, data and auxiliary cross-entropy. Probabilistic vLLM serving uses temperature 1, top-k 20 and top-p 0.95, five seeds and three repetitions per seed across nine subsets. Appendix G reports batch-80 serving throughput, distinct from acceptance length. The alternative greedy-serving protocol uses greedy proposals while the target still samples; it is not ordinary target-greedy equivalence. Recorded training times do not isolate incremental loss overhead. No target-policy RL rollout/training evaluation. RL transfer requires adapting supervision to refreshed targets and measuring maintenance cost and net training savings.",
+    "evidence_pointer": "Sections 2–4 and Appendices D–G; Appendix G Table 10 distinguishes serving throughput from AL; Appendix E states timing controls.",
+    "metadata_provenance": "Official arXiv metadata and versioned full text reviewed on 2026-11-16. Discovery used the recorded query families supplemented by official-source keyword search and citation tracing. Publication dates are not inferred from registry timestamps.",
+    "code_urls": [
+      "https://github.com/King-ty/speculators/tree/real-loss"
+    ],
+    "manuscript_cited": false,
+    "bibtex": "@article{tian2026real,\n  author = {Tian, Yu},\n  title = {{REAL Loss: Optimizing Real Expected Acceptance Length for Speculative Decoding}},\n  journal = {arXiv preprint arXiv:2611.14399},\n  year = {2026},\n  eprint = {2611.14399},\n  archivePrefix = {arXiv},\n  note = {Reviewed version v1}\n}",
+    "curated_at": "2026-11-16",
+    "code_artifacts": [
+      {
+        "url": "https://github.com/King-ty/speculators/tree/real-loss",
+        "head_sha": "3dff4579c5f93f692108df8b5178c9e9200b8536",
+        "branch": "real-loss",
+        "checked_at": "2026-11-16",
+        "status": "checked public repository and selected branch HEAD; code not executed"
+      }
+    ]
+  },
+  {
+    "id": "vandenbosch2026olifant",
+    "name": "Olifant speculative drafting",
+    "title": "Towards Green Text Generation: Memory-Based Speculative Decoding",
+    "authors": "van den Bosch, Antal",
+    "year": 2026,
+    "venue": "arXiv preprint",
+    "doi": "",
+    "arxiv_id": "2611.16714",
+    "url": "https://arxiv.org/abs/2611.16714v1",
+    "reviewed_version": "v1",
+    "published": "2026-11-12",
+    "role": "post_cutoff",
+    "evidence": "serving_transfer",
+    "dimensions": [
+      "proposal-source",
+      "workload-recurrence",
+      "placement-idle-resources",
+      "memory-reuse-state",
+      "scheduling-mode-selection"
+    ],
+    "mechanism": "Uses an offline-trained information-gain-ordered memory trie to propose next tokens from four-token contexts on CPU, with cached-verifier rejection fast paths and separate latency/energy budget analysis.",
+    "evidence_note": "Mistral-7B-v0.1 greedy inference on an Apple M1 Max Mac Studio with 32 GB shared RAM, 300 short general/medical/legal prompts, and cached versus uncached verification compared separately. Memory-based classification generalizes via partial feature matches and is not merely a lookup of verbatim prior rollouts. Cached greedy token agreement is qualified by float16 shape-dependent numerical divergence. Energy-optimal and latency-optimal draft lengths differ. No stochastic sampling, batched server-GPU or RL target-training evaluation. RL transfer requires current-policy/domain matching, CPU-memory accounting, stochastic verification and evaluation at rollout concurrency. The uncached baseline does not represent optimized production rollout decoding.",
+    "evidence_pointer": "Sections 2.1–2.4, 3–5.6 and Appendix A; Section 5.6 explicitly leaves sampling and batching for future work.",
+    "metadata_provenance": "Official arXiv metadata and versioned full text reviewed on 2026-11-16. Discovery used the recorded query families supplemented by official-source keyword search and citation tracing. Publication dates are not inferred from registry timestamps. arXiv reports INLG 2026 proceedings pp. 472–482 and the official INLG accepted-paper list confirms the title. The formal Anthology record/version was not retrieved, so the fully reviewed arXiv version remains the selected source; no formal DOI is invented. Name particles normalized to van den Bosch, Antal using the paper byline and author-provided citation rather than the arXiv citation meta tag.",
+    "code_urls": [
+      "https://github.com/antalvdb/olifant-speculative"
+    ],
+    "manuscript_cited": false,
+    "bibtex": "@article{vandenbosch2026olifant,\n  author = {van den Bosch, Antal},\n  title = {{Towards Green Text Generation: Memory-Based Speculative Decoding}},\n  journal = {arXiv preprint arXiv:2611.16714},\n  year = {2026},\n  eprint = {2611.16714},\n  archivePrefix = {arXiv},\n  note = {Reviewed version v1}\n}",
+    "curated_at": "2026-11-16",
+    "code_artifacts": [
+      {
+        "url": "https://github.com/antalvdb/olifant-speculative",
+        "head_sha": "6d7d17fe37bbfca6e4f0c1e2ca6f8f4c0d853ab8",
+        "branch": "main",
+        "checked_at": "2026-11-16",
+        "status": "checked public repository and selected branch HEAD; code not executed"
+      }
+    ],
+    "publication_observations": [
+      {
+        "checked_at": "2026-11-16",
+        "reported_venue": "INLG 2026",
+        "reported_pages": "472–482",
+        "sources": [
+          "https://arxiv.org/abs/2611.16714",
+          "https://github.com/acl-org/inlg-2026/blob/main/sitedata/accepted_papers.md"
+        ],
+        "status": "Title confirmed on official accepted list; proceedings metadata reported by arXiv, formal full text not retrieved"
+      }
+    ]
+  },
+  {
+    "id": "huang2026bunshinrl",
+    "name": "BunshinRL",
+    "title": "BunshinRL: Whole-Workspace Forking for Agentic Reinforcement Learning Rollouts",
+    "authors": "Huang, Yutong and Srivatsa, Vikranth and Asch, Alex and Zhang, Yiying",
+    "year": 2026,
+    "venue": "arXiv preprint",
+    "doi": "",
+    "arxiv_id": "2611.10453",
+    "url": "https://arxiv.org/abs/2611.10453v2",
+    "reviewed_version": "v2",
+    "published": "2026-11-07",
+    "role": "contextual",
+    "evidence": "contextual",
+    "dimensions": [],
+    "mechanism": "Forks live agent workspaces with copy-on-write sharing, caches repeated tool prefixes, and executes predicted historical tool calls during model reasoning with signature checks and rollback.",
+    "evidence_note": "Contextual tool/action speculation inside agentic RL, not token-level draft-and-verify decoding. Qwen3-VL-8B with synchronous GRPO on OSWorld and a WebArena shopping subset. Section 5.2 compares memory under replayed trajectories against CRIU and AgentENV. Section 5.3 separately compares Base, speculative-tool-only Spec and combined Full under live training, distinguishing prefix-cache and speculation gains. Reported rollout-epoch latency includes tool/environment effects and must not be relabeled as token-decoding or whole-training speedup. Adoption requires matching tool signatures and validating dependencies; failed branches discard private state and roll back. This can complement token-level speculation but no combined gain is established.",
+    "evidence_pointer": "Sections 3.1–3.3, 4 and 5.1–5.3; replay-based memory comparison differs from live GRPO tool-latency ablations.",
+    "metadata_provenance": "Official arXiv metadata and versioned full text reviewed on 2026-11-16. Discovery used the recorded query families supplemented by official-source keyword search and citation tracing. Publication dates are not inferred from registry timestamps.",
+    "code_urls": [
+      "https://github.com/WukLab/ForkRL"
+    ],
+    "manuscript_cited": false,
+    "bibtex": "@article{huang2026bunshinrl,\n  author = {Huang, Yutong and Srivatsa, Vikranth and Asch, Alex and Zhang, Yiying},\n  title = {{BunshinRL: Whole-Workspace Forking for Agentic Reinforcement Learning Rollouts}},\n  journal = {arXiv preprint arXiv:2611.10453},\n  year = {2026},\n  eprint = {2611.10453},\n  archivePrefix = {arXiv},\n  note = {Reviewed version v2}\n}",
+    "curated_at": "2026-11-16",
+    "code_artifacts": [
+      {
+        "url": "https://github.com/WukLab/ForkRL",
+        "head_sha": "f1a682576d142c231c0c0feb62bbda9a9834d6d6",
+        "branch": "main",
+        "checked_at": "2026-11-16",
+        "status": "checked public repository and selected branch HEAD; code not executed"
       }
     ]
   }

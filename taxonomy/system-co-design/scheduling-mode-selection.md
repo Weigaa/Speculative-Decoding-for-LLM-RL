@@ -28,3 +28,4 @@ Choose speculative execution modes and verification budgets under varying rollou
 | [PolyGraph](../../papers/yang2026polygraph.md) | 2026 | Serving / inference — RL transfer potential | Post-cutoff screened addition |
 | [ForeSpark](../../papers/song2026forespark.md) | 2026 | Serving / inference — RL transfer potential | Post-cutoff screened addition |
 | [D3Tree](../../papers/nie2026d3tree.md) | 2026 | Serving / inference — RL transfer potential | Post-cutoff screened addition |
+| [Olifant speculative drafting](../../papers/vandenbosch2026olifant.md) | 2026 | Serving / inference — RL transfer potential | Post-cutoff screened addition |

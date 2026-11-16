@@ -1,0 +1,31 @@
+{
+  "timestamp": "2026-11-16",
+  "source": "curator official-source web search and versioned primary text",
+  "status": "supplementary_partial_coverage",
+  "automated_log": "updates/logs/2026-11-16T01-05-17Z.json",
+  "queries": [
+    {
+      "family": "secondary-tail-load",
+      "query": "site:arxiv.org/abs/2611 (\"speculative decoding\" OR \"speculative sampling\") (concurrency OR \"long-tail\" OR scheduling OR \"load-aware\")"
+    },
+    {
+      "family": "secondary-reuse",
+      "query": "site:arxiv.org/abs/2611 speculative (\"trajectory reuse\" OR \"prefix reuse\" OR \"suffix reuse\" OR retrieval OR \"tree cache\")"
+    },
+    {
+      "family": "secondary-policy-adaptation",
+      "query": "site:arxiv.org/abs/2611 (speculative OR drafter) (\"online drafter\" OR \"policy drift\" OR staleness OR \"on-policy distillation\" OR \"co-training\")"
+    },
+    {
+      "family": "secondary-verification-parallel",
+      "query": "site:arxiv.org/abs/2611 (\"speculative decoding\" OR drafter) (\"adaptive verification\" OR \"parallel drafting\" OR \"block diffusion\" OR \"multi-token prediction\")"
+    }
+  ],
+  "primary_text_reviewed": [
+    "https://arxiv.org/abs/2611.14399v1",
+    "https://arxiv.org/abs/2611.16714v1",
+    "https://arxiv.org/abs/2611.10453v2",
+    "https://arxiv.org/html/2611.12356v2"
+  ],
+  "note": "Search-engine site filters do not guarantee exhaustive coverage or exact Boolean behavior. API incompleteness is retained, not reinterpreted as no new papers. DataCite records may lag source versions."
+}

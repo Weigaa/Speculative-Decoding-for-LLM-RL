@@ -156,3 +156,6 @@
 | `ding2026processorcontracts` | [Testing Processor Contracts in Speculative Decoding Engines](../papers/ding2026processorcontracts.md) | contextual |
 | `luo2026adversarial` | [Adversarial Speculative Reasoning Improves Long Horizon Agents](../papers/luo2026adversarial.md) | contextual |
 | `liu2026specdistill` | [SPEC-Distill: Towards Efficient Speculative Distillation for Reinforcement Learning with Verifiable Rewards](../papers/liu2026specdistill.md) | post_cutoff |
+| `tian2026real` | [REAL Loss: Optimizing Real Expected Acceptance Length for Speculative Decoding](../papers/tian2026real.md) | post_cutoff |
+| `vandenbosch2026olifant` | [Towards Green Text Generation: Memory-Based Speculative Decoding](../papers/vandenbosch2026olifant.md) | post_cutoff |
+| `huang2026bunshinrl` | [BunshinRL: Whole-Workspace Forking for Agentic Reinforcement Learning Rollouts](../papers/huang2026bunshinrl.md) | contextual |

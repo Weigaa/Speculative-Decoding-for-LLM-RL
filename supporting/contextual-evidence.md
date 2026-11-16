@@ -9,3 +9,4 @@ These records are excluded from the 46-study taxonomy corpus.
 - [ObsSpec: Accelerating Agentic Reinforcement Learning with Observation Speculation](../papers/montgomery2026obsspec.md) (2026)
 - [Testing Processor Contracts in Speculative Decoding Engines](../papers/ding2026processorcontracts.md) (2026)
 - [Adversarial Speculative Reasoning Improves Long Horizon Agents](../papers/luo2026adversarial.md) (2026)
+- [BunshinRL: Whole-Workspace Forking for Agentic Reinforcement Learning Rollouts](../papers/huang2026bunshinrl.md) (2026)

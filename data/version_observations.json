@@ -78,5 +78,15 @@
     "checked_at": "2026-11-11",
     "curator_status": "reviewed_new_edition_original_record_preserved",
     "curator_note": "Reviewed refreshed full-response generation and group selection, plus Appendix G matched-decoder routing controls. Headline 1.67x routing and 2.59x combined gains remain versus uniform routing without speculation; matched-decoder routing gains are separate. No historical headline value replaced."
+  },
+  {
+    "id": "zheng2026dforktree",
+    "reviewed_version": "v1",
+    "observed_version": "v2",
+    "url": "https://arxiv.org/abs/2611.12356v2",
+    "observed_at": "2026-11-12T06:04:02Z",
+    "checked_at": "2026-11-16",
+    "curator_status": "material_metadata_change_reviewed_original_preserved",
+    "curator_note": "Reviewed v2 full text and official metadata. Author list adds Tianxiang Zhao. Fork-aware PMI scoring, GPU exact tree construction, batch-one RTX 5090 setup and headline gains remain. V2 expands the branch-coverage/tree-shape/calibration analyses and output-agreement confidence intervals. Stochastic sample-and-match evaluation remains separate from greedy verification. Original v1 authors, BibTeX, source selection and measurements retained; v2 metadata and BibTeX are recorded explicitly here for future citation reconciliation."
   }
 ]

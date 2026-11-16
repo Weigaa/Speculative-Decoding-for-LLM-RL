@@ -10,6 +10,7 @@ New versions do not overwrite reviewed or manuscript versions. Re-read changed e
 - [wang2026draftcotraining](https://arxiv.org/abs/2609.07108v3): reviewed v1, observed v3 (2026-11-04T03:48:05Z).
 - [xia2026acceptanceaware](https://arxiv.org/abs/2609.24150v2): reviewed v1, observed v2 (2026-11-10T07:58:07Z).
 - [xu2026tailsieve](https://arxiv.org/abs/2608.22788v3): reviewed v2, observed v3 (2026-11-06T09:28:32Z).
+- [zheng2026dforktree](https://arxiv.org/abs/2611.12356v2): reviewed v1, observed v2 (2026-11-12T06:04:02Z).
 
 Curator review of `he2026s3r` (2026-11-08): The reviewed v2 retains sparse drafting, dense verification and response-group semantics. Reviewed its setup and KV scheduling discussion. Historical values retained. See the [paper card](../papers/he2026s3r.md).
 
@@ -26,3 +27,5 @@ Curator review of `wang2026draftcotraining` (2026-11-08): Reviewed v3 CP branch 
 Curator review of `xia2026acceptanceaware` (2026-11-11): Reviewed weighted window-start objectives, tree acceptance objectives and optional GRPO for the drafter. This remains fixed-target drafter training, not target-policy RL rollout evidence. See the [paper card](../papers/xia2026acceptanceaware.md).
 
 Curator review of `xu2026tailsieve` (2026-11-11): Reviewed refreshed full-response generation and group selection, plus Appendix G matched-decoder routing controls. Headline 1.67x routing and 2.59x combined gains remain versus uniform routing without speculation; matched-decoder routing gains are separate. No historical headline value replaced. See the [paper card](../papers/xu2026tailsieve.md).
+
+Curator review of `zheng2026dforktree` (2026-11-16): Reviewed v2 full text and official metadata. Author list adds Tianxiang Zhao. Fork-aware PMI scoring, GPU exact tree construction, batch-one RTX 5090 setup and headline gains remain. V2 expands the branch-coverage/tree-shape/calibration analyses and output-agreement confidence intervals. Stochastic sample-and-match evaluation remains separate from greedy verification. Original v1 authors, BibTeX, source selection and measurements retained; v2 metadata and BibTeX are recorded explicitly here for future citation reconciliation. See the [paper card](../papers/zheng2026dforktree.md).
