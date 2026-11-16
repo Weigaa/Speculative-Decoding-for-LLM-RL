@@ -4,6 +4,26 @@ Unreviewed search hits are not part of the curated corpus and must not be cited 
 
 [Search protocol](../docs/search-protocol.md) · [Update status](../data/update_state.json)
 
+## [Callo: Serving Cache-Miss Requests with Speculative Decoding on Invalidated KV under Prefill-Decode Disaggregation](https://arxiv.org/abs/2611.18459v1)
+
+- arXiv: `2611.18459` / v1
+- Paper updated: 2026-11-13T17:28:37Z
+- Source: arXiv API
+- Screening status: pending
+- Query families: datacite-secondary-tail-load, secondary-tail-load
+
+Agent sessions may involve frequent context edits, which effectively invalidate cached KV state and force requests to wait for re-prefill before decoding. We present Callo, a disaggregated serving system that leverages invalidated KV for speculative drafts to reduce this latency, while verifying drafts against the exact KV after prefill before committing tokens. Callo makes effective use of decode resources by scheduling speculations during periods of underutilization and preempting speculations when drafts are likely to not be accepted. We evaluated Callo on a two-GPU testbed using SWE-agent sessions across three model families, observing all-request speedups of 1.05-1.19x over vLLM at moderate load. We demonstrate that these gains are also realized at scale through cluster-level simulations driven by real-world traces.
+
+## [SpecHop: Continuous Speculation for Accelerating Multi-Hop Retrieval Agents](https://arxiv.org/abs/2605.21965v2)
+
+- arXiv: `2605.21965` / v2
+- Paper updated: 2026-11-13T16:50:55Z
+- Source: arXiv API
+- Screening status: pending
+- Query families: datacite-secondary-reuse, secondary-reuse
+
+Large language models increasingly use external tools such as web search and document retrieval to solve information-intensive tasks. However, multi-hop tool use in complex tasks introduces substantial latency, since the model must repeatedly wait for tool observations before continuing. We study how to accelerate such trajectories without changing the final trajectory the model would have taken without acceleration, assuming access to faster but less reliable speculator tools. We develop a theoretical framework for lossless speculation in multi-hop tool-use settings, characterizing the optimal achievable latency gain. We propose SpecHop, a continuous speculation framework that maintains multiple speculative threads, verifies predicted observations asynchronously as target tool outputs arrive, commits correct branches, and rolls back incorrect ones. This preserves accuracy while reducing wall-clock latency. We show that SpecHop can approach oracle latency gains with enough active threads. Empirically, on retrieval-augmented multi-hop tasks, SpecHop closely matches theoretical predictions and reduces latency by up to 40\% in some settings. Code: https://github.com/mehrdadsaberi/spechop
+
 ## [Inference Validation for Regulated AI: A Governed Decision Pipeline for LLM Serving](https://arxiv.org/abs/2611.12737v2)
 
 - arXiv: `2611.12737` / v2

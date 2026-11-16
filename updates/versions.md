@@ -8,6 +8,7 @@ New versions do not overwrite reviewed or manuscript versions. Re-read changed e
 - [nie2026unilaspec](https://arxiv.org/abs/2611.01617v2): reviewed v1, observed v2 (2026-11-06T09:31:14Z).
 - [pham2026specroll](https://arxiv.org/abs/2608.04962v2): reviewed v1, observed v2 (2026-10-14T04:53:03Z).
 - [song2026forespark](https://arxiv.org/abs/2611.13442v2): reviewed v1, observed v2 (2026-11-13T01:33:53Z).
+- [song2026specmem](https://arxiv.org/abs/2610.31840v2): reviewed v1, observed v2 (2026-11-13T16:46:22Z).
 - [wang2026draftcotraining](https://arxiv.org/abs/2609.07108v3): reviewed v1, observed v3 (2026-11-04T03:48:05Z).
 - [xia2026acceptanceaware](https://arxiv.org/abs/2609.24150v2): reviewed v1, observed v2 (2026-11-10T07:58:07Z).
 - [xu2026tailsieve](https://arxiv.org/abs/2608.22788v3): reviewed v2, observed v3 (2026-11-06T09:28:32Z).
