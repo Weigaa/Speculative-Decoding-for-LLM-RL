@@ -29,3 +29,9 @@ Choose speculative execution modes and verification budgets under varying rollou
 | [ForeSpark](../../papers/song2026forespark.md) | 2026 | Serving / inference — RL transfer potential | Post-cutoff screened addition |
 | [D3Tree](../../papers/nie2026d3tree.md) | 2026 | Serving / inference — RL transfer potential | Post-cutoff screened addition |
 | [Olifant speculative drafting](../../papers/vandenbosch2026olifant.md) | 2026 | Serving / inference — RL transfer potential | Post-cutoff screened addition |
+| [FACT](../../papers/fares2026fact.md) | 2026 | Serving / inference — RL transfer potential | Post-cutoff screened addition |
+| [SpecSearch](../../papers/yildirim2026specsearch.md) | 2026 | Serving / inference — RL transfer potential | Post-cutoff screened addition |
+| [SpecRelay](../../papers/jain2026specrelay.md) | 2026 | Serving / inference — RL transfer potential | Post-cutoff screened addition |
+| [Callo](../../papers/ou2026callo.md) | 2026 | Serving / inference — RL transfer potential | Post-cutoff screened addition |
+| [Session-local recency and restraint](../../papers/vandenbosch2026sessiondraft.md) | 2026 | Serving / inference — RL transfer potential | Post-cutoff screened addition |
+| [Raptor](../../papers/hu2026raptor.md) | 2026 | Serving / inference — RL transfer potential | Post-cutoff screened addition |

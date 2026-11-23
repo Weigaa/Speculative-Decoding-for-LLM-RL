@@ -64,7 +64,10 @@
     "reviewed_version": "v1",
     "observed_version": "v2",
     "url": "https://arxiv.org/abs/2610.31840v2",
-    "observed_at": "2026-11-13T16:46:22Z"
+    "observed_at": "2026-11-13T16:46:22Z",
+    "checked_at": "2026-11-23",
+    "curator_status": "reviewed_original_preserved",
+    "curator_note": "Reviewed SpecMem v2 methods, Tables 1–4, wall-clock timing and limitations against v1. The checked core lifecycle mechanism, headline MAT and external-loop speedup settings remain consistent. Canonicalized greedy-call MAT remains a proxy separate from wire-token acceptance, and the wall-clock loop is not an engine-integrated RL evaluation. No material change requiring replacement of historical v1 measurements was identified in these checked sections. Original v1 metadata, BibTeX and source selection retained."
   },
   {
     "id": "wang2026draftcotraining",

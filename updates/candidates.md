@@ -4,15 +4,135 @@ Unreviewed search hits are not part of the curated corpus and must not be cited 
 
 [Search protocol](../docs/search-protocol.md) · [Update status](../data/update_state.json)
 
-## [Callo: Serving Cache-Miss Requests with Speculative Decoding on Invalidated KV under Prefill-Decode Disaggregation](https://arxiv.org/abs/2611.18459v1)
+## [Beam Model Technical Report](https://arxiv.org/abs/2611.26358v1)
 
-- arXiv: `2611.18459` / v1
-- Paper updated: 2026-11-13T17:28:37Z
+- arXiv: `2611.26358` / v1
+- Paper updated: 2026-11-19T16:28:23Z
+- Source: arXiv API
+- Screening status: pending
+- Query families: datacite-primary-sampling-rl, primary-sampling-rl
+
+Beam is a sparse Mixture-of-Experts (MoE) model with 501.3B total parameters and 23.4B active parameters, specifically built and optimized for coding, reasoning, and agentic workloads. Beam delivers frontier level reasoning, while requiring 3-4x less inference compute than many models of its class. Pretrained on 23.8T diverse, curated, high-quality tokens, Beam features a 1M-token context window achieved through a novel two-stage midtraining phase, built on verifiable, correctness-anchored data. Post-training leveraged a large-scale, fully asynchronous reinforcement learning (RL) campaign across 10.5K GB300 GPUs, generating over 100M rollouts over 4 weeks of training. We believe this is one of the largest scale RL runs conducted by any open lab to date. Across our evaluation suite, capabilities continued to improve as we increased RL compute, with no sign of a plateau. Supported by deep hardware-model co-design, FP8/NVFP4 quantization, and a 1.93B-parameter speculative decoding drafter (DFlash 2), Beam maximizes serving throughput with efficient, flexible deployment. Averaged across conversation turns and harm categories, Beam refuses or pivots on 88.9% of harmful requests while complying with 81.5% of harmless requests, achieving the highest refusal/pivot rate on harmful requests among open-weight models on the Pareto frontier.
+
+Curator note: Reviewed the speculative-decoding section for triage. DFlash 2 is trained for a fixed Beam target and benchmarked for deployment; this does not by itself establish speculative decoding during target-policy RL rollouts. Full report eligibility as supporting literature or a distinct transferable mechanism remains pending.
+
+## [Ceiling-Clipped Acceptance Histograms Indicate Stranded Speed-up in Block-Diffusion Speculative Decoding](https://arxiv.org/abs/2608.30427v2)
+
+- arXiv: `2608.30427` / v2
+- Paper updated: 2026-11-18T09:55:40Z
+- Source: arXiv API
+- Screening status: pending
+- Query families: datacite-secondary-verification-parallel, primary-draft-posttraining
+
+Speculative decoding speeds up generation using an efficient draft model (drafter) to propose tokens that a target model verifies in one pass, preserving the target's output distribution. High-acceptance block-diffusion drafters, such as DFlash and DFlare, fill an entire block in one parallel pass. In many cycles, the target model accepts all draft tokens in the block, so the drafter exhausts its trained horizon before verification ever fails. We call this unrealized acceptance stranded speed-up. Evaluating a drafter by its per-prompt or per-cycle mean committed length alone hides this phenomenon, whereas the acceptance histogram exposes this bottleneck as a spike in the ceiling bin, the fraction of cycles that accept the entire block. We recommend reviewing the acceptance histogram before spending more training compute. Naively widening the block at inference could reduce acceptance for drafters with bidirectional attention, since, once the block outgrows its training size, the drafter's bidirectional attention shifts its distribution even at early positions, which empirically degrades acceptance there. We therefore post-train the drafter to a longer block with a short curriculum that emphasizes the newly exposed positions, a method we call DBloom. We continue training the pretrained DFlash and DFlare drafters at the original block size of 16, before expanding them to 24 (B16 to B24) on Qwen3-8B and Qwen3-4B. Compared to the original B16 drafters, this technique raises per-prompt committed length by up to +1.7 tokens and decode speed-up by a median of +10.2% versus +5.7% without the continuation. On high-ceiling benchmarks, the speed-up rises to +11.9%. On Gemma-4-12B-IT and GPT-OSS-20B, expansion also raises committed length on every benchmark. Against JetSpec, a tree drafter, DBloom has higher committed length by point estimate on every benchmark at tree budgets up to 64 nodes.
+
+Curator note: Observed v2 belongs to an existing candidate, not automatically a new study. Full primary review of the acceptance-ceiling diagnostic and adaptive block control is pending.
+
+## [NarrowSpec: Draft Hidden Width Need Not Match the Target in Speculative Decoding](https://arxiv.org/abs/2611.23835v1)
+
+- arXiv: `2611.23835` / v1
+- Metadata updated: 2026-11-18T04:40:10Z
+- Source: Official arXiv abstract page; curator keyword/citation discovery
+- Screening status: pending
+- Query families: curator-secondary-verification-parallel
+
+Proposes narrower feature-conditioned drafters and folding a trained output adapter into the vocabulary projection.
+
+Curator note: Metadata and abstract verified. Full primary mechanism, training/precision controls and explicit rollout resource-transfer argument still require review before technical inclusion.
+
+## [VSpark: Speculative Decoding for Autoregressive Vision-Language-Action Models](https://arxiv.org/abs/2611.22666v1)
+
+- arXiv: `2611.22666` / v1
+- Paper updated: 2026-11-17T12:22:38Z
+- Source: arXiv API
+- Screening status: pending
+- Query families: primary-draft-posttraining, primary-sampling-rl
+
+Our aim is to accelerate autoregressive vision-language-action models (VLAs), which generate robot actions one token at a time. Speculative decoding makes this possible: a lightweight draft model proposes several tokens at once, and the VLA verifies them in a single pass, accepting only those that match its own predictions, so decoding remains lossless. The speedup, however, is limited in robot control, where many different tokens encode nearly the same motion and a draft close to the correct action is still rejected. To address this, our approach, VSpark, is built upon three design choices: (i) rollouts collected with calibrated action noise, which expose the draft to a wider range of robot states; (ii) feature alignment, which trains the draft to match the VLA's hidden features rather than its output tokens alone; and (iii) continuation reuse, which keeps the predictions the VLA has already computed along rejected drafts as candidates for the next verification step, instead of discarding them. On four VLAs with different action tokenizers and four manipulation benchmarks, VSpark achieves 1.28x to 2.10x speedup while keeping the VLA's decoding lossless.
+
+Curator note: VLA action-token speculation is not automatically LLM RL rollout evidence. Validate action space, verification rule and original learning/evaluation setting before classification.
+
+## [DynaDFlash: Dynamic Feature Projection for Block Diffusion Speculators](https://arxiv.org/abs/2611.19085)
+
+- arXiv: `2611.19085` / version not recorded
+- Metadata updated: 2026-11-17T08:39:24Z
+- Source: DataCite arXiv DOI registry
+- Screening status: pending
+- Query families: datacite-secondary-verification-parallel
+
+DFlash trains a parallel draft model on hidden features from its target model. Inspired by the previous work of DFlare that introduced per layer combinations of target hidden states, we test whether context dependent weighting of these states helps improve acceptance length of block diffusion speculators. We trained both a DFlash baseline for the Qwen 3 of block size 16, and a dynamic model that computes gates for each layer to affect the magnitude of hidden features before projection. While mean acceptance length between the dynamic model and the DFlash baseline didn't significantly differ, we notice that the dynamic model excels for drafting in the context of math. In an evaluation of 700 prompts from the MetaMathQA and Orca-Math datasets, the mean accepted length improves by 5%. We also found this lead to a 4.1% higher throughput for a subset of the same dataset in the context of speculative decoding.
+
+Curator note: Abstract suggests context-dependent feature mixing for a fixed block drafter. Full text and rollout-specific transfer beyond generic proposal-capacity improvement remain pending.
+
+## [TeleChat to Xing4: Advancing Frontier Agentic Models on Domestic Chips and Frameworks](https://arxiv.org/abs/2611.22115v1)
+
+- arXiv: `2611.22115` / v1
+- Paper updated: 2026-11-17T02:58:31Z
+- Source: arXiv API
+- Screening status: pending
+- Query families: datacite-primary-sampling-rl, datacite-secondary-tail-load, primary-sampling-rl, secondary-tail-load
+
+We present Xing 4, a series of large language models that extends the TeleChat lineage through coordinated advances in model architecture and training infrastructure on Ascend. This report describes the design principles and systems engineering behind the series, spanning architecture selection, large-scale pretraining, and reasoning and agentic post-training. We study how sparse activation, attention design, model depth and width, and speculative decoding balance model capacity with computation, memory access, and execution overhead. Our pretraining infrastructure builds on MindSpore HyperParallel, combining topology-aware hybrid sharding, efficient distributed optimizer execution, and coordinated management of long-sequence workloads and activation memory. CPU affinity and core isolation further reduce host scheduling interference. Together, these mechanisms support the pretraining of a 285B-parameter model on 8,192 Ascend 910C cards, providing a concrete setting for the architectural and systems studies. For post-training, we introduce TeleGym, a unified agent execution platform that connects execution, evaluation, and trajectory construction to policy optimization. Disaggregated asynchronous execution, bounded oversampling, and partial rollout accommodate heterogeneous task durations while preserving trajectory continuity across policy updates. Together, these advances establish an Ascend-oriented training foundation for the continued development of Xing 4 across model scales and increasingly demanding reasoning and agent workloads.
+
+Curator note: Section 2.4 explicitly describes inference-time DSpark, while Section 4 separately describes asynchronous RL. Their co-occurrence is not direct speculative-rollout integration evidence. Retained pending detailed eligibility/measurement review.
+
+## [VisHead-Spec: Head-Routed Visual Attention for Multimodal Speculative Decoding](https://arxiv.org/abs/2611.21839v1)
+
+- arXiv: `2611.21839` / v1
+- Paper updated: 2026-11-16T19:57:35Z
+- Source: arXiv API
+- Screening status: pending
+- Query families: datacite-secondary-tail-load, datacite-secondary-verification-parallel, secondary-tail-load
+
+Speculative decoding accelerates vision-language models(VLMs) while preserving the target model's outputs, but its speedup diminishes under high concurrency serving as the system becomes more compute bounded as the batch size increases. This problem is pronounced for multimodal speculative decoding as the long range of the image tokens in the prompt can significantly increase the computational cost during draft token prediction. The block-diffusion drafters (e.g. DFlash, DSpark) can effectively speed up the draft model efficiency by predicting multiple draft tokens in one forward pass, but their speedup for VLMs under high concurrency is still modest (&lt;9%). In order to understand this gap, we examine the information flow between different modalities from target model to draft model and identify the sparsity pattern of visual attention between the target and draft models: only small set of key-value heads in the draft model need direct visual feature attention in the context and only visual features from top level layers in the target model need to be attended in the context. We therefore propose VisHead-Spec, which selects a small, fixed set of key-value (KV) heads to attend to all image features from top level layers in the target model and restricts the remaining heads to text features. On Qwen3-VL-8B and MMSpec, VisHead-Spec-8 lets 8 of the drafter's 40 KV heads read the image while keeping accepted length within 0.3% of the block-diffusion draft model baseline (i.e. DSpark). At batch size 64, its throughput gain over autoregressive decoding increases to 16.0%, compared with 9.5% for DSpark; at batch size 1, its speedup remains comparable to DSpark.
+
+Curator note: Potential visual-attention resource control under high concurrency. Full primary verification, load measurements and multimodal-rollout transfer boundary remain pending.
+
+## [K2-Horizon: A Frontier Fleet of Open Source Language Models](https://arxiv.org/abs/2611.21003v1)
+
+- arXiv: `2611.21003` / v1
+- Paper updated: 2026-11-16T12:28:03Z
+- Source: arXiv API
+- Screening status: pending
+- Query families: datacite-primary-draft-posttraining, primary-draft-posttraining
+
+We present K2-Horizon, a fleet of six fully open language models, from a 0.9B dense model to a 375B-A23B MoE, built for general-purpose reasoning and agentic work across math and science, software engineering, deep research, office automation, and beyond. The models lead or are competitive with strong open models of their size on agentic and coding benchmarks. On the modeling side, to strengthen reasoning, we introduce Mixture-of-Value Attention (MoVA), applying MoE to attention value projections, and softplus attention gating, a more flexible, theoretically motivated gate. Our 36B-A4B model uses both and nearly matches a 32B dense model trained on the same data, with one-seventh the active parameters. We also introduce Uno, lossless diffusion adapters that speed up decoding by up to 2.2x without a separate draft model. Our release follows the LLM360 definition of open source for transparency and reproducibility: the full development history, including intermediate checkpoints from every training stage, pre-training data, training logs, and all training, evaluation, and infrastructure code, notably our production-scale xLLM framework for dense and MoE training and the RL360 reinforcement-learning stack. Beyond the data itself, we release and document in detail every pipeline that built it, the part of model development that open releases most rarely disclose. These pipelines produced roughly 10T synthetic pre-training tokens, showing that synthetic data can be a major ingredient of pre-training at scale. Four of the models share one 22T-token pre-training corpus and recipe, revealing consistent scaling behavior and enabling controlled studies of scale and sparsity. All artifacts are available at https://ifm.ai/k2/
+
+Curator note: Section 9 describes shared-weight Uno adapters and serving throughput. Its RL-reuse statement cites the original Uno paper rather than presenting an isolated new RL rollout measurement. Original Uno added to pending citation-follow-up queue.
+
+## [Nemotron 3.5 Bolt E4B 4GB: An Open and Efficient Small Language Model for Fast Conversational Agents](https://arxiv.org/abs/2611.20771v1)
+
+- arXiv: `2611.20771` / v1
+- Paper updated: 2026-11-16T09:21:45Z
 - Source: arXiv API
 - Screening status: pending
 - Query families: datacite-secondary-tail-load, secondary-tail-load
 
-Agent sessions may involve frequent context edits, which effectively invalidate cached KV state and force requests to wait for re-prefill before decoding. We present Callo, a disaggregated serving system that leverages invalidated KV for speculative drafts to reduce this latency, while verifying drafts against the exact KV after prefill before committing tokens. Callo makes effective use of decode resources by scheduling speculations during periods of underutilization and preempting speculations when drafts are likely to not be accepted. We evaluated Callo on a two-GPU testbed using SWE-agent sessions across three model families, observing all-request speedups of 1.05-1.19x over vLLM at moderate load. We demonstrate that these gains are also realized at scale through cluster-level simulations driven by real-world traces.
+We introduce Nemotron 3.5 Bolt E4B 4GB, an open and efficient small language model further post-trained from Gemma-4-E4B-it and optimized for speed and intelligence per GB of memory used for fast conversational agents. The model carries forward Gemma's strong conversational capabilities and further improves multi-turn tool use, instruction following, and input grounding for fast, local voice/device assistants, interactive personas, and embedded/Edge interfaces. The model combines natural conversation with multi-turn agentic capabilities to power voice/device assistants, interactive characters and robotic/IoT interfaces running on GeForce RTX, Jetson, and RTX/DGX Spark. Experiments on 21 benchmarks show that Nemotron 3.5 Bolt E4B 4GB achieves the highest average accuracy while generating the fewest output tokens in both reasoning and non-reasoning modes, compared with Gemma-4-E4B-it and Qwen3.5-4B. The model is released with a DFlash drafter. With DFlash, Bolt E4B achieves $2.74\times$ the per-user decode speed of inference without speculative decoding at concurrency~1, and $1.21\times$ the generation throughput of Gemma-4-E4B-it with MTP at batch size 1.
+
+Curator note: Section 8 trains a DFlash drafter for the post-trained model and Section 9 evaluates serving. No direct target-policy RL acceleration was confirmed by this triage. Retained pending review of distinct maintenance/resource contribution.
+
+## [Generative Search and Recommendation at Shopify](https://arxiv.org/abs/2611.08804v2)
+
+- arXiv: `2611.08804` / v2
+- Paper updated: 2026-11-15T20:31:47Z
+- Source: arXiv API
+- Screening status: pending
+- Query families: datacite-primary-draft-posttraining, primary-draft-posttraining
+
+Search and recommendation at Shopify require retrieving relevant products from a changing catalog of billions of products under strict latency constraints. We present SID-LLM, which casts both tasks as generating semantic IDs: short sequences of content-derived tokens representing products. We jointly pre-train SID-LLM on catalog and behavioral data, giving search and recommendation a shared representation and training objective. We show that reinforcement learning further improves judged search relevance. Furthermore, distillation from task-specific experts improves recommendation quality over joint supervised fine-tuning without a statistically detected loss in search quality. Finally, for efficient serving, we pair multi-token prediction with a lightweight ranker, improving retrieval quality over our autoregressive baseline while reducing latency. We evaluate SID-LLM both as a standalone retriever and as a component of Shopify's production search and recommendation systems. As a standalone search system, SID-LLM achieves quality comparable to Shopify's existing multi-model search stack while meeting production latency requirements. Integrating SID-LLM into the search and recommendation stacks provides significant gains in both offline evaluations and online A/B tests. Together, these results demonstrate the practical value of semantic-ID generation as a unified approach to product discovery at scale.
+
+## [MMFlash: Faster Speculative Decoding for Vision-Language Models](https://arxiv.org/abs/2611.18482v1)
+
+- arXiv: `2611.18482` / v1
+- Metadata updated: 2026-11-13T17:54:28Z
+- Source: Official arXiv abstract page; curator keyword/citation discovery
+- Screening status: pending
+- Query families: curator-secondary-verification-parallel
+
+Uses visual-dependence-weighted drafter training and sparse attention for video-conditioned speculation.
+
+Curator note: Metadata and abstract verified. Full multimodal verification, sparse-state scope and an explicit stochastic agent-rollout transfer case remain to be checked.
 
 ## [SpecHop: Continuous Speculation for Accelerating Multi-Hop Retrieval Agents](https://arxiv.org/abs/2605.21965v2)
 
@@ -113,16 +233,6 @@ We present M5-TTS, a compact text-to-speech system supporting multilingual and C
 - Query families: datacite-secondary-verification-parallel, secondary-verification-parallel
 
 Interleaved multimodal chain-of-thought reasoning improves the visual reasoning capabilities of multimodal large language models by dynamically incorporating visual evidence during reasoning. However, existing methods primarily select evidence from historical context. When the reasoning focus shifts, history-guided evidence may remain focused on prior regions and fail to cover the visual information required by the next step. We refer to this lag between visual evidence and subsequent reasoning demands as Temporal Evidence Myopia. To address this issue, we propose Lookahead Prediction-guided Adaptive Visual Refocusing (LPAVR), a training-free test-time framework. LPAVR transforms Multi-Token Prediction (MTP) from a decoding acceleration mechanism into a lookahead signal for anticipating upcoming reasoning intent. During MTP decoding, the draft head generates multiple future tokens, while the target model verifies them in parallel and retains the longest prefix consistent with its decoding trajectory. This target-verified prefix contains near-future semantics, which LPAVR uses to construct lookahead-guided visual evidence and assess whether history-guided evidence covers the indicated regions. If the coverage is sufficient, the history-guided evidence is retained; otherwise, LPAVR switches to the lookahead-guided evidence. This better aligns the visual context with upcoming reasoning and improves consistency between draft predictions and target-model decoding. Experiments on multiple multimodal reasoning benchmarks show that LPAVR improves both reasoning accuracy and the acceptance rates of MTP speculative tokens, jointly enhancing visual reasoning and speculative decoding efficiency.
-
-## [Generative Search and Recommendation at Shopify](https://arxiv.org/abs/2611.08804v1)
-
-- arXiv: `2611.08804` / v1
-- Paper updated: 2026-11-05T23:56:02Z
-- Source: arXiv API
-- Screening status: pending
-- Query families: datacite-primary-draft-posttraining, primary-draft-posttraining
-
-Search and recommendation at Shopify require retrieving relevant products from a changing catalog of billions of products under strict latency constraints. We present SID-LLM, which casts both tasks as generating semantic IDs: short sequences of content-derived tokens representing products. We jointly pre-train SID-LLM on catalog and behavioral data, giving search and recommendation a shared representation and training objective. We show that reinforcement learning further improves judged search relevance. Furthermore, distillation from task-specific experts improves recommendation quality over joint supervised fine-tuning without a statistically detected loss in search quality. Finally, for efficient serving, we pair multi-token prediction with a lightweight ranker, improving retrieval quality over our autoregressive baseline while reducing latency. We evaluate SID-LLM both as a standalone retriever and as a component of Shopify's production search and recommendation systems. As a standalone search system, SID-LLM achieves quality comparable to Shopify's existing multi-model search stack while meeting production latency requirements. Integrating SID-LLM into the search and recommendation stacks provides significant gains in both offline evaluations and online A/B tests. Together, these results demonstrate the practical value of semantic-ID generation as a unified approach to product discovery at scale.
 
 ## [CoRD: Coupled Rollouts Fill the Blind Spot of On-Policy Distillation](https://arxiv.org/abs/2611.07959v1)
 
@@ -521,4 +631,16 @@ Curator note: Full HTML retrieved; reconcile author/venue metadata and verificat
 Parallel drafting reduces the drafting overhead of speculative decoding for large language models (LLMs), but its gains remain limited by the accepted prefix length. Even when the correct token is present in the candidate pool, a single early selection error prevents subsequent predictions from being used. We propose DRelay, which uses global information from the entire draft block to perform prefix-aware selective repair of candidate selections before target-model verification. DRelay bases its decisions on candidate correlations and the selected path: a global reader extracts predictive information across positions for each candidate. While a causal selector combines candidate-level information extracted by the global read with the tokens selected at preceding positions to determine whether the native choice at the current position is consistent with the global evidence and the selected prefix. It then decides whether to retain or replace the token, thereby repairing early errors and extending the accepted prefix. We further jointly train the draft backbone and the selector, combining candidate-support learning with a repair objective, while weighting the repair loss according to each block position's potential contribution to the consecutive accepted prefix. Across eight diverse benchmarks on an H800 GPU, DRelay consistently improves both average acceptance length and end-to-end decoding performance over DFlash, Domino, and DSpark. Under SGLang serving, DRelay improves average end-to-end speedup over DFlash, Domino, and DSpark by 14.7%-16.8%, 8.7%-9.3%, and 8.1%-9.3%, respectively.
 
 Curator note: Full HTML retrieved; complete concurrency/correction-cost and rollout-transfer review before promoting this parallel-draft repair method.
+
+## [Unlocking Lossless Speedups in LLMs via Discrete Diffusion](https://arxiv.org/abs/2609.04010v1)
+
+- arXiv: `2609.04010` / v1
+- Metadata updated: 2026-09-03T15:48:43Z
+- Source: Official arXiv abstract page; curator keyword/citation discovery
+- Screening status: pending
+- Query families: curator-backward-snowballing
+
+Uno combines autoregressive weights with lightweight diffusion adapters and lossless verification.
+
+Curator note: Backward discovery from K2-Horizon Section 9. Official abstract verified, but primary full text is PDF-only and was not reviewed in this pass. In particular, the claim that SFT-distilled adapters remain usable during RL must be checked in the original study, not promoted from a secondary report into direct RL evidence.
 

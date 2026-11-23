@@ -14,3 +14,5 @@ Place drafting and maintenance to account for idle capacity and exposed runtime 
 | [JetSpec++](../../papers/feng2026jetspecpp.md) | 2026 | Serving / inference — RL transfer potential | Post-cutoff screened addition |
 | [D3D](../../papers/chen2026d3d.md) | 2026 | Serving / inference — RL transfer potential | Post-cutoff screened addition |
 | [Olifant speculative drafting](../../papers/vandenbosch2026olifant.md) | 2026 | Serving / inference — RL transfer potential | Post-cutoff screened addition |
+| [SpecRelay](../../papers/jain2026specrelay.md) | 2026 | Serving / inference — RL transfer potential | Post-cutoff screened addition |
+| [Callo](../../papers/ou2026callo.md) | 2026 | Serving / inference — RL transfer potential | Post-cutoff screened addition |

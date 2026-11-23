@@ -1,0 +1,61 @@
+{
+  "timestamp": "2026-11-23",
+  "status": "supplementary_partial_coverage",
+  "automated_log": "updates/logs/2026-11-23T02-36-32Z.json",
+  "transport_note": "Initial local transport attempts were interrupted before producing a discovery result after connection failures. The recorded run uses the same repository query/pagination/retry logic with a curl transport fallback. The official arXiv 429 cooldown was respected.",
+  "hosted_status": {
+    "last_completed": "2026-11-16T06:45:02Z",
+    "conclusion": "success",
+    "url": "https://github.com/Weigaa/Speculative-Decoding-for-LLM-RL/actions/runs/43818904524",
+    "note": "No November 23 hosted run was listed at curator check time. Scheduled executions can be delayed. Local discovery supplies this week's recorded scan."
+  },
+  "queries": [
+    {
+      "families": [
+        "primary-sampling-rl",
+        "primary-draft-posttraining"
+      ],
+      "query": "speculative decoding November 2026 reinforcement learning rollout"
+    },
+    {
+      "families": [
+        "secondary-reuse"
+      ],
+      "query": "\"speculative decoding\" \"Nov 2026\" \"retrieval\""
+    },
+    {
+      "families": [
+        "secondary-policy-adaptation"
+      ],
+      "query": "\"speculative decoding\" \"Nov 2026\" \"policy\""
+    },
+    {
+      "families": [
+        "secondary-verification-parallel"
+      ],
+      "query": "\"speculative decoding\" \"Nov 2026\" \"tree\""
+    },
+    {
+      "families": [
+        "secondary-tail-load"
+      ],
+      "query": "speculative decoding November 2026 cache parallel adaptive"
+    }
+  ],
+  "primary_text_reviewed": [
+    "https://arxiv.org/html/2611.23463v1",
+    "https://arxiv.org/html/2611.25813v1",
+    "https://arxiv.org/html/2611.22296v1",
+    "https://arxiv.org/html/2611.18963v1",
+    "https://arxiv.org/html/2611.18459v1",
+    "https://arxiv.org/html/2611.19455v1",
+    "https://arxiv.org/html/2611.25436v1",
+    "https://arxiv.org/html/2610.31840v1",
+    "https://arxiv.org/html/2610.31840v2"
+  ],
+  "citation_tracing": [
+    "Session-local drafting references the earlier Olifant work; distinct contribution checked.",
+    "K2-Horizon Section 9 led to the original Uno paper, retained pending full-text review."
+  ],
+  "limitations": "Search-engine queries do not reproduce exact Boolean-family coverage. Formal publisher/index databases were not exhaustively searched natively. DataCite registry dates are not paper-version dates. Remaining candidate reviews are incomplete, not exclusions or negative findings."
+}

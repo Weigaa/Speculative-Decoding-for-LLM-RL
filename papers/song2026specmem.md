@@ -34,6 +34,18 @@ Serving/agent-inference evidence only. Main recurrence streams use synthetic per
 - Released code: not recorded (not a claim of non-availability)
 - Artifact checks: not independently checked in this library
 
+## Version review: v2
+
+**SpecMem: Accelerating Agentic Tool Calling via Live Memory Management**
+
+- Authors in this version: Zihe Song and Wenting Zhao and Ye Liu and Yuanjie Zhu and Ke Xu and Shanghao Li and Philip S. Yu
+- [Version source](https://arxiv.org/html/2610.31840v2); revised 2026-11-13; checked 2026-11-23.
+- Evidence pointer: Sections 3–5, Tables 1–4 and Limitations
+
+Reviewed SpecMem v2 methods, Tables 1–4, wall-clock timing and limitations against v1. The checked core lifecycle mechanism, headline MAT and external-loop speedup settings remain consistent. Canonicalized greedy-call MAT remains a proxy separate from wire-token acceptance, and the wall-clock loop is not an engine-integrated RL evaluation. No material change requiring replacement of historical v1 measurements was identified in these checked sections. Original v1 metadata, BibTeX and source selection retained.
+
+No historical snapshot, manuscript edition or original reviewed-version field changed.
+
 ## BibTeX
 
 ```bibtex

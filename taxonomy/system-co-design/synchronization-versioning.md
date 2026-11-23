@@ -17,3 +17,4 @@ Coordinate actor-rollout policy versions, proposal state, and distributed featur
 | [GrowMTP](../../papers/he2026growmtp.md) | 2026 | Direct RL rollout / training | Manuscript core |
 | [FlashNext-RL](../../papers/yao2026flashnextrl.md) | 2026 | Direct RL rollout / training | Post-cutoff screened addition |
 | [SpecOPD](../../papers/liu2026specopd.md) | 2026 | Serving / inference — RL transfer potential | Post-cutoff screened addition |
+| [SpecRelay](../../papers/jain2026specrelay.md) | 2026 | Serving / inference — RL transfer potential | Post-cutoff screened addition |

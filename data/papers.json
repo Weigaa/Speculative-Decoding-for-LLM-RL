@@ -3410,7 +3410,28 @@
     "code_artifacts": [],
     "manuscript_cited": false,
     "bibtex": "@article{song2026specmem,\n  author = {Song, Zihe and Zhao, Wenting and Liu, Ye and Zhu, Yuanjie and Xu, Ke and Li, Shanghao and Yu, Philip S.},\n  title = {{SPECMEM: Accelerating Agentic Tool Calling via Live Memory Management}},\n  journal = {arXiv preprint arXiv:2610.31840},\n  year = {2026},\n  eprint = {2610.31840},\n  archivePrefix = {arXiv}\n}",
-    "curated_at": "2026-11-02"
+    "curated_at": "2026-11-02",
+    "version_reviews": [
+      {
+        "version": "v2",
+        "url": "https://arxiv.org/html/2610.31840v2",
+        "checked_at": "2026-11-23",
+        "note": "Reviewed SpecMem v2 methods, Tables 1–4, wall-clock timing and limitations against v1. The checked core lifecycle mechanism, headline MAT and external-loop speedup settings remain consistent. Canonicalized greedy-call MAT remains a proxy separate from wire-token acceptance, and the wall-clock loop is not an engine-integrated RL evaluation. No material change requiring replacement of historical v1 measurements was identified in these checked sections. Original v1 metadata, BibTeX and source selection retained."
+      }
+    ],
+    "version_notes": [
+      {
+        "version": "v2",
+        "title": "SpecMem: Accelerating Agentic Tool Calling via Live Memory Management",
+        "authors": "Zihe Song and Wenting Zhao and Ye Liu and Yuanjie Zhu and Ke Xu and Shanghao Li and Philip S. Yu",
+        "url": "https://arxiv.org/html/2610.31840v2",
+        "source_updated": "2026-11-13",
+        "checked_at": "2026-11-23",
+        "evidence_pointer": "Sections 3–5, Tables 1–4 and Limitations",
+        "summary": "Reviewed SpecMem v2 methods, Tables 1–4, wall-clock timing and limitations against v1. The checked core lifecycle mechanism, headline MAT and external-loop speedup settings remain consistent. Canonicalized greedy-call MAT remains a proxy separate from wire-token acceptance, and the wall-clock loop is not an engine-integrated RL evaluation. No material change requiring replacement of historical v1 measurements was identified in these checked sections. Original v1 metadata, BibTeX and source selection retained.",
+        "snapshot_impact": "No historical snapshot, manuscript edition or original reviewed-version field changed."
+      }
+    ]
   },
   {
     "id": "malvankar2026tabletune",
@@ -4418,5 +4439,241 @@
         "status": "checked public repository and selected branch HEAD; code not executed"
       }
     ]
+  },
+  {
+    "id": "fares2026fact",
+    "name": "FACT",
+    "title": "FACT: Fixed-Budget Allocation and Cross-Step Training for Speculative Decoding",
+    "authors": "Fares, Hadi and Hassan, Mayssa Hajj and Salman, Ali and Mohanna, Ammar",
+    "year": 2026,
+    "venue": "arXiv preprint",
+    "doi": "",
+    "arxiv_id": "2611.23463",
+    "url": "https://arxiv.org/abs/2611.23463v1",
+    "reviewed_version": "v1",
+    "published": "2026-11-17",
+    "role": "post_cutoff",
+    "evidence": "serving_transfer",
+    "dimensions": [
+      "proposal-maintenance",
+      "scheduling-mode-selection",
+      "parallel-load-aware-drafting"
+    ],
+    "mechanism": "Combines step-weighted backpropagation through predicted-feature drafts with confidence-based candidate allocation under matched per-depth tree budgets, measuring how training and execution costs affect accepted progress.",
+    "evidence_note": "Fixed Llama-3-8B-Instruct, one H100, bfloat16 and greedy decoding. Main timings use 50 prompts per benchmark, 256 nodes and a 128-token cap, including prefill but excluding model loading. Training comparisons jointly vary gradient flow and weighting, not either independently, and match optimizer steps rather than compute. Reported acceptance gains are not latency gains; host-thread settings can erase speedups without changing acceptance. The framework combines established ideas and does not claim each component as novel. No target-policy RL evaluation. Rollout transfer concerns cost-aware tree budgeting and drafter maintenance under refreshed targets, with stochastic verification and net training cost still to test. Numerical greedy disagreement is reported separately.",
+    "evidence_pointer": "Sections 3.1–3.4, 4.1–4.4 and 5; Appendices A–E distinguish proxy supervision, greedy verification, training attribution and numerical agreement.",
+    "metadata_provenance": "Official arXiv metadata and versioned primary HTML reviewed on 2026-11-23. Dates are source submission dates, not registry-update timestamps. Technical evaluation remains inference-origin. No formal acceptance inferred.",
+    "code_urls": [
+      "https://github.com/mrfares11/specdec"
+    ],
+    "code_artifacts": [
+      {
+        "url": "https://github.com/mrfares11/specdec",
+        "branch": "main",
+        "head_sha": "537f6c9c7877d9b80cc18c15a873d2af9c1bdfbb",
+        "checked_at": "2026-11-23",
+        "status": "Paper-linked public repository and HEAD checked; code not executed"
+      }
+    ],
+    "manuscript_cited": false,
+    "bibtex": "@article{fares2026fact,\n  author = {Fares, Hadi and Hassan, Mayssa Hajj and Salman, Ali and Mohanna, Ammar},\n  title = {{FACT: Fixed-Budget Allocation and Cross-Step Training for Speculative Decoding}},\n  journal = {arXiv preprint arXiv:2611.23463},\n  year = {2026},\n  eprint = {2611.23463},\n  archivePrefix = {arXiv},\n  note = {Reviewed version v1}\n}",
+    "curated_at": "2026-11-23"
+  },
+  {
+    "id": "galgani2026gmtp",
+    "name": "G-MTP",
+    "title": "Efficient and Robust Drafting with Multi-Token Prediction",
+    "authors": "Galgani, Filippo and Ji, Ziwei and Homburger, Omri and Jawahar, Ganesh and Ramanovich, Michelle and Korotkov, Ivan and Martins, Luciano and Evci, Utku and Yvinec, Edouard and Consul, Pooja and Kumar, Vivek and Schuster, Tal",
+    "year": 2026,
+    "venue": "arXiv preprint",
+    "doi": "",
+    "arxiv_id": "2611.25813",
+    "url": "https://arxiv.org/abs/2611.25813v1",
+    "reviewed_version": "v1",
+    "published": "2026-11-19",
+    "role": "post_cutoff",
+    "evidence": "serving_transfer",
+    "dimensions": [
+      "proposal-source",
+      "proposal-maintenance",
+      "memory-reuse-state"
+    ],
+    "mechanism": "Uses one recurrent four-layer draft head conditioned on target activations, direct cross-attention to target KV without a separate draft cache, and clustered vocabulary projection, with joint or two-stage distillation after target fine-tuning.",
+    "evidence_note": "Gemma 4 inference on H100 GPUs and two mobile devices. Server generation throughput and mobile greedy decoding are distinct evaluations. Domain adaptation uses teacher-forced LoRA supervised fine-tuning and total-variation distillation on SciQA and GSM8K, not target-policy RL. Joint adaptation detaches drafter gradients from backbone activations and KV. The 1.83x figure concerns fewer target forward passes after adaptation, not measured training wall-clock acceleration. Shared-head prediction is autoregressive rather than a one-pass parallel block. RL transfer concerns head alignment after policy refresh and shared-KV memory cost, requiring stochastic sampling validation, cache consistency and exposed adaptation costs. The initial drafter pretraining recipe is outside the report scope.",
+    "evidence_pointer": "Sections 3–5, Tables 1–4, and Appendices A.1–A.3, especially teacher forcing and stop-gradient in A.3.2.",
+    "metadata_provenance": "Official arXiv metadata and versioned primary HTML reviewed on 2026-11-23. Dates are source submission dates, not registry-update timestamps. Technical evaluation remains inference-origin. No formal acceptance inferred.",
+    "code_urls": [
+      "https://github.com/google-research/gemma4-mtp-drafter-domain-adaptation"
+    ],
+    "code_artifacts": [
+      {
+        "url": "https://github.com/google-research/gemma4-mtp-drafter-domain-adaptation",
+        "branch": "main",
+        "head_sha": "3ca321f2a356bd29d99c5d5fcea4018960f8b691",
+        "checked_at": "2026-11-23",
+        "status": "Paper-linked public repository and HEAD checked; code not executed"
+      }
+    ],
+    "manuscript_cited": false,
+    "bibtex": "@article{galgani2026gmtp,\n  author = {Galgani, Filippo and Ji, Ziwei and Homburger, Omri and Jawahar, Ganesh and Ramanovich, Michelle and Korotkov, Ivan and Martins, Luciano and Evci, Utku and Yvinec, Edouard and Consul, Pooja and Kumar, Vivek and Schuster, Tal},\n  title = {{Efficient and Robust Drafting with Multi-Token Prediction}},\n  journal = {arXiv preprint arXiv:2611.25813},\n  year = {2026},\n  eprint = {2611.25813},\n  archivePrefix = {arXiv},\n  note = {Reviewed version v1}\n}",
+    "curated_at": "2026-11-23"
+  },
+  {
+    "id": "yildirim2026specsearch",
+    "name": "SpecSearch",
+    "title": "SpecSearch: Towards Hardware-Aware Efficient Speculative Decoding",
+    "authors": "Yildirim, Selin and Zeyrek, Ali and Chen, Deming",
+    "year": 2026,
+    "venue": "arXiv preprint",
+    "doi": "",
+    "arxiv_id": "2611.22296",
+    "url": "https://arxiv.org/abs/2611.22296v1",
+    "reviewed_version": "v1",
+    "published": "2026-11-17",
+    "role": "post_cutoff",
+    "evidence": "serving_transfer",
+    "dimensions": [
+      "scheduling-mode-selection",
+      "memory-reuse-state",
+      "parallel-load-aware-drafting"
+    ],
+    "mechanism": "Uses a hardware cost model and calibration to choose autoregressive versus speculative execution, draft length and precision, including a batch-dependent length map and a learned selector for static configurations on unseen GPUs.",
+    "evidence_note": "Inference evaluation uses Qwen3-4B and one DFlash drafter on RTX 5090, H100, L40 and MI300X. Default speculative baseline has fixed draft length 15. Full calibration can select dynamic lengths, whereas the learned Jev selector currently chooses static configurations only. Throughput gains are configuration-specific serving results, not RL rollout gains. Abstract and conclusion report different aggregate AR-relative averages, so no single reconciled headline number is asserted here. RL transfer concerns changing rollout concurrency and memory budgets, with recalibration after policy/model changes. Changing target or KV precision also changes the numerical verifier configuration and should not be silently treated as an identical sampling baseline. Code not recorded.",
+    "evidence_pointer": "Sections IV–VII and Appendices A–B, including static-selector limitation in VII and calibration/held-out-GPU controls.",
+    "metadata_provenance": "Official arXiv metadata and versioned primary HTML reviewed on 2026-11-23. Dates are source submission dates, not registry-update timestamps. Technical evaluation remains inference-origin. No formal acceptance inferred.",
+    "code_urls": [],
+    "code_artifacts": [],
+    "manuscript_cited": false,
+    "bibtex": "@article{yildirim2026specsearch,\n  author = {Yildirim, Selin and Zeyrek, Ali and Chen, Deming},\n  title = {{SpecSearch: Towards Hardware-Aware Efficient Speculative Decoding}},\n  journal = {arXiv preprint arXiv:2611.22296},\n  year = {2026},\n  eprint = {2611.22296},\n  archivePrefix = {arXiv},\n  note = {Reviewed version v1}\n}",
+    "curated_at": "2026-11-23"
+  },
+  {
+    "id": "jain2026specrelay",
+    "name": "SpecRelay",
+    "title": "SpecRelay: Amortize or Avoid the Round Trip in Edge-Cloud Speculative Decoding",
+    "authors": "Jain, Jai and Ahn, Chihyo and Liu, Yong and Chen, Charles and Hoang, Duc N.M and Jaiswal, Ajay Kumar and Ilhan, Fatih and Kim, Han-Byul and Hannah, Lauren and Dixit, Richa and Cho, Minsik and Lin, Yingyan Celine and Kim, Hyesoon",
+    "year": 2026,
+    "venue": "arXiv preprint",
+    "doi": "",
+    "arxiv_id": "2611.18963",
+    "url": "https://arxiv.org/abs/2611.18963v1",
+    "reviewed_version": "v1",
+    "published": "2026-11-13",
+    "role": "post_cutoff",
+    "evidence": "serving_transfer",
+    "dimensions": [
+      "placement-idle-resources",
+      "synchronization-versioning",
+      "parallel-load-aware-drafting",
+      "scheduling-mode-selection"
+    ],
+    "mechanism": "Pipelines fixed-budget draft trees across edge-cloud round trips, hedges over alternative continuation anchors and rejects stale requests before target execution, with a separate latency-aware local/cloud router.",
+    "evidence_note": "Primary setup uses an RTX 4090 Qwen3-1.7B drafter and A100 Qwen3-14B verifier with injected round-trip delay. Main evaluations are greedy; a temperature-0.7 spot check is separate. Baseline is a corrected reproduction of synchronous SpecEdge. Cloud-path throughput ablations differ from full-system gains that include local-model routing at matched aggregate accuracy. Choosing local outputs does not preserve the cloud target distribution. RL transfer is limited to asynchronous draft/verify placement, lineage validation and stale-request rejection, requiring fixed per-trajectory policy identity and measured communication cost. Request staleness here is speculative-prefix mismatch, not actor-policy age. No RL training evaluation or verified project code link.",
+    "evidence_pointer": "Sections 4–6 and Appendices A, B.8–B.10 and C distinguish cloud scheduling, routing quality and denominators.",
+    "metadata_provenance": "Official arXiv metadata and versioned primary HTML reviewed on 2026-11-23. Dates are source submission dates, not registry-update timestamps. Technical evaluation remains inference-origin. No formal acceptance inferred.",
+    "code_urls": [],
+    "code_artifacts": [],
+    "manuscript_cited": false,
+    "bibtex": "@article{jain2026specrelay,\n  author = {Jain, Jai and Ahn, Chihyo and Liu, Yong and Chen, Charles and Hoang, Duc N.M and Jaiswal, Ajay Kumar and Ilhan, Fatih and Kim, Han-Byul and Hannah, Lauren and Dixit, Richa and Cho, Minsik and Lin, Yingyan Celine and Kim, Hyesoon},\n  title = {{SpecRelay: Amortize or Avoid the Round Trip in Edge-Cloud Speculative Decoding}},\n  journal = {arXiv preprint arXiv:2611.18963},\n  year = {2026},\n  eprint = {2611.18963},\n  archivePrefix = {arXiv},\n  note = {Reviewed version v1}\n}",
+    "curated_at": "2026-11-23"
+  },
+  {
+    "id": "ou2026callo",
+    "name": "Callo",
+    "title": "Callo: Serving Cache-Miss Requests with Speculative Decoding on Invalidated KV under Prefill-Decode Disaggregation",
+    "authors": "Ou, Jianjun and Lentz, Matthew",
+    "year": 2026,
+    "venue": "arXiv preprint",
+    "doi": "",
+    "arxiv_id": "2611.18459",
+    "url": "https://arxiv.org/abs/2611.18459v1",
+    "reviewed_version": "v1",
+    "published": "2026-11-13",
+    "role": "post_cutoff",
+    "evidence": "serving_transfer",
+    "dimensions": [
+      "workload-recurrence",
+      "proposal-source",
+      "memory-reuse-state",
+      "placement-idle-resources",
+      "scheduling-mode-selection"
+    ],
+    "mechanism": "Uses repositioned KV invalidated by context edits for target-model drafting while exact re-prefill streams replacement KV, then verifies against exact state, with load-aware admission and early stopping.",
+    "evidence_note": "SWE-agent prompt/reply-length replay on two H200 NVL GPUs with disaggregated vLLM, three model families and default fixed-tie greedy verification. Main end-to-end serving gains combine streaming KV transfer and speculation; Callo-Stream isolates transfer. A temperature-0.8 single-request ablation is separate, and 96-GPU results are simulation rather than direct measurements. Numerical output identity across batches is not assumed. No RL training evaluation. Transfer concerns repeated long-context agent rollouts with context edits, spare decode capacity and exact current-policy state available for verification. Reusing KV after a context edit does not establish validity across policy-weight updates, which additionally require policy-version-aware invalidation. Code not recorded.",
+    "evidence_pointer": "Sections 4.2–4.6, 5.1–5.5 and 6, plus Appendices C and F; Table 3 all-request/miss latency differs from simulation and single-request ablations.",
+    "metadata_provenance": "Official arXiv metadata and versioned primary HTML reviewed on 2026-11-23. Dates are source submission dates, not registry-update timestamps. Technical evaluation remains inference-origin. No formal acceptance inferred.",
+    "code_urls": [],
+    "code_artifacts": [],
+    "manuscript_cited": false,
+    "bibtex": "@article{ou2026callo,\n  author = {Ou, Jianjun and Lentz, Matthew},\n  title = {{Callo: Serving Cache-Miss Requests with Speculative Decoding on Invalidated KV under Prefill-Decode Disaggregation}},\n  journal = {arXiv preprint arXiv:2611.18459},\n  year = {2026},\n  eprint = {2611.18459},\n  archivePrefix = {arXiv},\n  note = {Reviewed version v1}\n}",
+    "curated_at": "2026-11-23"
+  },
+  {
+    "id": "vandenbosch2026sessiondraft",
+    "name": "Session-local recency and restraint",
+    "title": "Text Speeding Itself Up: Recency and Restraint in Session-Local Drafting",
+    "authors": "van den Bosch, Antal",
+    "year": 2026,
+    "venue": "arXiv preprint",
+    "doi": "",
+    "arxiv_id": "2611.19455",
+    "url": "https://arxiv.org/abs/2611.19455v1",
+    "reviewed_version": "v1",
+    "published": "2026-11-14",
+    "role": "post_cutoff",
+    "evidence": "serving_transfer",
+    "dimensions": [
+      "workload-recurrence",
+      "proposal-source",
+      "memory-reuse-state",
+      "scheduling-mode-selection"
+    ],
+    "mechanism": "Copies continuations from the most recent matching prompt/output n-gram and can abstain below a match-length floor, comparing this cheap rule against recency-weighted session memory and confidence gating.",
+    "evidence_note": "Mistral-7B-v0.1 float16 greedy inference on an Apple M1 Max Mac Studio with CPU drafters. Experiments compare speed, whole-system energy and token agreement on general, medical and legal text. Most-recent lookup captures the speed benefit; the richer memory adds no measurable improvement at 30–40 times drafting cost. Long-output gains shrink with a repetition penalty. Approximately 94% token-identical generations and near-tie divergence do not establish stochastic equivalence. No sampling, batched GPU serving or target-policy RL evaluation. Rollout transfer concerns inexpensive recent-history proposals and selective activation, with history scope, sampling, length and resource costs to test. This is a distinct session-local ablation study citing the earlier offline-trained Olifant work, not a new key for that same paper.",
+    "evidence_pointer": "Sections 2–6 and Limitations; Section 2.3 rebuilds session memory each call, and Section 6/Appendix A separate agreement from speed.",
+    "metadata_provenance": "Official arXiv metadata and versioned primary HTML reviewed on 2026-11-23. Dates are source submission dates, not registry-update timestamps. Technical evaluation remains inference-origin. No formal acceptance inferred. Author byline and prior verified author record support the name van den Bosch, Antal; the arXiv meta tag splits the surname particle incorrectly. Distinct title, arXiv ID and session-local comparison were checked against the earlier Olifant record.",
+    "code_urls": [
+      "https://github.com/antalvdb/olifant-speculative"
+    ],
+    "code_artifacts": [
+      {
+        "url": "https://github.com/antalvdb/olifant-speculative",
+        "branch": "main",
+        "head_sha": "6d7d17fe37bbfca6e4f0c1e2ca6f8f4c0d853ab8",
+        "checked_at": "2026-11-23",
+        "status": "Paper-linked public repository and HEAD checked; code not executed"
+      }
+    ],
+    "manuscript_cited": false,
+    "bibtex": "@article{vandenbosch2026sessiondraft,\n  author = {van den Bosch, Antal},\n  title = {{Text Speeding Itself Up: Recency and Restraint in Session-Local Drafting}},\n  journal = {arXiv preprint arXiv:2611.19455},\n  year = {2026},\n  eprint = {2611.19455},\n  archivePrefix = {arXiv},\n  note = {Reviewed version v1}\n}",
+    "curated_at": "2026-11-23"
+  },
+  {
+    "id": "hu2026raptor",
+    "name": "Raptor",
+    "title": "Raptor: Rejection-aware Adaptive Tree based on Speculative Decoding",
+    "authors": "Hu, Qishu and Wang, Haozhao and Hong, Zicong and Zhan, Yufeng and Xia, Yuanqing",
+    "year": 2026,
+    "venue": "arXiv preprint",
+    "doi": "",
+    "arxiv_id": "2611.25436",
+    "url": "https://arxiv.org/abs/2611.25436v1",
+    "reviewed_version": "v1",
+    "published": "2026-11-19",
+    "role": "post_cutoff",
+    "evidence": "serving_transfer",
+    "dimensions": [
+      "scheduling-mode-selection",
+      "parallel-load-aware-drafting"
+    ],
+    "mechanism": "Uses accepted progress, uncovered target probability at the rejection frontier and wasted deep nodes to adjust tree depth, width and node budget with smoothing, bounded updates and expansion recovery.",
+    "evidence_note": "Greedy multimodal inference on LLaVA-1.6-Vicuna-7B and Qwen2.5-VL-7B with Medusa, EAGLE and ViSpec, two RTX 3090 GPUs and seven benchmark subsets. Timing includes prefill, drafting, verification, cache/controller work and visual processing inside generation. Reported throughput is a mean of per-example rates. Controller coefficients are calibrated on separate examples, not learned target/drafter weights. Appendix A.1 notes terminal-block handling that can retain tokens after EOS, despite clipped pseudocode, so stopping and token accounting need reconciliation before reuse. No stochastic RL or training evidence. Transfer concerns feedback-guided candidate budgets as rollout content and policy alignment change, requiring current-policy probabilities, stochastic verification and concurrency-aware net latency evaluation. Code not recorded.",
+    "evidence_pointer": "Sections 3–4 and Appendices A.1–A.4 and B.1–B.5, especially implementation stopping convention and timing scope.",
+    "metadata_provenance": "Official arXiv metadata and versioned primary HTML reviewed on 2026-11-23. Dates are source submission dates, not registry-update timestamps. Technical evaluation remains inference-origin. No formal acceptance inferred.",
+    "code_urls": [],
+    "code_artifacts": [],
+    "manuscript_cited": false,
+    "bibtex": "@article{hu2026raptor,\n  author = {Hu, Qishu and Wang, Haozhao and Hong, Zicong and Zhan, Yufeng and Xia, Yuanqing},\n  title = {{Raptor: Rejection-aware Adaptive Tree based on Speculative Decoding}},\n  journal = {arXiv preprint arXiv:2611.25436},\n  year = {2026},\n  eprint = {2611.25436},\n  archivePrefix = {arXiv},\n  note = {Reviewed version v1}\n}",
+    "curated_at": "2026-11-23"
   }
 ]

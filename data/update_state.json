@@ -1,22 +1,26 @@
 {
-  "status": "success",
-  "last_attempt": "2026-11-16T06:45:14Z",
+  "status": "incomplete",
+  "last_attempt": "2026-11-23T02:36:32Z",
   "last_successful_scan": "2026-11-16T06:45:14Z",
-  "pending_candidates": 46,
+  "pending_candidates": 56,
   "note": "Automated arXiv and DataCite discovery. DataCite dates are registry-update dates, not paper-version dates. Hits require primary-source screening.",
-  "since": "2026-11-02T06:45:14Z",
-  "newly_discovered": 2,
-  "failures": [],
-  "last_curator_review": "2026-11-16",
-  "curator_included": 3,
+  "since": "2026-11-09T02:36:32Z",
+  "newly_discovered": 12,
+  "failures": [
+    "secondary-reuse",
+    "secondary-policy-adaptation",
+    "secondary-verification-parallel"
+  ],
+  "last_curator_review": "2026-11-23",
+  "curator_included": 7,
   "curator_excluded": 0,
-  "curator_pending": 44,
-  "curator_note": "Follow-up retry completed all six arXiv and all six DataCite families at 2026-11-16T02:52:20Z. No new unique discovery hits relative to the curated library. Observed ForeSpark v2 and two pending-candidate version updates. Reviewed ForeSpark v2 and its official code. The author-approved November 16 manuscript edition adds three citations and selects DForkTree/ForeSpark v2 without changing historical snapshots.",
+  "curator_pending": 56,
+  "curator_note": "Three arXiv families and all six DataCite families completed. HTTP 429 left three secondary arXiv families incomplete; the last successful watermark remains November 16. Official-source keyword searches and primary-text/citation review supplemented coverage without claiming exhaustive replacement. Seven distinct inference-origin transfer studies added and SpecMem v2 reviewed with original v1 preserved. No new direct RL study was established by these inclusions. All manuscript snapshots and editions unchanged.",
   "final_submission_review": "2026-11-16",
   "final_review_added": 3,
   "final_review_metadata_corrections": 2,
   "final_review_note": "Author-approved November 16 edition: 85 core studies, 24 direct RL and 61 serving transfer. BunshinRL remains contextual. Manuscript bibliography 155 records with 151 cited. This records a literature edition, not journal submission or acceptance.",
-  "curator_technical_added": 2,
+  "curator_technical_added": 7,
   "curator_supporting_added": 0,
-  "curator_contextual_added": 1
+  "curator_contextual_added": 0
 }

@@ -31,3 +31,7 @@ Manage historical indices, speculative cache state, KV residency, and state refr
 | [Uni-LaSpec](../../papers/nie2026unilaspec.md) | 2026 | Serving / inference — RL transfer potential | Post-cutoff screened addition |
 | [Windowed-MTP](../../papers/valliappan2026windowedmtp.md) | 2026 | Serving / inference — RL transfer potential | Post-cutoff screened addition |
 | [Olifant speculative drafting](../../papers/vandenbosch2026olifant.md) | 2026 | Serving / inference — RL transfer potential | Post-cutoff screened addition |
+| [G-MTP](../../papers/galgani2026gmtp.md) | 2026 | Serving / inference — RL transfer potential | Post-cutoff screened addition |
+| [SpecSearch](../../papers/yildirim2026specsearch.md) | 2026 | Serving / inference — RL transfer potential | Post-cutoff screened addition |
+| [Callo](../../papers/ou2026callo.md) | 2026 | Serving / inference — RL transfer potential | Post-cutoff screened addition |
+| [Session-local recency and restraint](../../papers/vandenbosch2026sessiondraft.md) | 2026 | Serving / inference — RL transfer potential | Post-cutoff screened addition |

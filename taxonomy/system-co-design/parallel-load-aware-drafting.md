@@ -43,3 +43,7 @@ Analyze parallel candidate generation, verification width, and load-dependent ne
 | [D3D](../../papers/chen2026d3d.md) | 2026 | Serving / inference — RL transfer potential | Post-cutoff screened addition |
 | [TraceSpec](../../papers/zhao2026tracespec.md) | 2026 | Serving / inference — RL transfer potential | Post-cutoff screened addition |
 | [REAL Loss](../../papers/tian2026real.md) | 2026 | Serving / inference — RL transfer potential | Post-cutoff screened addition |
+| [FACT](../../papers/fares2026fact.md) | 2026 | Serving / inference — RL transfer potential | Post-cutoff screened addition |
+| [SpecSearch](../../papers/yildirim2026specsearch.md) | 2026 | Serving / inference — RL transfer potential | Post-cutoff screened addition |
+| [SpecRelay](../../papers/jain2026specrelay.md) | 2026 | Serving / inference — RL transfer potential | Post-cutoff screened addition |
+| [Raptor](../../papers/hu2026raptor.md) | 2026 | Serving / inference — RL transfer potential | Post-cutoff screened addition |

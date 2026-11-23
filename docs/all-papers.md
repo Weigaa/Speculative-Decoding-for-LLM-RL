@@ -159,3 +159,10 @@
 | `tian2026real` | [REAL Loss: Optimizing Real Expected Acceptance Length for Speculative Decoding](../papers/tian2026real.md) | post_cutoff |
 | `vandenbosch2026olifant` | [Towards Green Text Generation: Memory-Based Speculative Decoding](../papers/vandenbosch2026olifant.md) | post_cutoff |
 | `huang2026bunshinrl` | [BunshinRL: Whole-Workspace Forking for Agentic Reinforcement Learning Rollouts](../papers/huang2026bunshinrl.md) | contextual |
+| `fares2026fact` | [FACT: Fixed-Budget Allocation and Cross-Step Training for Speculative Decoding](../papers/fares2026fact.md) | post_cutoff |
+| `galgani2026gmtp` | [Efficient and Robust Drafting with Multi-Token Prediction](../papers/galgani2026gmtp.md) | post_cutoff |
+| `yildirim2026specsearch` | [SpecSearch: Towards Hardware-Aware Efficient Speculative Decoding](../papers/yildirim2026specsearch.md) | post_cutoff |
+| `jain2026specrelay` | [SpecRelay: Amortize or Avoid the Round Trip in Edge-Cloud Speculative Decoding](../papers/jain2026specrelay.md) | post_cutoff |
+| `ou2026callo` | [Callo: Serving Cache-Miss Requests with Speculative Decoding on Invalidated KV under Prefill-Decode Disaggregation](../papers/ou2026callo.md) | post_cutoff |
+| `vandenbosch2026sessiondraft` | [Text Speeding Itself Up: Recency and Restraint in Session-Local Drafting](../papers/vandenbosch2026sessiondraft.md) | post_cutoff |
+| `hu2026raptor` | [Raptor: Rejection-aware Adaptive Tree based on Speculative Decoding](../papers/hu2026raptor.md) | post_cutoff |
