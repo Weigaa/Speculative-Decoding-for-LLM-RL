@@ -1,5 +1,44 @@
 [
   {
+    "arxiv_id": "2611.27477",
+    "version": "v1",
+    "title": "Cannot Wait to Verify: Parallel Drafting to Eliminate Verifier Idle Time in Speculative Decoding",
+    "authors": [
+      "Divya Jyoti Bajpai",
+      "Arun Verma",
+      "Manjesh Kumar Hanawal"
+    ],
+    "published": "2026-11-20T11:26:57Z",
+    "updated": "2026-11-20T11:26:57Z",
+    "abstract": "Autoregressive inference in large transformer models is limited by token-level sequential execution, resulting in high latency and low GPU utilization. Speculative decoding (SD) mitigates this bottleneck by introducing a draft-and-verifier model. However, the drafting stage remains sequential, leaving the verifier idle and underutilizing compute. To address this, we propose a plug-and-play drafting adaptive drafting method that parallelizes inference across transformer layers during draft generation. Starting from a shared hidden state, our approach evaluates multiple layers in parallel and verifies consistency by measuring divergence in hidden-state space. Layer-wise draft states are accepted when deviations are small; otherwise, a correction step is applied. By exploiting redundancy across transformer layers, our method accelerates draft generation and improves hardware utilization without modifying architectures or requiring retraining. Experimental results on NLP tasks show that our method speeds up the drafting stage by up to $1.65\\times$ with minimal degradation in accuracy, while maintaining the same performance as SD.",
+    "url": "https://arxiv.org/abs/2611.27477v1",
+    "queries": [
+      "datacite-secondary-verification-parallel",
+      "secondary-verification-parallel"
+    ],
+    "discovered_at": "2026-11-23T07:51:37Z",
+    "status": "pending"
+  },
+  {
+    "arxiv_id": "2611.27217",
+    "version": "v1",
+    "title": "CoPyro: Feeding Copy Proposals to Parallel Drafters",
+    "authors": [
+      "Hong-Kai Zheng",
+      "Piji Li"
+    ],
+    "published": "2026-11-20T07:11:06Z",
+    "updated": "2026-11-20T07:11:06Z",
+    "abstract": "Speculative decoding accelerates language generation by letting a target model verify several draft tokens in one forward pass. Earlier neural drafters such as EAGLE extend each candidate sequence one token at a time. Recent work has turned to parallel drafters such as DFlash, which predict a whole block at once. Another approach uses n-gram retrieval to find an earlier occurrence of the current context suffix and copy the tokens that followed it directly into the draft. We introduce CoPyro, which feeds these copied tokens into a parallel drafter in place of masks. The drafter learns from context which tokens to keep and which to revise as it predicts the block in its usual forward pass. Across eight benchmarks on Qwen3-4B, CoPyro improves overall acceptance length for all four parallel drafters tested, with gains of 2.19-5.08% when trained on 100K samples. With DFlash trained on 710K samples, overall gains range from 1.08% to 2.00% across the tested model sizes and temperatures. Code generation benefits most in both settings. On Qwen3-8B, processing the proposals adds an average of 0.24 ms per decoding round in Transformers.",
+    "url": "https://arxiv.org/abs/2611.27217v1",
+    "queries": [
+      "datacite-secondary-reuse",
+      "secondary-reuse"
+    ],
+    "discovered_at": "2026-11-23T07:51:37Z",
+    "status": "pending"
+  },
+  {
     "arxiv_id": "2611.26358",
     "version": "v1",
     "title": "Beam Model Technical Report",
@@ -248,6 +287,29 @@
     "screening_reason": "Reviewed the speculative-decoding section for triage. DFlash 2 is trained for a fixed Beam target and benchmarked for deployment; this does not by itself establish speculative decoding during target-policy RL rollouts. Full report eligibility as supporting literature or a distinct transferable mechanism remains pending."
   },
   {
+    "arxiv_id": "2611.24301",
+    "version": "v1",
+    "title": "LoopCache: Accelerating Long-Context Self-Speculative Decoding for Looped Transformers",
+    "authors": [
+      "Zizhuo Fu",
+      "Haochen Huang",
+      "Shengxuan Qiu",
+      "Linye Wei",
+      "Ziyu Tang",
+      "Runsheng Wang",
+      "Meng Li"
+    ],
+    "published": "2026-11-18T12:11:43Z",
+    "updated": "2026-11-18T12:11:43Z",
+    "abstract": "Looped Transformers achieve large effective depth with compact models by repeatedly applying a weight-shared block across R recurrent steps, each maintaining a loop-specific key-value (KV) cache. To accelerate sequential loop execution, recent wave-style self-speculative methods like WaveFront Decoding (WFD) and LoopSpec pipeline draft and target tokens across loops in a single step. However, they face two critical limitations. First, they draft only at fixed loops and ignore intermediate prediction changes, wasting computation on stale trajectories. Second, batching tokens from different loops loads up to Rx the KV cache per step, severely amplifying memory traffic in long-context scenarios. To address these challenges, we propose LoopCache, an efficient self-speculative decoding framework for long-context Looped Transformers. Based on the correlation between prediction switches and output confidence, LoopCache introduces confidence-guided dynamic draft updating to refine drafts in flight across all intermediate loops. Furthermore, LoopCache employs a cyclic loop KV cache strategy that rotates through loop-specific KV caches, restricting per-step KV traffic to a single loop while batching tokens at the nearest matching cycle for lossless verification. By also selectively retaining independent KV caches for a few loop-sensitive shallow layers, LoopCache improves acceptance rates with negligible overhead. Experiments show that LoopCache achieves average 10.25x and 14.56x speedup over WFD and LoopSpec.",
+    "url": "https://arxiv.org/abs/2611.24301v1",
+    "queries": [
+      "secondary-policy-adaptation"
+    ],
+    "discovered_at": "2026-11-23T07:51:37Z",
+    "status": "pending"
+  },
+  {
     "arxiv_id": "2608.30427",
     "version": "v2",
     "title": "Ceiling-Clipped Acceptance Histograms Indicate Stranded Speed-up in Block-Diffusion Speculative Decoding",
@@ -260,7 +322,8 @@
     "url": "https://arxiv.org/abs/2608.30427v2",
     "queries": [
       "datacite-secondary-verification-parallel",
-      "primary-draft-posttraining"
+      "primary-draft-posttraining",
+      "secondary-verification-parallel"
     ],
     "discovered_at": "2026-11-23T02:36:32Z",
     "status": "pending",
@@ -311,28 +374,6 @@
     "discovered_at": "2026-11-23T02:36:32Z",
     "status": "pending",
     "screening_reason": "VLA action-token speculation is not automatically LLM RL rollout evidence. Validate action space, verification rule and original learning/evaluation setting before classification."
-  },
-  {
-    "arxiv_id": "2611.19085",
-    "doi": "10.48550/arxiv.2611.19085",
-    "version": "",
-    "title": "DynaDFlash: Dynamic Feature Projection for Block Diffusion Speculators",
-    "authors": [
-      "Kulshrestha, Aadi",
-      "Chong, Reese"
-    ],
-    "published": "2026",
-    "updated": "2026-11-17T08:39:24Z",
-    "abstract": "DFlash trains a parallel draft model on hidden features from its target model. Inspired by the previous work of DFlare that introduced per layer combinations of target hidden states, we test whether context dependent weighting of these states helps improve acceptance length of block diffusion speculators. We trained both a DFlash baseline for the Qwen 3 of block size 16, and a dynamic model that computes gates for each layer to affect the magnitude of hidden features before projection. While mean acceptance length between the dynamic model and the DFlash baseline didn't significantly differ, we notice that the dynamic model excels for drafting in the context of math. In an evaluation of 700 prompts from the MetaMathQA and Orca-Math datasets, the mean accepted length improves by 5%. We also found this lead to a 4.1% higher throughput for a subset of the same dataset in the context of speculative decoding.",
-    "url": "https://arxiv.org/abs/2611.19085",
-    "metadata_source": "DataCite arXiv DOI registry",
-    "metadata_record_url": "https://api.datacite.org/dois/10.48550/arxiv.2611.19085",
-    "queries": [
-      "datacite-secondary-verification-parallel"
-    ],
-    "discovered_at": "2026-11-23T02:36:32Z",
-    "status": "pending",
-    "screening_reason": "Abstract suggests context-dependent feature mixing for a fixed block drafter. Full text and rollout-specific transfer beyond generic proposal-capacity improvement remain pending."
   },
   {
     "arxiv_id": "2611.22115",
@@ -495,6 +536,30 @@
     "screening_reason": "Section 2.4 explicitly describes inference-time DSpark, while Section 4 separately describes asynchronous RL. Their co-occurrence is not direct speculative-rollout integration evidence. Retained pending detailed eligibility/measurement review."
   },
   {
+    "arxiv_id": "2611.21925",
+    "version": "v1",
+    "title": "DNeo: Your Parallel Draft Model Needs Better Target Feature Encoding",
+    "authors": [
+      "Jameson Sandler",
+      "Shane Bergsma",
+      "Mostafa Elhoushi",
+      "Bin Claire Zhang",
+      "Gavia Gray",
+      "Joel Hestness",
+      "Nolan Dey",
+      "Ferdinando Fioretto"
+    ],
+    "published": "2026-11-16T21:41:20Z",
+    "updated": "2026-11-16T21:41:20Z",
+    "abstract": "Speculative-diffusion decoding uses a small parallel drafter model to generate b draft tokens in one forward pass, which then undergo parallel verification via a larger target model. Faster inference can be achieved when multiple draft tokens pass verification simultaneously. Recent parallel draft architectures (DFlash, DSpark) improve draft quality by conditioning on rich features computed by the target, through a mechanism known as feature encoding. However, standard feature encoding mechanisms have three limitations: (1) they are lossy, applying encoding projections that are destructive to the underlying target feature-space via a discovered effect known as residual mixing, (2) they are memory-less, with no record of previously processed proposals, and (3) they utilize features sampled uniformly from across the target layers, omitting important hidden states. To address these issues, we propose Mixture-of-Features Attention (MoFA), a lightweight feature-encoding approach equipped with a working memory that encodes previously rejected proposals. Leveraging MoFA, rejection memory, and a set of further enhancements, including 2-tap causal convolutions, prefix-only cross-attention, and non-uniform target layer selection, the final architecture, DNeo, achieves 1.3x faster generation speed than SoTA (DFlash-2) without impacting drafter footprint or generation quality. DNeo marks a new state of the art in high quality, fast LLM inference.",
+    "url": "https://arxiv.org/abs/2611.21925v1",
+    "queries": [
+      "secondary-verification-parallel"
+    ],
+    "discovered_at": "2026-11-23T07:51:37Z",
+    "status": "pending"
+  },
+  {
     "arxiv_id": "2611.21839",
     "version": "v1",
     "title": "VisHead-Spec: Head-Routed Visual Attention for Multimodal Speculative Decoding",
@@ -514,7 +579,8 @@
     "queries": [
       "datacite-secondary-tail-load",
       "datacite-secondary-verification-parallel",
-      "secondary-tail-load"
+      "secondary-tail-load",
+      "secondary-verification-parallel"
     ],
     "discovered_at": "2026-11-23T02:36:32Z",
     "status": "pending",
@@ -791,6 +857,27 @@
     ],
     "discovered_at": "2026-11-23T02:36:32Z",
     "status": "pending"
+  },
+  {
+    "arxiv_id": "2611.19085",
+    "doi": "10.48550/arxiv.2611.19085",
+    "version": "v1",
+    "title": "DynaDFlash: Dynamic Feature Projection for Block Diffusion Speculators",
+    "authors": [
+      "Aadi Kulshrestha",
+      "Reese Chong"
+    ],
+    "published": "2026-11-14T01:45:55Z",
+    "updated": "2026-11-14T01:45:55Z",
+    "abstract": "DFlash trains a parallel draft model on hidden features from its target model. Inspired by the previous work of DFlare that introduced per layer combinations of target hidden states, we test whether context dependent weighting of these states helps improve acceptance length of block diffusion speculators. We trained both a DFlash baseline for the Qwen 3 of block size 16, and a dynamic model that computes gates for each layer to affect the magnitude of hidden features before projection. While mean acceptance length between the dynamic model and the DFlash baseline didn't significantly differ, we notice that the dynamic model excels for drafting in the context of math. In an evaluation of 700 prompts from the MetaMathQA and Orca-Math datasets, the mean accepted length improves by 5%. We also found this lead to a 4.1% higher throughput for a subset of the same dataset in the context of speculative decoding.",
+    "url": "https://arxiv.org/abs/2611.19085v1",
+    "queries": [
+      "datacite-secondary-verification-parallel",
+      "secondary-verification-parallel"
+    ],
+    "discovered_at": "2026-11-23T07:51:37Z",
+    "status": "pending",
+    "screening_reason": "Abstract suggests context-dependent feature mixing for a fixed block drafter. Full text and rollout-specific transfer beyond generic proposal-capacity improvement remain pending."
   },
   {
     "arxiv_id": "2611.18482",

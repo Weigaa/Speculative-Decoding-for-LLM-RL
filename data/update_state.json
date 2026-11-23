@@ -1,16 +1,12 @@
 {
-  "status": "incomplete",
-  "last_attempt": "2026-11-23T02:36:32Z",
-  "last_successful_scan": "2026-11-16T06:45:14Z",
-  "pending_candidates": 56,
+  "status": "success",
+  "last_attempt": "2026-11-23T07:51:37Z",
+  "last_successful_scan": "2026-11-23T07:51:37Z",
+  "pending_candidates": 60,
   "note": "Automated arXiv and DataCite discovery. DataCite dates are registry-update dates, not paper-version dates. Hits require primary-source screening.",
-  "since": "2026-11-09T02:36:32Z",
-  "newly_discovered": 12,
-  "failures": [
-    "secondary-reuse",
-    "secondary-policy-adaptation",
-    "secondary-verification-parallel"
-  ],
+  "since": "2026-11-09T07:51:37Z",
+  "newly_discovered": 4,
+  "failures": [],
   "last_curator_review": "2026-11-23",
   "curator_included": 7,
   "curator_excluded": 0,
